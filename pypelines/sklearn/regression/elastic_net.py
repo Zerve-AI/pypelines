@@ -18,13 +18,13 @@ elastic_net_hyperparams = {
 class ElasticNet(SklearnModelBase):
     def __init__(self):
         model_string = 'ElasticNet()'
-        imports = '''from sklearn.linear_model import ElasticNet\nfrom sklearn.metrics import mean_squared_error,make_scorer,r2_score,explained_variance_score\nfrom sklearn.metrics import r2_score as model_accuracy\nimport plotly.express as px\nimport plotly.graph_objects as go'''
+        imports = '''from sklearn.linear_model import ElasticNet\nfrom sklearn.metrics import mean_squared_error,make_scorer,r2_score,explained_variance_score\nimport plotly.express as px\nimport plotly.graph_objects as go'''
         model_type='Regression'
         super().__init__('elastic_net', model_string, elastic_net_hyperparams, imports,model_type)
 
 class ElasticNetComparison(SklearnModelComparisonBase):
     def __init__(self):
         model_string = 'ElasticNet()'
-        imports = '''from sklearn.linear_model import ElasticNet\nfrom sklearn.metrics import mean_squared_error,make_scorer,r2_score,explained_variance_score\nfrom sklearn.metrics import r2_score as model_accuracy\nimport plotly.express as px\nimport plotly.graph_objects as go'''
+        imports = '''from sklearn.linear_model import ElasticNet\nfrom sklearn.metrics import mean_squared_error,make_scorer,r2_score,explained_variance_score\nimport plotly.express as px\nimport plotly.graph_objects as go'''
         model_type='Regression'
         super().__init__('elastic_net', model_string, elastic_net_hyperparams, imports,model_type)
