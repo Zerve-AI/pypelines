@@ -1,15 +1,18 @@
-from .elastic_net import ElasticNet,ElasticNetComparison
+from .elastic_net_regression import ElasticNetRegression,ElasticNetRegressionComparison
 from .linear_regression import LinearRegression,LinearRegressionComparison
-from .lasso import Lasso,LassoComparison
+from .lasso_regression import LassoRegression,LassoRegressionComparison
+from .ridge_regression import RidgeRegression,RidgeRegressionComparison
 
 models_regression = {
-    'Elastic Net': ElasticNet,
+    'Elastic Net': ElasticNetRegression,
     'Linear Regression': LinearRegression,
-    'Lasso': Lasso
+    'Lasso': LassoRegression,
+    'Ridge': RidgeRegression
 }
 
 model_comparison_regression = {
-    'Elastic Net': ElasticNetComparison,
+    'Elastic Net': ElasticNetRegressionComparison,
     'Linear Regression': LinearRegressionComparison,
-    'Lasso': LassoComparison
+    'Lasso': LassoRegressionComparison,
+    'Ridge': RidgeRegressionComparison
 }

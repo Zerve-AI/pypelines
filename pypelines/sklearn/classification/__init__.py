@@ -4,6 +4,7 @@ from .random_forest import RandomForest, RandomForestComparison
 from .svc import SVC,SVCComparison
 from .xgboost import XGBoost, XGBoostComparison
 from .mlp import MLP, MLPComparison
+from .ridge_classification import RidgeClassifier,RidgeClassifierComparison
 
 
 
@@ -13,7 +14,8 @@ models_classification = {
     'Random Forest': RandomForest,
     'SVC': SVC,
     #'XGBoost': XGBoost,
-    'MLP': MLP
+    'MLP': MLP,
+    'Ridge Classifier': RidgeClassifier
 }
 
 model_comparison_classification = {
@@ -22,7 +24,9 @@ model_comparison_classification = {
     'Random Forest': RandomForestComparison,
     'SVC': SVCComparison,
     #'XGBoost': XGBoostComparison,
-    'MLP': MLPComparison
+    'MLP': MLPComparison,
+    'Ridge Regression': RidgeClassifierComparison
+
 }
 
 __all__ = [
