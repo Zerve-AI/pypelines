@@ -69,65 +69,26 @@ class SklearnPipeline:
 
     def run(self, config, x_offset=0, y_offset=0):
         blocks = []
-        edges = []
         self.parse_config(config)
 
-        #data prep block
-        code, imports, requirements = PipelineTemplate()(self.pipeline_params)
-        blocks.append({
-            'content': code,
-            'id': 1
-        })
-
-        #model training/testing block
-        i = 2
         for model_name, params in self.model_params.items():
+            i = 1
+            code, imports, requirements = PipelineTemplate()(self.pipeline_params)
+            imports = self.default_imports + '\n' + imports
+            code_append = ""
+            code_append += imports
+            code_append += code
             ModelTemplate= self.models[model_name]
             code, model_imports, model_requirements  = ModelTemplate()({
                 **params, 
                 **self.shared_model_params, 
                 'hyperparams': self.compile_hyperparameters(ModelTemplate().prefix, params)
                 })
-            # Split the string at line 20
-            code_string_1, code_string_2 = code.split('# Model metrics', maxsplit=1)
             if model_requirements:
                 requirements += model_requirements
             if model_imports:
                 imports += '\n' + model_imports
-            blocks.append({
-                'content': code_string_1,
-                'id': i
-            })
-            edges.append((1, i))
-            i += 1
-
-        #model metric block
-        i = 2+len(self.model_params)
-        for model_name, params in self.model_params.items():
-            ModelTemplate= self.models[model_name]
-            code, model_imports, model_requirements  = ModelTemplate()({
-                **params, 
-                **self.shared_model_params, 
-                'hyperparams': self.compile_hyperparameters(ModelTemplate().prefix, params)
-                })
-            code_string_1, code_string_2 = code.split('# Model metrics', maxsplit=1)
-            code_string_2 = '# Model metrics' + code_string_2
-            if model_requirements:
-                requirements += model_requirements
-            if model_imports:
-                imports += '\n' + model_imports
-            blocks.append({
-                'content': code_string_2,
-                'id': i
-            })
-            edges.append((i-len(self.model_params), i))
-            i += 1
-
-        #model comparison block    
-        i = 2+len(self.model_params)
-        j = i+len(self.model_params)
-        code_append = ""
-        for model_name, params in self.model_params.items():    
+            code_append += code
             ModelCompTemplate= self.model_comp[model_name]
             code, model_imports, model_requirements  = ModelCompTemplate()({
                 **params, 
@@ -135,22 +96,18 @@ class SklearnPipeline:
                 'hyperparams': self.compile_hyperparameters(ModelCompTemplate().prefix, params)
                 })
             code_append += code
-            edges.append((i,j)) 
-            i += 1
-        blocks.append({
-            'content': code_append,
-            'id': j
-        }) 
-        edges.append((1, j)) 
-        
-        #blocks = graph_layout(blocks, edges, x_offset=x_offset, y_offset=y_offset, reference_node=1)
-
+            blocks.append({
+                'content': code_append,
+                'id': i
+            })
+            i = i+1
         # keep unique requirements
         requirements = list(set(requirements))
         # keep unique lines from imports and convert to list
         imports = self.default_imports + '\n' + imports
-        imports = list(set(imports.split('\n')))
+        #imports = list(set(imports.split('\n')))
+        
         
 
-        return blocks, edges, requirements, imports
+        return blocks, requirements, imports
         
