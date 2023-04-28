@@ -74,7 +74,9 @@ class SklearnPipeline:
         for model_name, params in self.model_params.items():
             i = 1
             code, imports, requirements = PipelineTemplate()(self.pipeline_params)
+            imports = self.default_imports + '\n' + imports
             code_append = ""
+            code_append += imports
             code_append += code
             ModelTemplate= self.models[model_name]
             code, model_imports, model_requirements  = ModelTemplate()({
@@ -103,7 +105,8 @@ class SklearnPipeline:
         requirements = list(set(requirements))
         # keep unique lines from imports and convert to list
         imports = self.default_imports + '\n' + imports
-        imports = list(set(imports.split('\n')))
+        #imports = list(set(imports.split('\n')))
+        
         
 
         return blocks, requirements, imports
