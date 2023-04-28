@@ -1,6 +1,6 @@
 from .templates.pipeline import PipelineTemplate
 from .schemas import HyperParams, NumericalParam, CategoricalParam
-from canvas_service.utils.graph_layout import graph_layout
+#from canvas_service.utils.graph_layout import graph_layout
 from .sklearn.classification import models_classification , model_comparison_classification
 from .sklearn.regression import models_regression, model_comparison_regression
 
@@ -143,7 +143,7 @@ class SklearnPipeline:
         }) 
         edges.append((1, j)) 
         
-        blocks = graph_layout(blocks, edges, x_offset=x_offset, y_offset=y_offset, reference_node=1)
+        #blocks = graph_layout(blocks, edges, x_offset=x_offset, y_offset=y_offset, reference_node=1)
 
         # keep unique requirements
         requirements = list(set(requirements))
