@@ -2,11 +2,11 @@
 Setup Steps:
 1. Use pypelines_demo.ipynb to access the package
 2. Update default_content.py with relevant config for the problem
-  - 'dataset': 'train.csv', #add data frame name 
-  - 'target_column': 'target', #add target column name
-  - 'model_type': 'classification', #problem type - regression,classifiction currently supported
-  - 'cross_validation': 5, #specify cross validation folds
-  - 'selected_models': ['Logistic Regression','SVC'], #mention the models to be run. Refer below for supported models
+  - 'dataset': 'train.csv', # add data frame name 
+  - 'target_column': 'target', # add target column name
+  - 'model_type': 'classification', # problem type - regression,classifiction currently supported
+  - 'cross_validation': 5, # specify cross validation folds
+  - 'selected_models': ['Logistic Regression','SVC'], # mention the models to be run. Refer below for supported models
   - 'completed_models': [],
   - 'classification': SklearnPipeline().get_settings_classification(),
   - 'regression': SklearnPipeline().get_settings_regression()
