@@ -13,8 +13,8 @@ Setup Steps:
 
 ## Supported Models:
 ### Regression:
-              1. ["linear_regression"]("https://github.com/Zerve-AI/pypelines/blob/master/pypelines/sklearn/regression/linear_regression.py")
-              2. [lasso_regression](https://github.com/Zerve-AI/pypelines/blob/master/pypelines/sklearn/regression/lasso_regression.py)
-              3. [ridge_regression](https://github.com/Zerve-AI/pypelines/blob/master/pypelines/sklearn/regression/ridge_regression.py)
-              4. [elastic_net_regression](https://github.com/Zerve-AI/pypelines/blob/master/pypelines/sklearn/regression/elastic_net_regression.py)
+1. ["linear_regression"]("https://github.com/Zerve-AI/pypelines/blob/master/pypelines/sklearn/regression/linear_regression.py")
+2. [lasso_regression](https://github.com/Zerve-AI/pypelines/blob/master/pypelines/sklearn/regression/lasso_regression.py)
+3. [ridge_regression](https://github.com/Zerve-AI/pypelines/blob/master/pypelines/sklearn/regression/ridge_regression.py)
+4. [elastic_net_regression](https://github.com/Zerve-AI/pypelines/blob/master/pypelines/sklearn/regression/elastic_net_regression.py)
 
