@@ -13,17 +13,17 @@ Setup Steps:
 
 ## Supported Models:
 ### Regression:
-1. [linear_regression](https://github.com/Zerve-AI/pypelines/blob/master/pypelines/sklearn/regression/linear_regression.py)
-2. [lasso_regression](https://github.com/Zerve-AI/pypelines/blob/master/pypelines/sklearn/regression/lasso_regression.py)
-3. [ridge_regression](https://github.com/Zerve-AI/pypelines/blob/master/pypelines/sklearn/regression/ridge_regression.py)
-4. [elastic_net_regression](https://github.com/Zerve-AI/pypelines/blob/master/pypelines/sklearn/regression/elastic_net_regression.py)
+1. [Linear Regression](https://github.com/Zerve-AI/pypelines/blob/master/pypelines/sklearn/regression/linear_regression.py)
+2. [Lasso Regression](https://github.com/Zerve-AI/pypelines/blob/master/pypelines/sklearn/regression/lasso_regression.py)
+3. [Ridge Regression](https://github.com/Zerve-AI/pypelines/blob/master/pypelines/sklearn/regression/ridge_regression.py)
+4. [Elastic Net Regression](https://github.com/Zerve-AI/pypelines/blob/master/pypelines/sklearn/regression/elastic_net_regression.py)
 
 ### Classification:
-1. [decision_tree](https://github.com/Zerve-AI/pypelines/blob/master/pypelines/sklearn/classification/decision_tree.py)
-2. [logistic_regression](https://github.com/Zerve-AI/pypelines/blob/master/pypelines/sklearn/classification/logistic_regression.py)
-3. [mlp](https://github.com/Zerve-AI/pypelines/blob/master/pypelines/sklearn/classification/mlp.py)
-4. [random_forest](https://github.com/Zerve-AI/pypelines/blob/master/pypelines/sklearn/classification/random_forest.py)
-5. [ridge_classification](https://github.com/Zerve-AI/pypelines/blob/master/pypelines/sklearn/classification/ridge_classification.py)
+1. [Decision Tree](https://github.com/Zerve-AI/pypelines/blob/master/pypelines/sklearn/classification/decision_tree.py)
+2. [Logistic Regression](https://github.com/Zerve-AI/pypelines/blob/master/pypelines/sklearn/classification/logistic_regression.py)
+3. [MLP](https://github.com/Zerve-AI/pypelines/blob/master/pypelines/sklearn/classification/mlp.py)
+4. [Random Forest](https://github.com/Zerve-AI/pypelines/blob/master/pypelines/sklearn/classification/random_forest.py)
+5. [Ridge Classifier](https://github.com/Zerve-AI/pypelines/blob/master/pypelines/sklearn/classification/ridge_classification.py)
 6. [SVC](https://github.com/Zerve-AI/pypelines/blob/master/pypelines/sklearn/classification/svc.py)
-7. [xgboost](https://github.com/Zerve-AI/pypelines/blob/master/pypelines/sklearn/classification/xgboost.py)
+7. [XGBoost](https://github.com/Zerve-AI/pypelines/blob/master/pypelines/sklearn/classification/xgboost.py)
 
