@@ -5,6 +5,12 @@ from .svc_classification import SVCClassification,SVCClassificationComparison
 from .xgboost_classification import XGBoostClassification, XGBoostClassificationComparison
 from .mlp_classification import MLPClassification, MLPClassificationComparison
 from .ridge_classification import RidgeClassification,RidgeClassificationComparison
+from .histgbt_classification import HistGBTClassification,HistGBTClassificationComparison
+from .perceptron_classification import PerceptronClassification, PerceptronClassificationComparison
+from .sgd_classification import SGDClassification, SGDClassificationComparison
+from .gbt_classification import GBTClassification, GBTClassificationComparison
+from .adaboost_classification import ADABoostClassification, ADABoostClassificationComparison
+
 
 
 models_classification = {
@@ -14,7 +20,12 @@ models_classification = {
     'SVC': SVCClassification,
     'XGBoost': XGBoostClassification,
     'MLP': MLPClassification,
-    'Ridge Classifier': RidgeClassification
+    'Ridge Classifier': RidgeClassification,
+    'HistGBT Classifier': HistGBTClassification,
+    'Perceptron Classifier':PerceptronClassification,
+    'SGD Classifier': SGDClassification,
+    'GBT Classifier': GBTClassification,
+    'ADABoost Classifier': ADABoostClassification,
 }
 
 model_comparison_classification = {
@@ -24,8 +35,12 @@ model_comparison_classification = {
     'SVC': SVCClassificationComparison,
     'XGBoost': XGBoostClassificationComparison,
     'MLP': MLPClassificationComparison,
-    'Ridge Regression': RidgeClassificationComparison
-
+    'Ridge Classifier': RidgeClassificationComparison,
+    'HistGBT Classifier': HistGBTClassificationComparison,
+    'Perceptron Classifier':PerceptronClassificationComparison,
+    'SGD Classifier': SGDClassificationComparison,
+    'GBT Classifier': GBTClassificationComparison,
+    'ADABoost Classifier': ADABoostClassificationComparison,
 }
 
 __all__ = [
