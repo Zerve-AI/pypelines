@@ -12,11 +12,11 @@ def default_content(block_type: int) -> str | None:
     """Get the default content for a block based on the block type"""
     if block_type == 5: # Pypeline Block
         config = {
-            'dataset': 'train.csv',
-            'target_column': 'target',
+            'dataset': 'titanic',
+            'target_column': 'Survived',
             'model_type': 'classification',
             'cross_validation': 5,
-            'selected_models': ['ADABoost Classifier'],
+            'selected_models': ['GBT Classifier'],
             'completed_models': [],
             'classification': SklearnPipeline().get_settings_classification(),
             'regression': SklearnPipeline().get_settings_regression()

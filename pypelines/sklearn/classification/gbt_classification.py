@@ -6,9 +6,6 @@ gbt_classification_hyperparams = {
         {'checked': True, 'name': 'n_estimators', 'min': 100, 'max': 10000, 'step': 100},
         {'checked': True, 'name': 'subsample', 'min': 0.1, 'max': 1, 'step': 0.1},
         {'checked': True, 'name': 'max_depth', 'min': 1, 'max': 10000, 'step': 100},
-    ],
-    'categorical': [
-        {'checked': True, 'name': 'loss', 'selected': ['log_loss'], 'values': ['log_loss', 'deviance', 'exponential']},
     ]
 }
 
