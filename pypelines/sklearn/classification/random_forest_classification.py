@@ -1,6 +1,6 @@
 from ..model_base import SklearnModelBase, SklearnModelComparisonBase
 
-random_forest_hyperparams = {
+random_forest_classification_hyperparams = {
     'numerical': [
         {'checked': True, 'name': 'n_estimators', 'min': 10, 'max': 100, 'step': 20},
         {'checked': True, 'name': 'max_depth', 'min': 2, 'max': 10, 'step': 2},
@@ -17,17 +17,17 @@ random_forest_hyperparams = {
     ]
 }
 
-class RandomForest(SklearnModelBase):
+class RandomForestClassification(SklearnModelBase):
     def __init__(self):
         model_string = 'RandomForestClassifier()'
         imports = '''from sklearn.ensemble import RandomForestClassifier\nfrom sklearn.metrics import accuracy_score,make_scorer,f1_score,precision_score,recall_score,roc_auc_score,roc_curve,auc\nimport plotly.express as px'''
         model_type ='Classification'
-        super().__init__('random_forest', model_string, random_forest_hyperparams, imports, model_type)
+        super().__init__('random_forest_classifier', model_string, random_forest_classification_hyperparams, imports, model_type)
 
 
-class RandomForestComparison(SklearnModelComparisonBase):
+class RandomForestClassificationComparison(SklearnModelComparisonBase):
     def __init__(self):
         model_string = 'RandomForestClassifier()'
         imports = '''from sklearn.ensemble import RandomForestClassifier\nfrom sklearn.metrics import accuracy_score,make_scorer,f1_score,precision_score,recall_score,roc_auc_score,roc_curve,auc\nimport plotly.express as px'''
         model_type ='Classification'
-        super().__init__('random_forest', model_string, random_forest_hyperparams, imports, model_type)
+        super().__init__('random_forest_classifier', model_string, random_forest_classification_hyperparams, imports, model_type)
