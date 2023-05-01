@@ -182,3 +182,5 @@ settings.json
 
 *.secrets
 .idea
+
+**/__pycache__

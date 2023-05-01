@@ -14,14 +14,14 @@ perceptron_classification_hyperparams = {
 
 class PerceptronClassification(SklearnModelBase):
     def __init__(self):
-        model_string = 'PerceptronClassifier()'
+        model_string = 'Perceptron()'
         imports = '''from sklearn.linear_model import Perceptron\nfrom sklearn.metrics import accuracy_score,make_scorer,f1_score,precision_score,recall_score,roc_auc_score,roc_curve,auc\nimport plotly.express as px'''
         model_type ='Classification'
         super().__init__('perceptron_classifier', model_string, perceptron_classification_hyperparams, imports,model_type)
 
 class PerceptronClassificationComparison(SklearnModelComparisonBase):
     def __init__(self):
-        model_string = 'PerceptronClassifier()'
+        model_string = 'Perceptron()'
         imports = '''from sklearn.linear_model import Perceptron\nfrom sklearn.metrics import accuracy_score,make_scorer,f1_score,precision_score,recall_score,roc_auc_score,roc_curve,auc\nimport plotly.express as px'''
         model_type ='Classification'
         super().__init__('perceptron_classifier', model_string, perceptron_classification_hyperparams, imports,model_type)

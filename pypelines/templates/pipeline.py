@@ -53,6 +53,7 @@ numeric_transformer = Pipeline(
 # define categorical transformer steps
 categorical_transformer = Pipeline(
     steps=[
+        ("imputer", SimpleImputer(strategy="most_frequent")), 
         ("encoder", OneHotEncoder(handle_unknown="ignore"))
     ]
 )
