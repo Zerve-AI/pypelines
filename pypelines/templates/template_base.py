@@ -32,6 +32,6 @@ class AutoPipelineBaseTemplate:
         :param values: Pass the values that are used in the template
         :return: A tuple of three elements:
         """
-        print(self.default_values)
+        #print(self.default_values)
         code =  Template(self.template).render(**{**self.default_values, **values})
         return code, self.required_imports, self.requirements

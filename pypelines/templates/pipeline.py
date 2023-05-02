@@ -17,6 +17,7 @@ import plotly.graph_objects as go
 template = """
 
 # target dataframe: {{dataset}}
+{{dataset}} = pd.read_csv("./{{dataset}}.csv")
 target = "{{target_column}}"
 features = list({{dataset}}.columns.drop("{{target_column}}"))
 feature_df = {{dataset}}[features]
