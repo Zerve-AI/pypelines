@@ -44,7 +44,7 @@ class SklearnPipeline:
         self.models_clf = models_classification
         self.models_reg = models_regression
 
-    def models(self):
+    def model_list(self):
         """
         The models function returns a list of all the models in the car class
         
