@@ -16,7 +16,7 @@ def default_content(block_type: int):
             'target_column': 'target',
             'model_type': 'regression',
             'cross_validation': 5,
-            'selected_models': ['Bayesian Ridge Regression'],
+            'selected_models': ['Logistic Regression','SVC'],
             'completed_models': [],
             'classification': SklearnPipeline().get_settings_classification(),
             'regression': SklearnPipeline().get_settings_regression()
