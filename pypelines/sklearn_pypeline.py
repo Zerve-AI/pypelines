@@ -178,6 +178,7 @@ class SklearnPipeline:
                 **self.shared_model_params, 
                 'hyperparams': self.compile_hyperparameters(ModelCompTemplate().prefix, params)
                 })
+            code_append += f"##### Model Metrics {model_name} #####"
             code_append += code
             code_append += '\n'
             code_append += f"##### End of Model Pipeline for {model_name} #####"
