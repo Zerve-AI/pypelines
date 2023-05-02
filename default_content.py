@@ -8,13 +8,13 @@ import json # used to convert json to string before saving to db
 from pypelines.sklearn_pypeline import SklearnPipeline
 
 
-def default_content(block_type: int) -> str | None:
+def default_content(block_type: int):
     """Get the default content for a block based on the block type"""
     if block_type == 5: # Pypeline Block
         config = {
             'dataset': 'train.csv',
             'target_column': 'target',
-            'model_type': 'classification',
+            'model_type': 'regression',
             'cross_validation': 5,
             'selected_models': ['Logistic Regression','SVC'],
             'completed_models': [],
