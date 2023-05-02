@@ -1,7 +1,7 @@
 from ..model_base import SklearnModelBase, SklearnModelComparisonBase
 
 
-xgboost_hyperparams = {
+xgboost_classification_hyperparams = {
     'numerical': [
         {'checked': True, 'name': 'learning_rate', 'min': 0.1, 'max': 1, 'step': 0.1},
         {'checked': True, 'name': 'n_estimators', 'min': 100, 'max': 500, 'step': 50},
@@ -21,16 +21,16 @@ xgboost_hyperparams = {
 }
 
 
-class XGBoost(SklearnModelBase):
+class XGBoostClassification(SklearnModelBase):
     def __init__(self):
         model_string = 'XGBClassifier()'
         imports = '''from xgboost import XGBClassifier\nfrom sklearn.metrics import accuracy_score,make_scorer,f1_score,precision_score,recall_score,roc_auc_score,roc_curve,auc\nimport plotly.express as px'''
         model_type ='Classification'
-        super().__init__('xgboost', model_string, xgboost_hyperparams, imports,model_type)
+        super().__init__('xgboost_classifier', model_string, xgboost_classification_hyperparams, imports,model_type)
 
-class XGBoostComparison(SklearnModelComparisonBase):
+class XGBoostClassificationComparison(SklearnModelComparisonBase):
     def __init__(self):
         model_string = 'XGBClassifier()'
         imports = '''from xgboost import XGBClassifier\nfrom sklearn.metrics import accuracy_score,make_scorer,f1_score,precision_score,recall_score,roc_auc_score,roc_curve,auc\nimport plotly.express as px'''
         model_type ='Classification'
-        super().__init__('xgboost', model_string, xgboost_hyperparams, imports,model_type)
+        super().__init__('xgboost_classifier', model_string, xgboost_classification_hyperparams, imports,model_type)

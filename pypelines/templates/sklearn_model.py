@@ -24,14 +24,14 @@ template = '''
 # Model metrics
 {% if model_type == "Regression" %}
 {{prefix}}_predictions = pd.DataFrame({{prefix}}_best_estimator.predict(X_test))
-{{prefix}}_r2_score = r2_score(y_test.iloc[:,0], {{prefix}}_predictions.iloc[:,0])
-{{prefix}}_mean_squared_error = mean_squared_error(y_test.iloc[:,0], {{prefix}}_predictions.iloc[:,0])
-{{prefix}}_explained_variance_score = explained_variance_score(y_test.iloc[:,0], {{prefix}}_predictions.iloc[:,0])
+{{prefix}}_r2_score = r2_score(y_test, {{prefix}}_predictions.iloc[:,0])
+{{prefix}}_mean_squared_error = mean_squared_error(y_test, {{prefix}}_predictions.iloc[:,0])
+{{prefix}}_explained_variance_score = explained_variance_score(y_test, {{prefix}}_predictions.iloc[:,0])
 {{prefix}}_performance_metrics = [['{{prefix}}','r2_score', {{prefix}}_r2_score], 
                                   ['{{prefix}}','mean_squared_error',{{prefix}}_mean_squared_error],
                                   ['{{prefix}}','explained_variance_score', {{prefix}}_explained_variance_score]]
 {{prefix}}_performance_metrics = pd.DataFrame({{prefix}}_performance_metrics, columns=['model','metric', 'value'])
-{{prefix}}_actual_predicted_plot = px.scatter(x=y_test.iloc[:,0], y={{prefix}}_predictions.iloc[:,0])
+{{prefix}}_actual_predicted_plot = px.scatter(x=y_test, y={{prefix}}_predictions.iloc[:,0])
 {{prefix}}_actual_predicted_plot.add_shape(type="line", line=dict(dash='dash'),x0=y.min(), y0=y.min(), x1=y.max(), y1=y.max())
 {{prefix}}_actual_predicted_plot.update_layout(title="Actual vs Predicted",xaxis_title="Actual",yaxis_title="Predicted")
 del df, target, features, feature_df, bool_cols, numerical_cols, categorical_cols, text_cols, col, numeric_transformer, categorical_transformer,text_transformer, preprocessor,X, X_train, X_test, y, y_train, y_test,mean_squared_error,make_scorer,r2_score,explained_variance_score
@@ -41,11 +41,11 @@ del df, target, features, feature_df, bool_cols, numerical_cols, categorical_col
 {{prefix}}_predictions_prob_df = pd.DataFrame()
 {{prefix}}_predictions_prob_df[{{prefix}}_grid_search.classes_[0]] = {{prefix}}_predictions_prob[:,0]
 {{prefix}}_predictions_prob_df[{{prefix}}_grid_search.classes_[1]] = {{prefix}}_predictions_prob[:,1] 
-{{prefix}}_accuracy = accuracy_score(y_test.iloc[:,0], {{prefix}}_predictions.iloc[:,0])
-{{prefix}}_f1_score = f1_score(y_test.iloc[:,0], {{prefix}}_predictions.iloc[:,0])
-{{prefix}}_precision = precision_score(y_test.iloc[:,0], {{prefix}}_predictions.iloc[:,0])
-{{prefix}}_recall = recall_score(y_test.iloc[:,0], {{prefix}}_predictions.iloc[:,0])
-{{prefix}}_roc_auc_score = roc_auc_score(y_test.iloc[:,0], {{prefix}}_predictions_prob_df[{{prefix}}_grid_search.classes_[1]])
+{{prefix}}_accuracy = accuracy_score(y_test, {{prefix}}_predictions.iloc[:,0])
+{{prefix}}_f1_score = f1_score(y_test, {{prefix}}_predictions.iloc[:,0])
+{{prefix}}_precision = precision_score(y_test, {{prefix}}_predictions.iloc[:,0])
+{{prefix}}_recall = recall_score(y_test, {{prefix}}_predictions.iloc[:,0])
+{{prefix}}_roc_auc_score = roc_auc_score(y_test, {{prefix}}_predictions_prob_df[{{prefix}}_grid_search.classes_[1]])
 {{prefix}}_performance_metrics = [['{{prefix}}','accuracy',{{prefix}}_accuracy], 
                                   ['{{prefix}}','f1_score',{{prefix}}_f1_score],
                                   ['{{prefix}}','precision', {{prefix}}_precision],
@@ -74,6 +74,19 @@ del df, target, features, feature_df, bool_cols, numerical_cols, categorical_col
 
 class SkLearnModelTemplate(AutoPipelineBaseTemplate):
     def __init__(self, requirements=None, required_imports=None, default_values=None):
+        """
+        The __init__ function is used to initialize the class.
+        It takes in a template, requirements, required_imports and default_values as arguments.
+        The template argument is a string that contains the code for your function. 
+        The requirements argument is an optional list of strings that contain any additional packages you need to install before running your function (e.g., ['pandas', 'numpy']). 
+        The required_imports argument is an optional list of strings that contain any additional imports you need to run your function (e.g., ['import pandas as pd', 'import numpy as np
+        
+        :param self: Represent the instance of the class
+        :param requirements: Specify the required packages for this template
+        :param required_imports: Specify the imports that are required for the template to run
+        :param default_values: Set the default values of the parameters that will be used in the template
+        :return: The super() class
+        """
         super().__init__(
             template=template,
             requirements=requirements,

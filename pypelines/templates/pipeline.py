@@ -53,6 +53,7 @@ numeric_transformer = Pipeline(
 # define categorical transformer steps
 categorical_transformer = Pipeline(
     steps=[
+        ("imputer", SimpleImputer(strategy="most_frequent")), 
         ("encoder", OneHotEncoder(handle_unknown="ignore"))
     ]
 )
@@ -83,10 +84,27 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_
 
 class PipelineTemplate(AutoPipelineBaseTemplate):
     def __init__(self):
+        """
+        The __init__ function is called when the class is instantiated.
+        It sets up the template, requirements and required imports for this particular 
+        class. The template will be used to generate a Python script that can be run on 
+        the command line or in a Jupyter notebook.
+        
+        :param self: Represent the instance of the class
+        :return: A class object
+        :doc-author: Trelent
+        """
         super().__init__(
                         template=template,
                          requirements=['scikit-learn', 'pandas', 'numpy'],
                          required_imports=required_imports)
     
     def template(self):
+        """
+        The template function is used to create a new template.
+            
+        
+        :param self: Represent the instance of the class
+        :return: The template file
+        """
         return 
