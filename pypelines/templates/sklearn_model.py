@@ -65,8 +65,6 @@ fpr, tpr, thresholds = roc_curve(y_test, {{prefix}}_predictions_prob_df[{{prefix
 )
 {{prefix}}_roc_auc_plot.update_yaxes(scaleanchor="x", scaleratio=1)
 {{prefix}}_roc_auc_plot.update_xaxes(constrain='domain')
-{{prefix}}_roc_auc_plot.show()
-del df, target, features, feature_df, bool_cols, numerical_cols, categorical_cols, text_cols, col, numeric_transformer, categorical_transformer,text_transformer, preprocessor,X, X_train, X_test, y, y_train, y_test,accuracy_score,make_scorer,f1_score,precision_score,recall_score,roc_auc_score,roc_curve,auc
 {% endif %}
 
 

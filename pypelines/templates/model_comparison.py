@@ -1,7 +1,6 @@
 from .template_base import AutoPipelineBaseTemplate
 
 template = '''
-#comparison metrics - {{prefix}}
 {% if model_type == "Regression" %}
 {{prefix}}_performance_metrics
 {{prefix}}_actual_predicted_plot.show()

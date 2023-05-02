@@ -186,3 +186,4 @@ settings.json
 **/__pycache__
 
 */__pycache__
+./pypelines/schemas/__pycache__
