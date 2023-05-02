@@ -14,6 +14,18 @@ from.extra_tree_regression import ExtraTreeRegression, ExtraTreeRegressionCompar
 from .gpr_regression import GPRRegression, GPRRegressionComparison
 from .bayesian_ard_regression import ARDRegression, ARDRegressionComparison
 from .bayesianridge_regression import BayesianRidgeRegression, BayesianRidgeRegressionComparison
+from .quantile_regression import QuantileRegression, QuantileRegressionComparison
+from .huber_regression import HuberRegression, HuberRegressionComparison
+from .theilsen_regression import TheilSenRegression, TheilSenRegressionComparison
+from .passiveaggressive_regression import PassiveAggressiveRegression, PassiveAggressiveRegressionComparison
+from .gamma_regression import GammaRegression, GammaRegressionComparison
+from .tweedie_regression import TweedieRegression, TweedieRegressionComparison
+from .omp_regression import OMPRegression, OMPRegressionComparison
+from .lasso_regression import LassoRegression, LassoRegressionComparison
+from .mt_elastic_net_regression import MTElasticNetRegression, MTElasticNetRegressionComparison
+from .mt_lasso_regression import MTLassoRegression, MTLassoRegressionComparison
+from .ransac_regression import RANSACRegression, RANSACRegressionComparison
+
 
 models_regression = {
     'Elastic Net': ElasticNetRegression,
@@ -30,7 +42,18 @@ models_regression = {
     'ExtraTree Regression': ExtraTreeRegression,
     'GPR Regression': GPRRegression,
     'Bayesian ARD Regression': ARDRegression,
-    'Bayesian Ridge Regression': BayesianRidgeRegression
+    'Bayesian Ridge Regression': BayesianRidgeRegression,
+    'Quantile Regression': QuantileRegression,
+    'Huber Regression': HuberRegression,
+    'TheilSen Regression': TheilSenRegression,
+    'Passive Aggressive Regression': PassiveAggressiveRegression,
+    'Gamma Regression': GammaRegression,
+    'Tweedie Regression': TweedieRegression,
+    'OMP Regression': OMPRegression,
+    'LassoLars Regression': LassoRegression,
+    'MT Elastic Net Regression': MTElasticNetRegression,
+    'MT Lasso Regression': MTLassoRegression,
+    'RANSAC Regression': RANSACRegression
 }
 
 model_comparison_regression = {
@@ -48,5 +71,16 @@ model_comparison_regression = {
     'ExtraTree Regression': ExtraTreeRegressionComparison,
     'GPR Regression': GPRRegressionComparison,
     'Bayesian ARD Regression': ARDRegressionComparison,
-    'Bayesian Ridge Regression': BayesianRidgeRegressionComparison
+    'Bayesian Ridge Regression': BayesianRidgeRegressionComparison,
+    'Quantile Regression': QuantileRegressionComparison,
+    'Huber Regression': HuberRegressionComparison,
+    'TheilSen Regression': TheilSenRegressionComparison,
+    'Passive Aggressive Regression': PassiveAggressiveRegressionComparison,
+    'Gamma Regression': GammaRegressionComparison,
+    'Tweedie Regression': TweedieRegressionComparison,
+    'OMP Regression': OMPRegressionComparison,
+    'LassoLars Regression': LassoRegressionComparison,
+    'MT Elastic Net Regression': MTElasticNetRegressionComparison,
+    'MT Lasso Regression': MTLassoRegressionComparison,
+    'RANSAC Regression': RANSACRegressionComparison
 }
