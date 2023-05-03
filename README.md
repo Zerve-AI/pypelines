@@ -38,5 +38,5 @@ To see a listing of all available models, utilize
 `my_pypeline.code_to_file('/path/to/filename.py')` saves the training code to a file.
 
 ## Supported Models:
-See currently available models: Supported models are shown here: [Regression](https://github.com/Zerve-AI/pypelines/blob/master/pypelines/sklearn/regression/) and [Classification](https://github.com/Zerve-AI/pypelines/blob/master/pypelines/sklearn/classification/)
+See currently available models: [Regression](https://github.com/Zerve-AI/pypelines/blob/master/pypelines/sklearn/regression/) and [Classification](https://github.com/Zerve-AI/pypelines/blob/master/pypelines/sklearn/classification/)
 
