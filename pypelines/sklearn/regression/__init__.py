@@ -22,8 +22,6 @@ from .gamma_regression import GammaRegression, GammaRegressionComparison
 from .tweedie_regression import TweedieRegression, TweedieRegressionComparison
 from .omp_regression import OMPRegression, OMPRegressionComparison
 from .lasso_regression import LassoRegression, LassoRegressionComparison
-from .mt_elastic_net_regression import MTElasticNetRegression, MTElasticNetRegressionComparison
-from .mt_lasso_regression import MTLassoRegression, MTLassoRegressionComparison
 from .ransac_regression import RANSACRegression, RANSACRegressionComparison
 
 
@@ -51,8 +49,6 @@ models_regression = {
     'Tweedie Regression': TweedieRegression,
     'OMP Regression': OMPRegression,
     'LassoLars Regression': LassoRegression,
-    'MT Elastic Net Regression': MTElasticNetRegression,
-    'MT Lasso Regression': MTLassoRegression,
     'RANSAC Regression': RANSACRegression
 }
 
@@ -80,7 +76,5 @@ model_comparison_regression = {
     'Tweedie Regression': TweedieRegressionComparison,
     'OMP Regression': OMPRegressionComparison,
     'LassoLars Regression': LassoRegressionComparison,
-    'MT Elastic Net Regression': MTElasticNetRegressionComparison,
-    'MT Lasso Regression': MTLassoRegressionComparison,
     'RANSAC Regression': RANSACRegressionComparison
 }
