@@ -20,7 +20,7 @@ my_pypeline = SupervisedPipeline(data = your_dataframe, target = 'dependent_vari
 my_pypeline.get_code()
 ```
 
-`SupervisedPipeline()` can also be passed an optional `models` parameter can be passed a list of model names.  If `models` is not specified, all available models will be included.
+`SupervisedPipeline()` can also be passed a list of model names through an optional `models` parameter.  If `models` is not specified, all available models will be included.
 
 To see a listing of all available models, utilize `pypelines.classification_model_list()` and `pypelines.regression_model_list()`
 
