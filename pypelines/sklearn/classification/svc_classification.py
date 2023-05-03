@@ -6,7 +6,7 @@ svc_classification_hyperparams = {
         {'checked': True, 'name': 'degree', 'min': 2, 'max': 5, 'step': 1},
     ],
     'categorical': [
-        {'checked': True, 'name': 'kernel', 'selected': ['linear', 'poly'], 'values': ['linear', 'rbf', 'sigmoid']},
+        {'checked': True, 'name': 'kernel', 'selected': ['linear'], 'values': ['linear', 'rbf', 'sigmoid']},
         {'checked': False, 'name': 'gamma', 'selected': [], 'values': ['scale', 'auto']}
     ]
 }

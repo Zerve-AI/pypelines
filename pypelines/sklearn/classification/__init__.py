@@ -10,7 +10,16 @@ from .perceptron_classification import PerceptronClassification, PerceptronClass
 from .sgd_classification import SGDClassification, SGDClassificationComparison
 from .gbt_classification import GBTClassification, GBTClassificationComparison
 from .adaboost_classification import ADABoostClassification, ADABoostClassificationComparison
-
+from .extra_trees_classification import ExtraTreesClassification, ExtraTreesClassificationComparison
+from .passive_aggressive_classification import PassiveAggressiveClassification,PassiveAggressiveClassificationComparison
+from .lda_classification import LDAClassification, LDAClassificationComparison
+from .qda_classification import QDAClassification, QDAClassificationComparison
+from .nusvc_classification import NuSVCClassification, NuSVCClassificationComparison
+from .guassian_nb_classification import GaussianNBClassification, GaussianNBClassificationComparison
+from .multinomial_nb_classification import MultinomialNBClassification, MultinomialNBClassificationComparison
+from .complement_nb_classification import ComplementNBClassification, ComplementNBClassificationComparison
+from .bernoulii_nb_classification import BernoulliNBClassification, BernoulliNBClassificationComparison
+from .categorical_nb_classification import CategoricalNBClassification, CategoricalNBClassificationComparison
 
 
 models_classification = {
@@ -26,6 +35,16 @@ models_classification = {
     'SGD Classifier': SGDClassification,
     'GBT Classifier': GBTClassification,
     'ADABoost Classifier': ADABoostClassification,
+    'ExtraTrees Classifier': ExtraTreesClassification,
+    'PassiveAggressive Classifier': PassiveAggressiveClassification,
+    'LDA Classifier': LDAClassification,
+    'QDA Classifier': QDAClassification,
+    'NuSVC Classifier': NuSVCClassification,
+    'GaussianNB Classifier': GaussianNBClassification,
+    'MultinomialNB Classifier': MultinomialNBClassification,
+    'ComplementNB Classifier': ComplementNBClassification,
+    'BernoulliNB Classifier': BernoulliNBClassification,
+    'CategoricalNB Classifier': CategoricalNBClassification
 }
 
 model_comparison_classification = {
@@ -41,6 +60,16 @@ model_comparison_classification = {
     'SGD Classifier': SGDClassificationComparison,
     'GBT Classifier': GBTClassificationComparison,
     'ADABoost Classifier': ADABoostClassificationComparison,
+    'ExtraTrees Classifier': ExtraTreesClassificationComparison,
+    'PassiveAggressive Classifier': PassiveAggressiveClassificationComparison,
+    'LDA Classifier': LDAClassificationComparison,
+    'QDA Classifier': QDAClassificationComparison,
+    'NuSVC Classifier': NuSVCClassificationComparison,
+    'GaussianNB Classifier': GaussianNBClassificationComparison,
+    'MultinomialNB Classifier': MultinomialNBClassificationComparison,
+    'ComplementNB Classifier': ComplementNBClassificationComparison,
+    'BernoulliNB Classifier': BernoulliNBClassificationComparison,
+    'CategoricalNB Classifier': CategoricalNBClassificationComparison
 }
 
 __all__ = [
