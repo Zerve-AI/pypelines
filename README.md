@@ -1,19 +1,42 @@
-# pypelines
-Use pypeline_example.ipynb for working example.
+# What is pypelines
+Pipelines is an open source automated machine learning training code generation utility.  It's intended to help data scientists get a fast start on building new models by providing boilerplate sklearn pipeline code for their particular dataset.
+
+The generated code includes:
+- Data preparation and feature engineering
+	- Missing value imputation
+	- Standardization
+	- Cataegorical feature prep
+	- Text parsing; e.g., TF-IDF
+- K-fold cross validation
+- Grid search
+- Model training
+- Model comparison
+
+Training code is generated as follows:
+```
+from pypelines.sklearn_pypeline import SklearnPipeline
+my_pypeline = SupervisedPipeline(data = you_dataframe
+								    , target = 'dependent_variable_name'
+		                            , model_type = 'classification' # or 'regression'
+		                            , nfolds = 5 # default is 5)
+my_pypeline.get_code()
+```
+
+An optional `models` parameter can be passed a list of model names.  If `models` is not specified, all available models will be included.
+
+To see a listing of all available models, utilize 
+
+`pypelines.classification_model_list()` and `pypelines.regression_model_list()`
+
+## A few noteable pypeline object methods
+`my_pypeline.model_list()` returns a list of models to be included in the training code.
+`my_pypeline.grid_search()` returns a dictionary containing the grid search parameters for every model to be included in the training code.
+`my_pypeline.grid_search_for_model('modelName')` returns a dictionary containing the grid search parameters for every model to be included in the training code.
+`my_pypeline.set_grid_search('modelName', grid_search_dictionary)` returns a dictionary containing the grid search parameters for every model to be included in the training code.
+`my_pypeline.get_code()` returns the generated training code.
+`my_pypeline.code_to_clipboard()` copies the training code to the clipboard.
+`my_pypeline.code_to_file('/path/to/filename.py')` saves the training code to a file.
 
 ## Supported Models:
-### Regression:
-1. [Linear Regression](https://github.com/Zerve-AI/pypelines/blob/master/pypelines/sklearn/regression/linear_regression.py)
-2. [Lasso Regression](https://github.com/Zerve-AI/pypelines/blob/master/pypelines/sklearn/regression/lasso_regression.py)
-3. [Ridge Regression](https://github.com/Zerve-AI/pypelines/blob/master/pypelines/sklearn/regression/ridge_regression.py)
-4. [Elastic Net Regression](https://github.com/Zerve-AI/pypelines/blob/master/pypelines/sklearn/regression/elastic_net_regression.py)
-
-### Classification:
-1. [Decision Tree](https://github.com/Zerve-AI/pypelines/blob/master/pypelines/sklearn/classification/decision_tree.py)
-2. [Logistic Regression](https://github.com/Zerve-AI/pypelines/blob/master/pypelines/sklearn/classification/logistic_regression.py)
-3. [MLP](https://github.com/Zerve-AI/pypelines/blob/master/pypelines/sklearn/classification/mlp.py)
-4. [Random Forest](https://github.com/Zerve-AI/pypelines/blob/master/pypelines/sklearn/classification/random_forest.py)
-5. [Ridge Classifier](https://github.com/Zerve-AI/pypelines/blob/master/pypelines/sklearn/classification/ridge_classification.py)
-6. [SVC](https://github.com/Zerve-AI/pypelines/blob/master/pypelines/sklearn/classification/svc.py)
-7. [XGBoost](https://github.com/Zerve-AI/pypelines/blob/master/pypelines/sklearn/classification/xgboost.py)
+See currently available models: Supported models are shown here: [Regression](https://github.com/Zerve-AI/pypelines/blob/master/pypelines/sklearn/regression/) and [Classification](https://github.com/Zerve-AI/pypelines/blob/master/pypelines/sklearn/classification/)
 
