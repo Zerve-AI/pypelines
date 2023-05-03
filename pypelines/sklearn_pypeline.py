@@ -1,5 +1,6 @@
 from typing import Type
 import pandas as pd
+import os
 from .templates.pipeline import PipelineTemplate
 from .schemas import HyperParams, NumericalParam, CategoricalParam
 from .sklearn.classification import models_classification , model_comparison_classification
@@ -21,19 +22,22 @@ class SklearnPipeline:
                  target:str,
                  model_type:str,
                  models:list,
-                 nfolds:int):
+                 nfolds:int,
+                 output_folder:str =  os.getcwd(),
+                 output_format:str = 'code'):
         """
-        The __init__ function is the first function that gets called when you create a new instance of a class.
-        It's job is to initialize all of the attributes of the class. 
-        The self parameter is automatically passed in and refers to an instance of MyClass.
+        The __init__ function is the constructor for a class.
+        It initializes all of the attributes of an object, and it's called when you create a new instance of that class.
+        
         
         :param self: Represent the instance of the class
-        :param data:str: Pass the dataframe name to the class
-        :param target:str: Specify the column name of the target variable
-        :param model_type:str: Specify whether the problem is a classification or regression problem
+        :param data:str: Specify the path to the data file
+        :param target:str: Specify the target variable in the dataset
+        :param model_type:str: Specify the type of model you want to use
         :param models:list: Pass a list of models to the class
-        :param nfolds:int: Set the number of folds for cross validation
-        :return: Nothing
+        :param nfolds:int: Specify the number of folds for cross-validation
+        :param output_folder:str: Specify the folder where the output files will be saved. If it's not specified then files get saved to home directory
+        :param output_format:str: Define the output format - 'code' - shows output on the console, 'script' - save to output directory
         """
         
         self.data = data
@@ -43,6 +47,8 @@ class SklearnPipeline:
         self.nfolds = nfolds
         self.models_clf = models_classification
         self.models_reg = models_regression
+        self.output_type = output_format
+        self.output_folder = output_folder
 
     def model_list(self):
         """
@@ -145,45 +151,95 @@ class SklearnPipeline:
         :return: A string of code
         """
         self.parse_config()
-        code_append = ""
-        code, imports, requirements = PipelineTemplate()(self.pipeline_params)
-        imports = self.default_imports + '\n' + imports
-        code_append += imports
-        code_append += code
-        code_append += '\n'
-        code_append += '\n'
-        code_append += "##### End of Data Processing Pipeline #####"
-        code_append += '\n'
-        code_append += '\n'
 
-        for model_name, params in self.model_params.items():
-            ModelTemplate= self.models_all[model_name]
-            code_append += '\n'
-            code_append += '\n'
-            code_append += f"##### Model Pipeline for {model_name} #####"
-            code_append += '\n'
-            code, model_imports, model_requirements  = ModelTemplate()({
-                **params, 
-                **self.shared_model_params, 
-                'hyperparams': self.compile_hyperparameters(ModelTemplate().prefix, params)
-                })
-            if model_requirements:
-                requirements += model_requirements
-            if model_imports:
-                imports += '\n' + model_imports
-            code_append += code
-            ModelCompTemplate= self.model_comp_all[model_name]
-            code, model_imports, model_requirements  = ModelCompTemplate()({
-                **params, 
-                **self.shared_model_params, 
-                'hyperparams': self.compile_hyperparameters(ModelCompTemplate().prefix, params)
-                })
-            code_append += f"##### Model Metrics {model_name} #####"
+        if self.output_type == 'code':
+            code_append = ""
+            code, imports, requirements = PipelineTemplate()(self.pipeline_params)
+            imports = self.default_imports + '\n' + imports
+            code_append += imports
             code_append += code
             code_append += '\n'
-            code_append += f"##### End of Model Pipeline for {model_name} #####"
+            code_append += '\n'
+            code_append += "##### End of Data Processing Pipeline #####"
+            code_append += '\n'
+            code_append += '\n'
+            for model_name, params in self.model_params.items():
+                ModelTemplate= self.models_all[model_name]
+                code_append += '\n'
+                code_append += '\n'
+                code_append += f"##### Model Pipeline for {model_name} #####"
+                code_append += '\n'
+                code, model_imports, model_requirements  = ModelTemplate()({
+                    **params, 
+                    **self.shared_model_params, 
+                    'hyperparams': self.compile_hyperparameters(ModelTemplate().prefix, params)
+                    })
+                if model_requirements:
+                    requirements += model_requirements
+                if model_imports:
+                    imports += '\n' + model_imports
+                code_append += code
+                ModelCompTemplate= self.model_comp_all[model_name]
+                code, model_imports, model_requirements  = ModelCompTemplate()({
+                    **params, 
+                    **self.shared_model_params, 
+                    'hyperparams': self.compile_hyperparameters(ModelCompTemplate().prefix, params)
+                    })
+                code_append += f"##### Model Metrics {model_name} #####"
+                code_append += code
+                code_append += '\n'
+                code_append += f"##### End of Model Pipeline for {model_name} #####"
+            return code_append
 
-        return code_append
+        elif self.output_type =='script':
+            code_list = {}
+            code_pipeline = ""
+            code, imports, requirements = PipelineTemplate()(self.pipeline_params)
+            imports = self.default_imports + '\n' + imports
+            code_pipeline += imports
+            code_pipeline += code
+            code_pipeline += '\n'
+            code_pipeline += '\n'
+            code_pipeline += "##### End of Data Processing Pipeline #####"
+            code_pipeline += '\n'
+            code_pipeline += '\n'
+            code_list['data_prep_pipeline'] = {'code':code_pipeline}
+            output_file = open(f"{self.output_folder}/data_prep_pipeline.py", "w")
+            n = output_file.write(code_pipeline)
+            output_file.close()
+            for model_name, params in self.model_params.items():
+                code_append = ""
+                ModelTemplate= self.models_all[model_name]
+                code_append += '\n'
+                code_append += '\n'
+                code_append += f"##### Model Pipeline for {model_name} #####"
+                code_append += '\n'
+                code, model_imports, model_requirements  = ModelTemplate()({
+                    **params, 
+                    **self.shared_model_params, 
+                    'hyperparams': self.compile_hyperparameters(ModelTemplate().prefix, params)
+                    })
+                if model_requirements:
+                    requirements += model_requirements
+                if model_imports:
+                    imports += '\n' + model_imports
+                code_append += code
+                ModelCompTemplate= self.model_comp_all[model_name]
+                code, model_imports, model_requirements  = ModelCompTemplate()({
+                    **params, 
+                    **self.shared_model_params, 
+                    'hyperparams': self.compile_hyperparameters(ModelCompTemplate().prefix, params)
+                    })
+                code_append += f"##### Model Metrics {model_name} #####"
+                code_append += code
+                code_append += '\n'
+                code_append += f"##### End of Model Pipeline for {model_name} #####"
+                code_list[model_name] = {'code':code_append}
+                output_file = open(f"{self.output_folder}/{model_name}.py", "w")
+                n = output_file.write(code_append)
+                output_file.close()
+
+            return code_list
     
     def grid_search(self):
         """
