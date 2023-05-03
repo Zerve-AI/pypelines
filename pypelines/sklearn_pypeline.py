@@ -21,8 +21,8 @@ class SklearnPipeline:
                  data:str,
                  target:str,
                  model_type:str,
-                 models:list,
                  nfolds:int,
+                 models:list = None,
                  output_folder:str =  os.getcwd(),
                  output_format:str = 'code'):
         """
@@ -43,7 +43,13 @@ class SklearnPipeline:
         self.data = data
         self.target = target
         self.model_type = model_type
-        self.models = models
+        if models == None and model_type == 'classification':
+            self.models = list(models_classification.keys())
+        elif models == None and model_type == 'regression':
+            self.models = list(models_regression.keys())    
+        else :
+            self.models = models    
+
         self.nfolds = nfolds
         self.models_clf = models_classification
         self.models_reg = models_regression
