@@ -15,18 +15,14 @@ The generated code includes:
 Training code is generated as follows:
 ```
 from pypelines.sklearn_pypeline import SklearnPipeline
-my_pypeline = SupervisedPipeline(data = your_dataframe
-								    , target = 'dependent_variable_name'
-		                            , model_type = 'classification' # or 'regression'
-		                            , nfolds = 5 # default is 5)
+my_pypeline = SupervisedPipeline(data = your_dataframe, target = 'dependent_variable_name', model_type = 'classification' # or 'regression', nfolds = 5 # default is 5)
+
 my_pypeline.get_code()
 ```
 
 An optional `models` parameter can be passed a list of model names.  If `models` is not specified, all available models will be included.
 
-To see a listing of all available models, utilize 
-
-`pypelines.classification_model_list()` and `pypelines.regression_model_list()`
+To see a listing of all available models, utilize `pypelines.classification_model_list()` and `pypelines.regression_model_list()`
 
 ## A few noteable pypeline object methods
 `my_pypeline.model_list()` returns a list of models to be included in the training code.
