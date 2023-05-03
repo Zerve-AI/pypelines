@@ -184,3 +184,7 @@ settings.json
 .idea
 
 **/__pycache__
+
+*/__pycache__
+
+requirements.txt
