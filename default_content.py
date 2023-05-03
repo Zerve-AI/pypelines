@@ -24,3 +24,5 @@ def default_content(block_type: int):
         return json.dumps(config)
     else: 
         return "" 
+    
+

@@ -7,7 +7,8 @@ ard_regression_hyperparams = {
     ],
     'categorical': [
         {'checked': True, 'name': 'fit_intercept', 'selected': [True], 'values': [True,False]},
-        {'checked': True, 'name': 'compute_score', 'selected': [False], 'values': [True,False]}
+        {'checked': True, 'name': 'compute_score', 'selected': [False], 'values': [True,False]},
+        {'checked': True, 'name': 'copy_X', 'selected': [True], 'values': [True,False]}
     ]
 }
 
@@ -16,7 +17,7 @@ class ARDRegression(SklearnModelBase):
         model_string = 'ARDRegression()'
         imports = '''from sklearn.linear_model import ARDRegression \nfrom sklearn.metrics import mean_squared_error,make_scorer,r2_score,explained_variance_score\nimport plotly.express as px\nimport plotly.graph_objects as go'''
         model_type='Regression'
-        super().__init__('bayesian_ard_regression.py', model_string, ard_regression_hyperparams, imports,model_type)
+        super().__init__('bayesian_ard_regression', model_string, ard_regression_hyperparams, imports,model_type)
 
 
 class ARDRegressionComparison(SklearnModelComparisonBase):

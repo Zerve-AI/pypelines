@@ -34,7 +34,6 @@ template = '''
 {{prefix}}_actual_predicted_plot = px.scatter(x=y_test, y={{prefix}}_predictions.iloc[:,0])
 {{prefix}}_actual_predicted_plot.add_shape(type="line", line=dict(dash='dash'),x0=y.min(), y0=y.min(), x1=y.max(), y1=y.max())
 {{prefix}}_actual_predicted_plot.update_layout(title="Actual vs Predicted",xaxis_title="Actual",yaxis_title="Predicted")
-del df, target, features, feature_df, bool_cols, numerical_cols, categorical_cols, text_cols, col, numeric_transformer, categorical_transformer,text_transformer, preprocessor,X, X_train, X_test, y, y_train, y_test,mean_squared_error,make_scorer,r2_score,explained_variance_score
 {% elif model_type == "Classification" %}
 {{prefix}}_predictions = pd.DataFrame({{prefix}}_best_estimator.predict(X_test))
 {{prefix}}_predictions_prob = {{prefix}}_best_estimator.predict_proba(X_test)
@@ -65,8 +64,6 @@ fpr, tpr, thresholds = roc_curve(y_test, {{prefix}}_predictions_prob_df[{{prefix
 )
 {{prefix}}_roc_auc_plot.update_yaxes(scaleanchor="x", scaleratio=1)
 {{prefix}}_roc_auc_plot.update_xaxes(constrain='domain')
-{{prefix}}_roc_auc_plot.show()
-del df, target, features, feature_df, bool_cols, numerical_cols, categorical_cols, text_cols, col, numeric_transformer, categorical_transformer,text_transformer, preprocessor,X, X_train, X_test, y, y_train, y_test,accuracy_score,make_scorer,f1_score,precision_score,recall_score,roc_auc_score,roc_curve,auc
 {% endif %}
 
 

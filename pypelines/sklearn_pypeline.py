@@ -208,3 +208,4 @@ class SklearnPipeline:
         """
         code_gen = self.generate_code()
         return print(code_gen)
+
