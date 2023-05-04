@@ -2,6 +2,10 @@ from ..model_base import SklearnModelBase, SklearnModelComparisonBase
 
 
 gaussian_nb_classification_hyperparams = {
+    'numerical': [
+    ],
+    'categorical': [
+    ]
 }
 
 

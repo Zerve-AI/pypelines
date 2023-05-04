@@ -5,7 +5,7 @@ gaussian_process_classification_hyperparams = {
         {'checked': True, 'name': 'max_iter_predict', 'min': 100, 'max': 10000, 'step': 100},
     ],
     'categorical': [
-        {'checked': True, 'name': 'warm_start', 'selected': ['True'], 'values': ['True', 'False']},
+        {'checked': True, 'name': 'warm_start', 'selected': [True], 'values': [True, False]},
     ]
 }
 

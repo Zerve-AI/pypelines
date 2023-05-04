@@ -1,9 +1,11 @@
-from typing import Type
-import pandas as pd
+#from typing import Type
+import os
+import pyperclip
 from .templates.pipeline import PipelineTemplate
 from .schemas import HyperParams, NumericalParam, CategoricalParam
 from .sklearn.classification import models_classification , model_comparison_classification
 from .sklearn.regression import models_regression, model_comparison_regression
+
 
 classification_imports = '''
 from sklearn.model_selection import GridSearchCV
@@ -15,31 +17,38 @@ from sklearn.model_selection import GridSearchCV
 from sklearn.metrics import mean_squared_error
 '''
 
-class SklearnPipeline:
+class SupervisedPipeline:
     def __init__(self,
                  data:str,
                  target:str,
                  model_type:str,
-                 models:list,
-                 nfolds:int):
+                 nfolds:int,
+                 models:list = None):
         """
-        The __init__ function is the first function that gets called when you create a new instance of a class.
-        It's job is to initialize all of the attributes of the class. 
-        The self parameter is automatically passed in and refers to an instance of MyClass.
+        The __init__ function is the constructor for a class.
+        It initializes all of the attributes of an object, and it's called when you create a new instance of that class.
+        
         
         :param self: Represent the instance of the class
-        :param data:str: Pass the dataframe name to the class
-        :param target:str: Specify the column name of the target variable
-        :param model_type:str: Specify whether the problem is a classification or regression problem
+        :param data:str: Specify the path to the data file
+        :param target:str: Specify the target variable in the dataset
+        :param model_type:str: Specify the type of model you want to use
         :param models:list: Pass a list of models to the class
-        :param nfolds:int: Set the number of folds for cross validation
-        :return: Nothing
+        :param nfolds:int: Specify the number of folds for cross-validation
+        :param output_folder:str: Specify the folder where the output files will be saved. If it's not specified then files get saved to home directory
+        :param output_format:str: Define the output format - 'code' - shows output on the console, 'script' - save to output directory
         """
         
         self.data = data
         self.target = target
         self.model_type = model_type
-        self.models = models
+        if models == None and model_type == 'classification':
+            self.models = list(models_classification.keys())
+        elif models == None and model_type == 'regression':
+            self.models = list(models_regression.keys())    
+        else :
+            self.models = models    
+
         self.nfolds = nfolds
         self.models_clf = models_classification
         self.models_reg = models_regression
@@ -53,7 +62,6 @@ class SklearnPipeline:
         """
         return print(self.models)
     
-
     def get_settings_classification(self):
         """
         The get_settings_classification function returns a dictionary of hyperparameters for each model.
@@ -80,6 +88,39 @@ class SklearnPipeline:
         hyperparameters = {}
         for name, model in self.models_reg.items():
             hyperparameters[name] = model().get_hyperparameters()
+        return hyperparameters
+
+    def get_hyperparameters(self):
+        """
+        The get_settings_classification function returns a dictionary of hyperparameters for each model.
+            The keys are the names of the models and the values are dictionaries containing all possible 
+            hyperparameter settings for that model.
+        
+        :param self: Represent the instance of the class
+        :return: A dictionary of hyperparameters for each model
+        """
+        if   self.model_type == 'classification':
+             self.models_ = self.models_clf
+        elif self.model_type == 'regression':
+             self.models_ = self.models_reg
+        self.model_params = {k:v for k,v in self.models_.items() if k in self.models}
+        hyperparameters = {}
+        for name, model in self.model_params.items():
+            hyperparameters[name] = model().get_hyperparameters()
+            i = 0
+            for key in hyperparameters[name]['numerical']:
+                try:
+                    del hyperparameters[name]['numerical'][i]['checked']
+                except (KeyError,IndexError) as e:
+                    pass
+                i += 1
+            i = 0
+            for key in hyperparameters[name]['categorical']:
+                try:
+                    del hyperparameters[name]['categorical'][i]['checked']
+                except (KeyError,IndexError) as e:
+                    pass
+                i += 1
         return hyperparameters
     
     def compile_hyperparameters(self, model_prefix, params):
@@ -155,7 +196,6 @@ class SklearnPipeline:
         code_append += "##### End of Data Processing Pipeline #####"
         code_append += '\n'
         code_append += '\n'
-
         for model_name, params in self.model_params.items():
             ModelTemplate= self.models_all[model_name]
             code_append += '\n'
@@ -182,21 +222,7 @@ class SklearnPipeline:
             code_append += code
             code_append += '\n'
             code_append += f"##### End of Model Pipeline for {model_name} #####"
-
         return code_append
-    
-    def grid_search(self):
-        """
-        The grid_search function is used to parse the config file and return a dictionary of model parameters.
-                The function will be called by the main script, which will then pass these parameters into the 
-                train_model function. This allows for easy modification of model hyperparameters without having to 
-                change code in multiple places.
-        
-        :param self: Represent the instance of the class
-        :return: A dictionary of the parameters to be used in the model
-        """
-        self.parse_config()
-        return self.model_params
     
     def get_code(self):
         """
@@ -208,4 +234,104 @@ class SklearnPipeline:
         """
         code_gen = self.generate_code()
         return print(code_gen)
+    
+    def code_to_clipboard(self):
+        """
+        The code_to_clipboard function copies the generated code to the clipboard.
+            
+        
+        :param self: Refer to the current instance of a class
+        :return: The generated code is saved to clipboard
+        """
+        code_gen = self.generate_code()
+        return pyperclip.copy(code_gen)
+    
+    def code_to_file(self,
+                     path:str =  os.getcwd()):
+        """
+        The code_to_file function takes the pipeline_params and model_params dictionaries, 
+        and creates a data processing pipeline file and one or more model files. The code for each of these is stored in a dictionary called code_list. 
+        The function then writes the contents of this dictionary to .py files in the specified path.
+        
+        :param self: Represent the instance of the class
+        :param path:str: Specify the path where the files are saved
+        :return: A string 
+        """
+        self.path = path
+        code_list = {}
+        code_pipeline = ""
+        code, imports, requirements = PipelineTemplate()(self.pipeline_params)
+        imports = self.default_imports + '\n' + imports
+        code_pipeline += imports
+        code_pipeline += code
+        code_pipeline += '\n'
+        code_pipeline += '\n'
+        code_pipeline += "##### End of Data Processing Pipeline #####"
+        code_pipeline += '\n'
+        code_pipeline += '\n'
+        code_list['data_prep_pipeline'] = {'code':code_pipeline}
+        output_file = open(f"{self.path}/data_prep_pipeline.py", "w")
+        n = output_file.write(code_pipeline)
+        output_file.close()
+        for model_name, params in self.model_params.items():
+            code_append = ""
+            code_append += code_pipeline
+            ModelTemplate= self.models_all[model_name]
+            code_append += '\n'
+            code_append += '\n'
+            code_append += f"##### Model Pipeline for {model_name} #####"
+            code_append += '\n'
+            code, model_imports, model_requirements  = ModelTemplate()({
+                **params, 
+                **self.shared_model_params, 
+                'hyperparams': self.compile_hyperparameters(ModelTemplate().prefix, params)
+                })
+            if model_requirements:
+                requirements += model_requirements
+            if model_imports:
+                imports += '\n' + model_imports
+            code_append += code
+            ModelCompTemplate= self.model_comp_all[model_name]
+            code, model_imports, model_requirements  = ModelCompTemplate()({
+                **params, 
+                **self.shared_model_params, 
+                'hyperparams': self.compile_hyperparameters(ModelCompTemplate().prefix, params)
+                })
+            code_append += f"##### Model Metrics {model_name} #####"
+            code_append += code
+            code_append += '\n'
+            code_append += f"##### End of Model Pipeline for {model_name} #####"
+            code_list[model_name] = {'code':code_append}
+            output_file = open(f"{self.path}/{model_name}.py", "w")
+            n = output_file.write(code_append)
+            output_file.close()
+        return f'model files saved to {path}'
+    
+    def grid_search_for_model(self,model_name:str=None):
+
+        if   self.model_type == 'classification':
+             self.models_ = self.models_clf
+        elif self.model_type == 'regression':
+             self.models_ = self.models_reg
+        self.model_params = {k:v for k,v in self.models_.items() if k in model_name}
+        hyperparameters = {}
+        for name, model in self.model_params.items():
+            hyperparameters[name] = model().get_hyperparameters()
+            i = 0
+            for key in hyperparameters[name]['numerical']:
+                try:
+                    del hyperparameters[name]['numerical'][i]['checked']
+                except (KeyError,IndexError) as e:
+                    pass
+                i += 1
+            i = 0
+            for key in hyperparameters[name]['categorical']:
+                try:
+                    del hyperparameters[name]['categorical'][i]['checked']
+                except (KeyError,IndexError) as e:
+                    pass
+                i += 1
+        return hyperparameters
+
+    #def set_grid_search_for_model(self):
 

@@ -7,9 +7,9 @@ mlp_classification_hyperparams = {
         {'checked': True, 'name': 'learning_rate', 'min': 0.001, 'max': 0.1, 'step': 0.05},
     ],
     'categorical': [
-        {'checked': True, 'name': 'learning_rate_init', 'selected': ['constant', 'adaptive'],  'value': ['constant', 'invscaling', 'adaptive']},
+        {'checked': True, 'name': 'learning_rate_init', 'selected': ['constant'],  'value': ['constant', 'invscaling', 'adaptive']},
         {'checked': True, 'name': 'solver', 'selected': ['adam'], 'value': ['lbfgs', 'sgd', 'adam']},
-        {'checked': True, 'name': 'activation', 'selected': ['relu', 'tanh'], 'value': ['relu', 'identity', 'logistic', 'tanh']},
+        {'checked': True, 'name': 'activation', 'selected': ['relu'], 'value': ['relu', 'identity', 'logistic', 'tanh']},
         {'checked': True, 'name': 'shuffle', 'selected': [True], 'value': [True, False]},
     ]
 }

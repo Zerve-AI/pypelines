@@ -8,8 +8,8 @@ extra_trees_classification_hyperparams = {
         {'checked': True, 'name': 'max_samples', 'min': 0.1, 'max': 1.0, 'step': 0.1},
     ],
     'categorical': [
-        {'checked': True, 'name': 'criterion', 'selected': [], 'values':  ['gini', 'entropy', 'log_loss']},
-        {'checked': True, 'name': 'max_features', 'selected': [], 'values': ['sqrt', 'log2', None]},
+        {'checked': True, 'name': 'criterion', 'selected': ['gini'], 'values':  ['gini', 'entropy', 'log_loss']},
+        {'checked': True, 'name': 'max_features', 'selected': ['log2'], 'values': ['sqrt', 'log2', None]},
     ]
 }
 

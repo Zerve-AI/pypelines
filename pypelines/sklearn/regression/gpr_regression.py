@@ -2,6 +2,8 @@ from ..model_base import SklearnModelBase,SklearnModelComparisonBase
 
 
 GPR_regression_hyperparams = {
+    'numerical': [
+    ],
     'categorical': [
         {'checked': True, 'name': 'optimizer', 'selected': [None], 'values': [None, "fmin_l_bfgs_b"]},
         {'checked': True, 'name': 'normalize_y', 'selected': [False], 'values': [True, False]},

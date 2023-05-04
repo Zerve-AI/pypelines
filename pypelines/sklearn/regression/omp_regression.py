@@ -2,6 +2,8 @@ from ..model_base import SklearnModelBase,SklearnModelComparisonBase
 
 
 omp_regression_hyperparams = {
+    'numerical': [
+    ],
     'categorical': [
         {'checked': True, 'name': 'fit_intercept', 'selected': [True], 'values': [True,False]},
         {'checked': True, 'name': 'normalize', 'selected': [False], 'values': [True,False]}

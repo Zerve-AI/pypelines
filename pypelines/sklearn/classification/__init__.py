@@ -71,12 +71,3 @@ model_comparison_classification = {
     'BernoulliNB Classifier': BernoulliNBClassificationComparison,
     'CategoricalNB Classifier': CategoricalNBClassificationComparison
 }
-
-__all__ = [
-    #'DecisionTree',
-    'LogisticRegression',
-    'RandomForest',
-    'SVC',
-    #'XGBoost',
-    'MLP'
-]

@@ -7,8 +7,8 @@ passive_aggressive_classification_hyperparams = {
         {'checked': True, 'name': 'C', 'min': 0.1, 'max': 1, 'step': 0.1},
     ],
     'categorical': [
-        {'checked': True, 'name': 'fit_intercept', 'selected': [], 'values':  ['True','False']},
-        {'checked': True, 'name': 'average', 'selected': [], 'values': ['True', 'False']},
+        {'checked': True, 'name': 'fit_intercept', 'selected': [True], 'values':  [True,False]},
+        {'checked': True, 'name': 'average', 'selected': [True], 'values': [True, False]},
     ]
 }
 

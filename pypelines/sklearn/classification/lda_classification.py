@@ -1,9 +1,12 @@
 from ..model_base import SklearnModelBase, SklearnModelComparisonBase
 
 lda_classification_hyperparams = {
+    'numerical': [
+    ],
     'categorical': [
         {'checked': True, 'name': 'solver', 'selected': ['svd'], 'values': ['svd', 'lsqr', 'eigen']},
     ]
+
 }
 
 
