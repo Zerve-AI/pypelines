@@ -188,4 +188,4 @@ settings.json
 */__pycache__
 requirements.txt
 
-./code_output
+code_output

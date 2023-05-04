@@ -6,8 +6,8 @@ complement_nb_classification_hyperparams = {
         {'checked': True, 'name': 'alpha', 'min': 0, 'max': 1, 'step': 0.1},
     ],
     'categorical': [
-        {'checked': True, 'name': 'fit_prior', 'selected': ['True'], 'values': ['True','False']},
-        {'checked': True, 'name': 'force_alpha', 'selected': ['True'], 'values': ['True','False']},
+        {'checked': True, 'name': 'fit_prior', 'selected': [True], 'values': [True,False]},
+        {'checked': True, 'name': 'force_alpha', 'selected': [True], 'values': [True,False]},
     ]
 }
 

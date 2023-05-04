@@ -8,7 +8,7 @@ linearsvc_classification_hyperparams = {
     'categorical': [
         {'checked': True, 'name': 'penalty', 'selected': ['l2'], 'values': ['l1','l2']},
         {'checked': False, 'name': 'loss', 'selected': ['squared_hinge'], 'values': ['hinge', 'squared_hinge']},
-        {'checked': False, 'name': 'fit_intercept', 'selected': ['True'], 'values': ['True', 'False']}
+        {'checked': False, 'name': 'fit_intercept', 'selected': [True], 'values': [True, False]}
     ]
 }
 

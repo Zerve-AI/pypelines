@@ -7,7 +7,7 @@ histgbt_classification_hyperparams = {
         {'checked': True, 'name': 'max_iter', 'min': 1000, 'max': 10000, 'step': 100},
     ],
     'categorical': [
-        {'checked': True, 'name': 'fit_intercept', 'selected': ['True'], 'values': ['True','False']},
+        {'checked': True, 'name': 'fit_intercept', 'selected': [True], 'values': [True,False]},
     ]
 }
 

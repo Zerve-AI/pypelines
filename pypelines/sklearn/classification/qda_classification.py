@@ -1,8 +1,10 @@
 from ..model_base import SklearnModelBase, SklearnModelComparisonBase
 
 qda_classification_hyperparams = {
+    'numerical': [
+    ],
     'categorical': [
-        {'checked': True, 'name': 'store_covariance', 'selected': [], 'values': ['True','False']},
+        {'checked': True, 'name': 'store_covariance', 'selected': [True], 'values': [True,False]},
     ]
 }
 

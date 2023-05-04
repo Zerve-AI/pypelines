@@ -11,9 +11,9 @@ random_forest_classification_hyperparams = {
         {'checked': True, 'name': 'criterion', 'selected': ['gini'], 'values': ['gini', 'entropy']},
         {'checked': True, 'name': 'max_features', 'selected': ['auto'], 'values': ['auto', 'sqrt', 'log2']},
         {'checked': True, 'name': 'bootstrap', 'selected': [True], 'values': [True, False]},
-        {'checked': False, 'name': 'oob_score', 'selected': [], 'values': [True, False]},
-        {'checked': False, 'name': 'warm_start', 'selected': [], 'values': [True, False]},
-        {'checked': False, 'name': 'class_weight', 'selected': [], 'values': ['balanced', 'balanced_subsample']}
+        {'checked': False, 'name': 'oob_score', 'selected': [True], 'values': [True, False]},
+        {'checked': False, 'name': 'warm_start', 'selected': [False], 'values': [True, False]},
+        {'checked': False, 'name': 'class_weight', 'selected': ['balanced'], 'values': ['balanced', 'balanced_subsample']}
     ]
 }
 

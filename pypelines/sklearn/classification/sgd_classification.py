@@ -8,10 +8,10 @@ sgd_classification_hyperparams = {
     'categorical': [
         {'checked': True, 'name': 'loss', 'selected': ['hinge'], 'values': ['hinge', 'log_loss', 'log', 'modified_huber', 'squared_hinge', 'perceptron', 'squared_error', 'huber', 'epsilon_insensitive', 'squared_epsilon_insensitive']},
         {'checked': True, 'name': 'penalty', 'selected': ['l2'], 'values': ['l2', 'l1', 'elasticnet']},
-        {'checked': True, 'name': 'fit_intercept', 'selected': ['True'], 'values': ['True','False']},
-        {'checked': True, 'name': 'shuffle', 'selected': ['True'], 'values': ['True','False']},
+        {'checked': True, 'name': 'fit_intercept', 'selected': [True], 'values': [True,False]},
+        {'checked': True, 'name': 'shuffle', 'selected': [True], 'values': [True,False]},
         {'checked': True, 'name': 'learning_rate', 'selected': ['optimal'], 'values': ['constant','optimal','invscaling','adaptive']},
-        {'checked': True, 'name': 'average', 'selected': ['True'], 'values': ['True','False']},
+        {'checked': True, 'name': 'average', 'selected': [True], 'values': [True,False]},
     ]
 }
 

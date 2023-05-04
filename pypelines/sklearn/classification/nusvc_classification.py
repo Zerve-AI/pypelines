@@ -7,7 +7,7 @@ nusvc_classification_hyperparams = {
     ],
     'categorical': [
         {'checked': True, 'name': 'kernel', 'selected': ['poly'], 'values': ['linear', 'rbf', 'sigmoid','poly','sigmoid']},
-        {'checked': False, 'name': 'gamma', 'selected': [], 'values': ['scale', 'auto']}
+        {'checked': False, 'name': 'gamma', 'selected': ['scale'], 'values': ['scale', 'auto']}
     ]
 }
 

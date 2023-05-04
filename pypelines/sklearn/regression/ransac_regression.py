@@ -4,6 +4,8 @@ from ..model_base import SklearnModelBase,SklearnModelComparisonBase
 ransac_regression_hyperparams = {
     'numerical': [
         {'checked': True, 'name': 'max_trials', 'min': 10, 'max': 100, 'step': 10},
+    ],
+    'categorical': [
     ]
 }
 

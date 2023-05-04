@@ -13,10 +13,10 @@ xgboost_classification_hyperparams = {
         {'checked': True, 'name': 'reg_lambda', 'min': 0.0, 'max': 1.0, 'step': 0.1},
     ],
     'categorical': [
-        {'checked': True, 'name': 'booster', 'selected': [], 'values':  ['gbtree', 'gblinear', 'dart']},
-        {'checked': True, 'name': 'eval_metric', 'selected': [], 'values': ['rmse', 'mae', 'logloss', 'error', 'merror', 'mlogloss', 'auc']},
-        {'checked': True, 'name': 'tree_method', 'selected': [], 'values': ['auto', 'exact', 'approx', 'hist', 'gpu_hist']},
-        {'checked': True, 'name': 'grow_policy', 'selected': [], 'values': ['depthwise', 'lossguide']},
+        {'checked': True, 'name': 'booster', 'selected': ['gbtree'], 'values':  ['gbtree', 'gblinear', 'dart']},
+        {'checked': True, 'name': 'eval_metric', 'selected': ['rmse'], 'values': ['rmse', 'mae', 'logloss', 'error', 'merror', 'mlogloss', 'auc']},
+        {'checked': True, 'name': 'tree_method', 'selected': ['auto'], 'values': ['auto', 'exact', 'approx', 'hist', 'gpu_hist']},
+        {'checked': True, 'name': 'grow_policy', 'selected': ['depthwise'], 'values': ['depthwise', 'lossguide']},
     ]
 }
 

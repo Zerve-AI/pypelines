@@ -10,7 +10,7 @@ from .adaboost_regression import AdaBoostRegression, AdaBoostRegressionCompariso
 from .poisson_regression import PoissonRegression, PoissonRegressionComparison
 from .decision_tree import DecisionTreeRegression, DecisionTreeRegressionComparison
 from .gbt_regression import GBTRegression, GBTRegressionComparison
-from.extra_tree_regression import ExtraTreeRegression, ExtraTreeRegressionComparison
+from .extra_tree_regression import ExtraTreeRegression, ExtraTreeRegressionComparison
 from .gpr_regression import GPRRegression, GPRRegressionComparison
 from .bayesian_ard_regression import ARDRegression, ARDRegressionComparison
 from .bayesianridge_regression import BayesianRidgeRegression, BayesianRidgeRegressionComparison
@@ -21,15 +21,15 @@ from .passiveaggressive_regression import PassiveAggressiveRegression, PassiveAg
 from .gamma_regression import GammaRegression, GammaRegressionComparison
 from .tweedie_regression import TweedieRegression, TweedieRegressionComparison
 from .omp_regression import OMPRegression, OMPRegressionComparison
-from .lasso_regression import LassoRegression, LassoRegressionComparison
+from .lassolars_regression import LassoLarsRegression, LassoLarsRegressionComparison
 from .ransac_regression import RANSACRegression, RANSACRegressionComparison
 
 
 models_regression = {
-    'Elastic Net': ElasticNetRegression,
+    'Elastic Net Regression': ElasticNetRegression,
     'Linear Regression': LinearRegression,
-    'Lasso': LassoRegression,
-    'Ridge': RidgeRegression,
+    'Lasso Regression': LassoRegression,
+    'Ridge Regression': RidgeRegression,
     'SGD Regressor Regression': SGDRegression,
     'Histogram Gradient Boost Regression': HistGBTRegression,
     'Random Forest Regression': RandomForestRegression,
@@ -48,15 +48,15 @@ models_regression = {
     'Gamma Regression': GammaRegression,
     'Tweedie Regression': TweedieRegression,
     'OMP Regression': OMPRegression,
-    'LassoLars Regression': LassoRegression,
+    'LassoLars Regression': LassoLarsRegression,
     'RANSAC Regression': RANSACRegression
 }
 
 model_comparison_regression = {
-    'Elastic Net': ElasticNetRegressionComparison,
+    'Elastic Net Regression': ElasticNetRegressionComparison,
     'Linear Regression': LinearRegressionComparison,
-    'Lasso': LassoRegressionComparison,
-    'Ridge': RidgeRegressionComparison,
+    'Lasso Regression': LassoRegressionComparison,
+    'Ridge Regression': RidgeRegressionComparison,
     'SGD Regressor Regression': SGDRegressionComparison,
     'Histogram Gradient Boost Regression': HistGBTRegressionComparison,
     'Random Forest Regression': RandomForestRegressionComparison,
@@ -75,6 +75,6 @@ model_comparison_regression = {
     'Gamma Regression': GammaRegressionComparison,
     'Tweedie Regression': TweedieRegressionComparison,
     'OMP Regression': OMPRegressionComparison,
-    'LassoLars Regression': LassoRegressionComparison,
+    'LassoLars Regression': LassoLarsRegressionComparison,
     'RANSAC Regression': RANSACRegressionComparison
 }
