@@ -15,7 +15,11 @@ The generated code includes:
 Training code is generated as follows:
 ```
 from pypelines.sklearn_pypeline import SupervisedPipeline
-my_pypeline = SupervisedPipeline(data = your_dataframe, target = 'dependent_variable_name', model_type = 'classification' # or 'regression', nfolds = 5 # default is 5)
+my_pypeline = SupervisedPipeline(data = your_dataframe,
+                                 target = 'dependent_variable_name', 
+				 model_type = 'classification' # or 'regression', 
+				 nfolds = 5 # default is 5
+				 )
 
 my_pypeline.get_code()
 ```
