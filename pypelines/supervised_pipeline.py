@@ -5,6 +5,9 @@ from .templates.pipeline import PipelineTemplate
 from .schemas import HyperParams, NumericalParam, CategoricalParam
 from .sklearn.classification import models_classification , model_comparison_classification
 from .sklearn.regression import models_regression, model_comparison_regression
+import pandas as pd 
+from typing import Union
+import inspect
 
 
 classification_imports = '''
@@ -19,7 +22,7 @@ from sklearn.metrics import mean_squared_error
 
 class SupervisedPipeline:
     def __init__(self,
-                 data:str,
+                 data:Union[str, pd.DataFrame],
                  target:str,
                  model_type:str,
                  nfolds:int,
@@ -38,13 +41,20 @@ class SupervisedPipeline:
         :param output_folder:str: Specify the folder where the output files will be saved. If it's not specified then files get saved to home directory
         :param output_format:str: Define the output format - 'code' - shows output on the console, 'script' - save to output directory
         """
-        
-        self.data = data
+        if isinstance(data, pd.DataFrame):
+            callers_globals = inspect.stack()[1][0].f_globals
+            dataset_name = [k for k,v in callers_globals.items() if v is data][0]
+        elif isinstance(data, str):
+            dataset_name = data
+        else:
+            raise ValueError("data must be a pandas DataFrame or a string")
+
+        self.dataset_name = dataset_name
         self.target = target
         self.model_type = model_type
-        if models == None and model_type == 'classification':
+        if models is None and model_type == 'classification':
             self.models = list(models_classification.keys())
-        elif models == None and model_type == 'regression':
+        elif models is None and model_type == 'regression':
             self.models = list(models_regression.keys())    
         else :
             self.models = models    
@@ -173,7 +183,7 @@ class SupervisedPipeline:
            selected_models = self.models 
            self.metric = 'mean_squared_error'
            self.default_imports = regression_imports
-        self.pipeline_params = {'dataset': self.data, 'target_column': self.target}
+        self.pipeline_params = {'dataset': self.dataset_name, 'target_column': self.target}
         self.shared_model_params = {'cross_validation':self.nfolds, 'metric':self.metric }
         self.model_params = {k:v for k,v in self.model_param.items() if k in selected_models}
         self.model_comp_params = {k:v for k,v in self.model_param.items() if k in selected_models}
