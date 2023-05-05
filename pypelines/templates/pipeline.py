@@ -17,7 +17,6 @@ import plotly.graph_objects as go
 template = """
 
 # target dataframe: {{dataset}}
-{{dataset}} = pd.read_csv("./{{dataset}}.csv")
 target = "{{target_column}}"
 features = list({{dataset}}.columns.drop("{{target_column}}"))
 feature_df = {{dataset}}[features]
@@ -28,7 +27,7 @@ bool_cols = feature_df.select_dtypes(include=['bool']).columns.tolist()
 numerical_cols = feature_df.select_dtypes(include=['int', 'float']).columns.tolist()
 categorical_cols = feature_df.select_dtypes(include=['object']).columns.tolist()
 text_cols = feature_df.select_dtypes(include=['string']).columns.tolist()
-# check categorical columns for high cardinality
+
 
 sample_size = np.min([10000, {{dataset}}.shape[0]])
 unique_theshold = np.min([100, sample_size/10])
@@ -50,6 +49,11 @@ numeric_transformer = Pipeline(
         ("imputer", SimpleImputer(strategy="median")), 
         ("scaler", StandardScaler())]
 )
+
+
+print(numerical_cols)
+print(categorical_cols)
+print(text_cols)
 
 # define categorical transformer steps
 categorical_transformer = Pipeline(
