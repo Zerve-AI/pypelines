@@ -8,7 +8,7 @@ decision_tree_regression_hyperparams = {
         {'checked': False, 'name': 'min_samples_leaf', 'min': 2, 'max': 10, 'step': 3},
     ],
     'categorical': [
-        {'checked': True, 'name': 'max_features', 'selected': [None], 'values': ["auto", "sqrt", "log2"]},
+        {'checked': True, 'name': 'max_features', 'selected': ["auto"], 'values': ["auto", "sqrt", "log2"]},
         {'checked': False, 'name': 'splitter', 'selected': ["best"], 'values': ["best", "random"]}
     ]
 }
