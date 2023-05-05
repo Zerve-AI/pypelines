@@ -43,17 +43,16 @@ for col in text_cols:
         categorical_cols.append(col)
         text_cols.remove(col)
 
+print(numerical_cols)
+print(categorical_cols)
+print(text_cols)
+
 # define numeric transformer steps
 numeric_transformer = Pipeline(
     steps=[
         ("imputer", SimpleImputer(strategy="median")), 
         ("scaler", StandardScaler())]
 )
-
-
-print(numerical_cols)
-print(categorical_cols)
-print(text_cols)
 
 # define categorical transformer steps
 categorical_transformer = Pipeline(
@@ -72,11 +71,9 @@ text_transformer = Pipeline(
 
 # create the preprocessing pipelines for both numeric and categorical data
 preprocessor = ColumnTransformer(
-    transformers=[
-        ('num', numeric_transformer , numerical_cols),
+        transformers=[('num', numeric_transformer , numerical_cols),
         ('cat', categorical_transformer, categorical_cols),
-        ('text', text_transformer, text_cols),
-    ]
+        *[(f'text_{t_col}', text_transformer, t_col) for t_col in text_cols]]
 )
 
 # train test split
