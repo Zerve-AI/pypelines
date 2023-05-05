@@ -8,7 +8,7 @@ tweedie_regression_hyperparams = {
         {'checked': True, 'name': 'alpha', 'min': 0, 'max': 5, 'step': 1}          
     ],
     'categorical': [
-        {'checked': False, 'name': 'link', 'selected': [False], 'values': ['auto', 'log', 'identity']},
+        {'checked': False, 'name': 'link', 'selected': ['auto'], 'values': ['auto', 'log', 'identity']},
         {'checked': False, 'name': 'fit_intercept', 'selected': [True], 'values': [True,False]}        
     ]
 }

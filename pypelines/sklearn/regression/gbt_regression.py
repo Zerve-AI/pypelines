@@ -10,7 +10,7 @@ gbt_regression_hyperparams = {
         {'checked': False, 'name': 'min_samples_leaf', 'min': 0.1, 'max': 1, 'step': 0.5},
     ],
     'categorical': [
-        {'checked': False, 'name': 'max_features', 'selected': [None], 'values': ["auto", "sqrt", "log2"]},
+        {'checked': False, 'name': 'max_features', 'selected': ['auto'], 'values': ["auto", "sqrt", "log2"]},
     ]
 }
 
