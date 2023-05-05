@@ -32,12 +32,14 @@ text_cols = feature_df.select_dtypes(include=['string']).columns.tolist()
 sample_size = np.min([10000, {{dataset}}.shape[0]])
 unique_theshold = np.min([100, sample_size/10])
 
-# check categorical columns for high cardinality
+# check categorical columns for high cardinality and make it text column
 for col in categorical_cols:
     if {{dataset}}[col].sample(sample_size).nunique() > unique_theshold:
+        text_cols.append(col)
         categorical_cols.remove(col)
+        
 
-# check text columns for low cardinality
+# check text columns for low cardinality and make it categorical columns
 for col in text_cols:
     if {{dataset}}[col].sample(sample_size).nunique() < unique_theshold:
         categorical_cols.append(col)
