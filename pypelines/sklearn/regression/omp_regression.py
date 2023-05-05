@@ -3,10 +3,11 @@ from ..model_base import SklearnModelBase,SklearnModelComparisonBase
 
 omp_regression_hyperparams = {
     'numerical': [
+        {'checked': True, 'name': 'n_nonzero_coefs', 'min': 0, 'max': 10, 'step': 2},
     ],
     'categorical': [
-        {'checked': True, 'name': 'fit_intercept', 'selected': [True], 'values': [True,False]},
-        {'checked': True, 'name': 'normalize', 'selected': [False], 'values': [True,False]}
+        {'checked': False, 'name': 'fit_intercept', 'selected': [True], 'values': [True,False]},
+        {'checked': False, 'name': 'normalize', 'selected': [False], 'values': [True,False]}
     ]
 }
 

@@ -3,11 +3,13 @@ from ..model_base import SklearnModelBase,SklearnModelComparisonBase
 
 decision_tree_regression_hyperparams = {
     'numerical': [
-        {'checked': True, 'name': 'max_depth', 'min': 1, 'max': 100, 'step': 10}
+        {'checked': True, 'name': 'max_depth', 'min': 1, 'max': 10, 'step': 3},
+        {'checked': False, 'name': 'min_samples_split', 'min': 0.1, 'max': 0.5, 'step': 0.2},
+        {'checked': False, 'name': 'min_samples_leaf', 'min': 2, 'max': 10, 'step': 3},
     ],
     'categorical': [
         {'checked': True, 'name': 'max_features', 'selected': [None], 'values': ["auto", "sqrt", "log2"]},
-        {'checked': True, 'name': 'splitter', 'selected': ["best"], 'values': ["best", "random"]}
+        {'checked': False, 'name': 'splitter', 'selected': ["best"], 'values': ["best", "random"]}
     ]
 }
 

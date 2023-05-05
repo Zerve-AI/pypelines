@@ -3,11 +3,9 @@ from ..model_base import SklearnModelBase,SklearnModelComparisonBase
 
 quantile_regression_hyperparams = {
     'numerical': [
-        {'checked': True, 'name': 'quantile', 'min': 0, 'max': 1, 'step': 0.5},
-        {'checked': True, 'name': 'alpha', 'min': 0.1, 'max': 1, 'step': 0.5}        
+        {'checked': True, 'name': 'alpha', 'min': 0.1, 'max': 2, 'step': 0.5}        
     ],
     'categorical': [
-        {'checked': True, 'name': 'solver', 'selected': ['interior-point'], 'values': ['highs-ds', 'highs-ipm', 'highs', 'interior-point', 'revised simplex']}
     ]
 }
 

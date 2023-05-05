@@ -119,17 +119,17 @@ class SupervisedPipeline:
             hyperparameters[name] = model().get_hyperparameters()
             i = 0
             for key in hyperparameters[name]['numerical']:
-                try:
-                    del hyperparameters[name]['numerical'][i]['checked']
-                except (KeyError,IndexError) as e:
-                    pass
+                # try:
+                #     del hyperparameters[name]['numerical'][i]['checked']
+                # except (KeyError,IndexError) as e:
+                #     pass
                 i += 1
             i = 0
             for key in hyperparameters[name]['categorical']:
-                try:
-                    del hyperparameters[name]['categorical'][i]['checked']
-                except (KeyError,IndexError) as e:
-                    pass
+                # try:
+                #     del hyperparameters[name]['categorical'][i]['checked']
+                # except (KeyError,IndexError) as e:
+                #     pass
                 i += 1
         return hyperparameters
     
@@ -148,6 +148,7 @@ class SupervisedPipeline:
         :return: A hyperparams object
         """
         hyperparams = []
+        
         for k, v in params.items():
             for p in v:
                 if p.get('checked')==False:
@@ -329,17 +330,17 @@ class SupervisedPipeline:
             hyperparameters[name] = model().get_hyperparameters()
             i = 0
             for key in hyperparameters[name]['numerical']:
-                try:
-                    del hyperparameters[name]['numerical'][i]['checked']
-                except (KeyError,IndexError) as e:
-                    pass
+                # try:
+                #     del hyperparameters[name]['numerical'][i]['checked']
+                # except (KeyError,IndexError) as e:
+                #     pass
                 i += 1
             i = 0
             for key in hyperparameters[name]['categorical']:
-                try:
-                    del hyperparameters[name]['categorical'][i]['checked']
-                except (KeyError,IndexError) as e:
-                    pass
+                # try:
+                #     del hyperparameters[name]['categorical'][i]['checked']
+                # except (KeyError,IndexError) as e:
+                #     pass
                 i += 1
         return hyperparameters
 

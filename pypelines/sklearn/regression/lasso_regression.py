@@ -4,14 +4,11 @@ from ..model_base import SklearnModelBase,SklearnModelComparisonBase
 
 lasso_regression_hyperparams = {
     'numerical': [
-        {'checked': True, 'name': 'alpha', 'min': 10, 'max': 100, 'step': 10},
-        {'checked': True, 'name': 'max_iter', 'min': 100, 'max': 1000, 'step': 100},
+        {'checked': True, 'name': 'alpha', 'min': 0, 'max': 2, 'step': .5},
+        {'checked': False, 'name': 'max_iter', 'min': 100, 'max': 1000, 'step': 100},
     ],
     'categorical': [
-        {'checked': True, 'name': 'fit_intercept', 'selected': [True], 'values': [True, False]},
-        {'checked': True, 'name': 'precompute', 'selected': [False], 'values': [True, False]},
-        {'checked': True, 'name': 'positive', 'selected': [True], 'values': [True, False]},
-        {'checked': True, 'name': 'selection', 'selected': ['cyclic'], 'values': ['cyclic', 'random']}
+        {'checked': False, 'name': 'fit_intercept', 'selected': [True], 'values': [True, False]},
     ]
 }
 

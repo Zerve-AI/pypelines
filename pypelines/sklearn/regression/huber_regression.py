@@ -3,11 +3,12 @@ from ..model_base import SklearnModelBase,SklearnModelComparisonBase
 
 huber_regression_hyperparams = {
     'numerical': [
-        {'checked': True, 'name': 'max_iter', 'min': 10, 'max': 100, 'step': 10}      
+        {'checked': True, 'name': 'epsilon', 'min': 1, 'max': 10, 'step': 2},
+        {'checked': True, 'name': 'alpha', 'min': 0, 'max': 3, 'step': 0.5}
+        
     ],
     'categorical': [
-        {'checked': True, 'name': 'warm_start', 'selected': [False], 'values': [True,False]},
-        {'checked': True, 'name': 'fit_intercept', 'selected': [True], 'values': [True,False]}        
+        {'checked': False, 'name': 'fit_intercept', 'selected': [True], 'values': [True,False]}        
     ]
 }
 
