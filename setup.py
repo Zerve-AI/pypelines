@@ -6,7 +6,8 @@ setup(
     packages=find_packages(),
     install_requires=[
         'scikit-learn',
-        'pandas'
+        'pandas',
+        'pyperclip',
     ],
     entry_points={
         'console_scripts': [
