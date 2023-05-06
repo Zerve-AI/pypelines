@@ -3,13 +3,11 @@ from ..model_base import SklearnModelBase,SklearnModelComparisonBase
 
 passiveaggressive_regression_hyperparams = {
     'numerical': [
-        {'checked': True, 'name': 'C', 'min': 0, 'max': 1, 'step': 0.5},
-        {'checked': True, 'name': 'max_iter', 'min': 100, 'max': 1000, 'step': 100}        
+        {'checked': True, 'name': 'C', 'min': 0, 'max': 2, 'step': 0.5},
     ],
     'categorical': [
-        {'checked': True, 'name': 'early_stopping', 'selected': [False], 'values': [True,False]},
-        {'checked': True, 'name': 'warm_start', 'selected': [False], 'values': [True,False]},
-        {'checked': True, 'name': 'early_stopping', 'selected': [False], 'values': [True,False]},
+        {'checked': False, 'name': 'early_stopping', 'selected': [True], 'values': [True,False]},
+        {'checked': False, 'name': 'shuffle', 'selected': [True], 'values': [True,False]},
     ]
 }
 

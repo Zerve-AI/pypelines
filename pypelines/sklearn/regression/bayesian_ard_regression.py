@@ -3,12 +3,11 @@ from ..model_base import SklearnModelBase,SklearnModelComparisonBase
 
 ard_regression_hyperparams = {
     'numerical': [
-        {'checked': True, 'name': 'n_iter', 'min': 10, 'max': 300, 'step': 50}
+        {'checked': False, 'name': 'n_iter', 'min': 10, 'max': 300, 'step': 50}
     ],
     'categorical': [
-        {'checked': True, 'name': 'fit_intercept', 'selected': [True], 'values': [True,False]},
-        {'checked': True, 'name': 'compute_score', 'selected': [False], 'values': [True,False]},
-        {'checked': True, 'name': 'copy_X', 'selected': [True], 'values': [True,False]}
+        {'checked': False, 'name': 'fit_intercept', 'selected': [True], 'values': [True,False]},
+        {'checked': False, 'name': 'compute_score', 'selected': [False], 'values': [True,False]},
     ]
 }
 

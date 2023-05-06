@@ -3,11 +3,9 @@ from ..model_base import SklearnModelBase,SklearnModelComparisonBase
 
 linear_regression_hyperparams = {
     'numerical': [
-        {'checked': True, 'name': 'n_jobs', 'min': 1, 'max': 10, 'step': 1},
     ],
     'categorical': [
-        {'checked': True, 'name': 'fit_intercept', 'selected': [True], 'values': [True, False]},
-        {'checked': False, 'name': 'normalize', 'selected': [True], 'values': [True, False]},
+        {'checked': False, 'name': 'fit_intercept', 'selected': [True], 'values': [True, False]}
     ]
 }
 

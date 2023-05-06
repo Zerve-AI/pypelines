@@ -3,17 +3,19 @@ from ..model_base import SklearnModelComparisonBase
 
 sgd_regression_hyperparams = {
     'numerical': [
-        {'checked': True, 'name': 'alpha', 'min': 0.1, 'max': 1, 'step': 0.5},
-        {'checked': True, 'name': 'l1_ratio', 'min': 0.0, 'max': 1.0, 'step': 0.1},
-        {'checked': True, 'name': 'max_iter', 'min': 500, 'max': 1000, 'step': 500},
-        {'checked': True, 'name': 'epsilon', 'min': 0.001, 'max': 0.1, 'step': 0.05},
+        {'checked': True, 'name': 'alpha', 'min': 0.0001, 'max': 2, 'step': 0.5},
+        {'checked': True, 'name': 'l1_ratio', 'min': 0.0, 'max': 1.0, 'step': 0.5},
+        {'checked': False, 'name': 'max_iter', 'min': 500, 'max': 1000, 'step': 500},
+        {'checked': False, 'name': 'epsilon', 'min': 0.001, 'max': 0.1, 'step': 0.05},
+        {'checked': False, 'name': 'power_t', 'min': 0.01, 'max': 0.1, 'step': 0.04}
 
     ],
     'categorical': [
-        {'checked': True, 'name': 'fit_intercept', 'selected': [True], 'values': [True, False]},
-        {'checked': True, 'name': 'early_stopping', 'selected': [False], 'values': [True, False]},
-        {'checked': True, 'name': 'warm_start', 'selected': [False], 'values': [True, False]},
-        {'checked': True, 'name': 'shuffle', 'selected': [True], 'values': [True, False]}
+        {'checked': True, 'name': 'penalty', 'selected': ['l2'], 'values': ['l2', 'l1', 'elasticnet']},
+        {'checked': False, 'name': 'fit_intercept', 'selected': [True], 'values': [True, False]},
+        {'checked': False, 'name': 'early_stopping', 'selected': [True], 'values': [True, False]},
+        {'checked': False, 'name': 'learning_rate', 'selected': ['invscaling'], 'values': ['invscaling', 'constant', 'optimal', 'adaptive']},
+        {'checked': False, 'name': 'shuffle', 'selected': [True], 'values': [True, False]}
     ]
 }
 

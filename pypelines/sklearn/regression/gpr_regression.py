@@ -5,9 +5,8 @@ GPR_regression_hyperparams = {
     'numerical': [
     ],
     'categorical': [
-        {'checked': True, 'name': 'optimizer', 'selected': [None], 'values': [None, "fmin_l_bfgs_b"]},
-        {'checked': True, 'name': 'normalize_y', 'selected': [False], 'values': [True, False]},
-        {'checked': True, 'name': 'copy_X_train', 'selected': [True], 'values': [True, False]}
+        {'checked': False, 'name': 'optimizer', 'selected': [None], 'values': [None, "fmin_l_bfgs_b"]},
+        {'checked': False, 'name': 'normalize_y', 'selected': [False], 'values': [True, False]},
     ]
 }
 

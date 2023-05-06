@@ -3,12 +3,14 @@ from ..model_base import SklearnModelBase,SklearnModelComparisonBase
 
 extratree_regression_hyperparams = {
     'numerical': [
-        {'checked': True, 'name': 'n_estimators', 'min': 10, 'max': 100, 'step': 10}
+        {'checked': True, 'name': 'n_estimators', 'min': 10, 'max': 200, 'step': 50},
+        {'checked': True, 'name': 'max_depth', 'min': 10, 'max': 200, 'step': 50},
+        {'checked': False, 'name': 'min_samples_split', 'min': 2, 'max': 200, 'step': 50},
+        {'checked': False, 'name': 'min_samples_leaf', 'min': 0.1, 'max': 0.5, 'step': 0.1},
     ],
     'categorical': [
-        {'checked': True, 'name': 'max_features', 'selected': [None], 'values': ["auto", "sqrt", "log2"]},
-        {'checked': True, 'name': 'warm_start', 'selected': [False], 'values': [True, False]},
-        {'checked': True, 'name': 'bootstrap', 'selected': [False], 'values': [True, False]}
+        {'checked': False, 'name': 'max_features', 'selected': ['auto'], 'values': ["auto", "sqrt", "log2"]},
+        {'checked': False, 'name': 'bootstrap', 'selected': [True], 'values': [True, False]}
     ]
 }
 

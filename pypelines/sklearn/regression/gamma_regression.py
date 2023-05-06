@@ -3,11 +3,11 @@ from ..model_base import SklearnModelBase,SklearnModelComparisonBase
 
 gamma_regression_hyperparams = {
     'numerical': [
-        {'checked': True, 'name': 'max_iter', 'min': 10, 'max': 100, 'step': 10}      
+        {'checked': False, 'name': 'max_iter', 'min': 10, 'max': 100, 'step': 10},      
+        {'checked': True, 'name': 'alpha', 'min': 0, 'max': 2, 'step': 1}      
     ],
     'categorical': [
-        {'checked': True, 'name': 'warm_start', 'selected': [False], 'values': [True,False]},
-        {'checked': True, 'name': 'fit_intercept', 'selected': [True], 'values': [True,False]}        
+        {'checked': False, 'name': 'fit_intercept', 'selected': [True], 'values': [True,False]}        
     ]
 }
 

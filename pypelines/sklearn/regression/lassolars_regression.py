@@ -3,13 +3,11 @@ from ..model_base import SklearnModelBase,SklearnModelComparisonBase
 
 lassolars_regression_hyperparams = {
     'numerical': [
-        {'checked': True, 'name': 'alpha', 'min': 0, 'max': 1, 'step': 0.5},
-        {'checked': True, 'name': 'max_iter', 'min': 10, 'max': 500, 'step': 50}     
+        {'checked': True, 'name': 'alpha', 'min': 0, 'max': 2, 'step': 0.5},
+        {'checked': False, 'name': 'max_iter', 'min': 10, 'max': 500, 'step': 50}     
     ],
     'categorical': [
-        {'checked': True, 'name': 'warm_start', 'selected': [False], 'values': [True,False]},
-        {'checked': True, 'name': 'fit_intercept', 'selected': [True], 'values': [True,False]},
-        {'checked': True, 'name': 'positive', 'selected': [False], 'values': [True,False]}            
+        {'checked': False, 'name': 'fit_intercept', 'selected': [True], 'values': [True,False]}
     ]
 }
 
