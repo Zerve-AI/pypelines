@@ -2,10 +2,10 @@ from ..model_base import SklearnModelBase,SklearnModelComparisonBase
 
 logisitic_regression_hyperparams = {
     'numerical': [
-        {'checked': True, 'name': 'C', 'min': 0.1, 'max': 1, 'step': 0.1},
+        {'search': True, 'name': 'C', 'min': 0.1, 'max': 1, 'step': 0.1},
     ],
     'categorical': [
-        {'checked': True, 'name': 'penalty', 'selected': ['l2'], 'values': ['l2', 'elasticnet', 'none']}
+        {'search': False, 'name': 'penalty', 'selected': ['l2'], 'values': ['l2', 'elasticnet', 'none']}
     ]
 }
 

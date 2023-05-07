@@ -4,7 +4,7 @@ lda_classification_hyperparams = {
     'numerical': [
     ],
     'categorical': [
-        {'checked': True, 'name': 'solver', 'selected': ['svd'], 'values': ['svd', 'lsqr', 'eigen']},
+        {'search': True, 'name': 'solver', 'selected': ['svd'], 'values': ['svd', 'lsqr', 'eigen']},
     ]
 
 }

@@ -3,12 +3,12 @@ from ..model_base import SklearnModelBase,SklearnModelComparisonBase
 
 random_forest_regression_hyperparams = {
     'numerical': [
-        {'checked': True, 'name': 'n_estimators', 'min': 50, 'max': 150, 'step': 35},
-        {'checked': True, 'name': 'max_depth', 'min': 5, 'max': 50, 'step': 10},
-        {'checked': True, 'name': 'min_samples_leaf', 'min': 1, 'max': 50, 'step': 20}
+        {'search': True, 'name': 'n_estimators', 'min': 50, 'max': 150, 'step': 35},
+        {'search': True, 'name': 'max_depth', 'min': 5, 'max': 50, 'step': 10},
+        {'search': True, 'name': 'min_samples_leaf', 'min': 1, 'max': 50, 'step': 20}
     ],
     'categorical': [
-        {'checked': False, 'name': 'bootstrap', 'selected': [True], 'values': [True, False]},
+        {'search': False, 'name': 'bootstrap', 'selected': [True], 'values': [True, False]},
     ]
 }
 

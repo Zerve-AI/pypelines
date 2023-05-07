@@ -8,7 +8,7 @@ from .histgbt_regression import HistGBTRegression, HistGBTRegressionComparison
 from .random_forest_regression import RandomForestRegression, RandomForestRegressionComparison
 from .adaboost_regression import AdaBoostRegression, AdaBoostRegressionComparison
 from .poisson_regression import PoissonRegression, PoissonRegressionComparison
-from .decision_tree import DecisionTreeRegression, DecisionTreeRegressionComparison
+from .decision_tree_regression import DecisionTreeRegression, DecisionTreeRegressionComparison
 from .gbt_regression import GBTRegression, GBTRegressionComparison
 from .extra_tree_regression import ExtraTreeRegression, ExtraTreeRegressionComparison
 from .gpr_regression import GPRRegression, GPRRegressionComparison
@@ -52,7 +52,7 @@ models_regression = {
     'RANSAC Regression': RANSACRegression
 }
 
-model_comparison_regression = {
+models_comparison_regression = {
     'Elastic Net Regression': ElasticNetRegressionComparison,
     'Linear Regression': LinearRegressionComparison,
     'Lasso Regression': LassoRegressionComparison,
@@ -77,4 +77,26 @@ model_comparison_regression = {
     'OMP Regression': OMPRegressionComparison,
     'LassoLars Regression': LassoLarsRegressionComparison,
     'RANSAC Regression': RANSACRegressionComparison
+}
+
+
+
+models_regression_default = {
+    'Elastic Net Regression': ElasticNetRegression,
+    'Linear Regression': LinearRegression,
+    'Lasso Regression': LassoRegression,
+    'Ridge Regression': RidgeRegression,
+    'Random Forest Regression': RandomForestRegression,
+    'Decision Tree Regression': DecisionTreeRegression,
+    'GBT Regression': GBTRegression
+}
+
+models_comparison_regression_default = {
+    'Elastic Net Regression': ElasticNetRegressionComparison,
+    'Linear Regression': LinearRegressionComparison,
+    'Lasso Regression': LassoRegressionComparison,
+    'Ridge Regression': RidgeRegressionComparison,
+    'Random Forest Regression': RandomForestRegressionComparison,
+    'Decision Tree Regression': DecisionTreeRegressionComparison,
+    'GBT Regression': GBTRegressionComparison
 }

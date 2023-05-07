@@ -3,7 +3,7 @@ from ..model_base import SklearnModelBase,SklearnModelComparisonBase
 
 quantile_regression_hyperparams = {
     'numerical': [
-        {'checked': True, 'name': 'alpha', 'min': 0.1, 'max': 2, 'step': 0.5}        
+        {'search': True, 'name': 'alpha', 'min': 0.1, 'max': 2, 'step': 0.5}        
     ],
     'categorical': [
     ]

@@ -2,12 +2,10 @@ from ..model_base import SklearnModelBase, SklearnModelComparisonBase
 
 histgbt_classification_hyperparams = {
     'numerical': [
-        {'checked': True, 'name': 'alpha', 'min': 0, 'max': 1, 'step': 0.1},
-        {'checked': True, 'name': 'l1_ratio', 'min': 0, 'max': 1, 'step': 0.1},
-        {'checked': True, 'name': 'max_iter', 'min': 1000, 'max': 10000, 'step': 100},
+        {'search': True, 'name': 'learning_rate', 'min': 0.1, 'max': 1, 'step': 0.1},
+        {'search': True, 'name': 'max_iter', 'min': 1000, 'max': 10000, 'step': 1000},
     ],
     'categorical': [
-        {'checked': True, 'name': 'fit_intercept', 'selected': [True], 'values': [True,False]},
     ]
 }
 

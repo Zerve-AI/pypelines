@@ -3,16 +3,16 @@ from ..model_base import SklearnModelComparisonBase
 
 histogram_GBT_regression_hyperparams = {
     'numerical': [
-        {'checked': False, 'name': 'max_iter', 'min':10, 'max': 100, 'step':5},
-        {'checked': True, 'name': 'max_leaf_nodes', 'min': 2, 'max': 100, 'step': 35},
-        {'checked': True, 'name': 'min_samples_leaf', 'min':10, 'max': 100, 'step': 40},
-        {'checked': False, 'name': 'max_depth', 'min':1, 'max': 10, 'step': 3},
-        {'checked': False, 'name': 'l2_regularization', 'min':0, 'max': 2, 'step':0.5},
-        {'checked': True, 'name': 'max_bins', 'min': 25, 'max': 255, 'step': 100},
-        {'checked': False, 'name': 'learning_rate', 'min': 0.1, 'max': 0.5, 'step': 0.1},
+        {'search': False, 'name': 'max_iter', 'min':10, 'max': 100, 'step':5},
+        {'search': True, 'name': 'max_leaf_nodes', 'min': 2, 'max': 100, 'step': 35},
+        {'search': True, 'name': 'min_samples_leaf', 'min':10, 'max': 100, 'step': 40},
+        {'search': False, 'name': 'max_depth', 'min':1, 'max': 10, 'step': 3},
+        {'search': False, 'name': 'l2_regularization', 'min':0, 'max': 2, 'step':0.5},
+        {'search': True, 'name': 'max_bins', 'min': 25, 'max': 255, 'step': 100},
+        {'search': False, 'name': 'learning_rate', 'min': 0.1, 'max': 0.5, 'step': 0.1},
     ],
     'categorical': [
-        {'checked': False, 'name': 'early_stopping', 'selected': [True], 'values': ['auto',True, False]},
+        {'search': False, 'name': 'early_stopping', 'selected': [True], 'values': ['auto',True, False]},
     ]
 }
 

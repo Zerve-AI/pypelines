@@ -2,10 +2,10 @@ from ..model_base import SklearnModelBase, SklearnModelComparisonBase
 
 gbt_classification_hyperparams = {
     'numerical': [
-        {'checked': True, 'name': 'learning_rate', 'min': 0, 'max': 1, 'step': 0.1},
-        {'checked': True, 'name': 'n_estimators', 'min': 100, 'max': 10000, 'step': 100},
-        {'checked': True, 'name': 'subsample', 'min': 0.1, 'max': 1, 'step': 0.1},
-        {'checked': True, 'name': 'max_depth', 'min': 1, 'max': 10000, 'step': 100},
+        {'search': True, 'name': 'learning_rate', 'min': 0, 'max': 1, 'step': 0.2},
+        {'search': True, 'name': 'n_estimators', 'min': 100, 'max': 10000, 'step': 1000},
+        {'search': True, 'name': 'subsample', 'min': 0.1, 'max': 1, 'step': 0.2},
+        {'search': True, 'name': 'max_depth', 'min': 1, 'max': 10000, 'step': 1000},
     ],
     'categorical': [
     ]

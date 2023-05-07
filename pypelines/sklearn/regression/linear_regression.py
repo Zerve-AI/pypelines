@@ -5,7 +5,7 @@ linear_regression_hyperparams = {
     'numerical': [
     ],
     'categorical': [
-        {'checked': False, 'name': 'fit_intercept', 'selected': [True], 'values': [True, False]}
+        {'search': False, 'name': 'fit_intercept', 'selected': [True], 'values': [True, False]}
     ]
 }
 

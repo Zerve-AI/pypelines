@@ -3,14 +3,14 @@ from ..model_base import SklearnModelBase,SklearnModelComparisonBase
 
 extratree_regression_hyperparams = {
     'numerical': [
-        {'checked': True, 'name': 'n_estimators', 'min': 10, 'max': 200, 'step': 50},
-        {'checked': True, 'name': 'max_depth', 'min': 10, 'max': 200, 'step': 50},
-        {'checked': False, 'name': 'min_samples_split', 'min': 2, 'max': 200, 'step': 50},
-        {'checked': False, 'name': 'min_samples_leaf', 'min': 0.1, 'max': 0.5, 'step': 0.1},
+        {'search': True, 'name': 'n_estimators', 'min': 10, 'max': 200, 'step': 50},
+        {'search': True, 'name': 'max_depth', 'min': 10, 'max': 200, 'step': 50},
+        {'search': False, 'name': 'min_samples_split', 'min': 2, 'max': 200, 'step': 50},
+        {'search': False, 'name': 'min_samples_leaf', 'min': 0.1, 'max': 0.5, 'step': 0.1},
     ],
     'categorical': [
-        {'checked': False, 'name': 'max_features', 'selected': ['auto'], 'values': ["auto", "sqrt", "log2"]},
-        {'checked': False, 'name': 'bootstrap', 'selected': [True], 'values': [True, False]}
+        {'search': False, 'name': 'max_features', 'selected': ['auto'], 'values': ["auto", "sqrt", "log2"]},
+        {'search': False, 'name': 'bootstrap', 'selected': [True], 'values': [True, False]}
     ]
 }
 

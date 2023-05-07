@@ -2,12 +2,13 @@ from ..model_base import SklearnModelBase, SklearnModelComparisonBase
 
 nusvc_classification_hyperparams = {
     'numerical': [
-        {'checked': True, 'name': 'nu', 'min': 0.1, 'max': 1, 'step': 0.1},
-        {'checked': True, 'name': 'degree', 'min': 2, 'max': 5, 'step': 1},
+        {'search': True, 'name': 'nu', 'min': 0.1, 'max': 1, 'step': 0.2},
+        {'search': True, 'name': 'degree', 'min': 2, 'max': 5, 'step': 1},
     ],
     'categorical': [
-        {'checked': True, 'name': 'kernel', 'selected': ['poly'], 'values': ['linear', 'rbf', 'sigmoid','poly','sigmoid']},
-        {'checked': False, 'name': 'gamma', 'selected': ['scale'], 'values': ['scale', 'auto']}
+        {'search': True, 'name': 'kernel', 'selected': ['poly'], 'values': ['linear', 'rbf', 'sigmoid','poly','sigmoid']},
+        {'search': False, 'name': 'gamma', 'selected': ['scale'], 'values': ['scale', 'auto']},
+        {'search': True, 'name': 'probability', 'selected': [True], 'values': [True]}
     ]
 }
 

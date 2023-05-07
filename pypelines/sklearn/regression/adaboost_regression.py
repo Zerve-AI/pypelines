@@ -3,10 +3,10 @@ from ..model_base import SklearnModelBase,SklearnModelComparisonBase
 
 adaboost_regression_hyperparams = {
     'numerical': [
-        {'checked': True, 'name': 'n_estimators', 'min': 10, 'max': 100, 'step': 20}
+        {'search': True, 'name': 'n_estimators', 'min': 10, 'max': 100, 'step': 20}
     ],
     'categorical': [
-        {'checked': False, 'name': 'loss', 'selected': ["linear"], 'values': ["linear", "square", "exponential"]}
+        {'search': False, 'name': 'loss', 'selected': ["linear"], 'values': ["linear", "square", "exponential"]}
     ]
 }
 

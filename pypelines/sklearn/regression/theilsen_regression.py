@@ -3,12 +3,12 @@ from ..model_base import SklearnModelBase,SklearnModelComparisonBase
 
 theilsen_regression_hyperparams = {
     'numerical': [
-        {'checked': False, 'name': 'max_iter', 'min': 10, 'max': 300, 'step': 50},
-        {'checked': False, 'name': 'max_subpopulation', 'min': 5000, 'max': 20000, 'step': 5000},
-        {'checked': False, 'name': 'n_subsamples', 'min': 100, 'max': 200, 'step': 50}
+        {'search': False, 'name': 'max_iter', 'min': 10, 'max': 300, 'step': 50},
+        {'search': False, 'name': 'max_subpopulation', 'min': 5000, 'max': 20000, 'step': 5000},
+        {'search': False, 'name': 'n_subsamples', 'min': 100, 'max': 200, 'step': 50}
     ],
     'categorical': [
-        {'checked': False, 'name': 'fit_intercept', 'selected': [True], 'values': [True,False]},
+        {'search': False, 'name': 'fit_intercept', 'selected': [True], 'values': [True,False]},
     ]
 }
 

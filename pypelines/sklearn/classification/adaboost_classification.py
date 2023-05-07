@@ -2,11 +2,11 @@ from ..model_base import SklearnModelBase, SklearnModelComparisonBase
 
 adaboost_classification_hyperparams = {
     'numerical': [
-        {'checked': True, 'name': 'learning_rate', 'min': 0, 'max': 1, 'step': 0.1},
-        {'checked': True, 'name': 'n_estimators', 'min': 100, 'max': 10000, 'step': 100},
+        {'search': True, 'name': 'learning_rate', 'min': 0, 'max': 1, 'step': 0.1},
+        {'search': True, 'name': 'n_estimators', 'min': 100, 'max': 10000, 'step': 1000},
     ],
     'categorical': [
-        {'checked': True, 'name': 'algorithm', 'selected': ['SAMME.R'], 'values': ['SAMME', 'SAMME.R']},
+        {'search': False, 'name': 'algorithm', 'selected': ['SAMME.R'], 'values': ['SAMME', 'SAMME.R']},
     ]
 }
 

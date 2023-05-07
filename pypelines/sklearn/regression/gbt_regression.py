@@ -3,14 +3,14 @@ from ..model_base import SklearnModelBase,SklearnModelComparisonBase
 
 gbt_regression_hyperparams = {
     'numerical': [
-        {'checked': True, 'name': 'n_estimators', 'min': 25, 'max': 200, 'step': 50},
-        {'checked': True, 'name': 'max_depth', 'min': 1, 'max': 10, 'step': 3},
-        {'checked': True, 'name': 'alpha', 'min': 0.1, 'max': 1, 'step': 0.5},
-        {'checked': False, 'name': 'min_samples_split', 'min': 2, 'max': 200, 'step': 50},
-        {'checked': False, 'name': 'min_samples_leaf', 'min': 0.1, 'max': 1, 'step': 0.5},
+        {'search': True, 'name': 'n_estimators', 'min': 25, 'max': 200, 'step': 50},
+        {'search': True, 'name': 'max_depth', 'min': 1, 'max': 10, 'step': 3},
+        {'search': True, 'name': 'alpha', 'min': 0.1, 'max': 1, 'step': 0.5},
+        {'search': False, 'name': 'min_samples_split', 'min': 2, 'max': 200, 'step': 50},
+        {'search': False, 'name': 'min_samples_leaf', 'min': 0.1, 'max': 1, 'step': 0.5},
     ],
     'categorical': [
-        {'checked': False, 'name': 'max_features', 'selected': ['auto'], 'values': ["auto", "sqrt", "log2"]},
+        {'search': False, 'name': 'max_features', 'selected': ['auto'], 'values': ["auto", "sqrt", "log2"]},
     ]
 }
 

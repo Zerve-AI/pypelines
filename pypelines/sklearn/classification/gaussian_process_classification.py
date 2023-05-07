@@ -2,10 +2,10 @@ from ..model_base import SklearnModelBase, SklearnModelComparisonBase
 
 gaussian_process_classification_hyperparams = {
     'numerical': [
-        {'checked': True, 'name': 'max_iter_predict', 'min': 100, 'max': 10000, 'step': 100},
+        {'search': True, 'name': 'max_iter_predict', 'min': 100, 'max': 10000, 'step': 1000},
     ],
     'categorical': [
-        {'checked': True, 'name': 'warm_start', 'selected': [True], 'values': [True, False]},
+        {'search': False, 'name': 'warm_start', 'selected': [True], 'values': [True, False]},
     ]
 }
 

@@ -2,18 +2,18 @@ from ..model_base import SklearnModelBase, SklearnModelComparisonBase
 
 random_forest_classification_hyperparams = {
     'numerical': [
-        {'checked': True, 'name': 'n_estimators', 'min': 10, 'max': 100, 'step': 20},
-        {'checked': True, 'name': 'max_depth', 'min': 2, 'max': 10, 'step': 2},
-        {'checked': True, 'name': 'min_samples_split', 'min': 0.5, 'max': 1, 'step': 0.1},
-        {'checked': True, 'name': 'min_samples_leaf', 'min': 1, 'max': 10, 'step': 2}
+        {'search': True, 'name': 'n_estimators', 'min': 10, 'max': 100, 'step': 20},
+        {'search': True, 'name': 'max_depth', 'min': 2, 'max': 10, 'step': 2},
+        {'search': True, 'name': 'min_samples_split', 'min': 0.5, 'max': 1, 'step': 0.1},
+        {'search': True, 'name': 'min_samples_leaf', 'min': 1, 'max': 10, 'step': 2}
     ],
     'categorical': [
-        {'checked': True, 'name': 'criterion', 'selected': ['gini'], 'values': ['gini', 'entropy']},
-        {'checked': True, 'name': 'max_features', 'selected': ['auto'], 'values': ['auto', 'sqrt', 'log2']},
-        {'checked': True, 'name': 'bootstrap', 'selected': [True], 'values': [True, False]},
-        {'checked': False, 'name': 'oob_score', 'selected': [True], 'values': [True, False]},
-        {'checked': False, 'name': 'warm_start', 'selected': [False], 'values': [True, False]},
-        {'checked': False, 'name': 'class_weight', 'selected': ['balanced'], 'values': ['balanced', 'balanced_subsample']}
+        {'search': False, 'name': 'criterion', 'selected': ['gini'], 'values': ['gini', 'entropy']},
+        {'search': False, 'name': 'max_features', 'selected': ['auto'], 'values': ['auto', 'sqrt', 'log2']},
+        {'search': False, 'name': 'bootstrap', 'selected': [True], 'values': [True, False]},
+        {'search': False, 'name': 'oob_score', 'selected': [True], 'values': [True, False]},
+        {'search': False, 'name': 'warm_start', 'selected': [False], 'values': [True, False]},
+        {'search': False, 'name': 'class_weight', 'selected': ['balanced'], 'values': ['balanced', 'balanced_subsample']}
     ]
 }
 

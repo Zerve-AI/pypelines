@@ -4,7 +4,7 @@ qda_classification_hyperparams = {
     'numerical': [
     ],
     'categorical': [
-        {'checked': True, 'name': 'store_covariance', 'selected': [True], 'values': [True,False]},
+        {'search': False, 'name': 'store_covariance', 'selected': [True], 'values': [True,False]},
     ]
 }
 

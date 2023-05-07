@@ -5,7 +5,6 @@ from .svc_classification import SVCClassification,SVCClassificationComparison
 from .xgboost_classification import XGBoostClassification, XGBoostClassificationComparison
 from .mlp_classification import MLPClassification, MLPClassificationComparison
 from .ridge_classification import RidgeClassification,RidgeClassificationComparison
-from .histgbt_classification import HistGBTClassification,HistGBTClassificationComparison
 from .perceptron_classification import PerceptronClassification, PerceptronClassificationComparison
 from .sgd_classification import SGDClassification, SGDClassificationComparison
 from .gbt_classification import GBTClassification, GBTClassificationComparison
@@ -23,14 +22,13 @@ from .categorical_nb_classification import CategoricalNBClassification, Categori
 
 
 models_classification = {
-    'Decision Tree': DecisionTreeClassification,
+    'Decision Tree Classifier': DecisionTreeClassification,
     'Logistic Regression': LogisticRegression,
-    'Random Forest': RandomForestClassification,
-    'SVC': SVCClassification,
-    'XGBoost': XGBoostClassification,
-    'MLP': MLPClassification,
+    'Random Forest Classifier': RandomForestClassification,
+    'SVC Classifier': SVCClassification,
+    'XGBoost Classifier': XGBoostClassification,
+    'MLP Classifier': MLPClassification,
     'Ridge Classifier': RidgeClassification,
-    'HistGBT Classifier': HistGBTClassification,
     'Perceptron Classifier':PerceptronClassification,
     'SGD Classifier': SGDClassification,
     'GBT Classifier': GBTClassification,
@@ -47,15 +45,14 @@ models_classification = {
     'CategoricalNB Classifier': CategoricalNBClassification
 }
 
-model_comparison_classification = {
-    'Decision Tree': DecisionTreeClassificationComparison,
+models_comparison_classification = {
+    'Decision Tree Classifier': DecisionTreeClassificationComparison,
     'Logistic Regression': LogisticRegressionComparison,
-    'Random Forest': RandomForestClassificationComparison,
-    'SVC': SVCClassificationComparison,
-    'XGBoost': XGBoostClassificationComparison,
-    'MLP': MLPClassificationComparison,
+    'Random Forest Classifier': RandomForestClassificationComparison,
+    'SVC Classifier': SVCClassificationComparison,
+    'XGBoost Classifier': XGBoostClassificationComparison,
+    'MLP Classifier': MLPClassificationComparison,
     'Ridge Classifier': RidgeClassificationComparison,
-    'HistGBT Classifier': HistGBTClassificationComparison,
     'Perceptron Classifier':PerceptronClassificationComparison,
     'SGD Classifier': SGDClassificationComparison,
     'GBT Classifier': GBTClassificationComparison,
@@ -70,4 +67,21 @@ model_comparison_classification = {
     'ComplementNB Classifier': ComplementNBClassificationComparison,
     'BernoulliNB Classifier': BernoulliNBClassificationComparison,
     'CategoricalNB Classifier': CategoricalNBClassificationComparison
+}
+
+
+models_classification_default = {
+    'Decision Tree Classifier': DecisionTreeClassification,
+    'Logistic Regression': LogisticRegression,
+    'Random Forest Classifier': RandomForestClassification,
+    'XGBoost Classifier': XGBoostClassification,
+    'GBT Classifier': GBTClassification
+}
+
+models_comparison_classification_default = {
+    'Decision Tree Classifier': DecisionTreeClassificationComparison,
+    'Logistic Regression': LogisticRegressionComparison,
+    'Random Forest Classifier': RandomForestClassificationComparison,
+    'XGBoost Classifier': XGBoostClassificationComparison,
+    'GBT Classifier': GBTClassificationComparison,
 }
