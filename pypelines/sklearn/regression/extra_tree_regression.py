@@ -17,7 +17,7 @@ extratree_regression_hyperparams = {
 class ExtraTreeRegression(SklearnModelBase):
     def __init__(self):
         model_string = 'ExtraTreesRegressor()'
-        imports = '''from sklearn.ensemble import ExtraTreesRegressor \nfrom sklearn.metrics import mean_squared_error,make_scorer,r2_score,explained_variance_score\nimport plotly.express as px\nimport plotly.graph_objects as go'''
+        imports = '''from sklearn.ensemble import ExtraTreesRegressor \nfrom sklearn.metrics import mean_squared_error,make_scorer,r2_score,explained_variance_score\nimport matplotlib.pyplot as plt'''
         model_type='Regression'
         super().__init__('extra_tree_regression', model_string, extratree_regression_hyperparams, imports,model_type)
 
@@ -25,6 +25,6 @@ class ExtraTreeRegression(SklearnModelBase):
 class ExtraTreeRegressionComparison(SklearnModelComparisonBase):
     def __init__(self):
         model_string = 'ExtraTreesRegressor()'
-        imports = '''from sklearn.ensemble import ExtraTreesRegressor \nfrom sklearn.metrics import mean_squared_error,make_scorer,r2_score,explained_variance_score\nimport plotly.express as px\nimport plotly.graph_objects as go'''
+        imports = '''from sklearn.ensemble import ExtraTreesRegressor \nfrom sklearn.metrics import mean_squared_error,make_scorer,r2_score,explained_variance_score\nimport matplotlib.pyplot as plt'''
         model_type='Regression'
         super().__init__('extra_tree_regression', model_string, extratree_regression_hyperparams, imports,model_type)

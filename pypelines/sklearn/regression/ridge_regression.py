@@ -15,7 +15,7 @@ ridge_regression_hyperparams = {
 class RidgeRegression(SklearnModelBase):
     def __init__(self):
         model_string = 'Ridge()'
-        imports = '''from sklearn.linear_model import Ridge \nfrom sklearn.metrics import mean_squared_error,make_scorer,r2_score,explained_variance_score\nimport plotly.express as px\nimport plotly.graph_objects as go'''
+        imports = '''from sklearn.linear_model import Ridge \nfrom sklearn.metrics import mean_squared_error,make_scorer,r2_score,explained_variance_score\nimport matplotlib.pyplot as plt'''
         model_type='Regression'
         super().__init__('ridge_regression', model_string, ridge_regression_hyperparams, imports,model_type)
 
@@ -23,6 +23,6 @@ class RidgeRegression(SklearnModelBase):
 class RidgeRegressionComparison(SklearnModelComparisonBase):
     def __init__(self):
         model_string = 'Ridge()'
-        imports = '''from sklearn.linear_model import Ridge \nfrom sklearn.metrics import mean_squared_error,make_scorer,r2_score,explained_variance_score\nimport plotly.express as px\nimport plotly.graph_objects as go'''
+        imports = '''from sklearn.linear_model import Ridge \nfrom sklearn.metrics import mean_squared_error,make_scorer,r2_score,explained_variance_score\nimport matplotlib.pyplot as plt'''
         model_type='Regression'
         super().__init__('ridge_regression', model_string, ridge_regression_hyperparams, imports,model_type)

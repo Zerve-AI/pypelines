@@ -20,7 +20,7 @@ random_forest_classification_hyperparams = {
 class RandomForestClassification(SklearnModelBase):
     def __init__(self):
         model_string = 'RandomForestClassifier()'
-        imports = '''from sklearn.ensemble import RandomForestClassifier\nfrom sklearn.metrics import accuracy_score,make_scorer,f1_score,precision_score,recall_score,roc_auc_score,roc_curve,auc\nimport plotly.express as px'''
+        imports = '''from sklearn.ensemble import RandomForestClassifier\nfrom sklearn.metrics import accuracy_score,make_scorer,f1_score,precision_score,recall_score,roc_auc_score,roc_curve,auc\nimport matplotlib.pyplot as plt'''
         model_type ='Classification'
         super().__init__('random_forest_classifier', model_string, random_forest_classification_hyperparams, imports, model_type)
 
@@ -28,6 +28,6 @@ class RandomForestClassification(SklearnModelBase):
 class RandomForestClassificationComparison(SklearnModelComparisonBase):
     def __init__(self):
         model_string = 'RandomForestClassifier()'
-        imports = '''from sklearn.ensemble import RandomForestClassifier\nfrom sklearn.metrics import accuracy_score,make_scorer,f1_score,precision_score,recall_score,roc_auc_score,roc_curve,auc\nimport plotly.express as px'''
+        imports = '''from sklearn.ensemble import RandomForestClassifier\nfrom sklearn.metrics import accuracy_score,make_scorer,f1_score,precision_score,recall_score,roc_auc_score,roc_curve,auc\nimport matplotlib.pyplot as plt'''
         model_type ='Classification'
         super().__init__('random_forest_classifier', model_string, random_forest_classification_hyperparams, imports, model_type)

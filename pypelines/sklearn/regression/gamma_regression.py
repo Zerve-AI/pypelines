@@ -14,7 +14,7 @@ gamma_regression_hyperparams = {
 class GammaRegression(SklearnModelBase):
     def __init__(self):
         model_string = 'GammaRegressor()'
-        imports = '''from sklearn.linear_model import GammaRegressor \nfrom sklearn.metrics import mean_squared_error,make_scorer,r2_score,explained_variance_score\nimport plotly.express as px\nimport plotly.graph_objects as go'''
+        imports = '''from sklearn.linear_model import GammaRegressor \nfrom sklearn.metrics import mean_squared_error,make_scorer,r2_score,explained_variance_score\nimport matplotlib.pyplot as plt'''
         model_type='Regression'
         super().__init__('gamma_regression', model_string, gamma_regression_hyperparams, imports,model_type)
 
@@ -22,6 +22,6 @@ class GammaRegression(SklearnModelBase):
 class GammaRegressionComparison(SklearnModelComparisonBase):
     def __init__(self):
         model_string = 'GammaRegressor()'
-        imports = '''from sklearn.linear_model import GammaRegressor \nfrom sklearn.metrics import mean_squared_error,make_scorer,r2_score,explained_variance_score\nimport plotly.express as px\nimport plotly.graph_objects as go'''
+        imports = '''from sklearn.linear_model import GammaRegressor \nfrom sklearn.metrics import mean_squared_error,make_scorer,r2_score,explained_variance_score\nimport matplotlib.pyplot as plt'''
         model_type='Regression'
         super().__init__('gamma_regression', model_string, gamma_regression_hyperparams, imports,model_type)

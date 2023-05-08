@@ -17,13 +17,13 @@ mlp_classification_hyperparams = {
 class MLPClassification(SklearnModelBase):
     def __init__(self):
         model_string = 'MLPClassifier()'
-        imports = '''from sklearn.neural_network import MLPClassifier\nfrom sklearn.metrics import accuracy_score,make_scorer,f1_score,precision_score,recall_score,roc_auc_score,roc_curve,auc\nimport plotly.express as px'''
+        imports = '''from sklearn.neural_network import MLPClassifier\nfrom sklearn.metrics import accuracy_score,make_scorer,f1_score,precision_score,recall_score,roc_auc_score,roc_curve,auc\nimport matplotlib.pyplot as plt'''
         model_type ='Classification'
         super().__init__('mlp_classifier', model_string, mlp_classification_hyperparams, imports,model_type)
 
 class MLPClassificationComparison(SklearnModelComparisonBase):
     def __init__(self):
         model_string = 'MLPClassifier()'
-        imports = '''from sklearn.neural_network import MLPClassifier\nfrom sklearn.metrics import accuracy_score,make_scorer,f1_score,precision_score,recall_score,roc_auc_score,roc_curve,auc\nimport plotly.express as px'''
+        imports = '''from sklearn.neural_network import MLPClassifier\nfrom sklearn.metrics import accuracy_score,make_scorer,f1_score,precision_score,recall_score,roc_auc_score,roc_curve,auc\nimport matplotlib.pyplot as plt'''
         model_type ='Classification'
         super().__init__('mlp_classifier', model_string, mlp_classification_hyperparams, imports,model_type)

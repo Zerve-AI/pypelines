@@ -18,7 +18,7 @@ bayesianridge_regression_hyperparams = {
 class BayesianRidgeRegression(SklearnModelBase):
     def __init__(self):
         model_string = 'BayesianRidge()'
-        imports = '''from sklearn.linear_model import BayesianRidge \nfrom sklearn.metrics import mean_squared_error,make_scorer,r2_score,explained_variance_score\nimport plotly.express as px\nimport plotly.graph_objects as go'''
+        imports = '''from sklearn.linear_model import BayesianRidge \nfrom sklearn.metrics import mean_squared_error,make_scorer,r2_score,explained_variance_score\nimport matplotlib.pyplot as plt'''
         model_type='Regression'
         super().__init__('bayesian_ridge_regression', model_string, bayesianridge_regression_hyperparams, imports,model_type)
 
@@ -26,6 +26,6 @@ class BayesianRidgeRegression(SklearnModelBase):
 class BayesianRidgeRegressionComparison(SklearnModelComparisonBase):
     def __init__(self):
         model_string = 'BayesianRidge()'
-        imports = '''from sklearn.linear_model import BayesianRidge \nfrom sklearn.metrics import mean_squared_error,make_scorer,r2_score,explained_variance_score\nimport plotly.express as px\nimport plotly.graph_objects as go'''
+        imports = '''from sklearn.linear_model import BayesianRidge \nfrom sklearn.metrics import mean_squared_error,make_scorer,r2_score,explained_variance_score\nimport matplotlib.pyplot as plt'''
         model_type='Regression'
         super().__init__('bayesian_ridge_regression', model_string, bayesianridge_regression_hyperparams, imports,model_type)

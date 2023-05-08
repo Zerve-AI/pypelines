@@ -16,7 +16,7 @@ tweedie_regression_hyperparams = {
 class TweedieRegression(SklearnModelBase):
     def __init__(self):
         model_string = 'TweedieRegressor()'
-        imports = '''from sklearn.linear_model import TweedieRegressor \nfrom sklearn.metrics import mean_squared_error,make_scorer,r2_score,explained_variance_score\nimport plotly.express as px\nimport plotly.graph_objects as go'''
+        imports = '''from sklearn.linear_model import TweedieRegressor \nfrom sklearn.metrics import mean_squared_error,make_scorer,r2_score,explained_variance_score\nimport matplotlib.pyplot as plt'''
         model_type='Regression'
         super().__init__('tweedie_regression', model_string, tweedie_regression_hyperparams, imports,model_type)
 
@@ -24,6 +24,6 @@ class TweedieRegression(SklearnModelBase):
 class TweedieRegressionComparison(SklearnModelComparisonBase):
     def __init__(self):
         model_string = 'TweedieRegressor()'
-        imports = '''from sklearn.linear_model import TweedieRegressor \nfrom sklearn.metrics import mean_squared_error,make_scorer,r2_score,explained_variance_score\nimport plotly.express as px\nimport plotly.graph_objects as go'''
+        imports = '''from sklearn.linear_model import TweedieRegressor \nfrom sklearn.metrics import mean_squared_error,make_scorer,r2_score,explained_variance_score\nimport matplotlib.pyplot as plt'''
         model_type='Regression'
         super().__init__('tweedie_regression', model_string, tweedie_regression_hyperparams, imports,model_type)

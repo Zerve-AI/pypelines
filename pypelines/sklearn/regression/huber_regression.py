@@ -15,7 +15,7 @@ huber_regression_hyperparams = {
 class HuberRegression(SklearnModelBase):
     def __init__(self):
         model_string = 'HuberRegressor()'
-        imports = '''from sklearn.linear_model import HuberRegressor \nfrom sklearn.metrics import mean_squared_error,make_scorer,r2_score,explained_variance_score\nimport plotly.express as px\nimport plotly.graph_objects as go'''
+        imports = '''from sklearn.linear_model import HuberRegressor \nfrom sklearn.metrics import mean_squared_error,make_scorer,r2_score,explained_variance_score\nimport matplotlib.pyplot as plt'''
         model_type='Regression'
         super().__init__('huber_regression', model_string, huber_regression_hyperparams, imports,model_type)
 
@@ -23,6 +23,6 @@ class HuberRegression(SklearnModelBase):
 class HuberRegressionComparison(SklearnModelComparisonBase):
     def __init__(self):
         model_string = 'HuberRegressor()'
-        imports = '''from sklearn.linear_model import HuberRegressor \nfrom sklearn.metrics import mean_squared_error,make_scorer,r2_score,explained_variance_score\nimport plotly.express as px\nimport plotly.graph_objects as go'''
+        imports = '''from sklearn.linear_model import HuberRegressor \nfrom sklearn.metrics import mean_squared_error,make_scorer,r2_score,explained_variance_score\nimport matplotlib.pyplot as plt'''
         model_type='Regression'
         super().__init__('huber_regression', model_string, huber_regression_hyperparams, imports,model_type)

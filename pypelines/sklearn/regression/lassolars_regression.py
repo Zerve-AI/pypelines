@@ -14,7 +14,7 @@ lassolars_regression_hyperparams = {
 class LassoLarsRegression(SklearnModelBase):
     def __init__(self):
         model_string = 'LassoLars()'
-        imports = '''from sklearn.linear_model import LassoLars \nfrom sklearn.metrics import mean_squared_error,make_scorer,r2_score,explained_variance_score\nimport plotly.express as px\nimport plotly.graph_objects as go'''
+        imports = '''from sklearn.linear_model import LassoLars \nfrom sklearn.metrics import mean_squared_error,make_scorer,r2_score,explained_variance_score\nimport matplotlib.pyplot as plt'''
         model_type='Regression'
         super().__init__('lassolars_regression', model_string, lassolars_regression_hyperparams, imports,model_type)
 
@@ -22,6 +22,6 @@ class LassoLarsRegression(SklearnModelBase):
 class LassoLarsRegressionComparison(SklearnModelComparisonBase):
     def __init__(self):
         model_string = 'LassoLars()'
-        imports = '''from sklearn.linear_model import LassoLars \nfrom sklearn.metrics import mean_squared_error,make_scorer,r2_score,explained_variance_score\nimport plotly.express as px\nimport plotly.graph_objects as go'''
+        imports = '''from sklearn.linear_model import LassoLars \nfrom sklearn.metrics import mean_squared_error,make_scorer,r2_score,explained_variance_score\nimport matplotlib.pyplot as plt'''
         model_type='Regression'
         super().__init__('lassolars_regression', model_string, lassolars_regression_hyperparams, imports,model_type)

@@ -20,13 +20,13 @@ histogram_GBT_regression_hyperparams = {
 class HistGBTRegression(SklearnModelBase):
     def __init__(self):
         model_string = 'HistGradientBoostingRegressor()'
-        imports = '''from sklearn.ensemble import HistGradientBoostingRegressor\nfrom sklearn.metrics import mean_squared_error,make_scorer,r2_score,explained_variance_score\nimport plotly.express as px\nimport plotly.graph_objects as go'''
+        imports = '''from sklearn.ensemble import HistGradientBoostingRegressor\nfrom sklearn.metrics import mean_squared_error,make_scorer,r2_score,explained_variance_score\nimport matplotlib.pyplot as plt'''
         model_type='Regression'
         super().__init__('hist_gbt_regression', model_string, histogram_GBT_regression_hyperparams, imports,model_type)
 
 class HistGBTRegressionComparison(SklearnModelComparisonBase):
     def __init__(self):
         model_string = 'HistGradientBoostingRegressor()'
-        imports = '''from sklearn.ensemble import HistGradientBoostingRegressor\nfrom sklearn.metrics import mean_squared_error,make_scorer,r2_score,explained_variance_score\nimport plotly.express as px\nimport plotly.graph_objects as go'''
+        imports = '''from sklearn.ensemble import HistGradientBoostingRegressor\nfrom sklearn.metrics import mean_squared_error,make_scorer,r2_score,explained_variance_score\nimport matplotlib.pyplot as plt'''
         model_type='Regression'
         super().__init__('hist_gbt_regression', model_string, histogram_GBT_regression_hyperparams, imports,model_type)

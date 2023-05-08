@@ -12,7 +12,7 @@ linear_regression_hyperparams = {
 class LinearRegression(SklearnModelBase):
     def __init__(self):
         model_string = 'LinearRegression()'
-        imports = '''from sklearn.linear_model import LinearRegression\nfrom sklearn.metrics import mean_squared_error,make_scorer,r2_score,explained_variance_score\nimport plotly.express as px\nimport plotly.graph_objects as go'''
+        imports = '''from sklearn.linear_model import LinearRegression\nfrom sklearn.metrics import mean_squared_error,make_scorer,r2_score,explained_variance_score\nimport plotly.express as px\nimport plotly.graph_objects as go\nimport matplotlib.pyplot as plt'''
         model_type='Regression'
         super().__init__('lin_reg', model_string, linear_regression_hyperparams, imports,model_type)
 
@@ -20,6 +20,6 @@ class LinearRegression(SklearnModelBase):
 class LinearRegressionComparison(SklearnModelComparisonBase):
     def __init__(self):
         model_string = 'LinearRegression()'
-        imports = '''from sklearn.linear_model import LinearRegression\nfrom sklearn.metrics import mean_squared_error,make_scorer,r2_score,explained_variance_score\nimport plotly.express as px\nimport plotly.graph_objects as go'''
+        imports = '''from sklearn.linear_model import LinearRegression\nfrom sklearn.metrics import mean_squared_error,make_scorer,r2_score,explained_variance_score\nimport plotly.express as px\nimport plotly.graph_objects as go\nimport matplotlib.pyplot as plt'''
         model_type='Regression'
         super().__init__('lin_reg', model_string, linear_regression_hyperparams, imports,model_type)

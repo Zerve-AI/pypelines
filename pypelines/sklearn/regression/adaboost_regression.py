@@ -13,7 +13,7 @@ adaboost_regression_hyperparams = {
 class AdaBoostRegression(SklearnModelBase):
     def __init__(self):
         model_string = 'AdaBoostRegressor()'
-        imports = '''from sklearn.ensemble import AdaBoostRegressor \nfrom sklearn.metrics import mean_squared_error,make_scorer,r2_score,explained_variance_score\nimport plotly.express as px\nimport plotly.graph_objects as go'''
+        imports = '''from sklearn.ensemble import AdaBoostRegressor \nfrom sklearn.metrics import mean_squared_error,make_scorer,r2_score,explained_variance_score\nimport matplotlib.pyplot as plt'''
         model_type='Regression'
         super().__init__('adaboost_regression', model_string, adaboost_regression_hyperparams, imports,model_type)
 
@@ -21,6 +21,6 @@ class AdaBoostRegression(SklearnModelBase):
 class AdaBoostRegressionComparison(SklearnModelComparisonBase):
     def __init__(self):
         model_string = 'AdaBoostRegressor()'
-        imports = '''from sklearn.ensemble import AdaBoostRegressor \nfrom sklearn.metrics import mean_squared_error,make_scorer,r2_score,explained_variance_score\nimport plotly.express as px\nimport plotly.graph_objects as go'''
+        imports = '''from sklearn.ensemble import AdaBoostRegressor \nfrom sklearn.metrics import mean_squared_error,make_scorer,r2_score,explained_variance_score\nimport matplotlib.pyplot as plt'''
         model_type='Regression'
         super().__init__('adaboost_regression', model_string, adaboost_regression_hyperparams, imports,model_type)
