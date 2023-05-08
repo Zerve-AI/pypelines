@@ -243,7 +243,7 @@ class SupervisedPipeline:
         hyperparameters = {}
         for name, model in self.model_params.items():
             hyperparameters[name] = model().get_hyperparameters()
-        return hyperparameters
+        return hyperparameters[name]
 
     def set_model_grid_search_settings(self,hyperparam_dict:dict = None, model_name:list = None, path:str=None):
         self.parse_config()
