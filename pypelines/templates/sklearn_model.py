@@ -31,9 +31,17 @@ template = '''
                                   ['{{prefix}}','mean_squared_error',{{prefix}}_mean_squared_error],
                                   ['{{prefix}}','explained_variance_score', {{prefix}}_explained_variance_score]]
 {{prefix}}_performance_metrics = pd.DataFrame({{prefix}}_performance_metrics, columns=['model','metric', 'value'])
-{{prefix}}_actual_predicted_plot = px.scatter(x=y_test, y={{prefix}}_predictions.iloc[:,0])
-{{prefix}}_actual_predicted_plot.add_shape(type="line", line=dict(dash='dash'),x0=y.min(), y0=y.min(), x1=y.max(), y1=y.max())
-{{prefix}}_actual_predicted_plot.update_layout(title="Actual vs Predicted",xaxis_title="Actual",yaxis_title="Predicted")
+
+
+{{prefix}}_actual_predicted_plot, {{prefix}}_actual_predicted_plot_ax = plt.subplots()
+{{prefix}}_actual_predicted_plot = {{prefix}}_actual_predicted_plot_ax.scatter(x=y_test, y={{prefix}}_predictions.iloc[:,0], alpha=0.5)
+# Add diagonal line
+{{prefix}}_actual_predicted_plot_ax.plot([y_test.min(), y_test.max()], [y_test.min(), y_test.max()], 'r--', alpha=0.5)
+# Set axis labels and title
+{{prefix}}_actual_predicted_plot_ax.set_xlabel('Actual')
+{{prefix}}_actual_predicted_plot_ax.set_ylabel('Predicted')
+{{prefix}}_actual_predicted_plot_ax.set_title('Actual vs. Predicted')
+
 {% elif model_type == "Classification" %}
 {{prefix}}_predictions = pd.DataFrame({{prefix}}_best_estimator.predict(X_test))
 {{prefix}}_predictions_prob = {{prefix}}_best_estimator.predict_proba(X_test)
@@ -51,19 +59,22 @@ template = '''
                                   ['{{prefix}}','recall', {{prefix}}_recall],
                                   ['{{prefix}}','roc_auc_score', {{prefix}}_roc_auc_score]]
 {{prefix}}_performance_metrics = pd.DataFrame({{prefix}}_performance_metrics, columns=['model','metric', 'value'])
+
 fpr, tpr, thresholds = roc_curve(y_test, {{prefix}}_predictions_prob_df[{{prefix}}_grid_search.classes_[1]])
-{{prefix}}_roc_auc_plot = px.area(
-    x=fpr, y=tpr,
-    title=f'ROC Curve (AUC={auc(fpr, tpr):.4f})',
-    labels=dict(x='False Positive Rate', y='True Positive Rate'),
-    width=700, height=500
-)
-{{prefix}}_roc_auc_plot.add_shape(
-    type='line', line=dict(dash='dash'),
-    x0=0, x1=1, y0=0, y1=1
-)
-{{prefix}}_roc_auc_plot.update_yaxes(scaleanchor="x", scaleratio=1)
-{{prefix}}_roc_auc_plot.update_xaxes(constrain='domain')
+roc_auc = auc(fpr, tpr)
+# Create plot
+{{prefix}}_roc_auc_plot, {{prefix}}_roc_auc_plot_ax = plt.subplots()
+{{prefix}}_roc_auc_plot_ax.plot(fpr, tpr, label=f'ROC curve (AUC = {roc_auc:.4f})')
+{{prefix}}_roc_auc_plot_ax.plot([0, 1], [0, 1], 'r--', label='Random guess')
+
+# Set axis labels and title
+{{prefix}}_roc_auc_plot_ax.set_xlabel('False Positive Rate')
+{{prefix}}_roc_auc_plot_ax.set_ylabel('True Positive Rate')
+{{prefix}}_roc_auc_plot_ax.set_title('ROC Curve')
+
+# Add legend
+{{prefix}}_roc_auc_plot_ax.legend()
+plt.show()
 {% endif %}
 
 

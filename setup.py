@@ -8,6 +8,7 @@ setup(
         'scikit-learn',
         'pandas',
         'pyperclip',
+        'matplotlib',
     ],
     entry_points={
         'console_scripts': [

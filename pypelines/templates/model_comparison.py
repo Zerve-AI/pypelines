@@ -3,10 +3,10 @@ from .template_base import AutoPipelineBaseTemplate
 template = '''
 {% if model_type == "Regression" %}
 {{prefix}}_performance_metrics
-{{prefix}}_actual_predicted_plot.show()
+plt.show()
 {% elif model_type == "Classification" %}
 {{prefix}}_performance_metrics
-{{prefix}}_roc_auc_plot.show()
+plt.show()
 {% endif %}
 '''
 
