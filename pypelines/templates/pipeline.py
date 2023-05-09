@@ -10,8 +10,6 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.model_selection import train_test_split
 from sklearn.pipeline import Pipeline
 from sklearn.impute import SimpleImputer
-import plotly.express as px
-import plotly.graph_objects as go
 """
 
 template = """

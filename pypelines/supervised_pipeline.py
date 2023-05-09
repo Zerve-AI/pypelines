@@ -28,18 +28,17 @@ class SupervisedPipeline:
                  nfolds:int,
                  models:list = None):
         """
-        The __init__ function is the constructor for a class.
-        It initializes all of the attributes of an object, and it's called when you create a new instance of that class.
-        
+        The __init__ function initializes the class with the following parameters:
+            
         
         :param self: Represent the instance of the class
-        :param data:str: Specify the path to the data file
+        :param data:Union[str: Specify the type of data that is being passed to the function
+        :param pd.DataFrame]: Check if the data is a pandas dataframe or not
         :param target:str: Specify the target variable in the dataset
-        :param model_type:str: Specify the type of model you want to use
-        :param models:list: Pass a list of models to the class
-        :param nfolds:int: Specify the number of folds for cross-validation
-        :param output_folder:str: Specify the folder where the output files will be saved. If it's not specified then files get saved to home directory
-        :param output_format:str: Define the output format - 'code' - shows output on the console, 'script' - save to output directory
+        :param model_type:str: Specify the type of problem we are dealing with
+        :param nfolds:int: Specify the number of folds in cross-validation
+        :param models:list: Specify the list of models to be used in the experiment
+        :return: A new object instance
         """
         if isinstance(data, pd.DataFrame):
             callers_globals = inspect.stack()[1][0].f_globals
@@ -76,12 +75,12 @@ class SupervisedPipeline:
 
     def get_hyperparameters(self):
         """
-        The get_settings_classification function returns a dictionary of hyperparameters for each model.
-            The keys are the names of the models and the values are dictionaries containing all possible 
-            hyperparameter settings for that model.
+        The get_hyperparameters function returns a dictionary of hyperparameters for each model.
+        The keys are the names of the models and the values are dictionaries containing 
+        the hyperparameter name as key and an instance of HyperParams as value. The HyperParams class is used to store information about each hyperparameter, such as its type (numerical or categorical), default value, range if numerical, etc.
         
-        :param self: Represent the instance of the class
-        :return: A dictionary of hyperparameters for each model
+        :param self: Bind the instance of the class to a method
+        :return: A dictionary of hyperparameters for each model in the models list
         """
         if   self.model_type == 'classification':
              self.models_ = self.models_clf
@@ -95,16 +94,15 @@ class SupervisedPipeline:
     
     def compile_hyperparameters(self, model_prefix, params):
         """
-        The compile_hyperparameters function takes a model_prefix and params dictionary as input.
-        The model_prefix is the name of the model, e.g., 'xgb'. The params dictionary contains two keys:
-        'categorical' and 'numerical'. Each key has a list of dictionaries as its value. 
-        Each dictionary in this list represents one hyperparameter for that type (categorical or numerical). 
-        For example, if we have three categorical hyperparameters with names &quot;a&quot;, &quot;b&quot;, and &quot;c&quot; then the value for 
-        the key 'categorical' will be [{
+        The compile_hyperparameters function takes in a model prefix and the params dictionary.
+        It then iterates through each key, value pair in the params dictionary. For each key, value pair it iterates through all of the values (which are dictionaries).
+        If search is set to False for any of these dictionaries, it skips them. If k is equal to categorical and selected is not empty for any of these dictionaries, 
+        it appends a CategoricalParam object with prefix as model_prefix and name as p['name'] (the name from that particular dictionary) 
+        and values as p['selected']
         
         :param self: Represent the instance of the class
         :param model_prefix: Identify the model
-        :param params: Pass in the hyperparameters that you want to use
+        :param params: Pass the parameters to be used in the model
         :return: A hyperparams object
         """
         hyperparams = []
@@ -123,12 +121,12 @@ class SupervisedPipeline:
     
     def parse_config(self):
         """
-        The parse_config function is used to parse the user input parameters and set up the model parameters.
-        =The function then sets up all of the necessary variables for running 
-        the models, including:
+        The parse_config function is used to parse the configuration file and extract all of the information needed for 
+        the pipeline. It extracts information about the dataset, target column, models to be trained on, hyperparameters for each model
+        and other parameters such as number of folds in cross validation and metric used.
         
-        :param self: Refer to the instance of the class
-        :return: A dictionary of models and their parameters
+        :param self: Represent the instance of the class
+        :return: A dictionary of models, model_params, pipeline_params and shared_model params
         """
         if self.model_type == 'classification':
            self.models_all = models_classification
@@ -151,9 +149,10 @@ class SupervisedPipeline:
 
     def generate_code(self, output_path:str=None):
         """
-        The generate_code function takes the parameters from the config file and generates a python script that can be run to train, evaluate, and save models.
+        The generate_code function takes in a dictionary of parameters and generates code for the pipeline.
         
-        :param self: Access the attributes and methods of the class
+        :param self: Refer to the object itself
+        :param output_path:str: Specify the path where the generated code will be saved
         :return: A string of code
         """
         self.parse_config()
@@ -230,11 +229,24 @@ class SupervisedPipeline:
     
     def code_to_file(self,
                      path:str =  os.getcwd()):
+        """
+        The code_to_file function saves the generated code to a file.
+        
+        :param self: Refer to the object itself
+        :param path:str: Define the path where the model files will be saved
+        :return: A string indicating where the model files were saved
+        """
         self.generate_code(output_path = path)
         return f'model files saved to {path}'
     
     def model_grid_search_settings(self,model_name:str=None):
-
+        """
+        The model_grid_search_settings function is used to return the hyperparameters of a model.
+        
+        :param self: Bind the attributes with an object
+        :param model_name:str: Specify the name of the model to be used
+        :return: The hyperparameters of the model
+        """
         if   self.model_type == 'classification':
              self.models_ = self.models_clf
         elif self.model_type == 'regression':
@@ -246,6 +258,15 @@ class SupervisedPipeline:
         return hyperparameters[name]
 
     def set_model_grid_search_settings(self,hyperparam_dict:dict = None, model_name:list = None, path:str=None):
+        """
+        The set_model_grid_search_settings function is used to manually set the model grid search settings.
+        
+        :param self: Represent the instance of the class
+        :param hyperparam_dict:dict: Pass in a dictionary of hyperparameters to be used for the model
+        :param model_name:list: Specify which models to generate code for
+        :param path:str: Specify the path you want to save your code in
+        :return: The code for the model pipeline
+        """
         self.parse_config()
         code_append = ""
         code, imports, requirements = PipelineTemplate()(self.pipeline_params)
