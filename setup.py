@@ -9,6 +9,8 @@ setup(
         'pandas',
         'pyperclip',
         'matplotlib',
+        'jinja2',
+        'pydantic'
     ],
     entry_points={
         'console_scripts': [

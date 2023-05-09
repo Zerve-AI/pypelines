@@ -40,7 +40,7 @@ template = '''
 # Set axis labels and title
 {{prefix}}_actual_predicted_plot_ax.set_xlabel('Actual')
 {{prefix}}_actual_predicted_plot_ax.set_ylabel('Predicted')
-{{prefix}}_actual_predicted_plot_ax.set_title('Actual vs. Predicted')
+{{prefix}}_actual_predicted_plot_ax.set_title(f'{{prefix}}_Actual vs. Predicted')
 
 {% elif model_type == "Classification" %}
 {{prefix}}_predictions = pd.DataFrame({{prefix}}_best_estimator.predict(X_test))
@@ -59,7 +59,6 @@ template = '''
                                   ['{{prefix}}','recall', {{prefix}}_recall],
                                   ['{{prefix}}','roc_auc_score', {{prefix}}_roc_auc_score]]
 {{prefix}}_performance_metrics = pd.DataFrame({{prefix}}_performance_metrics, columns=['model','metric', 'value'])
-
 fpr, tpr, thresholds = roc_curve(y_test, {{prefix}}_predictions_prob_df[{{prefix}}_grid_search.classes_[1]])
 roc_auc = auc(fpr, tpr)
 # Create plot
@@ -71,10 +70,8 @@ roc_auc = auc(fpr, tpr)
 {{prefix}}_roc_auc_plot_ax.set_xlabel('False Positive Rate')
 {{prefix}}_roc_auc_plot_ax.set_ylabel('True Positive Rate')
 {{prefix}}_roc_auc_plot_ax.set_title('ROC Curve')
-
 # Add legend
 {{prefix}}_roc_auc_plot_ax.legend()
-plt.show()
 {% endif %}
 
 

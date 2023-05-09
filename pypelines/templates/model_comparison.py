@@ -2,11 +2,11 @@ from .template_base import AutoPipelineBaseTemplate
 
 template = '''
 {% if model_type == "Regression" %}
-{{prefix}}_performance_metrics
-plt.show()
+print({{prefix}}_performance_metrics)
+plt.show(block=False)
 {% elif model_type == "Classification" %}
-{{prefix}}_performance_metrics
-plt.show()
+print({{prefix}}_performance_metrics)
+plt.show(block=False)
 {% endif %}
 '''
 
