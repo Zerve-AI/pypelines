@@ -174,6 +174,16 @@ class SupervisedPipeline:
             output_file.close()
         for model_name, params in self.model_params.items():
             ModelTemplate= self.models_all[model_name]
+            code_append = ""
+            code, imports, requirements = PipelineTemplate()(self.pipeline_params)
+            imports = self.default_imports + '\n' + imports
+            code_append += imports
+            code_append += code
+            code_append += '\n'
+            code_append += '\n'
+            code_append += "##### End of Data Processing Pipeline #####"
+            code_append += '\n'
+            code_append += '\n'
             code_append += '\n'
             code_append += '\n'
             code_append += f"##### Model Pipeline for {model_name} #####"
