@@ -30,10 +30,9 @@ To see a listing of all available models, utilize `pypelines.classification_mode
 
 ## A few noteable pypeline object methods
 - `my_pypeline.model_list()` returns a list of models to be included in the training code.
-- `my_pypeline.grid_search()` returns a dictionary containing the grid search parameters for every model to be included in the training code.
-- `my_pypeline.grid_search_for_model('modelName')` returns a dictionary containing the grid search parameters for every model to be included in the training code.
-- `my_pypeline.set_grid_search_for_model('modelName', grid_search_dictionary)` returns a dictionary containing the grid search parameters for every model to be included in the training code.
-- `my_pypeline.get_code()` returns the generated training code.
+- `my_pypeline.get_hyperparameters()` returns a dictionary containing the grid search parameters for every model to be included in the training code.
+- `my_pypeline.model_grid_search_settings(model_name)` returns a dictionary containing the grid search parameters of the specified model
+- `my_pypeline.set_model_grid_search_settings(hyperparam_dict,model_name,path)` returns the model code with updated dictionary
 - `my_pypeline.code_to_clipboard()` copies the training code to the clipboard.
 - `my_pypeline.code_to_file('/path/to/filename.py')` saves the training code to a file.
 

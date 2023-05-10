@@ -6,7 +6,7 @@ sgd_classification_hyperparams = {
         {'search': True, 'name': 'max_iter', 'min': 1, 'max': 1000, 'step': 100},
     ],
     'categorical': [
-        {'search': False, 'name': 'loss', 'selected': ['log_loss'], 'values': ['hinge', 'log_loss', 'log', 'modified_huber', 'squared_hinge', 'perceptron', 'squared_error', 'huber', 'epsilon_insensitive', 'squared_epsilon_insensitive']},
+        {'search': True, 'name': 'loss', 'selected': ['log_loss'], 'values': ['hinge', 'log_loss', 'log', 'modified_huber', 'squared_hinge', 'perceptron', 'squared_error', 'huber', 'epsilon_insensitive', 'squared_epsilon_insensitive']},
         {'search': False, 'name': 'penalty', 'selected': ['l2'], 'values': ['l2', 'l1', 'elasticnet']},
         {'search': False, 'name': 'fit_intercept', 'selected': [True], 'values': [True,False]},
         {'search': False, 'name': 'shuffle', 'selected': [True], 'values': [True,False]},
