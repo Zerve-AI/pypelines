@@ -23,7 +23,10 @@ template = '''
 
 # Model metrics
 {% if model_type == "Regression" %}
+# Generate Predictions
 {{prefix}}_predictions = pd.DataFrame({{prefix}}_best_estimator.predict(X_test))
+
+# Generate Model Metrics
 {{prefix}}_r2_score = r2_score(y_test, {{prefix}}_predictions.iloc[:,0])
 {{prefix}}_mean_squared_error = mean_squared_error(y_test, {{prefix}}_predictions.iloc[:,0])
 {{prefix}}_explained_variance_score = explained_variance_score(y_test, {{prefix}}_predictions.iloc[:,0])
@@ -32,7 +35,7 @@ template = '''
                                   ['{{prefix}}','explained_variance_score', {{prefix}}_explained_variance_score]]
 {{prefix}}_performance_metrics = pd.DataFrame({{prefix}}_performance_metrics, columns=['model','metric', 'value'])
 
-
+# Generate Actual vs Predicted Plot
 {{prefix}}_actual_predicted_plot, {{prefix}}_actual_predicted_plot_ax = plt.subplots()
 {{prefix}}_actual_predicted_plot = {{prefix}}_actual_predicted_plot_ax.scatter(x=y_test, y={{prefix}}_predictions.iloc[:,0], alpha=0.5)
 # Add diagonal line
@@ -42,12 +45,23 @@ template = '''
 {{prefix}}_actual_predicted_plot_ax.set_ylabel('Predicted')
 {{prefix}}_actual_predicted_plot_ax.set_title(f'{{prefix}}_Actual vs. Predicted')
 
+# Generate Decile Lift Chart
+
+
+
+print({{prefix}}_performance_metrics)
+plt.show(block=False)
+
+
 {% elif model_type == "Classification" %}
+# Generate Predictions
 {{prefix}}_predictions = pd.DataFrame({{prefix}}_best_estimator.predict(X_test))
 {{prefix}}_predictions_prob = {{prefix}}_best_estimator.predict_proba(X_test)
 {{prefix}}_predictions_prob_df = pd.DataFrame()
 {{prefix}}_predictions_prob_df[{{prefix}}_grid_search.classes_[0]] = {{prefix}}_predictions_prob[:,0]
 {{prefix}}_predictions_prob_df[{{prefix}}_grid_search.classes_[1]] = {{prefix}}_predictions_prob[:,1] 
+
+# Generate Model Metrics
 {{prefix}}_accuracy = accuracy_score(y_test, {{prefix}}_predictions.iloc[:,0])
 {{prefix}}_f1_score = f1_score(y_test, {{prefix}}_predictions.iloc[:,0])
 {{prefix}}_precision = precision_score(y_test, {{prefix}}_predictions.iloc[:,0])
@@ -61,17 +75,24 @@ template = '''
 {{prefix}}_performance_metrics = pd.DataFrame({{prefix}}_performance_metrics, columns=['model','metric', 'value'])
 fpr, tpr, thresholds = roc_curve(y_test, {{prefix}}_predictions_prob_df[{{prefix}}_grid_search.classes_[1]])
 roc_auc = auc(fpr, tpr)
-# Create plot
+
+# Generate ROC Curve plot
 {{prefix}}_roc_auc_plot, {{prefix}}_roc_auc_plot_ax = plt.subplots()
 {{prefix}}_roc_auc_plot_ax.plot(fpr, tpr, label=f'ROC curve (AUC = {roc_auc:.4f})')
 {{prefix}}_roc_auc_plot_ax.plot([0, 1], [0, 1], 'r--', label='Random guess')
-
 # Set axis labels and title
 {{prefix}}_roc_auc_plot_ax.set_xlabel('False Positive Rate')
 {{prefix}}_roc_auc_plot_ax.set_ylabel('True Positive Rate')
 {{prefix}}_roc_auc_plot_ax.set_title('ROC Curve')
 # Add legend
 {{prefix}}_roc_auc_plot_ax.legend()
+
+# Generate Decile Lift Chart
+
+
+
+print({{prefix}}_performance_metrics)
+plt.show(block=False)
 {% endif %}
 
 
