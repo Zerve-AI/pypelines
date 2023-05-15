@@ -182,7 +182,6 @@ class SupervisedPipeline:
             code_append += '\n'
             code_append += f"##### Model Pipeline for {model_name} #####"
             code_append += '\n'
-
             code_all_models += '\n'
             code_all_models += f"##### Model Pipeline for {model_name} #####"
             code_all_models += '\n'
@@ -207,12 +206,10 @@ class SupervisedPipeline:
             code_append += code
             code_append += '\n'
             code_append += f"##### End of Model Pipeline for {model_name} #####"
-
             code_all_models += f"##### Model Metrics {model_name} #####"
             code_all_models += code
             code_all_models += '\n'
             code_all_models += f"##### End of Model Pipeline for {model_name} #####"
-
             code_list[model_name] = {'code':code_append}
             if output_path is not None:
                 output_file = open(f"{output_path}/{model_name}.py", "w")
