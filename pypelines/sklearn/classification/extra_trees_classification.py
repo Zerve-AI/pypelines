@@ -5,7 +5,7 @@ extra_trees_classification_hyperparams = {
     'numerical': [
         {'search': True, 'name': 'n_estimators', 'min': 100, 'max': 500, 'step': 100},
         {'search': True, 'name': 'max_depth', 'min': 2, 'max': 10, 'step': 2},
-        {'search': True, 'name': 'max_samples', 'min': 0.1, 'max': 1.0, 'step': 0.2},
+        {'search': False, 'name': 'max_samples', 'min': 0.1, 'max': 1.0, 'step': 0.2},
     ],
     'categorical': [
         {'search': False, 'name': 'criterion', 'selected': ['gini'], 'values':  ['gini', 'entropy', 'log_loss']},

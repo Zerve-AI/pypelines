@@ -19,6 +19,7 @@ from .multinomial_nb_classification import MultinomialNBClassification, Multinom
 from .complement_nb_classification import ComplementNBClassification, ComplementNBClassificationComparison
 from .bernoulii_nb_classification import BernoulliNBClassification, BernoulliNBClassificationComparison
 from .categorical_nb_classification import CategoricalNBClassification, CategoricalNBClassificationComparison
+from .gaussian_process_classification import GaussianProcessClassification, GaussianProcessClassificationComparison
 
 
 models_classification = {
@@ -28,21 +29,22 @@ models_classification = {
     'SVC Classifier': SVCClassification,
     'XGBoost Classifier': XGBoostClassification,
     'MLP Classifier': MLPClassification,
-    'Ridge Classifier': RidgeClassification,
-    'Perceptron Classifier':PerceptronClassification,
+    #'Ridge Classifier': RidgeClassification, 
+    #'Perceptron Classifier':PerceptronClassification,
     'SGD Classifier': SGDClassification,
     'GBT Classifier': GBTClassification,
     'ADABoost Classifier': ADABoostClassification,
     'ExtraTrees Classifier': ExtraTreesClassification,
-    'PassiveAggressive Classifier': PassiveAggressiveClassification,
-    'LDA Classifier': LDAClassification,
+    #'PassiveAggressive Classifier': PassiveAggressiveClassification,
+    #'LDA Classifier': LDAClassification,
     'QDA Classifier': QDAClassification,
     'NuSVC Classifier': NuSVCClassification,
-    'GaussianNB Classifier': GaussianNBClassification,
-    'MultinomialNB Classifier': MultinomialNBClassification,
-    'ComplementNB Classifier': ComplementNBClassification,
+    #'GaussianNB Classifier': GaussianNBClassification,
+    #'MultinomialNB Classifier': MultinomialNBClassification,
+    #'ComplementNB Classifier': ComplementNBClassification,
     'BernoulliNB Classifier': BernoulliNBClassification,
-    'CategoricalNB Classifier': CategoricalNBClassification
+    #'CategoricalNB Classifier': CategoricalNBClassification,
+    'Gaussian Process Classifier': GaussianProcessClassification
 }
 
 models_comparison_classification = {
@@ -52,21 +54,22 @@ models_comparison_classification = {
     'SVC Classifier': SVCClassificationComparison,
     'XGBoost Classifier': XGBoostClassificationComparison,
     'MLP Classifier': MLPClassificationComparison,
-    'Ridge Classifier': RidgeClassificationComparison,
-    'Perceptron Classifier':PerceptronClassificationComparison,
+    #'Ridge Classifier': RidgeClassificationComparison,predict_proba()
+    #'Perceptron Classifier':PerceptronClassificationComparison,predict_proba()
     'SGD Classifier': SGDClassificationComparison,
     'GBT Classifier': GBTClassificationComparison,
     'ADABoost Classifier': ADABoostClassificationComparison,
     'ExtraTrees Classifier': ExtraTreesClassificationComparison,
-    'PassiveAggressive Classifier': PassiveAggressiveClassificationComparison,
-    'LDA Classifier': LDAClassificationComparison,
-    'QDA Classifier': QDAClassificationComparison,
+    #'PassiveAggressive Classifier': PassiveAggressiveClassificationComparison,predict_proba()
+    #'LDA Classifier': LDAClassificationComparison,to_array()
+    #'QDA Classifier': QDAClassificationComparison,to_array()
     'NuSVC Classifier': NuSVCClassificationComparison,
-    'GaussianNB Classifier': GaussianNBClassificationComparison,
-    'MultinomialNB Classifier': MultinomialNBClassificationComparison,
-    'ComplementNB Classifier': ComplementNBClassificationComparison,
+    #'GaussianNB Classifier': GaussianNBClassificationComparison,to_array()
+    #'MultinomialNB Classifier': MultinomialNBClassificationComparison, Negative Values
+    #'ComplementNB Classifier': ComplementNBClassificationComparison, Negative Values
     'BernoulliNB Classifier': BernoulliNBClassificationComparison,
-    'CategoricalNB Classifier': CategoricalNBClassificationComparison
+    #'CategoricalNB Classifier': CategoricalNBClassificationComparison, to_array()
+    'Gaussian Process Classifier': GaussianProcessClassificationComparison
 }
 
 

@@ -6,7 +6,7 @@ mlp_classification_hyperparams = {
         {'search': True, 'name': 'batch_size', 'min': 64, 'max': 512, 'step': 128},
     ],
     'categorical': [
-        {'search': True, 'name': 'learning_rate_init', 'selected': ['constant'],  'value': ['constant', 'invscaling', 'adaptive']},
+        {'search': True, 'name': 'learning_rate', 'selected': ['constant'],  'value': ['constant', 'invscaling', 'adaptive']},
         {'search': False, 'name': 'solver', 'selected': ['adam'], 'value': ['lbfgs', 'sgd', 'adam']},
         {'search': False, 'name': 'activation', 'selected': ['relu'], 'value': ['relu', 'identity', 'logistic', 'tanh']},
         {'search': False, 'name': 'shuffle', 'selected': [True], 'value': [True, False]},

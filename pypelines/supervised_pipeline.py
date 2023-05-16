@@ -158,6 +158,7 @@ class SupervisedPipeline:
         self.parse_config()
         code_list = {}
         code_append = ""
+        code_all_models = ""
         code, imports, requirements = PipelineTemplate()(self.pipeline_params)
         imports = self.default_imports + '\n' + imports
         code_append += imports
@@ -167,17 +168,23 @@ class SupervisedPipeline:
         code_append += "##### End of Data Processing Pipeline #####"
         code_append += '\n'
         code_append += '\n'
-        code_list['data_prep_pipeline'] = {'code':code_append}
+        code_data_prep = code_append
+        code_list['data_prep_pipeline'] = {'code':code_data_prep}
         if output_path is not None:
             output_file = open(f"{output_path}/data_prep_pipeline.py", "w")
-            n = output_file.write(code_append)
+            n = output_file.write(code_data_prep)
             output_file.close()
+        code_all_models += code_data_prep
         for model_name, params in self.model_params.items():
             ModelTemplate= self.models_all[model_name]
+            code_append = ""
             code_append += '\n'
             code_append += '\n'
             code_append += f"##### Model Pipeline for {model_name} #####"
             code_append += '\n'
+            code_all_models += '\n'
+            code_all_models += f"##### Model Pipeline for {model_name} #####"
+            code_all_models += '\n'
             code, model_imports, model_requirements  = ModelTemplate()({
                 **params, 
                 **self.shared_model_params, 
@@ -188,6 +195,7 @@ class SupervisedPipeline:
             if model_imports:
                 imports += '\n' + model_imports
             code_append += code
+            code_all_models += code
             ModelCompTemplate= self.model_comp_all[model_name]
             code, model_imports, model_requirements  = ModelCompTemplate()({
                 **params, 
@@ -198,12 +206,16 @@ class SupervisedPipeline:
             code_append += code
             code_append += '\n'
             code_append += f"##### End of Model Pipeline for {model_name} #####"
+            code_all_models += f"##### Model Metrics {model_name} #####"
+            code_all_models += code
+            code_all_models += '\n'
+            code_all_models += f"##### End of Model Pipeline for {model_name} #####"
             code_list[model_name] = {'code':code_append}
             if output_path is not None:
                 output_file = open(f"{output_path}/{model_name}.py", "w")
                 n = output_file.write(code_append)
                 output_file.close()
-        return code_append
+        return code_all_models
     
     def get_code(self):
         """

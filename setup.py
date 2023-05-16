@@ -12,10 +12,5 @@ setup(
         'jinja2',
         'pydantic'
     ],
-    entry_points={
-        'console_scripts': [
-            'your_script_name=your_project_name.your_script_module:main',
-        ],
-    },
     # other metadata
 )
