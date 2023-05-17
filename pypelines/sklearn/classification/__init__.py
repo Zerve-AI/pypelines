@@ -29,13 +29,13 @@ models_classification = {
     'SVC Classifier': SVCClassification,
     'XGBoost Classifier': XGBoostClassification,
     'MLP Classifier': MLPClassification,
-    #'Ridge Classifier': RidgeClassification, 
-    #'Perceptron Classifier':PerceptronClassification,
+    'Ridge Classifier': RidgeClassification, 
+    'Perceptron Classifier':PerceptronClassification,
     'SGD Classifier': SGDClassification,
     'GBT Classifier': GBTClassification,
     'ADABoost Classifier': ADABoostClassification,
     'ExtraTrees Classifier': ExtraTreesClassification,
-    #'PassiveAggressive Classifier': PassiveAggressiveClassification,
+    'PassiveAggressive Classifier': PassiveAggressiveClassification,
     #'LDA Classifier': LDAClassification,
     'QDA Classifier': QDAClassification,
     'NuSVC Classifier': NuSVCClassification,
@@ -54,13 +54,13 @@ models_comparison_classification = {
     'SVC Classifier': SVCClassificationComparison,
     'XGBoost Classifier': XGBoostClassificationComparison,
     'MLP Classifier': MLPClassificationComparison,
-    #'Ridge Classifier': RidgeClassificationComparison,predict_proba()
-    #'Perceptron Classifier':PerceptronClassificationComparison,predict_proba()
+    'Ridge Classifier': RidgeClassificationComparison,
+    'Perceptron Classifier':PerceptronClassificationComparison,
     'SGD Classifier': SGDClassificationComparison,
     'GBT Classifier': GBTClassificationComparison,
     'ADABoost Classifier': ADABoostClassificationComparison,
     'ExtraTrees Classifier': ExtraTreesClassificationComparison,
-    #'PassiveAggressive Classifier': PassiveAggressiveClassificationComparison,predict_proba()
+    'PassiveAggressive Classifier': PassiveAggressiveClassificationComparison,
     #'LDA Classifier': LDAClassificationComparison,to_array()
     #'QDA Classifier': QDAClassificationComparison,to_array()
     'NuSVC Classifier': NuSVCClassificationComparison,
