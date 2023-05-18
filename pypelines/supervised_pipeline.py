@@ -184,7 +184,6 @@ class SupervisedPipeline:
             code_append += '\n'
             code_append += f"##### Model Pipeline for {model_name} #####"
             code_append += '\n'
-
             code_all_models += '\n'
             code_all_models += f"##### Model Pipeline for {model_name} #####"
             code_all_models += '\n'

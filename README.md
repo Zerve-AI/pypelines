@@ -1,5 +1,5 @@
 # What is pypelines
-Pipelines is an open source automated machine learning training code generation utility.  It's intended to help data scientists get a fast start on building new models by providing boilerplate sklearn pipeline training code for a given dataset.
+Pypelines is an open source automated machine learning training code generation utility.  It's intended to help data scientists get a fast start on building new models by providing boilerplate sklearn pipeline training code for a given dataset.
 
 The generated code includes:
 - Data preparation and feature engineering
