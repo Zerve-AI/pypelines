@@ -37,11 +37,11 @@ models_classification = {
     'ExtraTrees Classifier': ExtraTreesClassification,
     'PassiveAggressive Classifier': PassiveAggressiveClassification,
     #'LDA Classifier': LDAClassification,
-    'QDA Classifier': QDAClassification,
+    #'QDA Classifier': QDAClassification,
     'NuSVC Classifier': NuSVCClassification,
     #'GaussianNB Classifier': GaussianNBClassification,
-    #'MultinomialNB Classifier': MultinomialNBClassification,
-    #'ComplementNB Classifier': ComplementNBClassification,
+    'MultinomialNB Classifier': MultinomialNBClassification,
+    'ComplementNB Classifier': ComplementNBClassification,
     'BernoulliNB Classifier': BernoulliNBClassification,
     #'CategoricalNB Classifier': CategoricalNBClassification,
     'Gaussian Process Classifier': GaussianProcessClassification
@@ -64,11 +64,11 @@ models_comparison_classification = {
     #'LDA Classifier': LDAClassificationComparison,to_array()
     #'QDA Classifier': QDAClassificationComparison,to_array()
     'NuSVC Classifier': NuSVCClassificationComparison,
-    #'GaussianNB Classifier': GaussianNBClassificationComparison,to_array()
-    #'MultinomialNB Classifier': MultinomialNBClassificationComparison, Negative Values
-    #'ComplementNB Classifier': ComplementNBClassificationComparison, Negative Values
+    #'GaussianNB Classifier': GaussianNBClassificationComparison,#to_array()
+    'MultinomialNB Classifier': MultinomialNBClassificationComparison,
+    'ComplementNB Classifier': ComplementNBClassificationComparison, 
     'BernoulliNB Classifier': BernoulliNBClassificationComparison,
-    #'CategoricalNB Classifier': CategoricalNBClassificationComparison, to_array()
+    #'CategoricalNB Classifier': CategoricalNBClassificationComparison, #to_array()
     'Gaussian Process Classifier': GaussianProcessClassificationComparison
 }
 
