@@ -171,13 +171,15 @@ class SupervisedPipeline:
         code_data_prep = code_append
         code_list['data_prep_pipeline'] = {'code':code_data_prep}
         if output_path is not None:
-            output_file = open(f"{output_path}/data_prep_pipeline.py", "wb")
+            output_file = open(f"{output_path}/data_prep_pipeline.py", "w")
             n = output_file.write(code_data_prep)
             output_file.close()
         code_all_models += code_data_prep
+        i = 0
         for model_name, params in self.model_params.items():
             ModelTemplate= self.models_all[model_name]
             code_append = ""
+            code_append = code_data_prep
             code_append += '\n'
             code_append += '\n'
             code_append += f"##### Model Pipeline for {model_name} #####"
@@ -197,22 +199,19 @@ class SupervisedPipeline:
                 imports += '\n' + model_imports
             code_append += code
             code_all_models += code
-            ModelCompTemplate= self.model_comp_all[model_name]
-            code, model_imports, model_requirements  = ModelCompTemplate()({
-                **params, 
-                **self.shared_model_params, 
-                'hyperparams': self.compile_hyperparameters(ModelCompTemplate().prefix, params)
-                })
-            code_append += f"##### Model Metrics {model_name} #####"
-            code_append += code
-            code_append += '\n'
-            code_append += f"##### End of Model Pipeline for {model_name} #####"
-
-            code_all_models += f"##### Model Metrics {model_name} #####"
-            code_all_models += code
-            code_all_models += '\n'
             code_all_models += f"##### End of Model Pipeline for {model_name} #####"
-
+            i += 1
+            if len(self.model_params.items()) == i:
+                ModelCompTemplate= self.model_comp_all[model_name]
+                code, model_imports, model_requirements  = ModelCompTemplate()({
+                    **params, 
+                    **self.shared_model_params, 
+                    'hyperparams': self.compile_hyperparameters(ModelCompTemplate().prefix, params)
+                    })
+                code_all_models += '\n'
+                code_all_models += f"##### Model Comparison #####"
+                code_all_models += code
+                code_all_models += '\n'
             code_list[model_name] = {'code':code_append}
             if output_path is not None:
                 output_file = open(f"{output_path}/{model_name}.py", "w")

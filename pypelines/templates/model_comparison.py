@@ -7,14 +7,13 @@ table = pd.concat(model_comparison_list)
 table = table.sort_values(by=['value'], ascending=False)
 table = table[table['metric'] == 'r2_score']
 print(table)
-f"The best model is {table['model'].to_string(index=False)}" 
-
+f"The best model is {table['model'].iloc[0]} with {table['value'].iloc[0]} as {table['metric'].iloc[0]}" 
 {% elif model_type == "Classification" %}
 table = pd.concat(model_comparison_list)
 table = table.sort_values(by=['value'], ascending=False)
 table = table[table['metric'] == 'roc_auc_score']
 print(table)
-f"The best model is {table['model'].to_string(index=False)}" 
+f"The best model is {table['model'].iloc[0]} with {table['value'].iloc[0]} as {table['metric'].iloc[0]}" 
 {% endif %}
 '''
 

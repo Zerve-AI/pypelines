@@ -93,7 +93,6 @@ print({{prefix}}_performance_metrics[{{prefix}}_performance_metrics['metric'] ==
 plt.show(block=False)
 
 {% endif %}
-
 model_comparison_list.append({{prefix}}_performance_metrics)
 '''
 
