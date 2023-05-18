@@ -29,7 +29,7 @@ models_classification = {
     'SVC Classifier': SVCClassification,
     'XGBoost Classifier': XGBoostClassification,
     'MLP Classifier': MLPClassification,
-    #'Ridge Classifier': RidgeClassification, 
+    'Ridge Classifier': RidgeClassification, 
     #'Perceptron Classifier':PerceptronClassification,
     'SGD Classifier': SGDClassification,
     'GBT Classifier': GBTClassification,
@@ -54,7 +54,7 @@ models_comparison_classification = {
     'SVC Classifier': SVCClassificationComparison,
     'XGBoost Classifier': XGBoostClassificationComparison,
     'MLP Classifier': MLPClassificationComparison,
-    #'Ridge Classifier': RidgeClassificationComparison,predict_proba()
+    'Ridge Classifier': RidgeClassificationComparison, #predict_proba()
     #'Perceptron Classifier':PerceptronClassificationComparison,predict_proba()
     'SGD Classifier': SGDClassificationComparison,
     'GBT Classifier': GBTClassificationComparison,

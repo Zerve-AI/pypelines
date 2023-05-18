@@ -1,12 +1,20 @@
 from .template_base import AutoPipelineBaseTemplate
+from IPython.display import display
 
 template = '''
 {% if model_type == "Regression" %}
-print({{prefix}}_performance_metrics)
-plt.show(block=False)
+table = pd.concat(model_comparison_list)
+table = table.sort_values(by=['value'], ascending=False)
+table = table[table['metric'] == 'r2_score']
+print(table)
+f"The best model is {table['model'].to_string(index=False)}" 
+
 {% elif model_type == "Classification" %}
-print({{prefix}}_performance_metrics)
-plt.show(block=False)
+table = pd.concat(model_comparison_list)
+table = table.sort_values(by=['value'], ascending=False)
+table = table[table['metric'] == 'roc_auc_score']
+print(table)
+f"The best model is {table['model'].to_string(index=False)}" 
 {% endif %}
 '''
 

@@ -47,9 +47,8 @@ template = '''
 
 # Generate Decile Lift Chart
 
+print({{prefix}}_performance_metrics[{{prefix}}_performance_metrics['metric'] == 'r2_score'])
 
-
-print({{prefix}}_performance_metrics)
 plt.show(block=False)
 
 
@@ -89,13 +88,13 @@ roc_auc = auc(fpr, tpr)
 
 # Generate Decile Lift Chart
 
+print({{prefix}}_performance_metrics[{{prefix}}_performance_metrics['metric'] == 'roc_auc_score'])
 
-
-print({{prefix}}_performance_metrics)
 plt.show(block=False)
+
 {% endif %}
 
-
+model_comparison_list.append({{prefix}}_performance_metrics)
 '''
 
 class SkLearnModelTemplate(AutoPipelineBaseTemplate):

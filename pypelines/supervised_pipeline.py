@@ -171,7 +171,7 @@ class SupervisedPipeline:
         code_data_prep = code_append
         code_list['data_prep_pipeline'] = {'code':code_data_prep}
         if output_path is not None:
-            output_file = open(f"{output_path}/data_prep_pipeline.py", "w")
+            output_file = open(f"{output_path}/data_prep_pipeline.py", "wb")
             n = output_file.write(code_data_prep)
             output_file.close()
         code_all_models += code_data_prep
