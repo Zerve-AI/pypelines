@@ -23,6 +23,7 @@ from sklearn.metrics import mean_squared_error
 class SupervisedPipeline:
     def __init__(self,
                  data:Union[str, pd.DataFrame],
+                 predictions_data:Union[str, pd.DataFrame],
                  target:str,
                  model_type:str,
                  nfolds:int,
@@ -47,8 +48,17 @@ class SupervisedPipeline:
             dataset_name = data
         else:
             raise ValueError("data must be a pandas DataFrame or a string")
+        
+        if isinstance(predictions_data, pd.DataFrame):
+            callers_globals = inspect.stack()[1][0].f_globals
+            predictions_dataset_name = [k for k,v in callers_globals.items() if v is data][0]
+        elif isinstance(predictions_data, str):
+            predictions_dataset_name = predictions_data
+        else:
+            raise ValueError("test_data must be a pandas DataFrame or a string")
 
         self.dataset_name = dataset_name
+        self.predictions_dataset_name = predictions_dataset_name
         self.target = target
         self.model_type = model_type
 
@@ -142,7 +152,7 @@ class SupervisedPipeline:
            selected_models = self.models 
            self.metric = 'mean_squared_error'
            self.default_imports = regression_imports
-        self.pipeline_params = {'dataset': self.dataset_name, 'target_column': self.target}
+        self.pipeline_params = {'dataset': self.dataset_name, 'target_column': self.target,'prediction_dataset':self.predictions_dataset_name}
         self.shared_model_params = {'cross_validation':self.nfolds, 'metric':self.metric }
         self.model_params = {k:v for k,v in self.model_param.items() if k in selected_models}
         self.model_comp_params = {k:v for k,v in self.model_param.items() if k in selected_models}
@@ -175,9 +185,11 @@ class SupervisedPipeline:
             n = output_file.write(code_data_prep)
             output_file.close()
         code_all_models += code_data_prep
+        i = 0
         for model_name, params in self.model_params.items():
             ModelTemplate= self.models_all[model_name]
             code_append = ""
+            code_append = code_data_prep
             code_append += '\n'
             code_append += '\n'
             code_append += f"##### Model Pipeline for {model_name} #####"
@@ -196,20 +208,19 @@ class SupervisedPipeline:
                 imports += '\n' + model_imports
             code_append += code
             code_all_models += code
-            ModelCompTemplate= self.model_comp_all[model_name]
-            code, model_imports, model_requirements  = ModelCompTemplate()({
-                **params, 
-                **self.shared_model_params, 
-                'hyperparams': self.compile_hyperparameters(ModelCompTemplate().prefix, params)
-                })
-            code_append += f"##### Model Metrics {model_name} #####"
-            code_append += code
-            code_append += '\n'
-            code_append += f"##### End of Model Pipeline for {model_name} #####"
-            code_all_models += f"##### Model Metrics {model_name} #####"
-            code_all_models += code
-            code_all_models += '\n'
             code_all_models += f"##### End of Model Pipeline for {model_name} #####"
+            i += 1
+            if len(self.model_params.items()) == i:
+                ModelCompTemplate= self.model_comp_all[model_name]
+                code, model_imports, model_requirements  = ModelCompTemplate()({
+                    **params, 
+                    **self.shared_model_params, 
+                    'hyperparams': self.compile_hyperparameters(ModelCompTemplate().prefix, params)
+                    })
+                code_all_models += '\n'
+                code_all_models += f"##### Model Comparison #####"
+                code_all_models += code
+                code_all_models += '\n'
             code_list[model_name] = {'code':code_append}
             if output_path is not None:
                 output_file = open(f"{output_path}/{model_name}.py", "w")

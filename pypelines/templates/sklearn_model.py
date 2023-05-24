@@ -110,6 +110,7 @@ roc_auc = auc(fpr, tpr)
 {{prefix}}_roc_auc_plot_ax.legend()
 
 
+print({{prefix}}_performance_metrics[{{prefix}}_performance_metrics['metric'] == 'roc_auc_score'])
 
 # Lift Chart
 aux_df = pd.DataFrame()
@@ -145,8 +146,7 @@ x_vals = np.linspace(0, 1, num=len(lift_values))
 {{prefix}}_lift_plot_ax.axhline(y=1, color='gray', linestyle='--', linewidth=3)
 
 {% endif %}
-
-
+model_comparison_list.append({{prefix}}_performance_metrics)
 '''
 
 class SkLearnModelTemplate(AutoPipelineBaseTemplate):

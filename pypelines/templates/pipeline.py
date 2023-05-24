@@ -19,6 +19,8 @@ target = "{{target_column}}"
 features = list({{dataset}}.columns.drop("{{target_column}}"))
 feature_df = {{dataset}}[features]
 
+prediction_df = {{prediction_dataset}}
+
 # get numerical and categorical columns
 bool_cols = feature_df.select_dtypes(include=['bool']).columns.tolist()
 {{dataset}}[bool_cols] = feature_df[bool_cols].astype(int)
@@ -80,6 +82,8 @@ preprocessor = ColumnTransformer(
 X = {{dataset}}[features]
 y = {{dataset}}[target]
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+model_comparison_list = []
 """
 
 

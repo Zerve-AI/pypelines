@@ -1,13 +1,23 @@
 from .template_base import AutoPipelineBaseTemplate
 
+
 template = '''
 {% if model_type == "Regression" %}
-print({{prefix}}_performance_metrics)
-plt.show(block=False)
+table = pd.concat(model_comparison_list)
+table = table.sort_values(by=['value'], ascending=False)
+table = table[table['metric'] == 'r2_score']
+print(table)
+f"The best model is {table['model'].iloc[0]} with {table['value'].iloc[0]} as {table['metric'].iloc[0]}" 
 {% elif model_type == "Classification" %}
-print({{prefix}}_performance_metrics)
-plt.show(block=False)
+table = pd.concat(model_comparison_list)
+table = table.sort_values(by=['value'], ascending=False)
+table = table[table['metric'] == 'roc_auc_score']
+print(table)
+f"The best model is {table['model'].iloc[0]} with {table['value'].iloc[0]} as {table['metric'].iloc[0]}" 
 {% endif %}
+
+# Predict test data using the best model
+test_predictions = eval(table['model'].iloc[0]+"_best_estimator").predict(prediction_df)
 '''
 
 class SkLearnModelComparisonTemplate(AutoPipelineBaseTemplate):
