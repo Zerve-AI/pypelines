@@ -19,6 +19,8 @@ target = "{{target_column}}"
 features = list({{dataset}}.columns.drop("{{target_column}}"))
 feature_df = {{dataset}}[features]
 
+prediction_df = {{prediction_dataset}}
+
 # get numerical and categorical columns
 bool_cols = feature_df.select_dtypes(include=['bool']).columns.tolist()
 {{dataset}}[bool_cols] = feature_df[bool_cols].astype(int)

@@ -23,6 +23,7 @@ from sklearn.metrics import mean_squared_error
 class SupervisedPipeline:
     def __init__(self,
                  data:Union[str, pd.DataFrame],
+                 predictions_data:Union[str, pd.DataFrame],
                  target:str,
                  model_type:str,
                  nfolds:int,
@@ -47,8 +48,17 @@ class SupervisedPipeline:
             dataset_name = data
         else:
             raise ValueError("data must be a pandas DataFrame or a string")
+        
+        if isinstance(predictions_data, pd.DataFrame):
+            callers_globals = inspect.stack()[1][0].f_globals
+            predictions_dataset_name = [k for k,v in callers_globals.items() if v is data][0]
+        elif isinstance(predictions_data, str):
+            predictions_dataset_name = predictions_data
+        else:
+            raise ValueError("test_data must be a pandas DataFrame or a string")
 
         self.dataset_name = dataset_name
+        self.predictions_dataset_name = predictions_dataset_name
         self.target = target
         self.model_type = model_type
 
@@ -142,7 +152,7 @@ class SupervisedPipeline:
            selected_models = self.models 
            self.metric = 'mean_squared_error'
            self.default_imports = regression_imports
-        self.pipeline_params = {'dataset': self.dataset_name, 'target_column': self.target}
+        self.pipeline_params = {'dataset': self.dataset_name, 'target_column': self.target,'prediction_dataset':self.predictions_dataset_name}
         self.shared_model_params = {'cross_validation':self.nfolds, 'metric':self.metric }
         self.model_params = {k:v for k,v in self.model_param.items() if k in selected_models}
         self.model_comp_params = {k:v for k,v in self.model_param.items() if k in selected_models}

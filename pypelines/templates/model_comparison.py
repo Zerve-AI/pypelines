@@ -15,6 +15,9 @@ table = table[table['metric'] == 'roc_auc_score']
 print(table)
 f"The best model is {table['model'].iloc[0]} with {table['value'].iloc[0]} as {table['metric'].iloc[0]}" 
 {% endif %}
+
+# Predict test data using the best model
+test_predictions = eval(table['model'].iloc[0]+"_best_estimator").predict(prediction_df)
 '''
 
 class SkLearnModelComparisonTemplate(AutoPipelineBaseTemplate):
