@@ -71,10 +71,17 @@ plt.show(block=False)
 {% elif model_type == "Classification" %}
 # Generate Predictions
 {{prefix}}_predictions = pd.DataFrame({{prefix}}_best_estimator.predict(X_test))
+{% if prefix not in ['passive_aggressive_classifier','ridge_classifer','perceptron_classifier']%}
 {{prefix}}_predictions_prob = {{prefix}}_best_estimator.predict_proba(X_test)
 {{prefix}}_predictions_prob_df = pd.DataFrame()
 {{prefix}}_predictions_prob_df[{{prefix}}_grid_search.classes_[0]] = {{prefix}}_predictions_prob[:,0]
 {{prefix}}_predictions_prob_df[{{prefix}}_grid_search.classes_[1]] = {{prefix}}_predictions_prob[:,1] 
+{% else %}
+{{prefix}}_predictions_prob  = {{prefix}}_best_estimator.decision_function(X_test)
+{{prefix}}_predictions_prob_df = pd.DataFrame()
+{{prefix}}_predictions_prob_df[{{prefix}}_grid_search.classes_[0]] = {{prefix}}_predictions_prob
+{{prefix}}_predictions_prob_df[{{prefix}}_grid_search.classes_[1]] = {{prefix}}_predictions_prob
+{% endif %}
 
 # Generate Model Metrics
 {{prefix}}_accuracy = accuracy_score(y_test, {{prefix}}_predictions.iloc[:,0])
@@ -108,7 +115,7 @@ print({{prefix}}_performance_metrics[{{prefix}}_performance_metrics['metric'] ==
 # Lift Chart
 aux_df = pd.DataFrame()
 aux_df['y_real'] = y_test
-aux_df['y_proba'] = {{prefix}}_predictions_prob[:,1]
+aux_df['y_proba'] = {{prefix}}_predictions_prob_df.iloc[:,1].values
 
 # Sort by predicted probability
 aux_df = aux_df.sort_values('y_proba', ascending=False)
