@@ -1,5 +1,5 @@
 from .template_base import AutoPipelineBaseTemplate
-from IPython.display import display
+
 
 template = '''
 {% if model_type == "Regression" %}
