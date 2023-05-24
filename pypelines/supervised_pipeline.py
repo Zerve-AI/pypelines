@@ -157,8 +157,8 @@ class SupervisedPipeline:
         """
         self.parse_config()
         code_list = {}
-        code_append = ""
-        code_all_models = ""
+        code_append = "" #store output for each model - used for writing code file output for each model
+        code_all_models = "" #store output for all models - used for copy_to_clipboard
         code, imports, requirements = PipelineTemplate()(self.pipeline_params)
         imports = self.default_imports + '\n' + imports
         code_append += imports
