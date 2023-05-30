@@ -10,9 +10,6 @@ def scorer_f(estimator, X_test):   #dummy scorer for unsupervised model gridsear
 
 {{prefix}}_param_grid = {{hyperparams}}
 
-x_train_preprocessed = preprocessor.fit_transform(x_train)
-y_train_preprocessed = preprocessor.fit_transform(prediction_df)
-
 {{prefix}}_model = {{prefix}}()
 
 # Perform grid search with cross-validation

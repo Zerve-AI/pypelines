@@ -1,0 +1,1000 @@
+Maker, Genmodel, Genmodel_ID,Adv_year,Adv_month,Color,Reg_year,Bodytype,Runned_Miles,Engin_size,Gearbox,Fuel_type,Price,Seat_num,Door_num,issue,issue_id,Adv_day,breakdown_date,repair_complexity,repair_cost,repair_hours,repair_date
+Bentley,Arnage,10_1,2018,4,Silver,2000.0,Saloon,60000,6.8L,Automatic,Petrol,21500.0,5.0,4.0,Electrical Issue,4,12,2018-04-12,3,184.5,6.0,2018-04-13
+Bentley,Arnage,10_1,2018,6,Grey,2002.0,Saloon,44000,6.8L,Automatic,Petrol,28750.0,5.0,4.0,Brake Pads Worn,0,10,2018-06-10,3,134.375,6.0,2018-06-11
+Bentley,Arnage,10_1,2017,11,Blue,2002.0,Saloon,55000,6.8L,Automatic,Petrol,29999.0,5.0,4.0,Flat Tyres,0,2,2017-11-02,3,68.9997,3.0,2017-11-02
+Bentley,Arnage,10_1,2018,4,Green,2003.0,Saloon,14000,6.8L,Automatic,Petrol,34948.0,5.0,4.0,Gear Box Issue,0,27,2018-04-27,3,469.48,6.0,2018-04-28
+Bentley,Arnage,10_1,2017,11,Grey,2003.0,Saloon,61652,6.8L,Automatic,Petrol,26555.0,5.0,4.0,Electrical Issue,4,23,2017-11-23,3,199.66500000000002,6.0,2017-11-24
+Bentley,Arnage,10_1,2017,12,Blue,2002.0,Saloon,55000,6.8L,Automatic,Petrol,24950.0,5.0,4.0,Flat Tyres,0,7,2017-12-07,3,67.485,3.0,2017-12-07
+Bentley,Arnage,10_1,2018,8,Green,2002.0,Saloon,67000,6.8L,Automatic,Petrol,29995.0,5.0,4.0,Windscreen Crack,0,15,2018-08-15,3,77.997,3.0,2018-08-15
+Bentley,Arnage,10_1,2018,4,Black,2003.0,Saloon,99200,6.8L,Automatic,Petrol,22450.0,5.0,4.0,Radiator Leaking,0,1,2018-04-01,3,569.0,6.0,2018-04-02
+Bentley,Arnage,10_1,2018,2,Silver,2003.0,Saloon,27541,6.8L,Automatic,Petrol,26990.0,4.0,4.0,Radiator Leaking,0,9,2018-02-09,3,659.8,6.0,2018-02-10
+Bentley,Arnage,10_1,2017,11,Silver,2003.0,Saloon,38000,6.8L,Automatic,Petrol,29995.0,5.0,4.0,Engine Issue,2,21,2017-11-21,3,23801.92097015141,48.0,2017-12-03
+Bentley,Arnage,10_1,2018,3,Green,2003.0,Saloon,69491,6.8L,Automatic,Petrol,23995.0,5.0,4.0,Tyre Alignment,0,5,2018-03-05,3,32.3995,1.5,2018-03-05
+Bentley,Arnage,10_1,2018,6,Silver,2002.0,Saloon,52000,6.8L,Automatic,Petrol,26990.0,5.0,4.0,Engine Issue,4,8,2018-06-08,3,1949.5,30.0,2018-06-15
+Bentley,Arnage,10_1,2018,4,Silver,2000.0,Saloon,53444,6.8L,Automatic,Petrol,21995.0,5.0,4.0,Warning Light,0,27,2018-04-27,3,759.95,27.0,2018-05-03
+Bentley,Arnage,10_1,2018,7,Blue,2002.0,Saloon,58000,6.8L,Automatic,Petrol,25950.0,5.0,4.0,Starter Motor Issue,0,18,2018-07-18,3,439.5,9.0,2018-07-20
+Bentley,Arnage,10_1,2018,4,Black,2000.0,Saloon,61500,6.7L,Automatic,Petrol,16500.0,20.0,0.0,Flat Tyres,0,16,2018-04-16,3,64.95,3.0,2018-04-16
+Bentley,Arnage,10_1,2017,12,Blue,2000.0,Saloon,49700,4.4L,Automatic,Petrol,29500.0,5.0,4.0,Tyre Alignment,0,19,2017-12-19,3,32.95,1.5,2017-12-19
+Bentley,Arnage,10_1,2018,2,Gelb,2003.0,Saloon,35000,6.8L,Automatic,Petrol,35000.0,16.0,0.0,Brake Pads Worn,0,22,2018-02-22,3,137.5,6.0,2018-02-23
+Bentley,Arnage,10_1,2018,4,White,2000.0,Saloon,75000,6.8L,Automatic,Petrol,17995.0,5.0,4.0,Tyre Alignment,0,23,2018-04-23,3,31.799500000000002,1.5,2018-04-23
+Bentley,Arnage,10_1,2018,4,Grey,2003.0,Saloon,48226,6.8L,Automatic,Petrol,33950.0,5.0,4.0,Tyre Alignment,0,16,2018-04-16,3,33.395,1.5,2018-04-16
+Bentley,Arnage,10_1,2018,4,Blue,2003.0,Saloon,92000,6.8L,Automatic,Petrol,25995.0,5.0,0.0,Steering Wheel Shaking,0,16,2018-04-16,3,404.65588997202013,305.8490082360678,2018-07-01
+Bentley,Arnage,10_1,2018,4,Silver,2003.0,Saloon,60000,6.8L,Automatic,Petrol,26995.0,5.0,4.0,Starter Motor Issue,0,5,2018-04-05,3,449.95,9.0,2018-04-07
+Bentley,Arnage,10_1,2017,3,Blue,2002.0,Saloon,51789,6.8L,Automatic,Petrol,26990.0,5.0,4.0,Sensor Malfunction,0,10,2017-03-10,3,1529.5,9.0,2017-03-12
+Bentley,Arnage,10_1,2017,7,Blue,2003.0,Saloon,77000,6.8L,Automatic,Petrol,29750.0,5.0,4.0,Warning Light,0,4,2017-07-04,3,837.5,27.0,2017-07-10
+Bentley,Arnage,10_1,2018,4,White,2003.0,Saloon,75000,6.8L,Automatic,Petrol,16500.0,5.0,4.0,Electrical Issue,3,3,2018-04-03,3,142.5,3.0,2018-04-03
+Bentley,Arnage,10_1,2018,5,Blue,2002.0,Saloon,49968,6.8L,Automatic,Petrol,29950.0,5.0,4.0,Warning Light,0,18,2018-05-18,3,839.5,27.0,2018-05-24
+Bentley,Arnage,10_1,2017,5,Silver,2000.0,Saloon,98000,6.8L,Automatic,Petrol,17945.0,5.0,4.0,Warning Light,0,16,2017-05-16,3,719.45,27.0,2017-05-22
+Bentley,Arnage,10_1,2018,3,Green,2000.0,Saloon,30000,6.8L,Automatic,Petrol,29950.0,5.0,4.0,Radiator Leaking,0,3,2018-03-03,3,719.0,6.0,2018-03-04
+Bentley,Arnage,10_1,2017,11,Silver,2003.0,Saloon,40000,6.8L,Automatic,Petrol,31950.0,5.0,4.0,Tyre Alignment,0,16,2017-11-16,3,33.195,1.5,2017-11-16
+Bentley,Arnage,10_1,2017,11,Blue,2000.0,Saloon,46000,6.8L,Automatic,Petrol,21950.0,5.0,4.0,Electrical Issue,3,27,2017-11-27,3,169.75,3.0,2017-11-27
+Bentley,Arnage,10_1,2018,6,Green,2002.0,Saloon,47225,6.8L,Automatic,Petrol,24995.0,5.0,4.0,Steering Wheel Shaking,0,17,2018-06-17,3,259.28400497246076,3.0,2018-06-17
+Bentley,Azure,10_2,2018,4,Red,1995.0,Convertible,78000,6.8L,Automatic,Petrol,59990.0,16.0,0.0,Windscreen Crack,0,12,2018-04-12,3,95.994,3.0,2018-04-12
+Bentley,Bentayga,10_3,2018,3,Grey,2016.0,SUV,12661,6.0L,Automatic,Petrol,129990.0,5.0,5.0,Tyre Alignment,0,17,2018-03-17,3,42.999,1.5,2018-03-17
+Bentley,Bentayga,10_3,2018,4,Brown,2018.0,SUV,415,6.0L,Automatic,Petrol,164995.0,5.0,5.0,Starter Motor Issue,0,5,2018-04-05,3,1829.95,9.0,2018-04-07
+Bentley,Bentayga,10_3,2018,4,Silver,2016.0,SUV,15141,6.0L,Automatic,Petrol,135000.0,5.0,5.0,Windscreen Crack,0,1,2018-04-01,3,141.0,3.0,2018-04-01
+Bentley,Bentayga,10_3,2018,2,Grey,2018.0,SUV,3000,4.0L,Automatic,Diesel,164750.0,5.0,5.0,Engine Issue,4,14,2018-02-14,3,8837.5,30.0,2018-02-21
+Bentley,Bentayga,10_3,2018,8,Black,2016.0,SUV,33000,6.0L,Automatic,Petrol,135000.0,14.0,5.0,Gear Box Issue,0,3,2018-08-03,3,1470.0,6.0,2018-08-04
+Bentley,Bentayga,10_3,2018,5,Black,2018.0,SUV,500,4.0L,Automatic,Petrol,169000.0,5.0,5.0,Windscreen Crack,0,7,2018-05-07,3,161.39999999999998,3.0,2018-05-07
+Bentley,Bentayga,10_3,2018,8,Grey,2017.0,SUV,10972,6.0L,Automatic,Petrol,139950.0,5.0,5.0,Radiator Leaking,0,7,2018-08-07,3,2919.0,6.0,2018-08-08
+Bentley,Bentayga,10_3,2018,8,Grey,2018.0,SUV,5963,4.0L,Automatic,Petrol,146995.0,5.0,5.0,Excessive Emissions,0,20,2018-08-20,3,192.2955,3.0,2018-08-20
+Bentley,Bentayga,10_3,2018,8,Grey,2018.0,SUV,1000,4.0L,Automatic,Diesel,159500.0,5.0,5.0,Tyre Alignment,0,21,2018-08-21,3,263.7907792719344,138.48708891859852,2018-09-24
+Bentley,Bentayga,10_3,2018,6,Blue,2016.0,SUV,16526,6.0L,Automatic,Petrol,127895.0,5.0,5.0,Starter Motor Issue,0,15,2018-06-15,3,1458.95,9.0,2018-06-17
+Bentley,Bentayga,10_3,2018,7,White,2016.0,SUV,16200,6.0L,Automatic,Petrol,125995.0,5.0,5.0,Excessive Emissions,0,18,2018-07-18,3,173.3955,3.0,2018-07-18
+Bentley,Bentayga,10_3,2018,6,Grey,2016.0,SUV,6000,6.0L,Automatic,Petrol,145000.0,5.0,5.0,Warning Light,0,13,2018-06-13,3,1990.0,27.0,2018-06-19
+Bentley,Bentayga,10_3,2018,7,Black,2017.0,SUV,15000,4.0L,Automatic,Diesel,124950.0,5.0,5.0,Engine Issue,1,25,2018-07-25,3,25470.0,24.0,2018-07-31
+Bentley,Bentayga,10_3,2018,6,Blue,2016.0,SUV,5900,6.0L,Automatic,Petrol,139900.0,5.0,5.0,Windscreen Crack,0,9,2018-06-09,3,143.94,3.0,2018-06-09
+Bentley,Bentayga,10_3,2018,8,Green,2018.0,SUV,9000,4.0L,Automatic,Diesel,149995.0,5.0,5.0,Steering Wheel Shaking,0,4,2018-08-04,3,209.995,3.0,2018-08-04
+Bentley,Bentayga,10_3,2018,8,Black,2017.0,SUV,3000,4.0L,Automatic,Diesel,154995.0,5.0,5.0,Alternator Failing,0,17,2018-08-17,3,3219.9,6.0,2018-08-18
+Bentley,Bentayga,10_3,2018,2,Grey,2017.0,SUV,5185,6.0L,Automatic,Petrol,147950.0,4.0,5.0,Starter Motor Issue,0,28,2018-02-28,3,1659.5,9.0,2018-03-02
+Bentley,Bentayga,10_3,2018,8,White,2018.0,SUV,2810,4.0L,Automatic,Diesel,137950.0,5.0,5.0,Transmission Issue,3,1,2018-08-01,3,1721.55,24.0,2018-08-07
+Bentley,Bentayga,10_3,2018,7,Black,2018.0,SUV,20,4.0L,Automatic,Diesel,194995.0,5.0,5.0,Warning Light,0,12,2018-07-12,3,14662.782987196442,27.0,2018-07-18
+Bentley,Bentayga,10_3,2017,10,Black,2018.0,SUV,40,6.0L,Automatic,Petrol,239950.0,5.0,5.0,Gear Box Issue,0,3,2017-10-03,3,2519.5,6.0,2017-10-04
+Bentley,Bentayga,10_3,2017,12,Silver,2018.0,SUV,80,4.0L,Automatic,Diesel,209950.0,5.0,5.0,Electrical Issue,3,10,2017-12-10,3,1109.75,3.0,2017-12-10
+Bentley,Bentayga,10_3,2018,3,Black,2018.0,SUV,10,4.0L,Automatic,Petrol,160000.0,5.0,5.0,Warning Light,0,6,2018-03-06,3,2140.0,27.0,2018-03-12
+Bentley,Bentayga,10_3,2018,3,Black,2018.0,SUV,2500,4.0L,Automatic,Petrol,159750.0,5.0,5.0,Tyre Alignment,0,10,2018-03-10,3,45.975,1.5,2018-03-10
+Bentley,Bentayga,10_3,2018,2,Black,2018.0,SUV,50,999.0L,Automatic,Petrol,149999.0,17.0,0.0,Radiator Leaking,0,2,2018-02-02,3,3119.98,6.0,2018-02-03
+Bentley,Bentayga,10_3,2018,3,Black,2018.0,SUV,2000,4.0L,Automatic,Petrol,159990.0,5.0,5.0,Sensor Malfunction,0,2,2018-03-02,3,8179.5,9.0,2018-03-04
+Bentley,Bentayga,10_3,2018,4,Green,2018.0,SUV,2000,4.0L,Automatic,Diesel,169950.0,5.0,5.0,Radiator Leaking,0,5,2018-04-05,3,3519.0,6.0,2018-04-06
+Bentley,Bentayga,10_3,2018,8,Blue,2018.0,SUV,4944,4.0L,Automatic,Petrol,97500.0,5.0,5.0,Flat Tyres,0,28,2018-08-28,3,89.25,3.0,2018-08-28
+Bentley,Bentayga,10_3,2018,4,Black,2018.0,SUV,1500,4.0L,Automatic,Diesel,169950.0,5.0,5.0,Engine Issue,3,7,2018-04-07,3,17715.0,36.0,2018-04-16
+Bentley,Bentayga,10_3,2018,7,Black,2018.0,SUV,1496,6.0L,Automatic,Petrol,184950.0,5.0,5.0,Brake Pads Worn,0,17,2018-07-17,3,1168.9604307231014,698.6982322528289,2019-01-07
+Bentley,Bentayga,10_3,2018,8,Orange,2018.0,SUV,700,6.0L,Automatic,Petrol,174950.0,5.0,5.0,Flat Tyres,0,16,2018-08-16,3,112.48499999999999,3.0,2018-08-16
+Bentley,Bentayga,10_3,2018,7,Grey,2017.0,SUV,12348,4.0L,Automatic,Diesel,134950.0,5.0,5.0,Warning Light,0,9,2018-07-09,3,1889.5,27.0,2018-07-15
+Bentley,Bentayga,10_3,2018,4,Grey,2018.0,SUV,1000,4.0L,Automatic,Petrol,169500.0,5.0,5.0,Transmission Issue,2,26,2018-04-26,3,1366.5,9.0,2018-04-28
+Bentley,Bentayga,10_3,2018,7,Grey,2018.0,Estate,6012,6.0L,Semi-Automatic,Petrol,179950.0,13.0,5.0,Tyre Alignment,0,16,2018-07-16,3,47.995000000000005,1.5,2018-07-16
+Bentley,Bentayga,10_3,2018,3,Gelb,2018.0,SUV,5734,6.0L,Automatic,Petrol,169950.0,5.0,5.0,Steering Wheel Shaking,0,21,2018-03-21,3,229.95000000000002,3.0,2018-03-21
+Bentley,Bentayga,10_3,2017,10,Grey,2017.0,SUV,8147,6.0L,Automatic,Petrol,143950.0,5.0,5.0,Electrical Issue,2,24,2017-10-24,3,317.90000000000003,1.5,2017-10-24
+Bentley,Bentayga,10_3,2018,6,Grey,2018.0,Estate,8500,6.0L,Automatic,Petrol,152000.0,10.0,5.0,Transmission Issue,3,16,2018-06-16,3,1848.0,24.0,2018-06-22
+Bentley,Bentayga,10_3,2018,3,White,2018.0,SUV,150,4.0L,Automatic,Petrol,155000.0,5.0,5.0,Warning Light,0,21,2018-03-21,3,2090.0,27.0,2018-03-27
+Bentley,Bentayga,10_3,2018,7,Blue,2018.0,SUV,2000,4.0L,Automatic,Petrol,139850.0,5.0,5.0,Engine Issue,4,14,2018-07-14,3,7592.5,30.0,2018-07-21
+Bentley,Bentayga,10_3,2018,4,White,2018.0,SUV,50,4.0L,Automatic,Diesel,169000.0,5.0,5.0,Warning Light,0,2,2018-04-02,3,7240.028165762253,27.0,2018-04-08
+Bentley,Bentayga,10_3,2018,4,Silver,2018.0,SUV,1125,4.0L,Automatic,Diesel,145000.0,5.0,5.0,Sensor Malfunction,0,7,2018-04-07,3,7430.0,9.0,2018-04-09
+Bentley,Bentayga,10_3,2017,9,Grey,2016.0,SUV,19283,6.0L,Automatic,Petrol,124995.0,5.0,5.0,Radiator Leaking,0,13,2017-09-13,3,2619.9,6.0,2017-09-14
+Bentley,Bentayga,10_3,2018,3,Grey,2018.0,SUV,1500,4.0L,Automatic,Petrol,159500.0,5.0,5.0,Flat Tyres,0,24,2018-03-24,3,107.85,3.0,2018-03-24
+Bentley,Bentayga,10_3,2018,8,Silver,2016.0,SUV,13190,6.0L,Automatic,Petrol,125990.0,5.0,0.0,Warning Light,0,2,2018-08-02,3,1799.9,27.0,2018-08-08
+Bentley,Bentayga,10_3,2017,8,Black,2018.0,SUV,100,4.0L,Automatic,Diesel,209950.0,5.0,5.0,Sensor Malfunction,0,6,2017-08-06,3,10677.5,9.0,2017-08-08
+Bentley,Bentayga,10_3,2018,8,White,2017.0,SUV,7982,4.0L,Automatic,Diesel,129950.0,5.0,5.0,Gear Box Issue,0,3,2018-08-03,3,1419.5,6.0,2018-08-04
+Bentley,Bentayga,10_3,2018,3,Gelb,2018.0,SUV,3678,4.0L,Automatic,Diesel,144950.0,5.0,5.0,Warning Light,0,24,2018-03-24,3,1989.5,27.0,2018-03-30
+Bentley,Bentayga,10_3,2018,8,Green,2016.0,SUV,4323,6.0L,Automatic,Petrol,124950.0,5.0,5.0,Transmission Issue,2,4,2018-08-04,3,1054.65,9.0,2018-08-06
+Bentley,Bentayga,10_3,2018,7,Grey,2018.0,SUV,6500,4.0L,Automatic,Petrol,149950.0,5.0,5.0,Warning Light,0,2,2018-07-02,3,2039.5,27.0,2018-07-08
+Bentley,Bentayga,10_3,2018,2,Black,2018.0,SUV,1800,4.0L,Automatic,Diesel,174950.0,5.0,5.0,Alternator Failing,0,7,2018-02-07,3,21399.65026148762,14167.150445582514,2027-10-19
+Bentley,Bentayga,10_3,2018,5,Black,2017.0,SUV,5576,4.0L,Automatic,Diesel,142000.0,5.0,5.0,Flat Tyres,0,28,2018-05-28,3,102.6,3.0,2018-05-28
+Bentley,Bentayga,10_3,2018,5,White,2017.0,SUV,12042,4.0L,Automatic,Diesel,132000.0,5.0,5.0,Radiator Leaking,0,19,2018-05-19,3,2760.0,6.0,2018-05-20
+Bentley,Bentayga,10_3,2018,5,Grey,2018.0,SUV,-11920,6.0L,Automatic,Petrol,159950.0,5.0,5.0,Electrical Issue,1,25,2018-05-25,3,279.95000000000005,6.0,2018-05-26
+Bentley,Bentayga,10_3,2018,6,Black,2017.0,SUV,15000,4.0L,Automatic,Diesel,139950.0,5.0,5.0,Transmission Issue,3,16,2018-06-16,3,1739.55,24.0,2018-06-22
+Bentley,Bentayga,10_3,2018,6,Grey,2017.0,SUV,12055,6.0L,Automatic,Petrol,144850.0,5.0,5.0,Alternator Failing,0,3,2018-06-03,3,3017.0,6.0,2018-06-04
+Bentley,Bentayga,10_3,2018,7,White,2017.0,SUV,16392,4.0L,Automatic,Diesel,126950.0,5.0,5.0,Warning Light,0,6,2018-07-06,3,1809.5,27.0,2018-07-12
+Bentley,Bentayga,10_3,2018,4,Blue,2018.0,SUV,10,4.0L,Automatic,Diesel,159990.0,5.0,5.0,Flat Tyres,0,13,2018-04-13,3,107.99699999999999,3.0,2018-04-13
+Bentley,Bentayga,10_3,2018,6,Blue,2018.0,SUV,1059,4.0L,Automatic,Petrol,148950.0,5.0,5.0,Windscreen Crack,0,22,2018-06-22,3,149.37,3.0,2018-06-22
+Bentley,Bentayga,10_3,2018,7,Grey,2018.0,SUV,1750,4.0L,Automatic,Diesel,154990.0,5.0,5.0,Excessive Emissions,0,10,2018-07-10,3,199.49099999999999,3.0,2018-07-10
+Bentley,Bentayga,10_3,2018,6,Gelb,2017.0,SUV,4000,6.0L,Automatic,Petrol,149950.0,5.0,5.0,Alternator Failing,0,28,2018-06-28,3,13269.955283679375,6.0,2018-06-29
+Bentley,Bentayga,10_3,2018,8,Black,2017.0,SUV,6195,4.0L,Automatic,Diesel,137950.0,5.0,5.0,Engine Issue,3,26,2018-08-26,3,14515.0,36.0,2018-09-04
+Bentley,Bentayga,10_3,2018,3,White,2018.0,SUV,1500,4.0L,Automatic,Diesel,153500.0,7.0,5.0,Electrical Issue,4,14,2018-03-14,3,580.5,6.0,2018-03-15
+Bentley,Bentayga,10_3,2018,8,Red,2016.0,SUV,4120,6.0L,Automatic,Petrol,127990.0,5.0,5.0,Steering Wheel Shaking,0,28,2018-08-28,3,187.99,3.0,2018-08-28
+Bentley,Bentayga,10_3,2018,5,Black,2018.0,SUV,40,4.0L,Automatic,Diesel,184995.0,5.0,5.0,Tyre Alignment,0,28,2018-05-28,3,48.4995,1.5,2018-05-28
+Bentley,Bentayga,10_3,2018,2,Black,2018.0,SUV,500,4.0L,Automatic,Diesel,179985.0,5.0,5.0,Sensor Malfunction,0,9,2018-02-09,3,9179.25,9.0,2018-02-11
+Bentley,Bentayga,10_3,2018,3,Black,2016.0,SUV,12000,6.0L,Automatic,Petrol,139975.0,5.0,5.0,Warning Light,0,15,2018-03-15,3,1939.75,27.0,2018-03-21
+Bentley,Bentayga,10_3,2018,8,Blue,2017.0,SUV,2917,4.0L,Automatic,Diesel,135950.0,5.0,5.0,Transmission Issue,1,21,2018-08-21,3,647.85,12.0,2018-08-24
+Bentley,Bentayga,10_3,2018,3,Black,2016.0,SUV,6445,6.0L,Automatic,Petrol,139500.0,5.0,5.0,Steering Wheel Shaking,0,10,2018-03-10,3,199.5,3.0,2018-03-10
+Bentley,Bentayga,10_3,2018,7,Black,2016.0,SUV,1800,6.0L,Automatic,Petrol,134850.0,5.0,5.0,Engine Issue,2,24,2018-07-24,3,21187.5,48.0,2018-08-05
+Bentley,Bentayga,10_3,2018,3,Black,2016.0,SUV,18074,6.0L,Automatic,Petrol,128500.0,5.0,5.0,Tyre Alignment,0,19,2018-03-19,3,182.96838876209003,146.04190401903986,2018-04-24
+Bentley,Bentayga,10_3,2018,7,Silver,2017.0,SUV,5501,4.0L,Automatic,Diesel,137950.0,5.0,5.0,Gear Box Issue,0,19,2018-07-19,3,1499.5,6.0,2018-07-20
+Bentley,Bentayga,10_3,2018,4,Grey,2018.0,SUV,50,4.0L,Automatic,Petrol,155000.0,5.0,5.0,Engine Issue,4,24,2018-04-24,3,8350.0,30.0,2018-05-01
+Bentley,Bentayga,10_3,2018,8,Black,2016.0,SUV,7207,6.0L,Automatic,Petrol,129500.0,5.0,5.0,Sensor Malfunction,0,15,2018-08-15,3,6655.0,9.0,2018-08-17
+Bentley,Bentayga,10_3,2018,2,Blue,2016.0,SUV,3900,6.0L,Automatic,Petrol,139950.0,5.0,5.0,Starter Motor Issue,0,7,2018-02-07,3,1579.5,9.0,2018-02-09
+Bentley,Bentayga,10_3,2018,7,Black,2017.0,SUV,4200,6.0L,Automatic,Petrol,145000.0,5.0,5.0,Brake Pads Worn,0,16,2018-07-16,3,192.5,6.0,2018-07-17
+Bentley,Bentayga,10_3,2018,3,Black,2016.0,SUV,12011,6.0L,Automatic,Petrol,130000.0,5.0,5.0,Excessive Emissions,0,13,2018-03-13,3,177.0,3.0,2018-03-13
+Bentley,Bentayga,10_3,2017,8,Black,2018.0,SUV,100,6.0L,Automatic,Petrol,229950.0,5.0,5.0,Steering Wheel Shaking,0,1,2017-08-01,3,289.95000000000005,3.0,2017-08-01
+Bentley,Bentayga,10_3,2018,3,Gelb,2018.0,SUV,-13470,6.0L,Automatic,Petrol,173000.0,5.0,5.0,Excessive Emissions,0,19,2018-03-19,3,215.7,3.0,2018-03-19
+Bentley,Bentayga,10_3,2018,2,Grey,2018.0,SUV,7000,4.0L,Automatic,Diesel,165000.0,5.0,5.0,Flat Tyres,0,17,2018-02-17,3,109.5,3.0,2018-02-17
+Bentley,Bentayga,10_3,2018,4,White,2018.0,SUV,500,4.0L,Automatic,Petrol,154950.0,7.0,0.0,Windscreen Crack,0,28,2018-04-28,3,848.141904147922,3.0,2018-04-28
+Bentley,Bentayga,10_3,2018,4,Black,2018.0,SUV,50,1.5L,Automatic,Petrol,169995.0,15.0,0.0,Brake Pads Worn,0,2,2018-04-02,3,204.9975,6.0,2018-04-03
+Bentley,Bentayga,10_3,2018,4,Grey,2018.0,SUV,2000,4.0L,Automatic,Petrol,154950.0,5.0,5.0,Gear Box Issue,0,14,2018-04-14,3,1669.5,6.0,2018-04-15
+Bentley,Bentayga,10_3,2018,4,Grey,2018.0,SUV,550,4.0L,Automatic,Petrol,165000.0,5.0,5.0,Transmission Issue,3,8,2018-04-08,3,1965.0,24.0,2018-04-14
+Bentley,Bentayga,10_3,2018,4,Black,2018.0,SUV,500,4.0L,Automatic,Diesel,169000.0,5.0,5.0,Engine Issue,3,20,2018-04-20,3,17620.0,36.0,2018-04-29
+Bentley,Bentayga,10_3,2018,8,Grey,2016.0,SUV,35000,6.0L,Automatic,Petrol,122990.0,5.0,5.0,Brake Pads Worn,0,12,2018-08-12,3,181.495,6.0,2018-08-13
+Bentley,Bentayga,10_3,2018,4,White,2018.0,SUV,40,4.0L,Automatic,Diesel,199950.0,5.0,5.0,Engine Issue,4,26,2018-04-26,3,10597.5,30.0,2018-05-03
+Bentley,Bentayga,10_3,2018,6,Blue,2017.0,SUV,12061,6.0L,Automatic,Petrol,144950.0,5.0,5.0,Warning Light,0,20,2018-06-20,3,1989.5,27.0,2018-06-26
+Bentley,Bentayga,10_3,2018,6,Black,2017.0,SUV,11847,4.0L,Automatic,Diesel,138950.0,5.0,5.0,Flat Tyres,0,2,2018-06-02,3,101.685,3.0,2018-06-02
+Bentley,Bentayga,10_3,2018,2,Grey,2017.0,SUV,3000,4.0L,Automatic,Diesel,149946.0,5.0,5.0,Flat Tyres,0,14,2018-02-14,3,104.9838,3.0,2018-02-14
+Bentley,Bentayga,10_3,2018,6,Grey,2018.0,SUV,1000,4.0L,Automatic,Diesel,169950.0,5.0,5.0,Gear Box Issue,0,17,2018-06-17,3,5947.706078462146,6828.146773552928,2023-02-18
+Bentley,Bentayga,10_3,2018,1,Grey,2017.0,SUV,10122,6.0L,Automatic,Petrol,159950.0,5.0,5.0,Radiator Leaking,0,24,2018-01-24,3,3319.0,6.0,2018-01-25
+Bentley,Bentayga,10_3,2018,7,Grey,2018.0,SUV,8500,4.0L,Automatic,Petrol,147000.0,5.0,5.0,Starter Motor Issue,0,9,2018-07-09,3,1650.0,9.0,2018-07-11
+Bentley,Bentayga,10_3,2018,8,Grey,2018.0,SUV,8690,6.0L,Automatic,Petrol,143980.0,5.0,5.0,Steering Wheel Shaking,0,4,2018-08-04,3,203.98,3.0,2018-08-04
+Bentley,Bentayga,10_3,2018,8,Grey,2016.0,SUV,19960,6.0L,Automatic,Petrol,131990.0,5.0,5.0,Starter Motor Issue,0,13,2018-08-13,3,1499.9,9.0,2018-08-15
+Bentley,Bentayga,10_3,2017,10,Black,2016.0,SUV,14654,6.0L,Automatic,Petrol,137990.0,5.0,5.0,Sensor Malfunction,0,5,2017-10-05,3,7079.5,9.0,2017-10-07
+Bentley,Bentayga,10_3,2018,6,White,2017.0,SUV,14000,4.0L,Automatic,Diesel,134995.0,5.0,5.0,Transmission Issue,2,27,2018-06-27,3,1124.9650000000001,9.0,2018-06-29
+Bentley,Bentayga,10_3,2018,7,Blue,2016.0,SUV,33145,6.0L,Automatic,Petrol,118000.0,5.0,5.0,Flat Tyres,0,5,2018-07-05,3,95.4,3.0,2018-07-05
+Bentley,Bentayga,10_3,2017,9,White,2018.0,SUV,100,6.0L,Automatic,Petrol,229950.0,5.0,5.0,Warning Light,0,1,2017-09-01,3,2839.5,27.0,2017-09-07
+Bentley,Bentayga,10_3,2018,5,Grey,2017.0,SUV,987,4.0L,Automatic,Diesel,139990.0,5.0,5.0,Sensor Malfunction,0,17,2018-05-17,3,7179.5,9.0,2018-05-19
+Bentley,Bentayga,10_3,2018,7,Gelb,2018.0,SUV,3000,4.0L,Automatic,Petrol,139990.0,5.0,5.0,Starter Motor Issue,0,10,2018-07-10,3,8937.875798877056,9.0,2018-07-12
+Bentley,Bentayga,10_3,2018,8,Black,2017.0,SUV,12000,6.0L,Automatic,Petrol,155000.0,5.0,5.0,Steering Wheel Shaking,0,22,2018-08-22,3,215.0,3.0,2018-08-22
+Bentley,Bentayga,10_3,2018,8,Blue,2018.0,SUV,10,4.0L,Automatic,Petrol,175445.0,5.0,5.0,Sensor Malfunction,0,28,2018-08-28,3,8952.25,9.0,2018-08-30
+Bentley,Bentayga,10_3,2018,3,Grey,2016.0,SUV,15710,6.0L,Automatic,Petrol,129990.0,5.0,5.0,Sensor Malfunction,0,19,2018-03-19,3,6679.5,9.0,2018-03-21
+Bentley,Bentayga,10_3,2018,3,Grey,2018.0,SUV,68,4.0L,Automatic,Diesel,149990.0,5.0,5.0,Brake Pads Worn,0,23,2018-03-23,3,194.995,6.0,2018-03-24
+Bentley,Bentayga,10_3,2018,8,Grey,2017.0,SUV,4545,6.0L,Automatic,Petrol,139950.0,7.0,5.0,Radiator Leaking,0,8,2018-08-08,3,2919.0,6.0,2018-08-09
+Bentley,Bentayga,10_3,2018,3,Black,2017.0,SUV,2782,4.0L,Automatic,Diesel,142850.0,7.0,5.0,Electrical Issue,2,20,2018-03-20,3,315.7,1.5,2018-03-20
+Bentley,Bentayga,10_3,2018,7,Grey,2018.0,Estate,998,4.0L,Semi-Automatic,Petrol,149950.0,20.0,5.0,Electrical Issue,1,24,2018-07-24,3,269.95000000000005,6.0,2018-07-25
+Bentley,Bentayga,10_3,2018,7,Blue,2018.0,SUV,3000,4.0L,Automatic,Diesel,167750.0,5.0,5.0,Tyre Alignment,0,27,2018-07-27,3,46.775000000000006,1.5,2018-07-27
+Bentley,Bentayga,10_3,2018,8,Grey,2018.0,SUV,10,4.0L,Automatic,Petrol,174150.0,5.0,5.0,Windscreen Crack,0,9,2018-08-09,3,164.49,3.0,2018-08-09
+Bentley,Bentayga,10_3,2018,7,Black,2018.0,SUV,3000,4.0L,Automatic,Petrol,155000.0,5.0,5.0,Gear Box Issue,0,21,2018-07-21,3,6171.722855847909,5383.904044306532,2022-03-27
+Bentley,Bentayga,10_3,2018,8,Grey,2017.0,SUV,10500,4.0L,Automatic,Diesel,127000.0,5.0,5.0,Windscreen Crack,0,22,2018-08-22,3,136.2,3.0,2018-08-22
+Bentley,Bentayga,10_3,2018,8,Silver,2016.0,SUV,25000,6.0L,Automatic,Petrol,112950.0,5.0,5.0,Alternator Failing,0,28,2018-08-28,3,2379.0,6.0,2018-08-29
+Bentley,Bentayga,10_3,2018,6,Black,2016.0,SUV,32372,6.0L,Automatic,Petrol,119895.0,5.0,5.0,Starter Motor Issue,0,6,2018-06-06,3,1378.95,9.0,2018-06-08
+Bentley,Bentayga,10_3,2018,4,Black,2018.0,SUV,3000,4.0L,Automatic,Diesel,144995.0,5.0,5.0,Tyre Alignment,0,23,2018-04-23,3,44.4995,1.5,2018-04-23
+Bentley,Bentayga,10_3,2018,7,Gelb,2017.0,SUV,10040,4.0L,Automatic,Diesel,144990.0,5.0,5.0,Gear Box Issue,0,10,2018-07-10,3,1569.9,6.0,2018-07-11
+Bentley,Bentayga,10_3,2018,3,Silver,2018.0,SUV,25,6.0L,Automatic,Petrol,172500.0,5.0,5.0,Warning Light,0,18,2018-03-18,3,2265.0,27.0,2018-03-24
+Bentley,Bentayga,10_3,2018,7,Red,2017.0,SUV,13372,4.0L,Automatic,Diesel,134990.0,7.0,5.0,Windscreen Crack,0,1,2018-07-01,3,140.994,3.0,2018-07-01
+Bentley,Bentayga,10_3,2018,6,Blue,2017.0,SUV,10951,4.0L,Automatic,Diesel,134950.0,5.0,5.0,Transmission Issue,3,9,2018-06-09,3,1694.55,24.0,2018-06-15
+Bentley,Bentayga,10_3,2018,7,Grey,2016.0,SUV,22319,6.0L,Automatic,Petrol,120000.0,5.0,5.0,Excessive Emissions,0,19,2018-07-19,3,168.0,3.0,2018-07-19
+Bentley,Bentayga,10_3,2018,6,Blue,2017.0,SUV,8148,4.0L,Automatic,Diesel,125000.0,10.0,0.0,Brake Pads Worn,0,7,2018-06-07,3,1089.3377208294855,6.0,2018-06-08
+Bentley,Bentayga,10_3,2018,6,Grey,2018.0,SUV,582,4.0L,Automatic,Diesel,153000.0,5.0,5.0,Tyre Alignment,0,12,2018-06-12,3,45.3,1.5,2018-06-12
+Bentley,Bentayga,10_3,2018,4,Black,2018.0,SUV,930,4.0L,Automatic,Petrol,154450.0,5.0,5.0,Windscreen Crack,0,25,2018-04-25,3,152.67,3.0,2018-04-25
+Bentley,Bentayga,10_3,2018,4,Blue,2018.0,SUV,1272,6.0L,Automatic,Petrol,164450.0,5.0,5.0,Electrical Issue,4,9,2018-04-09,3,613.35,6.0,2018-04-10
+Bentley,Bentayga,10_3,2018,8,Blue,2017.0,SUV,2626,4.0L,Automatic,Diesel,139000.0,5.0,5.0,Flat Tyres,0,21,2018-08-21,3,101.69999999999999,3.0,2018-08-21
+Bentley,Bentayga,10_3,2018,6,Gelb,2018.0,SUV,170,4.0L,Automatic,Diesel,199995.0,5.0,5.0,Windscreen Crack,0,9,2018-06-09,3,179.99699999999999,3.0,2018-06-09
+Bentley,Bentayga,10_3,2018,6,Black,2018.0,SUV,90,4.0L,Automatic,Petrol,219950.0,5.0,5.0,Electrical Issue,1,19,2018-06-19,3,339.95000000000005,6.0,2018-06-20
+Bentley,Bentayga,10_3,2018,6,Black,2016.0,SUV,6606,6.0L,Automatic,Petrol,134295.0,5.0,5.0,Electrical Issue,2,13,2018-06-13,3,298.59000000000003,1.5,2018-06-13
+Bentley,Bentayga,10_3,2018,8,Silver,2018.0,SUV,10,4.0L,Automatic,Petrol,192745.0,5.0,5.0,Brake Pads Worn,0,19,2018-08-19,3,216.3725,6.0,2018-08-20
+Bentley,Bentayga,10_3,2018,4,Red,2018.0,SUV,4199,4.0L,Automatic,Diesel,149950.0,5.0,5.0,Electrical Issue,5,11,2018-04-11,3,329.95000000000005,9.0,2018-04-13
+Bentley,Bentayga,10_3,2018,6,Grey,2018.0,SUV,60,4.0L,Automatic,Petrol,224950.0,5.0,5.0,Transmission Issue,2,3,2018-06-03,3,7047.502285209581,6944.9421173260525,2023-03-05
+Bentley,Bentayga,10_3,2018,5,Black,2018.0,SUV,857,4.0L,Automatic,Petrol,150950.0,5.0,5.0,Sensor Malfunction,0,25,2018-05-25,3,7727.5,9.0,2018-05-27
+Bentley,Bentayga,10_3,2020,12,Black,2019.0,SUV,25300,4.0L,Automatic,Petrol,122995.0,5.0,5.0,Sensor Malfunction,0,20,2020-12-20,3,6329.75,9.0,2020-12-22
+Bentley,Bentayga,10_3,2021,4,Grey,2019.0,SUV,18175,4.0L,Automatic,Petrol,129895.0,5.0,5.0,Electrical Issue,4,24,2021-04-24,3,509.685,6.0,2021-04-25
+Bentley,Bentayga,10_3,2021,1,Grey,2019.0,SUV,2000,3.0L,Automatic,Petrol Plug-in Hybrid,132500.0,5.0,5.0,Brake Pads Worn,0,15,2021-01-15,3,186.25,6.0,2021-01-16
+Bentley,Bentayga,10_3,2021,3,Black,2019.0,SUV,15607,4.0L,Automatic,Petrol,129950.0,5.0,5.0,Alternator Failing,0,24,2021-03-24,3,2719.0,6.0,2021-03-25
+Bentley,Bentayga,10_3,2021,4,Black,2019.0,SUV,15000,4.0L,Automatic,Petrol,130000.0,5.0,5.0,Windscreen Crack,0,2,2021-04-02,3,138.0,3.0,2021-04-02
+Bentley,Bentayga,10_3,2021,5,Black,2019.0,SUV,6870,4.0L,Automatic,Petrol,162500.0,5.0,5.0,Transmission Issue,1,28,2021-05-28,3,727.5,12.0,2021-05-31
+Bentley,Bentayga,10_3,2021,5,Blue,2019.0,SUV,20150,4.0L,Automatic,Petrol,122977.0,5.0,5.0,Alternator Failing,0,19,2021-05-19,3,2579.54,6.0,2021-05-20
+Bentley,Bentayga,10_3,2021,5,Silver,2019.0,SUV,12423,4.0L,Automatic,Petrol,119850.0,5.0,5.0,Tyre Alignment,0,25,2021-05-25,3,41.985,1.5,2021-05-25
+Bentley,Bentayga,10_3,2021,5,Black,2019.0,SUV,19863,4.0L,Automatic,Petrol,125000.0,5.0,5.0,Sensor Malfunction,0,3,2021-05-03,3,36064.12782680739,9.0,2021-05-05
+Bentley,Bentayga,10_3,2021,5,Black,2019.0,SUV,12498,4.0L,Automatic,Petrol,125000.0,5.0,5.0,Brake Pads Worn,0,20,2021-05-20,3,182.5,6.0,2021-05-21
+Bentley,Bentayga,10_3,2021,5,Black,2019.0,SUV,23019,4.0L,Automatic,Petrol,139000.0,5.0,5.0,Warning Light,0,15,2021-05-15,3,1930.0,27.0,2021-05-21
+Bentley,Bentayga,10_3,2021,5,Blue,2019.0,SUV,4825,4.0L,Automatic,Petrol,140000.0,5.0,5.0,Starter Motor Issue,0,28,2021-05-28,3,1580.0,9.0,2021-05-30
+Bentley,Bentayga,10_3,2021,6,Grey,2019.0,SUV,25500,4.0L,Automatic,Petrol,130000.0,5.0,5.0,Windscreen Crack,0,24,2021-06-24,3,138.0,3.0,2021-06-24
+Bentley,Brooklands,10_4,2017,5,Silver,2008.0,Coupe,20000,6.75L,Automatic,Petrol,124999.0,4.0,2.0,Alternator Failing,0,13,2017-05-13,3,2619.98,6.0,2017-05-14
+Bentley,Brooklands,10_4,2017,8,Blue,2008.0,Coupe,12264,6.75L,Automatic,Petrol,136950.0,4.0,2.0,Excessive Emissions,0,20,2017-08-20,3,183.255,3.0,2017-08-20
+Bentley,Brooklands,10_4,2017,11,Grey,2008.0,Coupe,58423,6.75L,Automatic,Petrol,94950.0,4.0,2.0,Sensor Malfunction,0,26,2017-11-26,3,4927.5,9.0,2017-11-28
+Bentley,Brooklands,10_4,2017,11,Blue,1995.0,Saloon,98286,6.8L,Automatic,Petrol,11000.0,19.0,4.0,Excessive Emissions,0,26,2017-11-26,3,69.9,3.0,2017-11-26
+Bentley,Brooklands,10_4,2016,12,Green,1995.0,Saloon,95000,6.8L,Automatic,Petrol,10495.0,16.0,4.0,Warning Light,0,4,2016-12-04,3,644.95,27.0,2016-12-10
+Bentley,Brooklands,10_4,2017,5,Silver,1995.0,Saloon,78000,6.8L,Automatic,Petrol,13975.0,16.0,4.0,Engine Issue,4,7,2017-05-07,3,4294.439909260159,3934.1066206533237,2020-01-15
+Bentley,Continental,10_5,2018,8,Grey,2018.0,Convertible,2700,4.0L,Automatic,Petrol,170000.0,4.0,2.0,Transmission Issue,2,14,2018-08-14,3,1370.0,9.0,2018-08-16
+Bentley,Continental,10_5,2018,7,Black,2016.0,Convertible,10248,6.0L,Automatic,Petrol,119895.0,4.0,2.0,Flat Tyres,0,12,2018-07-12,3,95.9685,3.0,2018-07-12
+Bentley,Continental,10_5,2018,8,Grey,2008.0,Coupe,54125,6.0L,Automatic,Petrol,38500.0,4.0,2.0,Gear Box Issue,0,3,2018-08-03,3,505.0,6.0,2018-08-04
+Bentley,Continental,10_5,2018,2,White,2014.0,Coupe,15847,6.0L,Automatic,Petrol,82950.0,4.0,2.0,Warning Light,0,8,2018-02-08,3,1369.5,27.0,2018-02-14
+Bentley,Continental,10_5,2017,9,Grey,2011.0,Coupe,22045,6.0L,Automatic,Petrol,57950.0,4.0,2.0,Steering Wheel Shaking,0,9,2017-09-09,3,117.95,3.0,2017-09-09
+Bentley,Continental,10_5,2017,7,Grey,2012.0,Convertible,20000,6.0L,Automatic,Petrol,74990.0,4.0,2.0,Tyre Alignment,0,12,2017-07-12,3,37.499,1.5,2017-07-12
+Bentley,Continental,10_5,2018,7,Gelb,2018.0,Convertible,3000,4.0L,Automatic,Petrol,155000.0,11.0,2.0,Steering Wheel Shaking,0,10,2018-07-10,3,215.0,3.0,2018-07-10
+Bentley,Continental,10_5,2018,4,Black,2008.0,Coupe,47899,6.0L,Automatic,Petrol,36925.0,4.0,2.0,Gear Box Issue,0,7,2018-04-07,3,489.25,6.0,2018-04-08
+Bentley,Continental,10_5,2018,7,Black,2004.0,Coupe,59430,6.0L,Automatic,Petrol,25950.0,4.0,2.0,Warning Light,0,1,2018-07-01,3,799.5,27.0,2018-07-07
+Bentley,Continental,10_5,2018,3,Grey,2014.0,Coupe,16000,4.0L,Automatic,Petrol,84950.0,4.0,2.0,Excessive Emissions,0,15,2018-03-15,3,755.0936122510477,3.0,2018-03-15
+Bentley,Continental,10_5,2018,7,Black,2013.0,Coupe,21992,4.0L,Automatic,Petrol,77950.0,4.0,2.0,Steering Wheel Shaking,0,20,2018-07-20,3,137.95,3.0,2018-07-20
+Bentley,Continental,10_5,2018,1,Black,2013.0,Convertible,38700,4.0L,Automatic,Petrol,99889.0,4.0,2.0,Excessive Emissions,0,18,2018-01-18,3,149.9001,3.0,2018-01-18
+Bentley,Continental,10_5,2018,6,Blue,2017.0,Coupe,3650,4.0L,Automatic,Petrol,118000.0,4.0,2.0,Sensor Malfunction,0,10,2018-06-10,3,6080.0,9.0,2018-06-12
+Bentley,Continental,10_5,2018,7,White,2013.0,Coupe,39000,4.0L,Automatic,Petrol,65990.0,4.0,2.0,Tyre Alignment,0,15,2018-07-15,3,36.599000000000004,1.5,2018-07-15
+Bentley,Continental,10_5,2017,2,Silver,2005.0,Coupe,72000,6.0L,Automatic,Petrol,25991.0,4.0,2.0,Alternator Failing,0,20,2017-02-20,3,639.82,6.0,2017-02-21
+Bentley,Continental,10_5,2018,5,Silver,2009.0,Convertible,27500,6.0L,Automatic,Petrol,49995.0,4.0,2.0,Transmission Issue,3,1,2018-05-01,3,929.9549999999999,24.0,2018-05-07
+Bentley,Continental,10_5,2018,5,Blue,2004.0,Coupe,49000,6.0L,Automatic,Petrol,24950.0,4.0,2.0,Sensor Malfunction,0,17,2018-05-17,3,1427.5,9.0,2018-05-19
+Bentley,Continental,10_5,2018,5,Silver,2004.0,Coupe,66000,6.0L,Automatic,Petrol,22989.0,4.0,2.0,Transmission Issue,3,2,2018-05-02,3,686.901,24.0,2018-05-08
+Bentley,Continental,10_5,2018,2,Green,2004.0,Coupe,27500,6.0L,Automatic,Petrol,31000.0,4.0,2.0,Warning Light,0,11,2018-02-11,3,850.0,27.0,2018-02-17
+Bentley,Continental,10_5,2017,8,Black,2018.0,Coupe,100,4.0L,Automatic,Petrol,179950.0,4.0,2.0,Alternator Failing,0,2,2017-08-02,3,15176.81867835596,12564.650603874441,2026-03-09
+Bentley,Continental,10_5,2017,8,Blue,2011.0,Convertible,64000,6.0L,Automatic,Petrol,57989.0,4.0,2.0,Warning Light,0,20,2017-08-20,3,1119.8899999999999,27.0,2017-08-26
+Bentley,Continental,10_5,2018,7,White,2016.0,Coupe,10730,4.0L,Automatic,Petrol,104950.0,4.0,2.0,Gear Box Issue,0,22,2018-07-22,3,1169.5,6.0,2018-07-23
+Bentley,Continental,10_5,2018,2,Silver,2004.0,Coupe,18000,6.0L,Automatic,Petrol,31500.0,4.0,2.0,Excessive Emissions,0,28,2018-02-28,3,88.35,3.0,2018-02-28
+Bentley,Continental,10_5,2018,4,Blue,2004.0,Coupe,47000,6.0L,Automatic,Petrol,27950.0,4.0,2.0,Steering Wheel Shaking,0,3,2018-04-03,3,87.95,3.0,2018-04-03
+Bentley,Continental,10_5,2018,4,Grey,2013.0,Coupe,17806,4.0L,Automatic,Petrol,77975.0,4.0,2.0,Transmission Issue,2,10,2018-04-10,3,725.825,9.0,2018-04-12
+Bentley,Continental,10_5,2018,8,Grey,2011.0,Convertible,33490,6.0L,Automatic,Petrol,69000.0,4.0,3.0,Tyre Alignment,0,15,2018-08-15,3,36.9,1.5,2018-08-15
+Bentley,Continental,10_5,2018,1,Gelb,2004.0,Coupe,60538,6.0L,Automatic,Petrol,23995.0,4.0,2.0,Brake Pads Worn,0,6,2018-01-06,3,131.9975,6.0,2018-01-07
+Bentley,Continental,10_5,2018,7,Red,2014.0,Convertible,23395,6.0L,Automatic,Petrol,89950.0,4.0,2.0,Gear Box Issue,0,6,2018-07-06,3,1019.5,6.0,2018-07-07
+Bentley,Continental,10_5,2018,8,Black,2015.0,Convertible,31000,4.0L,Automatic,Petrol,100000.0,4.0,2.0,Sensor Malfunction,0,15,2018-08-15,3,5180.0,9.0,2018-08-17
+Bentley,Continental,10_5,2017,11,Silver,2010.0,Coupe,20300,6.0L,Automatic,Petrol,51421.0,4.0,2.0,Windscreen Crack,0,9,2017-11-09,3,301.3173366293897,3.0,2017-11-09
+Bentley,Continental,10_5,2018,7,White,2005.0,Saloon,35000,6.0L,Automatic,Petrol,26000.0,5.0,4.0,Starter Motor Issue,0,17,2018-07-17,3,440.0,9.0,2018-07-19
+Bentley,Continental,10_5,2018,8,Black,2012.0,Coupe,61000,6.0L,Automatic,Petrol,52995.0,4.0,2.0,Tyre Alignment,0,9,2018-08-09,3,35.2995,1.5,2018-08-09
+Bentley,Continental,10_5,2017,11,Black,2011.0,Convertible,49654,6.0L,Automatic,Petrol,59990.0,4.0,2.0,Radiator Leaking,0,27,2017-11-27,3,1319.8,6.0,2017-11-28
+Bentley,Continental,10_5,2018,2,Black,2010.0,Convertible,30876,6.0L,Automatic,Petrol,68999.0,4.0,2.0,Transmission Issue,1,10,2018-02-10,3,446.997,12.0,2018-02-13
+Bentley,Continental,10_5,2018,1,Black,2013.0,Coupe,12637,4.0L,Automatic,Petrol,76900.0,4.0,2.0,Sensor Malfunction,0,7,2018-01-07,3,4025.0,9.0,2018-01-09
+Bentley,Continental,10_5,2017,9,Silver,2004.0,Coupe,64700,6.0L,Automatic,Petrol,25875.0,4.0,2.0,Steering Wheel Shaking,0,17,2017-09-17,3,85.875,3.0,2017-09-17
+Bentley,Continental,10_5,2018,2,Blue,2009.0,Coupe,31000,6.0L,Automatic,Petrol,42950.0,4.0,2.0,Starter Motor Issue,0,22,2018-02-22,3,609.5,9.0,2018-02-24
+Bentley,Continental,10_5,2018,8,Black,2010.0,Coupe,59000,6.0L,Automatic,Petrol,53988.0,11.0,2.0,Brake Pads Worn,0,5,2018-08-05,3,146.994,6.0,2018-08-06
+Bentley,Continental,10_5,2018,3,Grey,2014.0,Convertible,18989,4.0L,Automatic,Petrol,93895.0,4.0,2.0,Radiator Leaking,0,23,2018-03-23,3,1997.9,6.0,2018-03-24
+Bentley,Continental,10_5,2018,8,Grey,2018.0,Coupe,1000,6.0L,Automatic,Petrol,189975.0,4.0,2.0,Warning Light,0,12,2018-08-12,3,12834.321770354938,7876.851993515372,2024-01-02
+Bentley,Continental,10_5,2017,12,Grey,2011.0,Coupe,32700,6.0L,Automatic,Petrol,57990.0,4.0,2.0,Transmission Issue,1,6,2017-12-06,3,413.97,12.0,2017-12-09
+Bentley,Continental,10_5,2018,8,Black,2005.0,Coupe,78000,6.0L,Automatic,Petrol,22500.0,4.0,2.0,Flat Tyres,0,2,2018-08-02,3,66.75,3.0,2018-08-02
+Bentley,Continental,10_5,2018,6,Grey,2016.0,Coupe,7242,4.0L,Automatic,Petrol,107895.0,4.0,2.0,Electrical Issue,5,12,2018-06-12,3,287.895,9.0,2018-06-14
+Bentley,Continental,10_5,2018,1,White,2005.0,Coupe,80700,6.0L,Automatic,Petrol,19795.0,4.0,2.0,Radiator Leaking,0,11,2018-01-11,3,515.9000000000001,6.0,2018-01-12
+Bentley,Continental,10_5,2018,2,Silver,2011.0,Coupe,44000,6.0L,Automatic,Petrol,54995.0,4.0,2.0,Starter Motor Issue,0,11,2018-02-11,3,729.95,9.0,2018-02-13
+Bentley,Continental,10_5,2018,4,Silver,2011.0,Coupe,23000,6.0L,Automatic,Petrol,57989.0,4.0,2.0,Electrical Issue,5,26,2018-04-26,3,237.989,9.0,2018-04-28
+Bentley,Continental,10_5,2017,10,Blue,2004.0,Coupe,52000,6.0L,Automatic,Petrol,24950.0,4.0,2.0,Windscreen Crack,0,28,2017-10-28,3,74.97,3.0,2017-10-28
+Bentley,Continental,10_5,2017,3,Black,2008.0,Coupe,93000,6.0L,Automatic,Petrol,29995.0,4.0,2.0,Gear Box Issue,0,11,2017-03-11,3,419.95,6.0,2017-03-12
+Bentley,Continental,10_5,2018,1,Blue,2004.0,Coupe,49972,6.0L,Automatic,Petrol,23975.0,4.0,2.0,Gear Box Issue,0,7,2018-01-07,3,359.75,6.0,2018-01-08
+Bentley,Continental,10_5,2018,7,Blue,2014.0,Convertible,21788,6.0L,Automatic,Petrol,97000.0,4.0,2.0,Warning Light,0,4,2018-07-04,3,7216.49734485643,27.0,2018-07-10
+Bentley,Continental,10_5,2018,8,Silver,2009.0,Coupe,43900,6.0L,Automatic,Petrol,39695.0,4.0,2.0,Gear Box Issue,0,4,2018-08-04,3,516.95,6.0,2018-08-05
+Bentley,Continental,10_5,2017,3,Blue,2012.0,Convertible,25000,6.0L,Automatic,Petrol,77995.0,4.0,2.0,Sensor Malfunction,0,4,2017-03-04,3,4079.75,9.0,2017-03-06
+Bentley,Continental,10_5,2017,3,White,2005.0,Saloon,114000,6.0L,Automatic,Petrol,20989.0,4.0,4.0,Transmission Issue,3,26,2017-03-26,3,668.901,24.0,2017-04-01
+Bentley,Continental,10_5,2018,3,Blue,2005.0,Saloon,80000,6.0L,Automatic,Petrol,19950.0,4.0,4.0,Sensor Malfunction,0,16,2018-03-16,3,1177.5,9.0,2018-03-18
+Bentley,Continental,10_5,2018,7,Black,2016.0,Convertible,9517,6.0L,Automatic,Petrol,124995.0,4.0,2.0,Warning Light,0,24,2018-07-24,3,1789.95,27.0,2018-07-30
+Bentley,Continental,10_5,2018,7,White,2011.0,Convertible,19000,6.0L,Automatic,Petrol,77990.0,4.0,2.0,Starter Motor Issue,0,24,2018-07-24,3,959.9,9.0,2018-07-26
+Bentley,Continental,10_5,2018,7,Black,2010.0,Convertible,38000,6.0L,Automatic,Petrol,49991.0,4.0,2.0,Excessive Emissions,0,9,2018-07-09,3,104.9919,3.0,2018-07-09
+Bentley,Continental,10_5,2018,4,White,2014.0,Convertible,14300,4.0L,Automatic,Petrol,88950.0,4.0,2.0,Starter Motor Issue,0,7,2018-04-07,3,1069.5,9.0,2018-04-09
+Bentley,Continental,10_5,2018,3,Grey,2009.0,Coupe,50500,6.0L,Automatic,Petrol,42995.0,4.0,2.0,Sensor Malfunction,0,25,2018-03-25,3,2329.75,9.0,2018-03-27
+Bentley,Continental,10_5,2018,1,Black,2009.0,Convertible,42000,6.0L,Automatic,Petrol,45000.0,4.0,2.0,Excessive Emissions,0,11,2018-01-11,3,504.82108909876143,314.0998999522935,2018-03-30
+Bentley,Continental,10_5,2018,5,Blue,2008.0,Convertible,40386,6.0L,Automatic,Petrol,55000.0,4.0,2.0,Starter Motor Issue,0,25,2018-05-25,3,730.0,9.0,2018-05-27
+Bentley,Continental,10_5,2017,10,White,2013.0,Convertible,21000,4.0L,Automatic,Petrol,72989.0,4.0,2.0,Transmission Issue,1,23,2017-10-23,3,458.967,12.0,2017-10-26
+Bentley,Continental,10_5,2018,4,Black,2014.0,Convertible,14900,6.0L,Automatic,Petrol,89995.0,4.0,2.0,Steering Wheel Shaking,0,7,2018-04-07,3,149.995,3.0,2018-04-07
+Bentley,Continental,10_5,2018,4,Blue,2004.0,Coupe,110000,6.0L,Automatic,Petrol,19750.0,4.0,2.0,Warning Light,0,22,2018-04-22,3,737.5,27.0,2018-04-28
+Bentley,Continental,10_5,2018,4,Black,2010.0,Convertible,12154,6.0L,Automatic,Petrol,79950.0,4.0,2.0,Transmission Issue,2,12,2018-04-12,3,739.65,9.0,2018-04-14
+Bentley,Continental,10_5,2018,5,Silver,2012.0,Coupe,45975,6.0L,Automatic,Petrol,58995.0,4.0,2.0,Radiator Leaking,0,22,2018-05-22,3,1299.9,6.0,2018-05-23
+Bentley,Continental,10_5,2018,8,Brown,2012.0,Coupe,22000,6.0L,Automatic,Petrol,63948.0,4.0,2.0,Transmission Issue,1,23,2018-08-23,3,431.844,12.0,2018-08-26
+Bentley,Continental,10_5,2018,6,Red,2016.0,Convertible,8990,4.0L,Automatic,Petrol,112950.0,4.0,2.0,Tyre Alignment,0,14,2018-06-14,3,41.295,1.5,2018-06-14
+Bentley,Continental,10_5,2018,3,Gelb,2005.0,Coupe,74555,6.0L,Automatic,Petrol,20925.0,4.0,2.0,Steering Wheel Shaking,0,28,2018-03-28,3,80.925,3.0,2018-03-28
+Bentley,Continental,10_5,2018,8,Black,2011.0,Convertible,36500,6.0L,Automatic,Petrol,64000.0,4.0,2.0,Brake Pads Worn,0,21,2018-08-21,3,577.0242864675862,6.0,2018-08-22
+Bentley,Continental,10_5,2017,10,Silver,2008.0,Convertible,34000,6.0L,Automatic,Petrol,46000.0,4.0,2.0,Transmission Issue,3,2,2017-10-02,3,894.0,24.0,2017-10-08
+Bentley,Continental,10_5,2018,8,Black,2015.0,Coupe,35000,6.0L,Automatic,Petrol,79995.0,4.0,2.0,Sensor Malfunction,0,4,2018-08-04,3,4179.75,9.0,2018-08-06
+Bentley,Continental,10_5,2018,6,Black,2016.0,Coupe,1466,6.0L,Semi-Automatic,Petrol,129950.0,10.0,2.0,Transmission Issue,3,5,2018-06-05,3,1649.55,24.0,2018-06-11
+Bentley,Continental,10_5,2018,4,Blue,2008.0,Convertible,28263,6.0L,Automatic,Petrol,46990.0,4.0,2.0,Flat Tyres,0,12,2018-04-12,3,74.097,3.0,2018-04-12
+Bentley,Continental,10_5,2018,6,Black,2016.0,Convertible,9374,6.0L,Automatic,Petrol,122450.0,4.0,2.0,Transmission Issue,2,24,2018-06-24,3,1037.15,9.0,2018-06-26
+Bentley,Continental,10_5,2018,8,Silver,2005.0,Coupe,65000,6.0L,Automatic,Petrol,24550.0,4.0,2.0,Gear Box Issue,0,6,2018-08-06,3,365.5,6.0,2018-08-07
+Bentley,Continental,10_5,2018,3,Black,2008.0,Coupe,79600,6.0L,Automatic,Petrol,31995.0,4.0,2.0,Steering Wheel Shaking,0,22,2018-03-22,3,91.995,3.0,2018-03-22
+Bentley,Continental,10_5,2018,4,Grey,2011.0,Coupe,29437,6.0L,Automatic,Petrol,58950.0,4.0,2.0,Gear Box Issue,0,7,2018-04-07,3,709.5,6.0,2018-04-08
+Bentley,Continental,10_5,2018,8,Blue,2004.0,Coupe,64653,6.0L,Automatic,Petrol,24999.0,4.0,2.0,Radiator Leaking,0,14,2018-08-14,3,619.98,6.0,2018-08-15
+Bentley,Continental,10_5,2018,7,Black,2013.0,Convertible,11000,4.0L,Automatic,Petrol,81980.0,4.0,2.0,Flat Tyres,0,6,2018-07-06,3,328.5390362763995,330.27939709844867,2018-09-26
+Bentley,Continental,10_5,2017,12,White,2004.0,Coupe,49416,6.0L,Automatic,Petrol,24495.0,4.0,2.0,Flat Tyres,0,24,2017-12-24,3,67.3485,3.0,2017-12-24
+Bentley,Continental,10_5,2018,8,Grey,2008.0,Coupe,58600,6.0L,Automatic,Petrol,37490.0,4.0,2.0,Starter Motor Issue,0,4,2018-08-04,3,554.9000000000001,9.0,2018-08-06
+Bentley,Continental,10_5,2018,1,Grey,2012.0,Coupe,23125,4.0L,Automatic,Petrol,68890.0,4.0,2.0,Excessive Emissions,0,5,2018-01-05,3,122.001,3.0,2018-01-05
+Bentley,Continental,10_5,2018,6,Black,2017.0,Coupe,5000,4.0L,Automatic,Petrol,119948.0,4.0,2.0,Sensor Malfunction,0,8,2018-06-08,3,6177.400000000001,9.0,2018-06-10
+Bentley,Continental,10_5,2018,7,Black,2005.0,Coupe,73360,6.0L,Automatic,Petrol,23905.0,4.0,2.0,Windscreen Crack,0,16,2018-07-16,3,74.343,3.0,2018-07-16
+Bentley,Continental,10_5,2018,3,Black,2005.0,Coupe,105000,6.0L,Automatic,Petrol,20950.0,10.0,0.0,Starter Motor Issue,0,9,2018-03-09,3,389.5,9.0,2018-03-11
+Bentley,Continental,10_5,2017,12,Silver,2005.0,Coupe,59987,6.0L,Automatic,Petrol,39950.0,4.0,2.0,Flat Tyres,0,8,2017-12-08,3,71.985,3.0,2017-12-08
+Bentley,Continental,10_5,2018,6,Silver,2004.0,Coupe,100000,6.0L,Automatic,Petrol,23995.0,4.0,2.0,Flat Tyres,0,20,2018-06-20,3,67.1985,3.0,2018-06-20
+Bentley,Continental,10_5,2018,8,Silver,2011.0,Coupe,9500,6.0L,Automatic,Petrol,57500.0,4.0,2.0,Radiator Leaking,0,1,2018-08-01,3,1270.0,6.0,2018-08-02
+Bentley,Continental,10_5,2018,6,Silver,2008.0,Coupe,49600,6.0L,Automatic,Petrol,39950.0,4.0,2.0,Gear Box Issue,0,16,2018-06-16,3,1708.566795192259,6.0,2018-06-17
+Bentley,Continental,10_5,2018,8,Maroon,2010.0,Saloon,28000,6.0L,Automatic,Petrol,43750.0,4.0,4.0,Transmission Issue,2,20,2018-08-20,3,486.25,9.0,2018-08-22
+Bentley,Continental,10_5,2018,3,Silver,2005.0,Coupe,45786,6.0L,Automatic,Petrol,24990.0,5.0,2.0,Gear Box Issue,0,14,2018-03-14,3,369.9,6.0,2018-03-15
+Bentley,Continental,10_5,2018,6,Black,2009.0,Convertible,38000,6.0L,Automatic,Petrol,42995.0,4.0,2.0,Excessive Emissions,0,24,2018-06-24,3,98.6955,3.0,2018-06-24
+Bentley,Continental,10_5,2018,4,Black,2012.0,Convertible,38700,4.0L,Automatic,Petrol,73000.0,4.0,2.0,Electrical Issue,4,9,2018-04-09,3,339.0,6.0,2018-04-10
+Bentley,Continental,10_5,2018,5,Black,2005.0,Coupe,60000,6.0L,Automatic,Petrol,26995.0,4.0,2.0,Engine Issue,3,4,2018-05-04,3,3419.5,36.0,2018-05-13
+Bentley,Continental,10_5,2018,2,Silver,2011.0,Coupe,40000,6.0L,Automatic,Petrol,64900.0,4.0,2.0,Gear Box Issue,0,2,2018-02-02,3,769.0,6.0,2018-02-03
+Bentley,Continental,10_5,2018,6,Grey,2012.0,Coupe,43000,4.0L,Automatic,Petrol,62995.0,4.0,2.0,Gear Box Issue,0,24,2018-06-24,3,749.95,6.0,2018-06-25
+Bentley,Continental,10_5,2017,7,Black,2011.0,Convertible,45000,6.0L,Automatic,Petrol,67994.0,4.0,2.0,Excessive Emissions,0,6,2017-07-06,3,121.19460000000001,3.0,2017-07-06
+Bentley,Continental,10_5,2018,4,Grey,2008.0,Coupe,52437,6.0L,Automatic,Petrol,42000.0,4.0,2.0,Radiator Leaking,0,12,2018-04-12,3,960.0,6.0,2018-04-13
+Bentley,Continental,10_5,2016,11,Silver,2003.0,Coupe,108000,6.0L,Automatic,Petrol,18489.0,4.0,2.0,Flat Tyres,0,12,2016-11-12,3,219.11565730572187,235.90095206882197,2017-01-09
+Bentley,Continental,10_5,2018,1,Grey,2011.0,Coupe,19000,6.0L,Automatic,Petrol,66990.0,4.0,2.0,Radiator Leaking,0,3,2018-01-03,3,1459.8,6.0,2018-01-04
+Bentley,Continental,10_5,2018,4,Black,2012.0,Convertible,48529,6.0L,Automatic,Petrol,65999.0,4.0,2.0,Sensor Malfunction,0,7,2018-04-07,3,3479.9500000000003,9.0,2018-04-09
+Bentley,Continental,10_5,2017,11,Silver,2012.0,Coupe,27000,6.0L,Automatic,Petrol,69995.0,4.0,2.0,Starter Motor Issue,0,26,2017-11-26,3,879.95,9.0,2017-11-28
+Bentley,Continental,10_5,2018,2,Black,2005.0,Coupe,54000,6.0L,Automatic,Petrol,28989.0,4.0,2.0,Electrical Issue,4,3,2018-02-03,3,206.96699999999998,6.0,2018-02-04
+Bentley,Continental,10_5,2018,3,Blue,2004.0,Coupe,76759,6.0L,Automatic,Petrol,25500.0,4.0,2.0,Starter Motor Issue,0,26,2018-03-26,3,435.0,9.0,2018-03-28
+Bentley,Continental,10_5,2018,4,Gelb,2005.0,Coupe,55000,6.0L,Automatic,Petrol,27000.0,10.0,0.0,Engine Issue,4,12,2018-04-12,3,1950.0,30.0,2018-04-19
+Bentley,Continental,10_5,2018,6,Blue,2015.0,Coupe,10998,6.0L,Automatic,Petrol,83950.0,4.0,2.0,Windscreen Crack,0,5,2018-06-05,3,110.37,3.0,2018-06-05
+Bentley,Continental,10_5,2018,8,Grey,2015.0,Coupe,11500,4.0L,Automatic,Petrol,89950.0,4.0,2.0,Tyre Alignment,0,28,2018-08-28,3,38.995000000000005,1.5,2018-08-28
+Bentley,Continental,10_5,2018,8,White,2017.0,Convertible,4447,4.0L,Automatic,Petrol,127000.0,4.0,2.0,Starter Motor Issue,0,28,2018-08-28,3,1450.0,9.0,2018-08-30
+Bentley,Continental,10_5,2018,8,Blue,2017.0,Coupe,5651,4.0L,Automatic,Petrol,114850.0,4.0,2.0,Sensor Malfunction,0,14,2018-08-14,3,30031.813816331192,9.0,2018-08-16
+Bentley,Continental,10_5,2017,4,Silver,2011.0,Convertible,21000,6.0L,Automatic,Petrol,69995.0,4.0,2.0,Radiator Leaking,0,4,2017-04-04,3,1519.9,6.0,2017-04-05
+Bentley,Continental,10_5,2018,1,Black,2013.0,Convertible,36000,4.0L,Automatic,Petrol,77990.0,4.0,2.0,Steering Wheel Shaking,0,12,2018-01-12,3,137.99,3.0,2018-01-12
+Bentley,Continental,10_5,2018,4,Blue,2010.0,Coupe,10121,6.0L,Automatic,Petrol,53000.0,4.0,2.0,Transmission Issue,2,7,2018-04-07,3,551.0,9.0,2018-04-09
+Bentley,Continental,10_5,2018,8,Grey,2015.0,Coupe,25300,4.0L,Automatic,Petrol,93899.0,4.0,2.0,Tyre Alignment,0,12,2018-08-12,3,39.3899,1.5,2018-08-12
+Bentley,Continental,10_5,2016,6,Blue,2011.0,Coupe,20500,6.0L,Automatic,Petrol,69849.0,4.0,2.0,Transmission Issue,1,4,2016-06-04,3,449.547,12.0,2016-06-07
+Bentley,Continental,10_5,2018,7,Black,2012.0,Coupe,52000,4.0L,Automatic,Petrol,58999.0,4.0,2.0,Steering Wheel Shaking,0,8,2018-07-08,3,118.999,3.0,2018-07-08
+Bentley,Continental,10_5,2018,4,Black,2011.0,Convertible,53000,6.0L,Automatic,Petrol,53000.0,4.0,2.0,Gear Box Issue,0,5,2018-04-05,3,650.0,6.0,2018-04-06
+Bentley,Continental,10_5,2017,9,White,2014.0,Coupe,3000,6.0L,Automatic,Petrol,86990.0,4.0,2.0,Flat Tyres,0,22,2017-09-22,3,86.097,3.0,2017-09-22
+Bentley,Continental,10_5,2018,7,Gelb,2014.0,Coupe,18000,6.0L,Automatic,Petrol,74975.0,4.0,2.0,Transmission Issue,1,17,2018-07-17,3,464.925,12.0,2018-07-20
+Bentley,Continental,10_5,2018,7,Silver,2011.0,Convertible,30512,6.0L,Automatic,Petrol,62750.0,19.0,2.0,Windscreen Crack,0,3,2018-07-03,3,412.38164082965864,346.3564772784415,2018-09-27
+Bentley,Continental,10_5,2018,6,Black,2017.0,Coupe,12559,4.0L,Automatic,Petrol,114950.0,4.0,2.0,Windscreen Crack,0,21,2018-06-21,3,128.97,3.0,2018-06-21
+Bentley,Continental,10_5,2018,8,Black,2018.0,Coupe,1050,6.0L,Automatic,Petrol,205495.0,4.0,2.0,Engine Issue,3,10,2018-08-10,3,21269.5,36.0,2018-08-19
+Bentley,Continental,10_5,2018,5,Red,2015.0,Coupe,29033,4.0L,Automatic,Petrol,80000.0,4.0,2.0,Flat Tyres,0,23,2018-05-23,3,84.0,3.0,2018-05-23
+Bentley,Continental,10_5,2018,8,Black,2015.0,Convertible,4808,4.0L,Automatic,Petrol,107950.0,4.0,2.0,Transmission Issue,3,25,2018-08-25,3,1451.55,24.0,2018-08-31
+Bentley,Continental,10_5,2018,8,Black,2008.0,Saloon,79000,6.0L,Automatic,Petrol,34800.0,4.0,4.0,Tyre Alignment,0,1,2018-08-01,3,33.48,1.5,2018-08-01
+Bentley,Continental,10_5,2018,4,Silver,2008.0,Convertible,93000,6.0L,Automatic,Petrol,38000.0,4.0,2.0,Brake Pads Worn,0,6,2018-04-06,3,139.0,6.0,2018-04-07
+Bentley,Continental,10_5,2018,1,Silver,2004.0,Coupe,42000,6.0L,Automatic,Petrol,23911.0,4.0,2.0,Electrical Issue,5,6,2018-01-06,3,203.911,9.0,2018-01-08
+Bentley,Continental,10_5,2018,6,Grey,2016.0,Coupe,4724,4.0L,Automatic,Petrol,110950.0,4.0,2.0,Engine Issue,2,11,2018-06-11,3,17602.5,48.0,2018-06-23
+Bentley,Continental,10_5,2018,7,Silver,2016.0,Convertible,10108,6.0L,Automatic,Petrol,124000.0,4.0,2.0,Alternator Failing,0,19,2018-07-19,3,2600.0,6.0,2018-07-20
+Bentley,Continental,10_5,2018,3,Blue,2009.0,Coupe,22200,6.0L,Automatic,Petrol,49950.0,4.0,2.0,Alternator Failing,0,13,2018-03-13,3,4868.573191210639,6.0,2018-03-14
+Bentley,Continental,10_5,2018,3,Black,2013.0,Coupe,38000,6.0L,Automatic,Petrol,65000.0,4.0,2.0,Gear Box Issue,0,2,2018-03-02,3,770.0,6.0,2018-03-03
+Bentley,Continental,10_5,2018,7,Black,2009.0,Convertible,34000,6.0L,Automatic,Petrol,51948.0,4.0,2.0,Gear Box Issue,0,7,2018-07-07,3,639.48,6.0,2018-07-08
+Bentley,Continental,10_5,2018,6,Black,2017.0,Convertible,11000,4.0L,Automatic,Petrol,129500.0,4.0,2.0,Warning Light,0,19,2018-06-19,3,1835.0,27.0,2018-06-25
+Bentley,Continental,10_5,2018,6,Brown,2011.0,Coupe,26532,6.0L,Automatic,Petrol,54000.0,4.0,2.0,Excessive Emissions,0,20,2018-06-20,3,108.6,3.0,2018-06-20
+Bentley,Continental,10_5,2018,4,Silver,2004.0,Coupe,85000,6.0L,Automatic,Petrol,18990.0,4.0,2.0,Windscreen Crack,0,23,2018-04-23,3,71.394,3.0,2018-04-23
+Bentley,Continental,10_5,2018,8,Blue,2005.0,Saloon,70000,6.0L,Automatic,Petrol,22000.0,5.0,4.0,Windscreen Crack,0,8,2018-08-08,3,73.2,3.0,2018-08-08
+Bentley,Continental,10_5,2018,7,Blue,2012.0,Convertible,25438,6.0L,Automatic,Petrol Ethanol,72850.0,4.0,2.0,Radiator Leaking,0,6,2018-07-06,3,1577.0,6.0,2018-07-07
+Bentley,Continental,10_5,2018,1,Silver,2005.0,Coupe,16400,6.0L,Automatic,Petrol,44990.0,4.0,2.0,Tyre Alignment,0,3,2018-01-03,3,34.499,1.5,2018-01-03
+Bentley,Continental,10_5,2017,5,Blue,2008.0,Coupe,15850,6.0L,Automatic,Petrol,50000.0,4.0,2.0,Warning Light,0,13,2017-05-13,3,1040.0,27.0,2017-05-19
+Bentley,Continental,10_5,2018,8,Purple,2016.0,Convertible,2700,6.0L,Automatic,Petrol,120000.0,4.0,2.0,Starter Motor Issue,0,27,2018-08-27,3,7784.8911543622,4680.366720419253,2021-11-09
+Bentley,Continental,10_5,2018,3,Green,2003.0,Coupe,67000,6.0L,Automatic,Petrol,21950.0,4.0,2.0,Sensor Malfunction,0,17,2018-03-17,3,1277.5,9.0,2018-03-19
+Bentley,Continental,10_5,2016,8,Grey,2008.0,Coupe,60000,6.0L,Automatic,Petrol,33999.0,4.0,2.0,Warning Light,0,27,2016-08-27,3,879.99,27.0,2016-09-02
+Bentley,Continental,10_5,2018,5,Grey,2016.0,Coupe,22100,4.0L,Automatic,Petrol,96995.0,4.0,2.0,Radiator Leaking,0,28,2018-05-28,3,2059.9,6.0,2018-05-29
+Bentley,Continental,10_5,2018,4,Black,2010.0,Coupe,16253,6.0L,Automatic,Petrol,52000.0,4.0,2.0,Radiator Leaking,0,7,2018-04-07,3,1160.0,6.0,2018-04-08
+Bentley,Continental,10_5,2018,6,Black,2012.0,Coupe,34000,4.0L,Automatic,Petrol,61950.0,4.0,2.0,Brake Pads Worn,0,7,2018-06-07,3,150.975,6.0,2018-06-08
+Bentley,Continental,10_5,2016,3,Black,2009.0,Coupe,74000,6.0L,Automatic,Petrol,39995.0,4.0,2.0,Alternator Failing,0,11,2016-03-11,3,919.9,6.0,2016-03-12
+Bentley,Continental,10_5,2017,11,Black,2008.0,Convertible,66000,6.0L,Automatic,Petrol,41948.0,4.0,2.0,Warning Light,0,1,2017-11-01,3,959.48,27.0,2017-11-07
+Bentley,Continental,10_5,2018,7,Silver,2008.0,Convertible,33000,6.0L,Automatic,Petrol,45995.0,4.0,2.0,Sensor Malfunction,0,7,2018-07-07,3,2479.75,9.0,2018-07-09
+Bentley,Continental,10_5,2018,4,Grey,2014.0,Coupe,17750,6.0L,Automatic,Petrol,82450.0,4.0,2.0,Tyre Alignment,0,11,2018-04-11,3,38.245000000000005,1.5,2018-04-11
+Bentley,Continental,10_5,2018,6,Silver,2011.0,Coupe,35376,6.0L,Automatic,Petrol,52995.0,4.0,2.0,Sensor Malfunction,0,17,2018-06-17,3,9411.53563158006,9.0,2018-06-19
+Bentley,Continental,10_5,2018,8,Black,2012.0,Coupe,40000,4.0L,Automatic,Petrol,62500.0,4.0,2.0,Flat Tyres,0,9,2018-08-09,3,78.75,3.0,2018-08-09
+Bentley,Continental,10_5,2017,2,Black,2012.0,Coupe,9500,6.0L,Automatic,Petrol,74900.0,4.0,2.0,Brake Pads Worn,0,28,2017-02-28,3,157.45,6.0,2017-03-01
+Bentley,Continental,10_5,2018,1,Silver,2013.0,Coupe,25485,4.0L,Automatic,Petrol,62750.0,4.0,2.0,Excessive Emissions,0,3,2018-01-03,3,116.475,3.0,2018-01-03
+Bentley,Continental,10_5,2018,4,Black,2010.0,Convertible,28000,6.0L,Automatic,Petrol,62500.0,4.0,2.0,Flat Tyres,0,10,2018-04-10,3,78.75,3.0,2018-04-10
+Bentley,Continental,10_5,2018,8,Blue,2014.0,Coupe,32000,6.0L,Automatic,Petrol,69995.0,4.0,2.0,Excessive Emissions,0,15,2018-08-15,3,122.99549999999999,3.0,2018-08-15
+Bentley,Continental,10_5,2018,7,Silver,2018.0,Coupe,1965,6.0L,Semi-Automatic,Petrol,184950.0,4.0,2.0,Tyre Alignment,0,9,2018-07-09,3,48.495000000000005,1.5,2018-07-09
+Bentley,Continental,10_5,2018,5,Blue,2005.0,Saloon,57300,6.0L,Automatic,Petrol,24989.0,4.0,4.0,Gear Box Issue,0,5,2018-05-05,3,369.89,6.0,2018-05-06
+Bentley,Continental,10_5,2018,4,Black,2012.0,Coupe,40000,4.0L,Automatic,Petrol,64995.0,4.0,2.0,Engine Issue,1,21,2018-04-21,3,13479.0,24.0,2018-04-27
+Bentley,Continental,10_5,2018,6,Blue,2012.0,Convertible,28756,6.0L,Semi-Automatic,Petrol,74950.0,4.0,2.0,Sensor Malfunction,0,11,2018-06-11,3,3927.5,9.0,2018-06-13
+Bentley,Continental,10_5,2018,4,Grey,2012.0,Convertible,23000,6.0L,Automatic,Petrol,74990.0,4.0,0.0,Starter Motor Issue,0,22,2018-04-22,3,5360.538632791069,3497.176006666157,2020-09-12
+Bentley,Continental,10_5,2018,1,Green,2004.0,Coupe,27000,6.0L,Automatic,Petrol,30000.0,4.0,2.0,Alternator Failing,0,22,2018-01-22,3,720.0,6.0,2018-01-23
+Bentley,Continental,10_5,2018,7,Black,2014.0,Convertible,25364,4.0L,Automatic,Petrol,92450.0,4.0,2.0,Tyre Alignment,0,5,2018-07-05,3,39.245000000000005,1.5,2018-07-05
+Bentley,Continental,10_5,2018,7,Silver,2008.0,Convertible,58000,6.0L,Automatic,Petrol,41895.0,4.0,2.0,Flat Tyres,0,4,2018-07-04,3,72.5685,3.0,2018-07-04
+Bentley,Continental,10_5,2018,6,Red,2004.0,Coupe,40000,6.0L,Automatic,Petrol,26900.0,4.0,2.0,Brake Pads Worn,0,8,2018-06-08,3,133.45,6.0,2018-06-09
+Bentley,Continental,10_5,2018,8,Blue,2011.0,Convertible,24500,6.0L,Semi-Automatic,Petrol,64950.0,4.0,2.0,Electrical Issue,4,19,2018-08-19,3,314.85,6.0,2018-08-20
+Bentley,Continental,10_5,2017,8,Grey,2017.0,Convertible,4216,4.0L,Automatic,Petrol,119950.0,4.0,2.0,Electrical Issue,3,22,2017-08-22,3,659.75,3.0,2017-08-22
+Bentley,Continental,10_5,2018,4,White,2011.0,Convertible,19900,6.0L,Automatic,Petrol,69889.0,4.0,2.0,Alternator Failing,0,11,2018-04-11,3,1517.78,6.0,2018-04-12
+Bentley,Continental,10_5,2018,2,Blue,2004.0,Coupe,48000,6.0L,Automatic,Petrol,25995.0,4.0,2.0,Excessive Emissions,0,15,2018-02-15,3,83.3955,3.0,2018-02-15
+Bentley,Continental,10_5,2018,6,Black,2004.0,Coupe,49000,6.0L,Automatic,Petrol,21999.0,4.0,2.0,Gear Box Issue,0,24,2018-06-24,3,339.99,6.0,2018-06-25
+Bentley,Continental,10_5,2018,7,Red,2004.0,Coupe,78000,6.0L,Automatic,Petrol,23000.0,4.0,2.0,Alternator Failing,0,10,2018-07-10,3,1774.441826137792,6.0,2018-07-11
+Bentley,Continental,10_5,2018,8,Black,2015.0,Coupe,41000,6.0L,Automatic,Petrol,81000.0,4.0,2.0,Transmission Issue,2,5,2018-08-05,3,747.0,9.0,2018-08-07
+Bentley,Continental,10_5,2018,7,Blue,2012.0,Coupe,38400,4.0L,Automatic,Petrol,61990.0,4.0,2.0,Windscreen Crack,0,5,2018-07-05,3,97.19399999999999,3.0,2018-07-05
+Bentley,Continental,10_5,2018,6,Grey,2010.0,Coupe,27000,6.0L,Automatic,Petrol,53999.0,4.0,2.0,Starter Motor Issue,0,16,2018-06-16,3,719.99,9.0,2018-06-18
+Bentley,Continental,10_5,2018,4,Grey,2014.0,Coupe,42000,6.0L,Automatic,Petrol,64948.0,4.0,2.0,Radiator Leaking,0,20,2018-04-20,3,1418.96,6.0,2018-04-21
+Bentley,Continental,10_5,2018,3,Black,2004.0,Coupe,47000,6.0L,Automatic,Petrol,25000.0,4.0,2.0,Sensor Malfunction,0,6,2018-03-06,3,1430.0,9.0,2018-03-08
+Bentley,Continental,10_5,2018,6,Green,2004.0,Coupe,141000,6.0L,Automatic,Petrol,17990.0,4.0,2.0,Windscreen Crack,0,14,2018-06-14,3,70.794,3.0,2018-06-14
+Bentley,Continental,10_5,2018,8,Gelb,2016.0,Coupe,6500,4.0L,Automatic,Petrol,102990.0,4.0,2.0,Transmission Issue,1,12,2018-08-12,3,548.97,12.0,2018-08-15
+Bentley,Continental,10_5,2018,3,Gelb,2004.0,Coupe,42000,6.0L,Automatic,Petrol,21950.0,4.0,2.0,Gear Box Issue,0,17,2018-03-17,3,339.5,6.0,2018-03-18
+Bentley,Continental,10_5,2018,4,Black,2012.0,Coupe,34000,4.0L,Automatic,Petrol,64950.0,4.0,2.0,Excessive Emissions,0,18,2018-04-18,3,118.455,3.0,2018-04-18
+Bentley,Continental,10_5,2018,7,Grey,2009.0,Coupe,22553,6.0L,Automatic,Petrol,48991.0,4.0,2.0,Alternator Failing,0,10,2018-07-10,3,4646.754314633268,4207.886424794541,2021-05-26
+Bentley,Continental,10_5,2018,1,Red,2009.0,Coupe,50000,6.0L,Automatic,Petrol,47999.0,4.0,2.0,Steering Wheel Shaking,0,7,2018-01-07,3,107.999,3.0,2018-01-07
+Bentley,Continental,10_5,2018,4,Black,2012.0,Saloon,59000,6.0L,Automatic,Petrol,45000.0,4.0,4.0,Electrical Issue,5,12,2018-04-12,3,225.0,9.0,2018-04-14
+Bentley,Continental,10_5,2018,5,Purple,2010.0,Coupe,32200,6.0L,Automatic,Petrol,47900.0,4.0,2.0,Electrical Issue,2,4,2018-05-04,3,125.8,1.5,2018-05-04
+Bentley,Continental,10_5,2018,2,White,2008.0,Coupe,81389,6.0L,Automatic,Petrol,34489.0,4.0,2.0,Engine Issue,3,20,2018-02-20,3,4168.9,36.0,2018-03-01
+Bentley,Continental,10_5,2018,8,Grey,2017.0,Convertible,3043,4.0L,Automatic,Petrol,134995.0,16.0,2.0,Windscreen Crack,0,7,2018-08-07,3,140.997,3.0,2018-08-07
+Bentley,Continental,10_5,2018,5,Black,2009.0,Convertible,55727,6.0L,Automatic,Petrol,49995.0,4.0,2.0,Starter Motor Issue,0,5,2018-05-05,3,679.95,9.0,2018-05-07
+Bentley,Continental,10_5,2018,4,Grey,2013.0,Coupe,39920,4.0L,Automatic,Petrol,76500.0,4.0,2.0,Alternator Failing,0,22,2018-04-22,3,1650.0,6.0,2018-04-23
+Bentley,Continental,10_5,2017,11,Silver,1995.0,Coupe,98600,6.8L,Automatic,Petrol,34750.0,4.0,2.0,Sensor Malfunction,0,19,2017-11-19,3,1917.5,9.0,2017-11-21
+Bentley,Continental,10_5,2018,4,White,2013.0,Coupe,18500,4.0L,Automatic,Petrol,74995.0,4.0,2.0,Gear Box Issue,0,3,2018-04-03,3,869.95,6.0,2018-04-04
+Bentley,Continental,10_5,2018,2,Red,2013.0,Convertible,16400,6.0L,Automatic,Petrol,77750.0,4.0,2.0,Transmission Issue,3,13,2018-02-13,3,4564.011854075812,24.0,2018-02-19
+Bentley,Continental,10_5,2017,10,Silver,2004.0,Coupe,31000,6.0L,Automatic,Petrol,29990.0,4.0,2.0,Radiator Leaking,0,2,2017-10-02,3,719.8000000000001,6.0,2017-10-03
+Bentley,Continental,10_5,2017,11,Silver,2004.0,Coupe,106000,6.0L,Automatic,Petrol,19450.0,4.0,2.0,Engine Issue,3,17,2017-11-17,3,2665.0,36.0,2017-11-26
+Bentley,Continental,10_5,2018,8,Grey,2010.0,Convertible,57000,6.0L,Automatic,Petrol,47975.0,4.0,2.0,Electrical Issue,2,23,2018-08-23,3,125.95,1.5,2018-08-23
+Bentley,Continental,10_5,2018,4,Silver,2005.0,Saloon,49933,6.0L,Automatic,Petrol,21350.0,5.0,4.0,Alternator Failing,0,10,2018-04-10,3,547.0,6.0,2018-04-11
+Bentley,Continental,10_5,2018,6,Gelb,2017.0,Coupe,4000,4.0L,Automatic,Petrol,124950.0,4.0,2.0,Brake Pads Worn,0,23,2018-06-23,3,182.475,6.0,2018-06-24
+Bentley,Continental,10_5,2018,3,Green,2005.0,Coupe,74388,6.0L,Automatic,Petrol,23955.0,4.0,2.0,Warning Light,0,17,2018-03-17,3,779.55,27.0,2018-03-23
+Bentley,Continental,10_5,2018,5,White,2012.0,Coupe,10000,6.0L,Automatic,Petrol,71945.0,4.0,2.0,Windscreen Crack,0,5,2018-05-05,3,103.167,3.0,2018-05-05
+Bentley,Continental,10_5,2018,5,Black,2010.0,Coupe,58574,6.0L,Automatic,Petrol,47000.0,4.0,2.0,Alternator Failing,0,15,2018-05-15,3,1060.0,6.0,2018-05-16
+Bentley,Continental,10_5,2018,3,White,2009.0,Coupe,73000,6.0L,Automatic,Petrol,39990.0,4.0,2.0,Electrical Issue,2,13,2018-03-13,3,109.98,1.5,2018-03-13
+Bentley,Continental,10_5,2017,10,Blue,2005.0,Saloon,90000,6.0L,Automatic,Petrol,18995.0,4.0,4.0,Radiator Leaking,0,8,2017-10-08,3,2317.2472522365715,1854.3888186974839,2019-01-14
+Bentley,Continental,10_5,2018,8,Grey,2016.0,Convertible,1200,4.0L,Automatic,Petrol,129950.0,4.0,2.0,Alternator Failing,0,16,2018-08-16,3,2719.0,6.0,2018-08-17
+Bentley,Continental,10_5,2018,8,Blue,2010.0,Convertible,56500,6.0L,Automatic,Petrol,49950.0,4.0,2.0,Steering Wheel Shaking,0,5,2018-08-05,3,109.95,3.0,2018-08-05
+Bentley,Continental,10_5,2017,10,Black,2004.0,Coupe,38000,6.0L,Automatic,Petrol,26999.0,4.0,2.0,Transmission Issue,3,7,2017-10-07,3,722.991,24.0,2017-10-13
+Bentley,Continental,10_5,2017,9,Black,2005.0,Coupe,63000,6.0L,Automatic,Petrol,29950.0,4.0,2.0,Windscreen Crack,0,26,2017-09-26,3,77.97,3.0,2017-09-26
+Bentley,Continental,10_5,2018,5,Silver,2004.0,Coupe,100000,6.0L,Automatic,Petrol,21950.0,4.0,2.0,Flat Tyres,0,5,2018-05-05,3,66.585,3.0,2018-05-05
+Bentley,Continental,10_5,2018,1,Blue,2016.0,Coupe,16000,4.0L,Automatic,Petrol,99785.0,4.0,2.0,Excessive Emissions,0,10,2018-01-10,3,149.8065,3.0,2018-01-10
+Bentley,Continental,10_5,2018,8,Black,2013.0,Convertible,29500,4.0L,Automatic,Petrol,79995.0,4.0,2.0,Flat Tyres,0,10,2018-08-10,3,83.99849999999999,3.0,2018-08-10
+Bentley,Continental,10_5,2017,8,Black,2009.0,Convertible,30136,6.0L,Automatic,Petrol,51995.0,4.0,2.0,Flat Tyres,0,20,2017-08-20,3,75.5985,3.0,2017-08-20
+Bentley,Continental,10_5,2018,8,Black,2008.0,Convertible,34950,6.0L,Automatic,Petrol,50950.0,4.0,2.0,Starter Motor Issue,0,1,2018-08-01,3,689.5,9.0,2018-08-03
+Bentley,Continental,10_5,2018,2,Black,2014.0,Coupe,12913,4.0L,Automatic,Petrol,75547.0,4.0,2.0,Engine Issue,1,17,2018-02-17,3,81580.94796010834,24.0,2018-02-23
+Bentley,Continental,10_5,2018,4,Black,2013.0,Coupe,26450,4.0L,Automatic,Petrol,74850.0,4.0,2.0,Excessive Emissions,0,26,2018-04-26,3,127.365,3.0,2018-04-26
+Bentley,Continental,10_5,2018,4,Silver,2011.0,Coupe,52489,6.0L,Automatic,Petrol,57000.0,4.0,2.0,Gear Box Issue,0,19,2018-04-19,3,690.0,6.0,2018-04-20
+Bentley,Continental,10_5,2018,3,Black,2012.0,Saloon,30126,6.0L,Automatic,Petrol,45995.0,4.0,4.0,Windscreen Crack,0,8,2018-03-08,3,87.597,3.0,2018-03-08
+Bentley,Continental,10_5,2018,1,Silver,2005.0,Coupe,42732,6.0L,Automatic,Petrol,27850.0,4.0,2.0,Electrical Issue,3,22,2018-01-22,3,199.25,3.0,2018-01-22
+Bentley,Continental,10_5,2018,3,Black,2011.0,Convertible,20000,6.0L,Automatic,Petrol,72950.0,4.0,2.0,Starter Motor Issue,0,15,2018-03-15,3,909.5,9.0,2018-03-17
+Bentley,Continental,10_5,2018,3,Grey,2013.0,Convertible,16000,6.0L,Automatic,Petrol,95000.0,4.0,2.0,Alternator Failing,0,22,2018-03-22,3,2020.0,6.0,2018-03-23
+Bentley,Continental,10_5,2018,7,White,2010.0,Coupe,33374,6.0L,Automatic,Petrol,59995.0,4.0,2.0,Windscreen Crack,0,15,2018-07-15,3,95.997,3.0,2018-07-15
+Bentley,Continental,10_5,2018,6,White,2015.0,Coupe,25200,4.0L,Automatic,Petrol,159950.0,2.0,2.0,Excessive Emissions,0,26,2018-06-26,3,203.95499999999998,3.0,2018-06-26
+Bentley,Continental,10_5,2018,4,Black,2005.0,Saloon,127254,6.0L,Automatic,Petrol,16995.0,5.0,4.0,Brake Pads Worn,0,21,2018-04-21,3,128.4975,6.0,2018-04-22
+Bentley,Continental,10_5,2018,7,Silver,2008.0,Convertible,16000,6.0L,Automatic,Petrol,49948.0,4.0,2.0,Gear Box Issue,0,24,2018-07-24,3,3457.245430915675,2008.881701209865,2019-12-08
+Bentley,Continental,10_5,2018,7,Black,2008.0,Convertible,50591,6.0L,Automatic,Petrol,45490.0,4.0,2.0,Steering Wheel Shaking,0,7,2018-07-07,3,105.49000000000001,3.0,2018-07-07
+Bentley,Continental,10_5,2018,7,White,2013.0,Coupe,19000,4.0L,Automatic,Petrol,69990.0,4.0,2.0,Excessive Emissions,0,22,2018-07-22,3,122.991,3.0,2018-07-22
+Bentley,Continental,10_5,2018,8,Black,2017.0,Convertible,4669,4.0L,Automatic,Petrol,136990.0,4.0,2.0,Electrical Issue,1,12,2018-08-12,3,256.99,6.0,2018-08-13
+Bentley,Continental,10_5,2017,3,Gelb,2012.0,Coupe,12300,6.0L,Automatic,Petrol,69995.0,4.0,2.0,Windscreen Crack,0,10,2017-03-10,3,101.99699999999999,3.0,2017-03-10
+Bentley,Continental,10_5,2018,8,Black,2009.0,Convertible,26000,6.0L,Automatic,Petrol,49995.0,4.0,2.0,Alternator Failing,0,7,2018-08-07,3,1119.9,6.0,2018-08-08
+Bentley,Continental,10_5,2018,8,Black,2005.0,Coupe,66548,6.0L,Automatic,Petrol,27500.0,4.0,2.0,Engine Issue,2,10,2018-08-10,3,5085.0,48.0,2018-08-22
+Bentley,Continental,10_5,2017,10,Silver,2008.0,Convertible,33098,6.0L,Automatic,Petrol,50000.0,4.0,2.0,Sensor Malfunction,0,13,2017-10-13,3,2680.0,9.0,2017-10-15
+Bentley,Continental,10_5,2018,1,Black,2013.0,Convertible,26000,4.0L,Automatic,Petrol,76949.0,4.0,2.0,Windscreen Crack,0,27,2018-01-27,3,106.1694,3.0,2018-01-27
+Bentley,Continental,10_5,2018,7,Red,2014.0,Convertible,23349,4.0L,Automatic,Petrol,88990.0,4.0,2.0,Engine Issue,4,16,2018-07-16,3,5049.5,30.0,2018-07-23
+Bentley,Continental,10_5,2018,5,Black,2012.0,Convertible,32000,4.0L,Automatic,Petrol,77990.0,4.0,2.0,Starter Motor Issue,0,27,2018-05-27,3,4609.49285967224,9.0,2018-05-29
+Bentley,Continental,10_5,2018,4,Blue,2012.0,Coupe,16949,6.0L,Automatic,Petrol,69500.0,4.0,2.0,Transmission Issue,3,17,2018-04-17,3,1105.5,24.0,2018-04-23
+Bentley,Continental,10_5,2017,12,Black,2008.0,Convertible,43955,6.0L,Automatic,Petrol,45000.0,4.0,2.0,Alternator Failing,0,15,2017-12-15,3,1020.0,6.0,2017-12-16
+Bentley,Continental,10_5,2018,8,Blue,2004.0,Coupe,73000,6.0L,Automatic,Petrol,28950.0,4.0,2.0,Flat Tyres,0,19,2018-08-19,3,68.685,3.0,2018-08-19
+Bentley,Continental,10_5,2018,4,Silver,2004.0,Coupe,87000,6.0L,Automatic,Petrol,19995.0,4.0,2.0,Alternator Failing,0,6,2018-04-06,3,519.9000000000001,6.0,2018-04-07
+Bentley,Continental,10_5,2018,7,Grey,2016.0,Convertible,13012,4.0L,Automatic,Petrol,118995.0,4.0,2.0,Excessive Emissions,0,13,2018-07-13,3,167.09550000000002,3.0,2018-07-13
+Bentley,Continental,10_5,2018,8,Grey,2012.0,Coupe,41000,4.0L,Automatic,Petrol,59900.0,4.0,2.0,Sensor Malfunction,0,8,2018-08-08,3,3175.0,9.0,2018-08-10
+Bentley,Continental,10_5,2018,7,Grey,2015.0,Coupe,9345,6.0L,Automatic,Petrol,89950.0,4.0,2.0,Transmission Issue,3,24,2018-07-24,3,1289.55,24.0,2018-07-30
+Bentley,Continental,10_5,2017,12,Grey,2012.0,Coupe,70000,6.0L,Automatic,Petrol,52990.0,4.0,2.0,Alternator Failing,0,26,2017-12-26,3,1179.8,6.0,2017-12-27
+Bentley,Continental,10_5,2018,7,Blue,2011.0,Saloon,43934,6.0L,Automatic,Petrol,46950.0,4.0,4.0,Windscreen Crack,0,1,2018-07-01,3,88.17,3.0,2018-07-01
+Bentley,Continental,10_5,2018,4,Blue,2010.0,Coupe,54369,6.0L,Automatic,Petrol,49950.0,4.0,2.0,Alternator Failing,0,27,2018-04-27,3,5861.113367119649,3642.5312306572523,2020-10-23
+Bentley,Continental,10_5,2018,8,Grey,2017.0,Coupe,10721,4.0L,Automatic,Petrol,109990.0,4.0,2.0,Starter Motor Issue,0,24,2018-08-24,3,1279.9,9.0,2018-08-26
+Bentley,Continental,10_5,2017,12,Silver,2004.0,Coupe,140000,6.0L,Automatic,Petrol,20950.0,4.0,2.0,Radiator Leaking,0,13,2017-12-13,3,539.0,6.0,2017-12-14
+Bentley,Continental,10_5,2018,5,Grey,2010.0,Convertible,26000,6.0L,Automatic,Petrol,59995.0,4.0,2.0,Steering Wheel Shaking,0,11,2018-05-11,3,119.995,3.0,2018-05-11
+Bentley,Continental,10_5,2017,11,Gelb,2009.0,Coupe,50000,6.0L,Automatic,Petrol,35850.0,4.0,2.0,Steering Wheel Shaking,0,9,2017-11-09,3,95.85,3.0,2017-11-09
+Bentley,Continental,10_5,2017,8,Black,2011.0,Coupe,24800,6.0L,Automatic,Petrol,67950.0,4.0,2.0,Tyre Alignment,0,11,2017-08-11,3,36.795,1.5,2017-08-11
+Bentley,Continental,10_5,2018,8,Silver,2005.0,Saloon,75000,6.0L,Automatic,Petrol,23990.0,5.0,4.0,Sensor Malfunction,0,11,2018-08-11,3,1379.5,9.0,2018-08-13
+Bentley,Continental,10_5,2018,6,Black,2008.0,Convertible,58000,6.0L,Automatic,Petrol,39995.0,4.0,2.0,Engine Issue,4,22,2018-06-22,3,2599.75,30.0,2018-06-29
+Bentley,Continental,10_5,2017,12,White,2014.0,Coupe,10400,6.0L,Automatic,Petrol,79995.0,4.0,2.0,Starter Motor Issue,0,23,2017-12-23,3,979.95,9.0,2017-12-25
+Bentley,Continental,10_5,2018,6,Gelb,2013.0,Coupe,22265,4.0L,Automatic,Petrol,68790.0,4.0,2.0,Steering Wheel Shaking,0,28,2018-06-28,3,128.79000000000002,3.0,2018-06-28
+Bentley,Continental,10_5,2017,9,Black,2014.0,Coupe,21200,4.0L,Automatic,Petrol,78950.0,4.0,2.0,Engine Issue,4,9,2017-09-09,3,19133.64885635167,30.0,2017-09-16
+Bentley,Continental,10_5,2018,6,Black,2016.0,Convertible,9100,4.0L,Automatic,Petrol,115889.0,4.0,2.0,Starter Motor Issue,0,10,2018-06-10,3,1338.89,9.0,2018-06-12
+Bentley,Continental,10_5,2018,8,Black,2011.0,Coupe,26000,6.0L,Automatic,Petrol,54950.0,4.0,2.0,Starter Motor Issue,0,2,2018-08-02,3,729.5,9.0,2018-08-04
+Bentley,Continental,10_5,2018,8,White,2011.0,Convertible,17017,6.0L,Automatic,Petrol,78950.0,11.0,2.0,Flat Tyres,0,20,2018-08-20,3,83.685,3.0,2018-08-20
+Bentley,Continental,10_5,2018,7,Grey,2011.0,Coupe,29000,6.0L,Automatic,Petrol,57990.0,4.0,2.0,Flat Tyres,0,2,2018-07-02,3,77.39699999999999,3.0,2018-07-02
+Bentley,Continental,10_5,2018,8,Black,2005.0,Coupe,45999,6.0L,Automatic,Petrol,28850.0,4.0,2.0,Alternator Failing,0,15,2018-08-15,3,697.0,6.0,2018-08-16
+Bentley,Continental,10_5,2018,4,Silver,2011.0,Coupe,13352,6.0L,Automatic,Petrol,69950.0,4.0,2.0,Sensor Malfunction,0,4,2018-04-04,3,3677.5,9.0,2018-04-06
+Bentley,Continental,10_5,2018,5,Grey,2008.0,Coupe,51400,6.0L,Automatic,Petrol,39990.0,4.0,2.0,Flat Tyres,0,6,2018-05-06,3,71.997,3.0,2018-05-06
+Bentley,Continental,10_5,2018,6,Blue,2015.0,Convertible,29000,6.0L,Automatic,Petrol,108000.0,4.0,2.0,Flat Tyres,0,19,2018-06-19,3,92.4,3.0,2018-06-19
+Bentley,Continental,10_5,2018,8,Blue,2010.0,Coupe,21000,6.0L,Automatic,Petrol,55000.0,4.0,2.0,Windscreen Crack,0,7,2018-08-07,3,93.0,3.0,2018-08-07
+Bentley,Continental,10_5,2018,7,Grey,2009.0,Coupe,54850,6.0L,Automatic,Petrol,49990.0,4.0,2.0,Tyre Alignment,0,16,2018-07-16,3,124.62652412425307,139.58005491562355,2018-08-19
+Bentley,Continental,10_5,2018,7,Black,2005.0,Saloon,93000,6.0L,Automatic,Petrol,26950.0,5.0,4.0,Excessive Emissions,0,2,2018-07-02,3,84.255,3.0,2018-07-02
+Bentley,Continental,10_5,2017,10,Blue,2008.0,Coupe,55000,6.0L,Automatic,Petrol,30975.0,4.0,2.0,Radiator Leaking,0,3,2017-10-03,3,739.5,6.0,2017-10-04
+Bentley,Continental,10_5,2018,6,Blue,2010.0,Coupe,29000,6.0L,Automatic,Petrol,46950.0,4.0,2.0,Brake Pads Worn,0,1,2018-06-01,3,143.475,6.0,2018-06-02
+Bentley,Continental,10_5,2018,8,Blue,2018.0,Coupe,1500,6.0L,Automatic,Petrol,219995.0,4.0,2.0,Tyre Alignment,0,2,2018-08-02,3,51.9995,1.5,2018-08-02
+Bentley,Continental,10_5,2018,6,Black,2012.0,Coupe,10000,6.0L,Automatic,Petrol,67990.0,4.0,2.0,Warning Light,0,11,2018-06-11,3,1219.9,27.0,2018-06-17
+Bentley,Continental,10_5,2018,4,White,2011.0,Coupe,48000,6.0L,Automatic,Petrol,59975.0,4.0,2.0,Gear Box Issue,0,22,2018-04-22,3,719.75,6.0,2018-04-23
+Bentley,Continental,10_5,2018,2,Black,2005.0,Coupe,93500,6.0L,Automatic,Petrol,23495.0,4.0,2.0,Engine Issue,3,4,2018-02-04,3,3069.5,36.0,2018-02-13
+Bentley,Continental,10_5,2018,7,Blue,2015.0,Coupe,17100,6.0L,Automatic,Petrol,94990.0,4.0,2.0,Electrical Issue,3,24,2018-07-24,3,534.95,3.0,2018-07-24
+Bentley,Continental,10_5,2018,8,Grey,2013.0,Coupe,14870,4.0L,Automatic,Petrol,79950.0,4.0,2.0,Electrical Issue,3,13,2018-08-13,3,459.75,3.0,2018-08-13
+Bentley,Continental,10_5,2018,7,Gelb,2018.0,Coupe,40,6.0L,Automatic,Petrol,205995.0,4.0,2.0,Brake Pads Worn,0,18,2018-07-18,3,1045.0816661830386,6.0,2018-07-19
+Bentley,Continental,10_5,2017,12,Grey,2011.0,Coupe,15996,6.0L,Automatic,Petrol,74995.0,4.0,2.0,Warning Light,0,11,2017-12-11,3,1289.95,27.0,2017-12-17
+Bentley,Continental,10_5,2017,10,White,2014.0,Convertible,32000,4.0L,Automatic,Petrol,89994.0,4.0,2.0,Brake Pads Worn,0,2,2017-10-02,3,164.997,6.0,2017-10-03
+Bentley,Continental,10_5,2018,3,Blue,2009.0,Coupe,30000,6.0L,Automatic,Petrol,45495.0,4.0,2.0,Steering Wheel Shaking,0,28,2018-03-28,3,105.495,3.0,2018-03-28
+Bentley,Continental,10_5,2018,6,Grey,2013.0,Coupe,8000,4.0L,Automatic,Petrol,74990.0,11.0,2.0,Steering Wheel Shaking,0,16,2018-06-16,3,134.99,3.0,2018-06-16
+Bentley,Continental,10_5,2018,7,Grey,2004.0,Coupe,98369,6.0L,Automatic,Petrol,19990.0,4.0,2.0,Flat Tyres,0,23,2018-07-23,3,65.997,3.0,2018-07-23
+Bentley,Continental,10_5,2018,1,Blue,2010.0,Coupe,41395,6.0L,Automatic,Petrol,47450.0,4.0,2.0,Windscreen Crack,0,7,2018-01-07,3,88.47,3.0,2018-01-07
+Bentley,Continental,10_5,2018,6,Green,2018.0,Convertible,1012,4.0L,Semi-Automatic,Petrol,159950.0,10.0,2.0,Radiator Leaking,0,6,2018-06-06,3,3319.0,6.0,2018-06-07
+Bentley,Continental,10_5,2018,6,Grey,2017.0,Coupe,4586,4.0L,Automatic,Petrol,122000.0,4.0,2.0,Tyre Alignment,0,12,2018-06-12,3,42.2,1.5,2018-06-12
+Bentley,Continental,10_5,2018,3,White,2011.0,Coupe,47120,6.0L,Automatic,Petrol,58990.0,4.0,2.0,Brake Pads Worn,0,24,2018-03-24,3,149.495,6.0,2018-03-25
+Bentley,Continental,10_5,2018,4,Grey,2013.0,Convertible,8677,4.0L,Automatic,Petrol,89850.0,4.0,2.0,Gear Box Issue,0,24,2018-04-24,3,3662.41118095945,3536.4581740138924,2020-09-24
+Bentley,Continental,10_5,2018,7,Black,2018.0,Coupe,20,6.0L,Automatic,Petrol,229995.0,4.0,2.0,Gear Box Issue,0,16,2018-07-16,3,2419.9500000000003,6.0,2018-07-17
+Bentley,Continental,10_5,2018,4,Black,2008.0,Convertible,27487,6.0L,Automatic,Petrol,49000.0,4.0,2.0,Excessive Emissions,0,10,2018-04-10,3,104.1,3.0,2018-04-10
+Bentley,Continental,10_5,2018,8,Blue,2011.0,Convertible,30210,6.0L,Automatic,Petrol,69950.0,4.0,2.0,Flat Tyres,0,2,2018-08-02,3,80.985,3.0,2018-08-02
+Bentley,Continental,10_5,2018,4,White,2012.0,Convertible,25000,6.0L,Automatic,Petrol,76948.0,4.0,0.0,Engine Issue,2,3,2018-04-03,3,12502.199999999999,48.0,2018-04-15
+Bentley,Continental,10_5,2018,8,White,2013.0,Coupe,21300,6.0L,Automatic,Petrol,74990.0,4.0,2.0,Warning Light,0,15,2018-08-15,3,1289.9,27.0,2018-08-21
+Bentley,Continental,10_5,2018,4,Grey,2009.0,Coupe,58050,6.0L,Automatic,Petrol,39999.0,4.0,2.0,Starter Motor Issue,0,1,2018-04-01,3,579.99,9.0,2018-04-03
+Bentley,Continental,10_5,2018,8,Blue,2014.0,Convertible,10285,6.0L,Automatic,Petrol,92950.0,4.0,2.0,Tyre Alignment,0,24,2018-08-24,3,39.295,1.5,2018-08-24
+Bentley,Continental,10_5,2018,8,Grey,2011.0,Coupe,51000,6.0L,Automatic,Petrol,58995.0,4.0,2.0,Gear Box Issue,0,17,2018-08-17,3,709.95,6.0,2018-08-18
+Bentley,Continental,10_5,2018,8,Orange,2016.0,Convertible,9439,6.0L,Automatic,Petrol,119995.0,4.0,2.0,Flat Tyres,0,24,2018-08-24,3,95.9985,3.0,2018-08-24
+Bentley,Continental,10_5,2018,8,Green,2018.0,Coupe,257,6.0L,Automatic,Petrol,208000.0,4.0,2.0,Flat Tyres,0,3,2018-08-03,3,434.63943268797425,3.0,2018-08-03
+Bentley,Continental,10_5,2018,8,Grey,2017.0,Coupe,6418,4.0L,Automatic,Petrol,119000.0,4.0,2.0,Engine Issue,3,14,2018-08-14,3,12620.0,36.0,2018-08-23
+Bentley,Continental,10_5,2018,5,White,2018.0,Convertible,500,4.0L,Automatic,Petrol,144990.0,4.0,2.0,Excessive Emissions,0,11,2018-05-11,3,190.49099999999999,3.0,2018-05-11
+Bentley,Continental,10_5,2018,3,Silver,2004.0,Coupe,61500,6.0L,Automatic,Petrol,26250.0,4.0,2.0,Alternator Failing,0,18,2018-03-18,3,645.0,6.0,2018-03-19
+Bentley,Continental,10_5,2016,8,Blue,2015.0,Convertible,9000,4.0L,Automatic,Petrol,104975.0,4.0,2.0,Brake Pads Worn,0,23,2016-08-23,3,172.4875,6.0,2016-08-24
+Bentley,Continental,10_5,2018,2,Black,2011.0,Convertible,42000,6.0L,Automatic,Petrol,66990.0,4.0,2.0,Gear Box Issue,0,3,2018-02-03,3,789.9,6.0,2018-02-04
+Bentley,Continental,10_5,2018,4,White,2011.0,Coupe,38000,6.0L,Automatic,Petrol,59990.0,4.0,2.0,Alternator Failing,0,10,2018-04-10,3,1319.8,6.0,2018-04-11
+Bentley,Continental,10_5,2018,8,Blue,2014.0,Convertible,13580,6.0L,Automatic,Petrol,89500.0,4.0,2.0,Transmission Issue,2,11,2018-08-11,3,806.5,9.0,2018-08-13
+Bentley,Continental,10_5,2018,3,Black,2011.0,Coupe,62000,6.0L,Automatic,Petrol,49950.0,4.0,2.0,Gear Box Issue,0,11,2018-03-11,3,619.5,6.0,2018-03-12
+Bentley,Continental,10_5,2018,6,Blue,2015.0,Convertible,18921,4.0L,Automatic,Petrol,104950.0,4.0,2.0,Radiator Leaking,0,27,2018-06-27,3,2219.0,6.0,2018-06-28
+Bentley,Continental,10_5,2017,11,Grey,2014.0,Coupe,16703,6.0L,Automatic,Petrol,81895.0,4.0,2.0,Windscreen Crack,0,18,2017-11-18,3,461.6971064960294,328.4313020387387,2018-02-08
+Bentley,Continental,10_5,2018,7,Silver,2016.0,Coupe,7685,4.0L,Automatic,Petrol,104990.0,4.0,2.0,Starter Motor Issue,0,7,2018-07-07,3,1229.9,9.0,2018-07-09
+Bentley,Continental,10_5,2018,7,Grey,2017.0,Convertible,1200,4.0L,Automatic,Petrol,134990.0,4.0,2.0,Engine Issue,2,18,2018-07-18,3,21208.5,48.0,2018-07-30
+Bentley,Continental,10_5,2018,3,Silver,2005.0,Coupe,66000,6.0L,Automatic,Petrol,27750.0,4.0,2.0,Warning Light,0,19,2018-03-19,3,817.5,27.0,2018-03-25
+Bentley,Continental,10_5,2018,8,Black,2013.0,Convertible,15500,4.0L,Automatic,Petrol,79950.0,4.0,2.0,Warning Light,0,4,2018-08-04,3,1339.5,27.0,2018-08-10
+Bentley,Continental,10_5,2018,7,Silver,2018.0,Coupe,189,6.0L,Automatic,Petrol,189999.0,4.0,2.0,Flat Tyres,0,17,2018-07-17,3,116.99969999999999,3.0,2018-07-17
+Bentley,Continental,10_5,2018,8,Grey,2015.0,Coupe,43500,6.0L,Automatic,Petrol,79995.0,4.0,2.0,Engine Issue,4,18,2018-08-18,3,4599.75,30.0,2018-08-25
+Bentley,Continental,10_5,2018,6,Silver,2005.0,Coupe,57000,6.0L,Automatic,Petrol,24475.0,4.0,2.0,Radiator Leaking,0,28,2018-06-28,3,609.5,6.0,2018-06-29
+Bentley,Continental,10_5,2017,11,Black,2004.0,Coupe,51000,6.0L,Automatic,Petrol,27495.0,4.0,2.0,Steering Wheel Shaking,0,7,2017-11-07,3,87.495,3.0,2017-11-07
+Bentley,Continental,10_5,2018,8,Black,2005.0,Saloon,45000,6.0L,Automatic,Petrol,25995.0,5.0,4.0,Steering Wheel Shaking,0,5,2018-08-05,3,85.995,3.0,2018-08-05
+Bentley,Continental,10_5,2018,4,Silver,2005.0,Coupe,67000,6.0L,Automatic,Petrol,23600.0,4.0,2.0,Radiator Leaking,0,19,2018-04-19,3,2171.3186114866285,6.0,2018-04-20
+Bentley,Continental,10_5,2018,4,Green,2004.0,Coupe,58000,6.0L,Automatic,Petrol,20950.0,4.0,2.0,Brake Pads Worn,0,16,2018-04-16,3,130.475,6.0,2018-04-17
+Bentley,Continental,10_5,2017,11,Blue,2004.0,Coupe,50000,6.0L,Automatic,Petrol,24995.0,4.0,2.0,Gear Box Issue,0,17,2017-11-17,3,369.95000000000005,6.0,2017-11-18
+Bentley,Continental,10_5,2018,2,Black,2010.0,Coupe,27000,6.0L,Automatic,Petrol,59990.0,4.0,2.0,Engine Issue,2,12,2018-02-12,3,9958.5,48.0,2018-02-24
+Bentley,Continental,10_5,2018,5,Gelb,2013.0,Coupe,21000,6.0L,Automatic,Petrol,63495.0,4.0,2.0,Alternator Failing,0,18,2018-05-18,3,1389.9,6.0,2018-05-19
+Bentley,Continental,10_5,2018,7,Grey,2016.0,Coupe,12800,4.0L,Automatic,Petrol,98995.0,4.0,2.0,Warning Light,0,21,2018-07-21,3,1529.95,27.0,2018-07-27
+Bentley,Continental,10_5,2018,8,Grey,2015.0,Coupe,3799,6.0L,Automatic,Petrol,97990.0,4.0,2.0,Radiator Leaking,0,18,2018-08-18,3,2079.8,6.0,2018-08-19
+Bentley,Continental,10_5,2018,1,Grey,2010.0,Coupe,45000,6.0L,Automatic,Petrol,39990.0,4.0,2.0,Gear Box Issue,0,3,2018-01-03,3,519.9000000000001,6.0,2018-01-04
+Bentley,Continental,10_5,2018,3,Black,2012.0,Convertible,6948,6.0L,Automatic,Petrol,90990.0,4.0,2.0,Flat Tyres,0,13,2018-03-13,3,87.297,3.0,2018-03-13
+Bentley,Continental,10_5,2018,4,Silver,2005.0,Saloon,44000,6.0L,Automatic,Petrol,25995.0,5.0,4.0,Starter Motor Issue,0,17,2018-04-17,3,439.95,9.0,2018-04-19
+Bentley,Continental,10_5,2018,2,Silver,2004.0,Coupe,67984,6.0L,Automatic,Petrol,22900.0,4.0,2.0,Transmission Issue,3,24,2018-02-24,3,4061.5922902309667,2153.9455166221674,2019-08-16
+Bentley,Continental,10_5,2018,7,Blue,2013.0,Coupe,14162,6.0L,Automatic,Petrol,76695.0,4.0,2.0,Windscreen Crack,0,4,2018-07-04,3,106.017,3.0,2018-07-04
+Bentley,Continental,10_5,2017,9,Blue,2017.0,Coupe,2500,6.0L,Automatic,Petrol,159990.0,4.0,2.0,Sensor Malfunction,0,25,2017-09-25,3,8179.5,9.0,2017-09-27
+Bentley,Continental,10_5,2018,4,Grey,2011.0,Convertible,33490,6.0L,Automatic,Petrol,61990.0,4.0,2.0,Transmission Issue,1,27,2018-04-27,3,425.97,12.0,2018-04-30
+Bentley,Continental,10_5,2018,8,Blue,2017.0,Coupe,3290,4.0L,Automatic,Petrol,111990.0,4.0,2.0,Tyre Alignment,0,12,2018-08-12,3,41.199,1.5,2018-08-12
+Bentley,Continental,10_5,2018,4,Black,2014.0,Convertible,23388,6.0L,Automatic,Petrol,95000.0,4.0,2.0,Steering Wheel Shaking,0,10,2018-04-10,3,155.0,3.0,2018-04-10
+Bentley,Continental,10_5,2018,7,Grey,2015.0,Coupe,8668,6.0L,Automatic,Petrol,93950.0,4.0,2.0,Engine Issue,2,21,2018-07-21,3,15052.5,48.0,2018-08-02
+Bentley,Continental,10_5,2018,8,Black,2015.0,Coupe,9365,6.0L,Automatic,Petrol,94950.0,4.0,2.0,Brake Pads Worn,0,20,2018-08-20,3,167.475,6.0,2018-08-21
+Bentley,Continental,10_5,2018,4,Black,2011.0,Convertible,30442,6.0L,Automatic,Petrol,68999.0,4.0,2.0,Brake Pads Worn,0,3,2018-04-03,3,154.4995,6.0,2018-04-04
+Bentley,Continental,10_5,2018,3,Black,2009.0,Convertible,39000,6.0L,Automatic,Petrol,47850.0,4.0,2.0,Flat Tyres,0,27,2018-03-27,3,74.355,3.0,2018-03-27
+Bentley,Continental,10_5,2018,8,White,2015.0,Convertible,8960,4.0L,Automatic,Petrol,113895.0,4.0,2.0,Excessive Emissions,0,21,2018-08-21,3,780.6600314390762,3.0,2018-08-21
+Bentley,Continental,10_5,2018,4,Grey,2012.0,Coupe,34000,6.0L,Automatic,Petrol,59950.0,4.0,2.0,Transmission Issue,2,7,2018-04-07,3,599.6500000000001,9.0,2018-04-09
+Bentley,Continental,10_5,2018,2,Black,2014.0,Coupe,2980,4.0L,Automatic,Petrol,84890.0,4.0,2.0,Tyre Alignment,0,18,2018-02-18,3,38.489000000000004,1.5,2018-02-18
+Bentley,Continental,10_5,2018,7,Green,2004.0,Coupe,50000,6.0L,Automatic,Petrol,26750.0,4.0,2.0,Tyre Alignment,0,7,2018-07-07,3,32.675,1.5,2018-07-07
+Bentley,Continental,10_5,2018,6,Black,2015.0,Coupe,37338,4.0L,Automatic,Petrol,77950.0,4.0,2.0,Transmission Issue,2,6,2018-06-06,3,725.65,9.0,2018-06-08
+Bentley,Continental,10_5,2018,6,Brown,2014.0,Coupe,9405,4.0L,Automatic,Petrol,77500.0,4.0,2.0,Transmission Issue,1,28,2018-06-28,3,472.5,12.0,2018-07-01
+Bentley,Continental,10_5,2017,11,Grey,2010.0,Convertible,29000,6.0L,Automatic,Petrol,59950.0,4.0,2.0,Excessive Emissions,0,5,2017-11-05,3,113.955,3.0,2017-11-05
+Bentley,Continental,10_5,2018,7,Gelb,2008.0,Coupe,66712,6.0L,Automatic,Petrol,32925.0,4.0,2.0,Gear Box Issue,0,3,2018-07-03,3,449.25,6.0,2018-07-04
+Bentley,Continental,10_5,2018,4,Grey,2012.0,Coupe,17000,6.0L,Automatic,Petrol,67780.0,4.0,2.0,Radiator Leaking,0,23,2018-04-23,3,1475.6000000000001,6.0,2018-04-24
+Bentley,Continental,10_5,2018,2,Black,2013.0,Convertible,47000,6.0L,Automatic,Petrol,82500.0,4.0,2.0,Starter Motor Issue,0,2,2018-02-02,3,1005.0,9.0,2018-02-04
+Bentley,Continental,10_5,2017,10,Black,2014.0,Convertible,18800,6.0L,Automatic,Petrol,89999.0,4.0,2.0,Windscreen Crack,0,25,2017-10-25,3,492.6463949821848,383.33123780823524,2018-01-28
+Bentley,Continental,10_5,2018,8,Blue,2017.0,Coupe,650,4.0L,Automatic,Petrol,124950.0,4.0,2.0,Brake Pads Worn,0,20,2018-08-20,3,182.475,6.0,2018-08-21
+Bentley,Continental,10_5,2018,5,Silver,2009.0,Convertible,44370,6.0L,Automatic,Petrol,49990.0,4.0,2.0,Starter Motor Issue,0,23,2018-05-23,3,679.9000000000001,9.0,2018-05-25
+Bentley,Continental,10_5,2018,3,Grey,2012.0,Coupe,24000,6.0L,Automatic,Petrol,69000.0,4.0,2.0,Starter Motor Issue,0,5,2018-03-05,3,870.0,9.0,2018-03-07
+Bentley,Continental,10_5,2018,4,Black,2004.0,Coupe,99000,6.0L,Automatic,Petrol,22995.0,4.0,2.0,Excessive Emissions,0,11,2018-04-11,3,80.6955,3.0,2018-04-11
+Bentley,Continental,10_5,2018,8,Black,2017.0,Coupe,6050,4.0L,Automatic,Petrol,139950.0,10.0,2.0,Flat Tyres,0,7,2018-08-07,3,101.985,3.0,2018-08-07
+Bentley,Continental,10_5,2018,6,Grey,2013.0,Coupe,18200,4.0L,Automatic,Petrol,73889.0,4.0,2.0,Brake Pads Worn,0,25,2018-06-25,3,156.9445,6.0,2018-06-26
+Bentley,Continental,10_5,2018,8,White,2015.0,Coupe,7360,999.0L,Automatic,Petrol,179950.0,2.0,2.0,Warning Light,0,28,2018-08-28,3,2339.5,27.0,2018-09-03
+Bentley,Continental,10_5,2018,4,Purple,2014.0,Convertible,4800,6.0L,Automatic,Petrol,100000.0,17.0,0.0,Steering Wheel Shaking,0,28,2018-04-28,3,160.0,3.0,2018-04-28
+Bentley,Continental,10_5,2018,7,Blue,2005.0,Saloon,80000,6.0L,Automatic,Petrol,20990.0,5.0,4.0,Starter Motor Issue,0,21,2018-07-21,3,389.9,9.0,2018-07-23
+Bentley,Continental,10_5,2018,7,White,2014.0,Convertible,9268,4.0L,Automatic,Petrol,105000.0,4.0,2.0,Steering Wheel Shaking,0,28,2018-07-28,3,657.7791951586544,3.0,2018-07-28
+Bentley,Continental,10_5,2018,3,Silver,2005.0,Coupe,62000,6.0L,Automatic,Petrol,22995.0,4.0,2.0,Transmission Issue,1,3,2018-03-03,3,308.985,12.0,2018-03-06
+Bentley,Continental,10_5,2018,7,Blue,2008.0,Saloon,55649,6.0L,Automatic,Petrol,34990.0,5.0,4.0,Starter Motor Issue,0,7,2018-07-07,3,529.9000000000001,9.0,2018-07-09
+Bentley,Continental,10_5,2018,8,Black,2011.0,Coupe,50000,6.0L,Automatic,Petrol,53975.0,4.0,2.0,Flat Tyres,0,13,2018-08-13,3,76.1925,3.0,2018-08-13
+Bentley,Continental,10_5,2018,4,Black,2011.0,Coupe,8900,6.0L,Automatic,Petrol,69950.0,4.0,2.0,Transmission Issue,1,26,2018-04-26,3,449.85,12.0,2018-04-29
+Bentley,Continental,10_5,2018,6,Grey,2017.0,Coupe,1971,6.0L,Automatic,Petrol,165395.0,4.0,2.0,Starter Motor Issue,0,2,2018-06-02,3,1833.95,9.0,2018-06-04
+Bentley,Continental,10_5,2018,8,Grey,2013.0,Convertible,12971,4.0L,Automatic,Petrol,89500.0,4.0,2.0,Engine Issue,2,10,2018-08-10,3,14385.0,48.0,2018-08-22
+Bentley,Continental,10_5,2018,4,White,2010.0,Convertible,35000,6.0L,Automatic,Petrol,56950.0,4.0,2.0,Excessive Emissions,0,20,2018-04-20,3,111.255,3.0,2018-04-20
+Bentley,Continental,10_5,2018,7,Silver,2010.0,Coupe,55143,6.0L,Automatic,Petrol,49850.0,4.0,2.0,Electrical Issue,4,3,2018-07-03,3,269.55,6.0,2018-07-04
+Bentley,Continental,10_5,2018,4,White,2014.0,Convertible,11500,6.0L,Automatic,Petrol,99950.0,4.0,2.0,Alternator Failing,0,5,2018-04-05,3,2119.0,6.0,2018-04-06
+Bentley,Continental,10_5,2018,7,White,2015.0,Coupe,28142,4.0L,Automatic,Petrol,89950.0,4.0,2.0,Tyre Alignment,0,12,2018-07-12,3,174.84983781980338,129.18678006676274,2018-08-13
+Bentley,Continental,10_5,2018,4,Silver,2005.0,Saloon,59970,6.0L,Automatic,Petrol,20995.0,5.0,4.0,Sensor Malfunction,0,24,2018-04-24,3,1229.75,9.0,2018-04-26
+Bentley,Continental,10_5,2018,4,Black,2011.0,Coupe,25000,6.0L,Automatic,Petrol,62990.0,4.0,2.0,Starter Motor Issue,0,7,2018-04-07,3,809.9,9.0,2018-04-09
+Bentley,Continental,10_5,2018,3,Grey,2009.0,Coupe,28985,6.0L,Automatic,Petrol,42995.0,4.0,2.0,Gear Box Issue,0,11,2018-03-11,3,549.95,6.0,2018-03-12
+Bentley,Continental,10_5,2018,8,Green,2005.0,Saloon,110000,6.0L,Automatic,Petrol,19500.0,5.0,4.0,Windscreen Crack,0,16,2018-08-16,3,71.7,3.0,2018-08-16
+Bentley,Continental,10_5,2018,8,Black,2004.0,Coupe,74042,6.0L,Automatic,Petrol,27950.0,4.0,2.0,Warning Light,0,23,2018-08-23,3,819.5,27.0,2018-08-29
+Bentley,Continental,10_5,2018,5,Grey,2012.0,Coupe,25601,4.0L,Automatic,Petrol,68950.0,15.0,0.0,Starter Motor Issue,0,4,2018-05-04,3,869.5,9.0,2018-05-06
+Bentley,Continental,10_5,2018,4,White,2013.0,Coupe,18500,4.0L,Automatic,Petrol,74990.0,4.0,2.0,Steering Wheel Shaking,0,25,2018-04-25,3,134.99,3.0,2018-04-25
+Bentley,Continental,10_5,2018,7,Silver,2011.0,Coupe,26998,6.0L,Automatic,Petrol,57990.0,4.0,2.0,Alternator Failing,0,10,2018-07-10,3,1279.8,6.0,2018-07-11
+Bentley,Continental,10_5,2018,2,Silver,2011.0,Coupe,66000,6.0L,Automatic,Petrol,49890.0,4.0,2.0,Excessive Emissions,0,25,2018-02-25,3,104.901,3.0,2018-02-25
+Bentley,Continental,10_5,2018,4,Green,2008.0,Convertible,53000,6.0L,Automatic,Petrol,39995.0,4.0,2.0,Radiator Leaking,0,2,2018-04-02,3,4409.083767639394,6.0,2018-04-03
+Bentley,Continental,10_5,2018,1,Blue,2012.0,Convertible,29000,4.0L,Automatic,Petrol,81990.0,4.0,2.0,Radiator Leaking,0,3,2018-01-03,3,1759.8,6.0,2018-01-04
+Bentley,Continental,10_5,2018,2,Black,2010.0,Convertible,9000,6.0L,Automatic,Petrol,59990.0,4.0,2.0,Starter Motor Issue,0,3,2018-02-03,3,779.9,9.0,2018-02-05
+Bentley,Continental,10_5,2018,3,Silver,2009.0,Coupe,33000,6.0L,Automatic,Petrol,41999.0,4.0,2.0,Windscreen Crack,0,5,2018-03-05,3,85.1994,3.0,2018-03-05
+Bentley,Continental,10_5,2016,9,Silver,2004.0,Coupe,76000,6.0L,Automatic,Petrol,22995.0,4.0,2.0,Gear Box Issue,0,23,2016-09-23,3,349.95000000000005,6.0,2016-09-24
+Bentley,Continental,10_5,2018,7,Black,2008.0,Coupe,41600,6.0L,Automatic,Petrol,36955.0,4.0,2.0,Tyre Alignment,0,14,2018-07-14,3,33.6955,1.5,2018-07-14
+Bentley,Continental,10_5,2018,6,Grey,2013.0,Convertible,12000,999.0L,Automatic,Petrol,79299.0,4.0,2.0,Steering Wheel Shaking,0,1,2018-06-01,3,139.299,3.0,2018-06-01
+Bentley,Continental,10_5,2016,10,Black,2011.0,Convertible,24000,6.0L,Automatic,Petrol,69990.0,4.0,2.0,Gear Box Issue,0,16,2016-10-16,3,819.9,6.0,2016-10-17
+Bentley,Continental,10_5,2018,1,Silver,2011.0,Coupe,27000,6.0L,Automatic,Petrol,59995.0,4.0,2.0,Flat Tyres,0,10,2018-01-10,3,77.9985,3.0,2018-01-10
+Bentley,Continental,10_5,2018,8,Blue,2004.0,Coupe,70000,6.0L,Automatic,Petrol,20990.0,4.0,2.0,Transmission Issue,3,27,2018-08-27,3,668.91,24.0,2018-09-02
+Bentley,Continental,10_5,2018,4,Silver,2004.0,Coupe,98900,6.0L,Automatic,Petrol,21950.0,4.0,2.0,Tyre Alignment,0,17,2018-04-17,3,132.98844832667493,106.00663653574752,2018-05-13
+Bentley,Continental,10_5,2018,7,Grey,2014.0,Coupe,20100,4.0L,Automatic,Petrol,80750.0,4.0,2.0,Starter Motor Issue,0,18,2018-07-18,3,987.5,9.0,2018-07-20
+Bentley,Continental,10_5,2018,1,Silver,2004.0,Coupe,71240,6.0L,Automatic,Petrol,23990.0,4.0,2.0,Radiator Leaking,0,10,2018-01-10,3,599.8,6.0,2018-01-11
+Bentley,Continental,10_5,2018,6,Grey,2014.0,Coupe,13000,4.0L,Automatic,Petrol,79948.0,4.0,2.0,Starter Motor Issue,0,11,2018-06-11,3,979.48,9.0,2018-06-13
+Bentley,Continental,10_5,2018,3,Silver,2012.0,Coupe,21977,4.0L,Automatic,Petrol,62100.0,4.0,2.0,Alternator Failing,0,4,2018-03-04,3,1362.0,6.0,2018-03-05
+Bentley,Continental,10_5,2018,5,Black,2013.0,Convertible,41000,4.0L,Automatic,Petrol,94990.0,4.0,2.0,Transmission Issue,3,16,2018-05-16,3,1334.9099999999999,24.0,2018-05-22
+Bentley,Continental,10_5,2018,8,Black,2009.0,Convertible,18000,6.0L,Automatic,Petrol,55000.0,4.0,2.0,Radiator Leaking,0,12,2018-08-12,3,1220.0,6.0,2018-08-13
+Bentley,Continental,10_5,2018,8,Blue,2008.0,Convertible,35859,6.0L,Automatic,Petrol,51950.0,4.0,2.0,Brake Pads Worn,0,3,2018-08-03,3,145.975,6.0,2018-08-04
+Bentley,Continental,10_5,2018,8,Blue,2014.0,Coupe,21702,4.0L,Automatic,Petrol,84977.0,4.0,2.0,Radiator Leaking,0,18,2018-08-18,3,1819.54,6.0,2018-08-19
+Bentley,Continental,10_5,2018,8,Blue,2013.0,Convertible,3000,4.0L,Automatic,Petrol,89995.0,4.0,2.0,Excessive Emissions,0,24,2018-08-24,3,140.9955,3.0,2018-08-24
+Bentley,Continental,10_5,2018,4,Grey,2010.0,Convertible,38500,6.0L,Automatic,Petrol,69950.0,4.0,2.0,Alternator Failing,0,4,2018-04-04,3,8712.633692661497,6.0,2018-04-05
+Bentley,Continental,10_5,2018,5,Silver,2005.0,Coupe,45000,6.0L,Automatic,Petrol,25995.0,4.0,2.0,Alternator Failing,0,20,2018-05-20,3,639.9,6.0,2018-05-21
+Bentley,Continental,10_5,2018,8,Grey,2016.0,Coupe,10000,4.0L,Automatic,Petrol,107490.0,4.0,2.0,Excessive Emissions,0,11,2018-08-11,3,156.74099999999999,3.0,2018-08-11
+Bentley,Continental,10_5,2018,5,Blue,2013.0,Coupe,30147,4.0L,Automatic,Petrol,67950.0,4.0,2.0,Excessive Emissions,0,12,2018-05-12,3,121.155,3.0,2018-05-12
+Bentley,Continental,10_5,2018,6,Gelb,2018.0,Convertible,2456,6.0L,Automatic,Petrol,219950.0,4.0,2.0,Engine Issue,1,3,2018-06-03,3,44470.0,24.0,2018-06-09
+Bentley,Continental,10_5,2016,2,Black,2009.0,Convertible,53970,6.0L,Automatic,Petrol,55000.0,4.0,2.0,Tyre Alignment,0,21,2016-02-21,3,35.5,1.5,2016-02-21
+Bentley,Continental,10_5,2018,7,Red,2012.0,Coupe,37438,4.0L,Automatic,Petrol,64950.0,16.0,2.0,Excessive Emissions,0,4,2018-07-04,3,118.455,3.0,2018-07-04
+Bentley,Continental,10_5,2018,7,White,2016.0,Convertible,11965,4.0L,Automatic,Petrol,117990.0,18.0,0.0,Gear Box Issue,0,4,2018-07-04,3,1299.9,6.0,2018-07-05
+Bentley,Continental,10_5,2018,4,Blue,2008.0,Coupe,35678,6.0L,Automatic,Petrol,38000.0,4.0,2.0,Alternator Failing,0,24,2018-04-24,3,880.0,6.0,2018-04-25
+Bentley,Continental,10_5,2018,7,Silver,2005.0,Coupe,40000,6.0L,Automatic,Petrol,23995.0,4.0,2.0,Windscreen Crack,0,26,2018-07-26,3,74.39699999999999,3.0,2018-07-26
+Bentley,Continental,10_5,2018,6,Grey,2012.0,Coupe,19692,6.0L,Automatic,Petrol,64950.0,4.0,2.0,Steering Wheel Shaking,0,9,2018-06-09,3,413.1233328291786,490.5166088162081,2018-10-09
+Bentley,Continental,10_5,2018,8,Blue,2015.0,Convertible,10505,6.0L,Automatic,Petrol,104500.0,4.0,2.0,Steering Wheel Shaking,0,8,2018-08-08,3,164.5,3.0,2018-08-08
+Bentley,Continental,10_5,2017,6,Blue,2004.0,Coupe,75000,6.0L,Automatic,Petrol,22993.0,4.0,2.0,Electrical Issue,2,6,2017-06-06,3,75.986,1.5,2017-06-06
+Bentley,Continental,10_5,2018,2,Blue,2013.0,Coupe,30000,4.0L,Automatic,Petrol,68500.0,4.0,2.0,Sensor Malfunction,0,10,2018-02-10,3,3605.0,9.0,2018-02-12
+Bentley,Continental,10_5,2018,4,Blue,2009.0,Coupe,80000,6.0L,Automatic,Petrol,32950.0,4.0,2.0,Warning Light,0,19,2018-04-19,3,869.5,27.0,2018-04-25
+Bentley,Continental,10_5,2018,3,Grey,2018.0,Coupe,5996,4.0L,Automatic,Petrol,129950.0,4.0,2.0,Alternator Failing,0,7,2018-03-07,3,2719.0,6.0,2018-03-08
+Bentley,Continental,10_5,2018,3,Gelb,2015.0,Coupe,16000,4.0L,Automatic,Petrol,97495.0,4.0,2.0,Steering Wheel Shaking,0,11,2018-03-11,3,157.495,3.0,2018-03-11
+Bentley,Continental,10_5,2018,4,Blue,2011.0,Convertible,15000,6.0L,Automatic,Petrol,67995.0,4.0,2.0,Excessive Emissions,0,8,2018-04-08,3,121.1955,3.0,2018-04-08
+Bentley,Continental,10_5,2017,11,Blue,2008.0,Convertible,69000,6.0L,Automatic,Petrol,41950.0,4.0,2.0,Electrical Issue,5,23,2017-11-23,3,221.95,9.0,2017-11-25
+Bentley,Continental,10_5,2018,7,Blue,2010.0,Coupe,42500,6.0L,Automatic,Petrol,52000.0,4.0,2.0,Radiator Leaking,0,16,2018-07-16,3,1160.0,6.0,2018-07-17
+Bentley,Continental,10_5,2017,7,Black,2009.0,Coupe,39074,6.0L,Automatic,Petrol,44990.0,4.0,2.0,Engine Issue,1,11,2017-07-11,3,39495.5164549582,24.0,2017-07-17
+Bentley,Continental,10_5,2018,3,Silver,2004.0,Coupe,57250,6.0L,Automatic,Petrol,22000.0,4.0,2.0,Brake Pads Worn,0,8,2018-03-08,3,131.0,6.0,2018-03-09
+Bentley,Continental,10_5,2018,5,Silver,2005.0,Coupe,67000,6.0L,Automatic,Petrol,22995.0,4.0,2.0,Windscreen Crack,0,15,2018-05-15,3,73.797,3.0,2018-05-15
+Bentley,Continental,10_5,2018,8,Purple,2014.0,Convertible,30182,6.0L,Automatic,Petrol,89950.0,4.0,2.0,Starter Motor Issue,0,11,2018-08-11,3,1079.5,9.0,2018-08-13
+Bentley,Continental,10_5,2018,5,Black,2008.0,Convertible,39600,6.0L,Automatic,Petrol,50000.0,4.0,2.0,Brake Pads Worn,0,7,2018-05-07,3,145.0,6.0,2018-05-08
+Bentley,Continental,10_5,2018,3,Green,2004.0,Coupe,26000,6.0L,Automatic,Petrol,28999.0,4.0,2.0,Windscreen Crack,0,3,2018-03-03,3,77.3994,3.0,2018-03-03
+Bentley,Continental,10_5,2017,8,Grey,2013.0,Coupe,13000,6.0L,Automatic,Petrol,72949.0,4.0,2.0,Radiator Leaking,0,18,2017-08-18,3,1578.98,6.0,2017-08-19
+Bentley,Continental,10_5,2017,8,Grey,2013.0,Convertible,29000,6.0L,Automatic,Petrol,84990.0,4.0,0.0,Flat Tyres,0,18,2017-08-18,3,85.497,3.0,2017-08-18
+Bentley,Continental,10_5,2018,4,Black,2003.0,Coupe,72000,6.0L,Automatic,Petrol,20995.0,4.0,2.0,Sensor Malfunction,0,2,2018-04-02,3,1229.75,9.0,2018-04-04
+Bentley,Continental,10_5,2015,6,Silver,2012.0,Coupe,15800,6.0L,Automatic,Petrol,70000.0,4.0,2.0,Engine Issue,1,26,2015-06-26,3,14480.0,24.0,2015-07-02
+Bentley,Continental,10_5,2018,4,Silver,2008.0,Convertible,16300,6.0L,Automatic,Petrol,49750.0,4.0,2.0,Excessive Emissions,0,1,2018-04-01,3,440.6925869418314,392.57900234229993,2018-07-08
+Bentley,Continental,10_5,2018,7,Silver,2009.0,Coupe,38250,6.0L,Automatic,Petrol,46999.0,4.0,2.0,Tyre Alignment,0,6,2018-07-06,3,34.6999,1.5,2018-07-06
+Bentley,Continental,10_5,2018,4,Silver,2011.0,Coupe,38000,6.0L,Automatic,Petrol,52948.0,4.0,2.0,Alternator Failing,0,22,2018-04-22,3,1178.96,6.0,2018-04-23
+Bentley,Continental,10_5,2018,4,Silver,2011.0,Coupe,19432,6.0L,Automatic,Petrol,68000.0,4.0,2.0,Radiator Leaking,0,18,2018-04-18,3,1480.0,6.0,2018-04-19
+Bentley,Continental,10_5,2017,10,Grey,2016.0,Coupe,14578,4.0L,Automatic,Petrol,92995.0,4.0,2.0,Gear Box Issue,0,17,2017-10-17,3,1049.95,6.0,2017-10-18
+Bentley,Continental,10_5,2017,9,Orange,2014.0,Convertible,6064,4.0L,Automatic,Petrol,96990.0,4.0,2.0,Flat Tyres,0,10,2017-09-10,3,89.097,3.0,2017-09-10
+Bentley,Continental,10_5,2018,7,Black,2008.0,Convertible,15000,6.0L,Automatic,Petrol,41222.0,4.0,2.0,Radiator Leaking,0,7,2018-07-07,3,944.44,6.0,2018-07-08
+Bentley,Continental,10_5,2018,7,Silver,2004.0,Coupe,51201,6.0L,Automatic,Petrol,22500.0,4.0,2.0,Steering Wheel Shaking,0,6,2018-07-06,3,82.5,3.0,2018-07-06
+Bentley,Continental,10_5,2018,4,Black,2013.0,Convertible,26500,4.0L,Automatic,Petrol,75000.0,4.0,2.0,Tyre Alignment,0,4,2018-04-04,3,37.5,1.5,2018-04-04
+Bentley,Continental,10_5,2017,11,White,2010.0,Convertible,45931,6.0L,Automatic,Petrol,66995.0,4.0,2.0,Tyre Alignment,0,25,2017-11-25,3,36.6995,1.5,2017-11-25
+Bentley,Continental,10_5,2018,8,Silver,2004.0,Coupe,110000,6.0L,Automatic,Petrol,18990.0,4.0,2.0,Alternator Failing,0,8,2018-08-08,3,2683.8393891330024,6.0,2018-08-09
+Bentley,Continental,10_5,2018,8,Black,2015.0,Coupe,25000,6.0L,Automatic,Petrol,82995.0,4.0,2.0,Flat Tyres,0,23,2018-08-23,3,84.8985,3.0,2018-08-23
+Bentley,Continental,10_5,2018,8,Blue,2016.0,Convertible,21079,4.0L,Automatic,Petrol,110000.0,4.0,2.0,Windscreen Crack,0,25,2018-08-25,3,126.0,3.0,2018-08-25
+Bentley,Continental,10_5,2017,10,Silver,2009.0,Coupe,13600,6.0L,Automatic,Petrol,43988.0,4.0,2.0,Excessive Emissions,0,10,2017-10-10,3,99.5892,3.0,2017-10-10
+Bentley,Continental,10_5,2017,10,Silver,2008.0,Convertible,55700,6.0L,Automatic,Petrol,42950.0,4.0,2.0,Transmission Issue,1,23,2017-10-23,3,368.85,12.0,2017-10-26
+Bentley,Continental,10_5,2018,8,Silver,2009.0,Convertible,32800,6.0L,Automatic,Petrol,52889.0,4.0,2.0,Flat Tyres,0,17,2018-08-17,3,75.8667,3.0,2018-08-17
+Bentley,Continental,10_5,2017,11,Black,2010.0,Saloon,38000,6.0L,Automatic,Petrol,43995.0,5.0,4.0,Sensor Malfunction,0,5,2017-11-05,3,2379.75,9.0,2017-11-07
+Bentley,Continental,10_5,2018,4,Black,2011.0,Coupe,8850,6.0L,Automatic,Petrol,67850.0,4.0,2.0,Alternator Failing,0,1,2018-04-01,3,1477.0,6.0,2018-04-02
+Bentley,Continental,10_5,2018,8,Blue,2014.0,Coupe,16000,4.0L,Automatic,Petrol,92500.0,4.0,2.0,Windscreen Crack,0,28,2018-08-28,3,115.5,3.0,2018-08-28
+Bentley,Continental,10_5,2018,2,Silver,2008.0,Coupe,23000,6.0L,Automatic,Petrol,45995.0,4.0,2.0,Excessive Emissions,0,1,2018-02-01,3,101.3955,3.0,2018-02-01
+Bentley,Continental,10_5,2017,7,Black,2008.0,Convertible,36200,6.0L,Automatic,Petrol,47633.0,4.0,2.0,Tyre Alignment,0,2,2017-07-02,3,185.32972388369248,107.46371788225221,2017-07-28
+Bentley,Continental,10_5,2018,6,Black,2013.0,Convertible,11800,4.0L,Automatic,Petrol,79800.0,4.0,2.0,Radiator Leaking,0,10,2018-06-10,3,1716.0,6.0,2018-06-11
+Bentley,Continental,10_5,2018,4,Blue,2014.0,Convertible,11000,4.0L,Automatic,Petrol,89995.0,4.0,0.0,Sensor Malfunction,0,13,2018-04-13,3,4679.75,9.0,2018-04-15
+Bentley,Continental,10_5,2017,6,Silver,2004.0,Coupe,27500,6.0L,Automatic,Petrol,47995.0,4.0,2.0,Excessive Emissions,0,24,2017-06-24,3,103.1955,3.0,2017-06-24
+Bentley,Continental,10_5,2018,5,Black,2005.0,Coupe,75000,6.0L,Automatic,Petrol,25995.0,4.0,2.0,Starter Motor Issue,0,18,2018-05-18,3,439.95,9.0,2018-05-20
+Bentley,Continental,10_5,2018,3,Blue,2014.0,Convertible,7196,6.0L,Automatic,Petrol,95500.0,4.0,2.0,Starter Motor Issue,0,17,2018-03-17,3,1135.0,9.0,2018-03-19
+Bentley,Continental,10_5,2017,8,White,2015.0,Convertible,7600,6.0L,Automatic,Petrol,99990.0,4.0,2.0,Engine Issue,3,16,2017-08-16,3,10719.0,36.0,2017-08-25
+Bentley,Continental,10_5,2018,6,Grey,2014.0,Coupe,12261,4.0L,Automatic,Petrol,79990.0,4.0,2.0,Excessive Emissions,0,11,2018-06-11,3,131.99099999999999,3.0,2018-06-11
+Bentley,Continental,10_5,2018,7,Grey,2012.0,Coupe,26000,4.0L,Automatic,Petrol,64900.0,4.0,2.0,Alternator Failing,0,18,2018-07-18,3,1418.0,6.0,2018-07-19
+Bentley,Continental,10_5,2018,5,Grey,2012.0,Coupe,21480,6.0L,Automatic,Petrol,73950.0,4.0,2.0,Brake Pads Worn,0,19,2018-05-19,3,156.975,6.0,2018-05-20
+Bentley,Continental,10_5,2018,4,Purple,2014.0,Convertible,4800,6.0L,Automatic,Petrol,100000.0,4.0,2.0,Warning Light,0,20,2018-04-20,3,4737.434235083081,27.0,2018-04-26
+Bentley,Continental,10_5,2018,6,Blue,2017.0,Coupe,1300,6.0L,Automatic,Petrol,174990.0,4.0,2.0,Engine Issue,1,24,2018-06-24,3,35478.0,24.0,2018-06-30
+Bentley,Continental,10_5,2018,5,Black,2005.0,Saloon,69000,6.0L,Automatic,Petrol,19995.0,5.0,4.0,Radiator Leaking,0,15,2018-05-15,3,519.9000000000001,6.0,2018-05-16
+Bentley,Continental,10_5,2018,6,Black,2013.0,Convertible,36735,4.0L,Automatic,Petrol,79950.0,4.0,2.0,Alternator Failing,0,12,2018-06-12,3,1719.0,6.0,2018-06-13
+Bentley,Continental,10_5,2018,7,Red,2008.0,Coupe,14998,6.0L,Automatic,Petrol,54450.0,4.0,2.0,Alternator Failing,0,27,2018-07-27,3,1209.0,6.0,2018-07-28
+Bentley,Continental,10_5,2017,11,White,2015.0,Convertible,1650,4.0L,Automatic,Petrol,99990.0,4.0,2.0,Transmission Issue,3,19,2017-11-19,3,1379.9099999999999,24.0,2017-11-25
+Bentley,Continental,10_5,2018,7,Silver,2004.0,Coupe,80475,6.0L,Automatic,Petrol,20950.0,4.0,2.0,Radiator Leaking,0,12,2018-07-12,3,539.0,6.0,2018-07-13
+Bentley,Continental,10_5,2018,6,Grey,2008.0,Convertible,42000,6.0L,Automatic,Petrol,39990.0,4.0,2.0,Windscreen Crack,0,10,2018-06-10,3,83.994,3.0,2018-06-10
+Bentley,Continental,10_5,2018,7,White,2015.0,Coupe,8000,4.0L,Automatic,Petrol,94948.0,4.0,2.0,Tyre Alignment,0,5,2018-07-05,3,39.4948,1.5,2018-07-05
+Bentley,Continental,10_5,2017,7,Black,2010.0,Coupe,39600,6.0L,Automatic,Petrol,64900.0,4.0,2.0,Warning Light,0,17,2017-07-17,3,1189.0,27.0,2017-07-23
+Bentley,Continental,10_5,2018,7,Green,2004.0,Coupe,52179,6.0L,Automatic,Petrol,22995.0,4.0,2.0,Brake Pads Worn,0,5,2018-07-05,3,415.7642677065598,408.8833396023765,2018-10-15
+Bentley,Continental,10_5,2018,4,Black,2014.0,Coupe,13799,6.0L,Automatic,Petrol,57950.0,4.0,2.0,Tyre Alignment,0,10,2018-04-10,3,35.795,1.5,2018-04-10
+Bentley,Continental,10_5,2018,8,Black,2008.0,Coupe,60458,6.0L,Automatic,Petrol,34995.0,4.0,2.0,Alternator Failing,0,28,2018-08-28,3,819.9,6.0,2018-08-29
+Bentley,Continental,10_5,2018,4,Black,2014.0,Convertible,15179,6.0L,Automatic,Petrol,95500.0,4.0,2.0,Radiator Leaking,0,9,2018-04-09,3,2030.0,6.0,2018-04-10
+Bentley,Continental,10_5,2018,1,Gelb,2004.0,Coupe,107000,6.0L,Automatic,Petrol,15995.0,4.0,2.0,Starter Motor Issue,0,19,2018-01-19,3,339.95000000000005,9.0,2018-01-21
+Bentley,Continental,10_5,2018,4,Grey,2013.0,Coupe,13925,6.0L,Semi-Automatic,Petrol,74950.0,4.0,0.0,Warning Light,0,25,2018-04-25,3,1289.5,27.0,2018-05-01
+Bentley,Continental,10_5,2018,6,White,2014.0,Convertible,9800,6.0L,Automatic,Petrol,94995.0,4.0,2.0,Sensor Malfunction,0,3,2018-06-03,3,4929.75,9.0,2018-06-05
+Bentley,Continental,10_5,2018,8,Green,2018.0,Convertible,512,6.0L,Semi-Automatic,Petrol,199950.0,17.0,2.0,Transmission Issue,3,3,2018-08-03,3,2279.55,24.0,2018-08-09
+Bentley,Continental,10_5,2018,2,Black,2014.0,Coupe,14000,6.0L,Automatic,Petrol,79995.0,4.0,2.0,Engine Issue,1,7,2018-02-07,3,16479.0,24.0,2018-02-13
+Bentley,Continental,10_5,2018,5,Black,2010.0,Coupe,23000,6.0L,Automatic,Petrol,49995.0,4.0,2.0,Alternator Failing,0,3,2018-05-03,3,1119.9,6.0,2018-05-04
+Bentley,Continental,10_5,2018,8,Blue,2018.0,Convertible,1800,4.0L,Automatic,Petrol,134990.0,4.0,2.0,Alternator Failing,0,12,2018-08-12,3,12708.66414596649,6.0,2018-08-13
+Bentley,Continental,10_5,2018,7,Blue,2018.0,Convertible,3100,4.0L,Automatic,Petrol,129950.0,4.0,2.0,Transmission Issue,3,22,2018-07-22,3,1649.55,24.0,2018-07-28
+Bentley,Continental,10_5,2018,3,Silver,2004.0,Coupe,96500,6.0L,Automatic,Petrol,22990.0,4.0,2.0,Alternator Failing,0,25,2018-03-25,3,579.8,6.0,2018-03-26
+Bentley,Continental,10_5,2018,7,Purple,2015.0,Coupe,15036,6.0L,Automatic,Petrol,89950.0,4.0,2.0,Windscreen Crack,0,22,2018-07-22,3,113.97,3.0,2018-07-22
+Bentley,Continental,10_5,2018,3,Grey,2010.0,Convertible,24500,6.0L,Automatic,Petrol,64950.0,4.0,2.0,Engine Issue,2,19,2018-03-19,3,10702.5,48.0,2018-03-31
+Bentley,Continental,10_5,2018,7,Silver,2014.0,Convertible,18000,4.0L,Automatic,Petrol,82500.0,4.0,2.0,Steering Wheel Shaking,0,10,2018-07-10,3,142.5,3.0,2018-07-10
+Bentley,Continental,10_5,2017,9,Grey,2012.0,Coupe,13000,6.0L,Automatic,Petrol,69950.0,4.0,2.0,Gear Box Issue,0,7,2017-09-07,3,819.5,6.0,2017-09-08
+Bentley,Continental,10_5,2017,8,Black,2014.0,Coupe,20000,4.0L,Automatic,Petrol,76995.0,4.0,2.0,Electrical Issue,4,10,2017-08-10,3,350.985,6.0,2017-08-11
+Bentley,Continental,10_5,2018,3,Black,2014.0,Coupe,23723,4.0L,Automatic,Petrol,84950.0,4.0,2.0,Warning Light,0,26,2018-03-26,3,1389.5,27.0,2018-04-01
+Bentley,Continental,10_5,2018,8,White,2013.0,Coupe,23500,6.0L,Automatic,Petrol,72990.0,4.0,0.0,Gear Box Issue,0,7,2018-08-07,3,849.9,6.0,2018-08-08
+Bentley,Continental,10_5,2018,5,Grey,2012.0,Coupe,10767,6.0L,Automatic,Petrol,84999.0,4.0,2.0,Tyre Alignment,0,3,2018-05-03,3,135.18243349189382,130.08144413874308,2018-06-04
+Bentley,Continental,10_5,2018,5,White,2012.0,Coupe,31000,6.0L,Automatic,Petrol,65995.0,4.0,2.0,Electrical Issue,1,8,2018-05-08,3,185.995,6.0,2018-05-09
+Bentley,Continental,10_5,2018,3,Blue,2012.0,Saloon,37874,6.0L,Automatic,Petrol,57895.0,4.0,4.0,Radiator Leaking,0,17,2018-03-17,3,1277.9,6.0,2018-03-18
+Bentley,Continental,10_5,2018,6,Grey,2014.0,Coupe,5892,6.0L,Automatic,Petrol,83000.0,4.0,2.0,Gear Box Issue,0,27,2018-06-27,3,950.0,6.0,2018-06-28
+Bentley,Continental,10_5,2018,5,Grey,2014.0,Convertible,32157,4.0L,Automatic,Petrol,89995.0,4.0,2.0,Gear Box Issue,0,10,2018-05-10,3,1019.95,6.0,2018-05-11
+Bentley,Continental,10_5,2018,3,Silver,2005.0,Coupe,101000,6.0L,Automatic,Petrol,19850.0,4.0,2.0,Electrical Issue,2,24,2018-03-24,3,69.7,1.5,2018-03-24
+Bentley,Continental,10_5,2017,12,Black,2014.0,Coupe,25000,4.0L,Automatic,Petrol,82995.0,4.0,2.0,Alternator Failing,0,8,2017-12-08,3,1779.9,6.0,2017-12-09
+Bentley,Continental,10_5,2018,4,Green,2004.0,Coupe,47000,6.0L,Automatic,Petrol,21500.0,4.0,2.0,Engine Issue,1,25,2018-04-25,3,4780.0,24.0,2018-05-01
+Bentley,Continental,10_5,2018,7,Black,2014.0,Coupe,20000,6.0L,Automatic,Petrol,78840.0,4.0,2.0,Engine Issue,3,17,2018-07-17,3,8604.0,36.0,2018-07-26
+Bentley,Continental,10_5,2018,8,Black,2015.0,Coupe,11000,4.0L,Automatic,Petrol,86990.0,4.0,2.0,Sensor Malfunction,0,24,2018-08-24,3,4529.5,9.0,2018-08-26
+Bentley,Continental,10_5,2018,3,Silver,2004.0,Coupe,39800,6.0L,Automatic,Petrol,24995.0,4.0,2.0,Tyre Alignment,0,2,2018-03-02,3,102.28295454634981,1.5,2018-03-02
+Bentley,Continental,10_5,2018,7,White,2012.0,Convertible,39000,6.0L,Automatic,Petrol,74900.0,4.0,2.0,Windscreen Crack,0,24,2018-07-24,3,104.94,3.0,2018-07-24
+Bentley,Continental,10_5,2018,7,Blue,2009.0,Convertible,35000,6.0L,Automatic,Petrol,59950.0,4.0,2.0,Transmission Issue,3,22,2018-07-22,3,1019.55,24.0,2018-07-28
+Bentley,Continental,10_5,2018,8,White,2017.0,Coupe,13500,4.0L,Automatic,Petrol,110000.0,4.0,2.0,Starter Motor Issue,0,23,2018-08-23,3,1280.0,9.0,2018-08-25
+Bentley,Continental,10_5,2018,3,Black,2010.0,Convertible,32000,6.0L,Automatic,Petrol,56975.0,4.0,2.0,Engine Issue,3,24,2018-03-24,3,6417.5,36.0,2018-04-02
+Bentley,Continental,10_5,2018,6,Grey,2012.0,Coupe,36000,4.0L,Automatic,Petrol,59950.0,4.0,2.0,Windscreen Crack,0,24,2018-06-24,3,95.97,3.0,2018-06-24
+Bentley,Continental,10_5,2018,4,Black,2008.0,Convertible,47999,6.0L,Automatic,Petrol,41999.0,4.0,2.0,Excessive Emissions,0,19,2018-04-19,3,97.7991,3.0,2018-04-19
+Bentley,Continental,10_5,2018,5,Black,2013.0,Coupe,20789,6.0L,Semi-Automatic,Petrol,77450.0,4.0,0.0,Brake Pads Worn,0,17,2018-05-17,3,158.725,6.0,2018-05-18
+Bentley,Continental,10_5,2017,9,Grey,2013.0,Coupe,23000,6.0L,Automatic,Petrol,68900.0,4.0,2.0,Flat Tyres,0,5,2017-09-05,3,80.67,3.0,2017-09-05
+Bentley,Continental,10_5,2018,2,Yellow,2014.0,Convertible,36500,4.0L,Automatic,Petrol,81450.0,4.0,2.0,Starter Motor Issue,0,17,2018-02-17,3,994.5,9.0,2018-02-19
+Bentley,Continental,10_5,2018,1,Grey,2014.0,Coupe,17500,4.0L,Automatic,Petrol,79950.0,4.0,2.0,Starter Motor Issue,0,5,2018-01-05,3,3719.9329813356107,3124.3585577754106,2020-02-25
+Bentley,Continental,10_5,2018,7,Grey,2012.0,Coupe,24826,6.0L,Automatic,Petrol,60000.0,4.0,2.0,Excessive Emissions,0,21,2018-07-21,3,114.0,3.0,2018-07-21
+Bentley,Continental,10_5,2017,11,Black,2012.0,Convertible,25000,4.0L,Automatic,Petrol,79890.0,4.0,2.0,Flat Tyres,0,3,2017-11-03,3,83.967,3.0,2017-11-03
+Bentley,Continental,10_5,2018,7,Grey,2013.0,Coupe,23349,6.0L,Automatic,Petrol,68299.0,4.0,2.0,Brake Pads Worn,0,21,2018-07-21,3,154.1495,6.0,2018-07-22
+Bentley,Continental,10_5,2018,4,Red,2017.0,Convertible,20,999.0L,Automatic,Petrol,249995.0,4.0,2.0,Steering Wheel Shaking,0,4,2018-04-04,3,309.995,3.0,2018-04-04
+Bentley,Continental,10_5,2018,4,Black,2013.0,Convertible,26365,6.0L,Automatic,Petrol,87990.0,4.0,0.0,Warning Light,0,16,2018-04-16,3,1419.9,27.0,2018-04-22
+Bentley,Continental,10_5,2018,3,Silver,2009.0,Convertible,19800,6.0L,Automatic,Petrol,64950.0,2.0,2.0,Starter Motor Issue,0,3,2018-03-03,3,829.5,9.0,2018-03-05
+Bentley,Continental,10_5,2018,5,Grey,2018.0,Convertible,75,6.0L,Automatic,Petrol,158950.0,4.0,2.0,Windscreen Crack,0,2,2018-05-02,3,155.37,3.0,2018-05-02
+Bentley,Continental,10_5,2018,7,Grey,2015.0,Coupe,16685,4.0L,Automatic,Petrol,89990.0,4.0,2.0,Tyre Alignment,0,25,2018-07-25,3,38.999,1.5,2018-07-25
+Bentley,Continental,10_5,2017,11,Grey,2008.0,Coupe,54795,6.0L,Automatic,Petrol,41985.0,4.0,2.0,Radiator Leaking,0,11,2017-11-11,3,959.7,6.0,2017-11-12
+Bentley,Continental,10_5,2018,3,Silver,2010.0,Coupe,58000,6.0L,Automatic,Petrol,52995.0,4.0,2.0,Starter Motor Issue,0,7,2018-03-07,3,2682.5488794199437,9.0,2018-03-09
+Bentley,Continental,10_5,2018,2,Grey,2009.0,Convertible,62000,6.0L,Automatic,Petrol,42990.0,4.0,2.0,Transmission Issue,1,22,2018-02-22,3,368.97,12.0,2018-02-25
+Bentley,Continental,10_5,2018,8,Blue,2005.0,Saloon,37279,6.0L,Automatic,Petrol,27985.0,5.0,4.0,Engine Issue,2,27,2018-08-27,3,5157.75,48.0,2018-09-08
+Bentley,Continental,10_5,2018,4,Black,2013.0,Convertible,21858,6.0L,Semi-Automatic,Petrol,79950.0,4.0,0.0,Steering Wheel Shaking,0,10,2018-04-10,3,139.95,3.0,2018-04-10
+Bentley,Continental,10_5,2018,4,Black,2008.0,Coupe,66000,6.0L,Automatic,Petrol,31995.0,4.0,2.0,Gear Box Issue,0,1,2018-04-01,3,439.95,6.0,2018-04-02
+Bentley,Continental,10_5,2017,12,Silver,2011.0,Coupe,41470,6.0L,Automatic,Petrol,49977.0,4.0,2.0,Flat Tyres,0,25,2017-12-25,3,74.9931,3.0,2017-12-25
+Bentley,Continental,10_5,2018,8,Blue,2009.0,Coupe,45000,6.0L,Automatic,Petrol,43993.0,4.0,2.0,Windscreen Crack,0,7,2018-08-07,3,86.3958,3.0,2018-08-07
+Bentley,Continental,10_5,2018,6,White,2004.0,Coupe,52991,6.0L,Automatic,Petrol,26885.0,4.0,2.0,Sensor Malfunction,0,24,2018-06-24,3,1524.25,9.0,2018-06-26
+Bentley,Continental,10_5,2018,3,Blue,2013.0,Coupe,9603,6.0L,Automatic,Petrol,77000.0,4.0,0.0,Electrical Issue,4,14,2018-03-14,3,351.0,6.0,2018-03-15
+Bentley,Continental,10_5,2018,5,Grey,2012.0,Coupe,71000,6.0L,Automatic,Petrol,55000.0,4.0,2.0,Steering Wheel Shaking,0,15,2018-05-15,3,115.0,3.0,2018-05-15
+Bentley,Continental,10_5,2018,2,Silver,2005.0,Coupe,51779,6.0L,Automatic,Petrol,28990.0,4.0,2.0,Tyre Alignment,0,13,2018-02-13,3,113.21160841234008,130.58266628597104,2018-03-17
+Bentley,Continental,10_5,2018,3,Silver,2005.0,Coupe,66901,6.0L,Automatic,Petrol,23500.0,4.0,2.0,Brake Pads Worn,0,5,2018-03-05,3,131.75,6.0,2018-03-06
+Bentley,Continental,10_5,2018,8,Blue,2009.0,Coupe,61000,6.0L,Automatic,Petrol,37990.0,4.0,2.0,Warning Light,0,6,2018-08-06,3,919.9000000000001,27.0,2018-08-12
+Bentley,Continental,10_5,2018,3,Brown,2014.0,Coupe,9405,4.0L,Automatic,Petrol,85000.0,4.0,2.0,Gear Box Issue,0,24,2018-03-24,3,970.0,6.0,2018-03-25
+Bentley,Continental,10_5,2016,9,Black,2018.0,Coupe,100,4.0L,Automatic,Petrol,169950.0,4.0,2.0,Flat Tyres,0,9,2016-09-09,3,110.98499999999999,3.0,2016-09-09
+Bentley,Continental,10_5,2018,7,Black,2009.0,Convertible,22599,6.0L,Automatic,Petrol,49995.0,4.0,2.0,Sensor Malfunction,0,1,2018-07-01,3,2679.75,9.0,2018-07-03
+Bentley,Continental,10_5,2017,12,Gelb,2004.0,Coupe,75000,6.0L,Automatic,Petrol,23950.0,4.0,2.0,Tyre Alignment,0,10,2017-12-10,3,32.395,1.5,2017-12-10
+Bentley,Continental,10_5,2018,4,White,2012.0,Convertible,41267,6.0L,Automatic,Petrol,72000.0,4.0,2.0,Warning Light,0,3,2018-04-03,3,1260.0,27.0,2018-04-09
+Bentley,Continental,10_5,2018,7,Black,2011.0,Convertible,54000,6.0L,Automatic,Petrol,54990.0,4.0,2.0,Warning Light,0,15,2018-07-15,3,1089.9,27.0,2018-07-21
+Bentley,Continental,10_5,2018,3,Silver,2008.0,Convertible,17652,6.0L,Automatic,Petrol,51950.0,4.0,2.0,Steering Wheel Shaking,0,4,2018-03-04,3,111.95,3.0,2018-03-04
+Bentley,Continental,10_5,2018,7,Black,2008.0,Coupe,27100,6.0L,Automatic,Petrol,44800.0,4.0,2.0,Windscreen Crack,0,14,2018-07-14,3,429.64502352973136,3.0,2018-07-14
+Bentley,Continental,10_5,2018,3,Blue,2012.0,Coupe,31774,6.0L,Automatic,Petrol,67995.0,4.0,2.0,Flat Tyres,0,27,2018-03-27,3,80.3985,3.0,2018-03-27
+Bentley,Continental,10_5,2017,11,Red,2004.0,Coupe,73140,6.0L,Automatic,Petrol,23490.0,4.0,2.0,Tyre Alignment,0,22,2017-11-22,3,32.349000000000004,1.5,2017-11-22
+Bentley,Continental,10_5,2018,7,Black,2014.0,Coupe,44000,4.0L,Automatic,Petrol,70000.0,4.0,2.0,Engine Issue,4,13,2018-07-13,3,4100.0,30.0,2018-07-20
+Bentley,Continental,10_5,2018,4,Red,2014.0,Convertible,22000,4.0L,Automatic,Petrol,94990.0,4.0,2.0,Starter Motor Issue,0,4,2018-04-04,3,1129.9,9.0,2018-04-06
+Bentley,Continental,10_5,2018,7,Black,2010.0,Convertible,57000,6.0L,Automatic,Petrol,51948.0,4.0,2.0,Engine Issue,2,10,2018-07-10,3,8752.2,48.0,2018-07-22
+Bentley,Continental,10_5,2018,3,Blue,2008.0,Convertible,24376,6.0L,Automatic,Petrol,51995.0,4.0,2.0,Steering Wheel Shaking,0,7,2018-03-07,3,111.995,3.0,2018-03-07
+Bentley,Continental,10_5,2018,7,Purple,2016.0,Convertible,21493,4.0L,Automatic,Petrol,119990.0,4.0,2.0,Radiator Leaking,0,9,2018-07-09,3,2519.8,6.0,2018-07-10
+Bentley,Continental,10_5,2018,8,Blue,2015.0,Coupe,28000,4.0L,Automatic,Petrol,84750.0,4.0,2.0,Electrical Issue,2,25,2018-08-25,3,199.5,1.5,2018-08-25
+Bentley,Continental,10_5,2018,4,Black,2010.0,Coupe,19500,6.0L,Automatic,Petrol,63995.0,4.0,2.0,Excessive Emissions,0,28,2018-04-28,3,117.5955,3.0,2018-04-28
+Bentley,Continental,10_5,2018,7,White,2004.0,Coupe,50000,6.0L,Automatic,Petrol,49990.0,4.0,2.0,Radiator Leaking,0,26,2018-07-26,3,6180.753083891953,4202.1473780377055,2021-06-10
+Bentley,Continental,10_5,2017,11,Black,2014.0,Coupe,11889,4.0L,Automatic,Petrol,77000.0,4.0,2.0,Starter Motor Issue,0,4,2017-11-04,3,950.0,9.0,2017-11-06
+Bentley,Continental,10_5,2018,5,Grey,2010.0,Convertible,14861,6.0L,Automatic,Petrol,69500.0,4.0,0.0,Warning Light,0,15,2018-05-15,3,1235.0,27.0,2018-05-21
+Bentley,Continental,10_5,2018,3,Black,2010.0,Convertible,37000,6.0L,Automatic,Petrol,54999.0,4.0,2.0,Gear Box Issue,0,18,2018-03-18,3,669.99,6.0,2018-03-19
+Bentley,Continental,10_5,2018,4,Black,2011.0,Coupe,38500,6.0L,Automatic,Petrol,54000.0,4.0,2.0,Engine Issue,1,6,2018-04-06,3,11280.0,24.0,2018-04-12
+Bentley,Continental,10_5,2017,10,Black,2012.0,Convertible,30000,4.0L,Automatic,Petrol,75950.0,4.0,2.0,Radiator Leaking,0,11,2017-10-11,3,1639.0,6.0,2017-10-12
+Bentley,Continental,10_5,2018,3,Black,2008.0,Coupe,59000,6.0L,Automatic,Petrol,36500.0,4.0,2.0,Electrical Issue,3,7,2018-03-07,3,242.5,3.0,2018-03-07
+Bentley,Continental,10_5,2018,7,Grey,2011.0,Saloon,42000,6.0L,Automatic,Petrol,37989.0,5.0,4.0,Gear Box Issue,0,3,2018-07-03,3,499.89,6.0,2018-07-04
+Bentley,Continental,10_5,2018,4,Black,2012.0,Coupe,25700,6.0L,Automatic,Petrol,62127.0,4.0,2.0,Excessive Emissions,0,25,2018-04-25,3,115.9143,3.0,2018-04-25
+Bentley,Continental,10_5,2017,4,Black,2012.0,Saloon,21500,6.0L,Automatic,Petrol,52950.0,5.0,4.0,Steering Wheel Shaking,0,21,2017-04-21,3,112.95,3.0,2017-04-21
+Bentley,Continental,10_5,2017,7,Grey,2014.0,Coupe,36500,4.0L,Automatic,Petrol,79995.0,4.0,2.0,Steering Wheel Shaking,0,18,2017-07-18,3,640.626699610922,3.0,2017-07-18
+Bentley,Continental,10_5,2018,7,Silver,2011.0,Coupe,50000,6.0L,Automatic,Petrol,51990.0,4.0,2.0,Sensor Malfunction,0,6,2018-07-06,3,2779.5,9.0,2018-07-08
+Bentley,Continental,10_5,2018,8,Silver,2008.0,Convertible,9500,6.0L,Automatic,Petrol,49500.0,4.0,2.0,Warning Light,0,6,2018-08-06,3,1035.0,27.0,2018-08-12
+Bentley,Continental,10_5,2017,11,Blue,2009.0,Convertible,29696,6.0L,Automatic,Petrol,51000.0,4.0,2.0,Windscreen Crack,0,5,2017-11-05,3,90.6,3.0,2017-11-05
+Bentley,Continental,10_5,2018,7,Blue,2016.0,Convertible,12303,6.0L,Automatic,Petrol,125000.0,4.0,2.0,Windscreen Crack,0,20,2018-07-20,3,135.0,3.0,2018-07-20
+Bentley,Continental,10_5,2018,2,Blue,2005.0,Coupe,71000,6.0L,Automatic,Petrol,26975.0,4.0,2.0,Radiator Leaking,0,21,2018-02-21,3,659.5,6.0,2018-02-22
+Bentley,Continental,10_5,2018,2,Black,2004.0,Coupe,74000,6.0L,Automatic,Petrol,23989.0,4.0,2.0,Alternator Failing,0,11,2018-02-11,3,599.78,6.0,2018-02-12
+Bentley,Continental,10_5,2018,7,White,2010.0,Convertible,32754,6.0L,Automatic,Petrol,55000.0,4.0,2.0,Tyre Alignment,0,11,2018-07-11,3,35.5,1.5,2018-07-11
+Bentley,Continental,10_5,2017,10,Black,2009.0,Coupe,42853,6.0L,Automatic,Petrol,41970.0,4.0,2.0,Excessive Emissions,0,2,2017-10-02,3,97.773,3.0,2017-10-02
+Bentley,Continental,10_5,2018,7,Silver,2005.0,Saloon,72000,6.0L,Automatic,Petrol,26250.0,5.0,4.0,Transmission Issue,2,12,2018-07-12,3,363.75,9.0,2018-07-14
+Bentley,Continental,10_5,2018,8,Black,2012.0,Convertible,36500,6.0L,Automatic,Petrol,79995.0,4.0,2.0,Transmission Issue,3,26,2018-08-26,3,6892.647860896706,4433.215347885233,2021-09-07
+Bentley,Continental,10_5,2017,5,Silver,2011.0,Convertible,12000,6.0L,Automatic,Petrol,88999.0,4.0,2.0,Electrical Issue,5,28,2017-05-28,3,268.999,9.0,2017-05-30
+Bentley,Continental,10_5,2018,7,Grey,2011.0,Coupe,46000,6.0L,Automatic,Petrol,53000.0,4.0,2.0,Electrical Issue,4,7,2018-07-07,3,279.0,6.0,2018-07-08
+Bentley,Continental,10_5,2018,8,Blue,2005.0,Saloon,38660,6.0L,Automatic,Petrol,27950.0,5.0,4.0,Windscreen Crack,0,13,2018-08-13,3,76.77,3.0,2018-08-13
+Bentley,Continental,10_5,2017,8,Silver,2004.0,Coupe,68000,6.0L,Automatic,Petrol,22995.0,4.0,2.0,Sensor Malfunction,0,16,2017-08-16,3,1329.75,9.0,2017-08-18
+Bentley,Continental,10_5,2018,6,Grey,2013.0,Coupe,40109,4.0L,Automatic,Petrol,72995.0,4.0,2.0,Windscreen Crack,0,20,2018-06-20,3,103.797,3.0,2018-06-20
+Bentley,Continental,10_5,2018,4,Blue,2018.0,Convertible,2433,4.0L,Automatic,Petrol,144990.0,4.0,2.0,Brake Pads Worn,0,28,2018-04-28,3,192.495,6.0,2018-04-29
+Bentley,Continental,10_5,2018,4,Black,2008.0,Convertible,69831,6.0L,Automatic,Petrol,36989.0,4.0,2.0,Engine Issue,4,17,2018-04-17,3,2449.45,30.0,2018-04-24
+Bentley,Continental,10_5,2018,4,Blue,2010.0,Convertible,20090,6.0L,Automatic,Petrol,65000.0,4.0,2.0,Alternator Failing,0,25,2018-04-25,3,1420.0,6.0,2018-04-26
+Bentley,Continental,10_5,2018,6,Blue,2004.0,Coupe,61000,6.0L,Automatic,Petrol,22950.0,4.0,2.0,Flat Tyres,0,28,2018-06-28,3,66.885,3.0,2018-06-28
+Bentley,Continental,10_5,2018,3,Black,2013.0,Coupe,31250,6.0L,Automatic,Petrol,69950.0,4.0,2.0,Starter Motor Issue,0,4,2018-03-04,3,3338.205638401105,9.0,2018-03-06
+Bentley,Continental,10_5,2018,7,Black,2004.0,Coupe,88000,6.0L,Automatic,Petrol,21000.0,4.0,2.0,Warning Light,0,24,2018-07-24,3,750.0,27.0,2018-07-30
+Bentley,Continental,10_5,2018,8,Grey,2012.0,Saloon,46000,6.0L,Automatic,Petrol,48500.0,5.0,4.0,Tyre Alignment,0,19,2018-08-19,3,34.85,1.5,2018-08-19
+Bentley,Continental,10_5,2017,11,Black,2010.0,Coupe,40000,6.0L,Automatic,Petrol,49995.0,4.0,2.0,Gear Box Issue,0,17,2017-11-17,3,619.95,6.0,2017-11-18
+Bentley,Continental,10_5,2018,2,Silver,2004.0,Coupe,54500,6.0L,Automatic,Petrol,22475.0,4.0,2.0,Tyre Alignment,0,11,2018-02-11,3,32.2475,1.5,2018-02-11
+Bentley,Continental,10_5,2016,9,Black,2009.0,Coupe,25000,6.0L,Automatic,Petrol,49999.0,4.0,2.0,Electrical Issue,3,23,2016-09-23,3,309.995,3.0,2016-09-23
+Bentley,Continental,10_5,2018,3,Blue,2011.0,Convertible,28425,6.0L,Automatic,Petrol,64990.0,4.0,2.0,Transmission Issue,3,25,2018-03-25,3,1064.9099999999999,24.0,2018-03-31
+Bentley,Continental,10_5,2018,5,Blue,2005.0,Saloon,54000,6.0L,Automatic,Petrol,29250.0,5.0,4.0,Starter Motor Issue,0,3,2018-05-03,3,472.5,9.0,2018-05-05
+Bentley,Continental,10_5,2017,6,Black,2008.0,Coupe,51800,6.0L,Automatic,Petrol,41995.0,4.0,2.0,Electrical Issue,2,21,2017-06-21,3,113.99,1.5,2017-06-21
+Bentley,Continental,10_5,2018,6,Blue,2005.0,Coupe,71295,6.0L,Automatic,Petrol,27990.0,4.0,2.0,Flat Tyres,0,1,2018-06-01,3,68.39699999999999,3.0,2018-06-01
+Bentley,Continental,10_5,2018,7,Blue,2004.0,Coupe,74000,6.0L,Automatic,Petrol,21350.0,4.0,2.0,Sensor Malfunction,0,26,2018-07-26,3,7095.095319091578,3885.434135341952,2021-03-23
+Bentley,Continental,10_5,2018,7,Red,2013.0,Coupe,25000,4.0L,Automatic,Petrol,73000.0,4.0,2.0,Steering Wheel Shaking,0,20,2018-07-20,3,133.0,3.0,2018-07-20
+Bentley,Continental,10_5,2018,6,White,2015.0,Convertible,5179,6.0L,Automatic,Petrol,124950.0,4.0,2.0,Starter Motor Issue,0,5,2018-06-05,3,1429.5,9.0,2018-06-07
+Bentley,Continental,10_5,2018,8,Green,2016.0,Coupe,14600,6.0L,Automatic,Petrol,102950.0,4.0,2.0,Steering Wheel Shaking,0,27,2018-08-27,3,162.95,3.0,2018-08-27
+Bentley,Continental,10_5,2018,3,Silver,2015.0,Coupe,18995,6.0L,Automatic,Petrol,79950.0,4.0,2.0,Brake Pads Worn,0,5,2018-03-05,3,159.975,6.0,2018-03-06
+Bentley,Continental,10_5,2018,7,Black,2015.0,Convertible,28500,4.0L,Automatic,Petrol,99995.0,4.0,2.0,Steering Wheel Shaking,0,25,2018-07-25,3,159.995,3.0,2018-07-25
+Bentley,Continental,10_5,2018,7,Grey,2010.0,Coupe,31000,6.0L,Automatic,Petrol,46700.0,4.0,2.0,Warning Light,0,20,2018-07-20,3,1007.0,27.0,2018-07-26
+Bentley,Continental,10_5,2018,1,Purple,2014.0,Convertible,35000,4.0L,Automatic,Petrol,84495.0,4.0,2.0,Electrical Issue,5,25,2018-01-25,3,264.495,9.0,2018-01-27
+Bentley,Continental,10_5,2017,10,Black,2004.0,Coupe,45986,6.0L,Automatic,Petrol,23995.0,4.0,2.0,Warning Light,0,4,2017-10-04,3,779.95,27.0,2017-10-10
+Bentley,Continental,10_5,2018,6,Grey,2015.0,Coupe,9900,6.0L,Automatic,Petrol,86889.0,4.0,2.0,Brake Pads Worn,0,7,2018-06-07,3,163.4445,6.0,2018-06-08
+Bentley,Continental,10_5,2018,3,White,2014.0,Coupe,17600,4.0L,Automatic,Petrol,84990.0,4.0,2.0,Electrical Issue,1,18,2018-03-18,3,790.7723871437644,6.0,2018-03-19
+Bentley,Continental,10_5,2018,6,Black,2014.0,Coupe,14000,6.0L,Automatic,Petrol,80000.0,4.0,2.0,Engine Issue,2,22,2018-06-22,3,12960.0,48.0,2018-07-04
+Bentley,Continental,10_5,2018,2,Black,2004.0,Coupe,91561,6.0L,Automatic,Petrol,22700.0,4.0,2.0,Steering Wheel Shaking,0,27,2018-02-27,3,82.7,3.0,2018-02-27
+Bentley,Continental,10_5,2017,11,Silver,2004.0,Coupe,68256,6.0L,Automatic,Petrol,22990.0,4.0,2.0,Brake Pads Worn,0,15,2017-11-15,3,131.495,6.0,2017-11-16
+Bentley,Continental,10_5,2018,2,Black,2008.0,Saloon,62000,6.0L,Automatic,Petrol,32995.0,5.0,4.0,Tyre Alignment,0,16,2018-02-16,3,33.2995,1.5,2018-02-16
+Bentley,Continental,10_5,2018,5,Grey,2015.0,Coupe,9900,6.0L,Automatic,Petrol,86889.0,4.0,2.0,Excessive Emissions,0,16,2018-05-16,3,138.2001,3.0,2018-05-16
+Bentley,Continental,10_5,2018,3,Black,2012.0,Coupe,40000,6.0L,Automatic,Petrol,57900.0,4.0,2.0,Brake Pads Worn,0,10,2018-03-10,3,148.95,6.0,2018-03-11
+Bentley,Continental,10_5,2018,3,Black,2004.0,Coupe,15000,6.0L,Automatic,Petrol,31995.0,4.0,2.0,Brake Pads Worn,0,12,2018-03-12,3,135.9975,6.0,2018-03-13
+Bentley,Continental,10_5,2018,5,Grey,2010.0,Coupe,28700,6.0L,Automatic,Petrol,46999.0,4.0,2.0,Tyre Alignment,0,28,2018-05-28,3,34.6999,1.5,2018-05-28
+Bentley,Continental,10_5,2018,4,Purple,2014.0,Convertible,4800,6.0L,Automatic,Petrol,100000.0,4.0,2.0,Gear Box Issue,0,21,2018-04-21,3,1120.0,6.0,2018-04-22
+Bentley,Continental,10_5,2018,4,Black,2014.0,Convertible,2713,6.0L,Automatic,Petrol,99950.0,4.0,2.0,Steering Wheel Shaking,0,17,2018-04-17,3,869.8054924187375,526.5214372764268,2018-08-26
+Bentley,Continental,10_5,2018,8,Blue,2016.0,Coupe,21158,6.0L,Automatic,Petrol,89950.0,4.0,2.0,Alternator Failing,0,25,2018-08-25,3,1919.0,6.0,2018-08-26
+Bentley,Continental,10_5,2018,8,Grey,2016.0,Coupe,15000,4.0L,Automatic,Petrol,90500.0,4.0,2.0,Engine Issue,3,11,2018-08-11,3,9770.0,36.0,2018-08-20
+Bentley,Continental,10_5,2018,6,Black,2013.0,Convertible,115000,6.0L,Automatic,Petrol,56995.0,4.0,2.0,Engine Issue,4,18,2018-06-18,3,3449.75,30.0,2018-06-25
+Bentley,Continental,10_5,2018,6,Black,2009.0,Coupe,51000,6.0L,Automatic,Petrol,44895.0,4.0,2.0,Starter Motor Issue,0,15,2018-06-15,3,628.95,9.0,2018-06-17
+Bentley,Continental,10_5,2018,1,Black,2009.0,Convertible,21900,6.0L,Automatic,Petrol,49995.0,4.0,2.0,Electrical Issue,1,21,2018-01-21,3,169.995,6.0,2018-01-22
+Bentley,Continental,10_5,2017,12,White,2004.0,Coupe,56000,6.0L,Automatic,Petrol,26995.0,4.0,2.0,Transmission Issue,1,28,2017-12-28,3,320.985,12.0,2017-12-31
+Bentley,Continental,10_5,2018,8,Silver,2011.0,Coupe,45000,6.0L,Automatic,Petrol,51000.0,4.0,2.0,Engine Issue,3,21,2018-08-21,3,5820.0,36.0,2018-08-30
+Bentley,Continental,10_5,2018,1,Black,2005.0,Coupe,54000,6.0L,Automatic,Petrol,28750.0,4.0,2.0,Alternator Failing,0,1,2018-01-01,3,695.0,6.0,2018-01-02
+Bentley,Continental,10_5,2018,3,White,2004.0,Coupe,92000,6.0L,Automatic,Petrol,20994.0,4.0,2.0,Radiator Leaking,0,11,2018-03-11,3,539.88,6.0,2018-03-12
+Bentley,Continental,10_5,2017,11,Silver,2014.0,Convertible,21000,4.0L,Automatic,Petrol,89950.0,4.0,2.0,Flat Tyres,0,1,2017-11-01,3,421.03226783918575,3.0,2017-11-01
+Bentley,Continental,10_5,2018,4,White,2011.0,Convertible,54000,6.0L,Automatic,Petrol,69990.0,4.0,2.0,Engine Issue,3,22,2018-04-22,3,7719.0,36.0,2018-05-01
+Bentley,Continental,10_5,2018,4,Blue,2013.0,Coupe,32909,6.0L,Automatic,Petrol,68850.0,4.0,2.0,Engine Issue,4,1,2018-04-01,3,4042.5,30.0,2018-04-08
+Bentley,Continental,10_5,2018,8,Black,2013.0,Coupe,24000,6.0L,Automatic,Petrol,64948.0,4.0,2.0,Windscreen Crack,0,9,2018-08-09,3,98.96879999999999,3.0,2018-08-09
+Bentley,Continental,10_5,2018,4,Black,2009.0,Coupe,63000,6.0L,Automatic,Petrol,37995.0,4.0,2.0,Engine Issue,2,14,2018-04-14,3,6659.25,48.0,2018-04-26
+Bentley,Continental,10_5,2017,1,Black,2005.0,Coupe,85000,6.0L,Automatic,Petrol,27750.0,4.0,2.0,Brake Pads Worn,0,2,2017-01-02,3,133.875,6.0,2017-01-03
+Bentley,Continental,10_5,2018,2,White,2010.0,Convertible,55971,6.0L,Automatic,Petrol,59000.0,4.0,2.0,Brake Pads Worn,0,23,2018-02-23,3,149.5,6.0,2018-02-24
+Bentley,Continental,10_5,2018,3,Black,2005.0,Saloon,113845,6.0L,Automatic,Petrol,19444.0,4.0,4.0,Transmission Issue,3,16,2018-03-16,3,654.996,24.0,2018-03-22
+Bentley,Continental,10_5,2018,5,White,2012.0,Convertible,17000,4.0L,Automatic,Petrol,81990.0,4.0,2.0,Alternator Failing,0,9,2018-05-09,3,1759.8,6.0,2018-05-10
+Bentley,Continental,10_5,2018,4,Grey,2010.0,Saloon,56350,6.0L,Automatic,Petrol,33995.0,5.0,4.0,Warning Light,0,23,2018-04-23,3,879.95,27.0,2018-04-29
+Bentley,Continental,10_5,2018,5,Black,2018.0,Coupe,6000,4.0L,Automatic,Petrol,139950.0,4.0,2.0,Gear Box Issue,0,15,2018-05-15,3,7393.065422747984,5206.128479903021,2021-12-06
+Bentley,Continental,10_5,2018,5,Black,2004.0,Coupe,99085,6.0L,Automatic,Petrol,19990.0,4.0,2.0,Electrical Issue,5,12,2018-05-12,3,199.99,9.0,2018-05-14
+Bentley,Continental,10_5,2018,8,Gelb,2013.0,Convertible,15300,4.0L,Automatic,Petrol,89950.0,4.0,2.0,Electrical Issue,5,28,2018-08-28,3,269.95,9.0,2018-08-30
+Bentley,Continental,10_5,2018,4,White,2011.0,Coupe,48359,6.0L,Automatic,Petrol,57990.0,4.0,2.0,Engine Issue,4,4,2018-04-04,3,3499.5,30.0,2018-04-11
+Bentley,Continental,10_5,2018,4,Green,2005.0,Coupe,92246,6.0L,Automatic,Petrol,22555.0,4.0,2.0,Warning Light,0,6,2018-04-06,3,765.55,27.0,2018-04-12
+Bentley,Continental,10_5,2018,3,Grey,2017.0,Convertible,2000,4.0L,Automatic,Petrol,128995.0,4.0,2.0,Gear Box Issue,0,27,2018-03-27,3,1409.95,6.0,2018-03-28
+Bentley,Continental,10_5,2018,6,White,2010.0,Convertible,34000,6.0L,Automatic,Petrol,58000.0,4.0,2.0,Flat Tyres,0,5,2018-06-05,3,77.4,3.0,2018-06-05
+Bentley,Continental,10_5,2018,6,Black,2010.0,Coupe,34830,6.0L,Automatic,Petrol,49975.0,4.0,2.0,Sensor Malfunction,0,14,2018-06-14,3,2678.75,9.0,2018-06-16
+Bentley,Continental,10_5,2018,6,Grey,2009.0,Coupe,59876,6.0L,Automatic,Petrol,37950.0,4.0,2.0,Brake Pads Worn,0,16,2018-06-16,3,138.975,6.0,2018-06-17
+Bentley,Continental,10_5,2017,10,White,2005.0,Coupe,41000,6.0L,Automatic,Petrol,28980.0,4.0,2.0,Radiator Leaking,0,3,2017-10-03,3,699.6,6.0,2017-10-04
+Bentley,Continental,10_5,2018,1,White,2014.0,Coupe,12000,4.0L,Automatic,Petrol,89950.0,4.0,2.0,Electrical Issue,3,23,2018-01-23,3,1613.0105050022507,3.0,2018-01-23
+Bentley,Continental,10_5,2018,3,White,2010.0,Coupe,60000,6.0L,Automatic,Petrol,47911.0,4.0,2.0,Transmission Issue,3,12,2018-03-12,3,911.199,24.0,2018-03-18
+Bentley,Continental,10_5,2018,5,Blue,2014.0,Coupe,6251,6.0L,Automatic,Petrol,99950.0,11.0,0.0,Electrical Issue,5,26,2018-05-26,3,279.95,9.0,2018-05-28
+Bentley,Continental,10_5,2018,4,Black,2011.0,Coupe,58252,6.0L,Automatic,Petrol,55500.0,4.0,2.0,Warning Light,0,12,2018-04-12,3,1095.0,27.0,2018-04-18
+Bentley,Continental,10_5,2018,3,Grey,2011.0,Coupe,21238,6.0L,Automatic,Petrol,57825.0,4.0,2.0,Alternator Failing,0,3,2018-03-03,3,1276.5,6.0,2018-03-04
+Bentley,Continental,10_5,2018,2,Blue,2005.0,Coupe,14500,6.0L,Automatic,Petrol,41990.0,4.0,2.0,Engine Issue,2,7,2018-02-07,3,7258.5,48.0,2018-02-19
+Bentley,Continental,10_5,2018,6,Blue,2016.0,Convertible,5000,6.0L,Automatic,Petrol,121995.0,4.0,2.0,Tyre Alignment,0,22,2018-06-22,3,42.1995,1.5,2018-06-22
+Bentley,Continental,10_5,2018,3,Black,2008.0,Convertible,48000,6.0L,Automatic,Petrol,44950.0,4.0,2.0,Tyre Alignment,0,14,2018-03-14,3,34.495,1.5,2018-03-14
+Bentley,Continental,10_5,2018,8,Blue,2014.0,Coupe,20500,6.0L,Automatic,Petrol,69999.0,4.0,2.0,Electrical Issue,2,17,2018-08-17,3,169.998,1.5,2018-08-17
+Bentley,Continental,10_5,2018,5,Black,2017.0,Convertible,4000,4.0L,Automatic,Petrol,124995.0,4.0,2.0,Transmission Issue,2,13,2018-05-13,3,1054.9650000000001,9.0,2018-05-15
+Bentley,Continental,10_5,2017,4,Gelb,2012.0,Convertible,22800,4.0L,Automatic,Petrol,76925.0,4.0,2.0,Engine Issue,2,14,2017-04-14,3,66234.07834951958,45712.83315539196,2048-07-28
+Bentley,Continental,10_5,2018,5,Blue,2004.0,Coupe,55600,6.0L,Automatic,Petrol,22990.0,4.0,2.0,Steering Wheel Shaking,0,13,2018-05-13,3,82.99000000000001,3.0,2018-05-13
+Bentley,Continental,10_5,2018,1,Grey,2010.0,Convertible,45950,6.0L,Automatic,Petrol,60000.0,4.0,2.0,Starter Motor Issue,0,28,2018-01-28,3,780.0,9.0,2018-01-30
+Bentley,Continental,10_5,2018,6,White,2011.0,Coupe,34000,6.0L,Automatic,Petrol,62950.0,4.0,2.0,Gear Box Issue,0,22,2018-06-22,3,749.5,6.0,2018-06-23
+Bentley,Continental,10_5,2018,5,Black,2016.0,Coupe,23000,4.0L,Automatic,Petrol,99950.0,4.0,2.0,Flat Tyres,0,7,2018-05-07,3,89.985,3.0,2018-05-07
+Bentley,Continental,10_5,2018,7,White,2016.0,Convertible,8650,4.0L,Automatic,Petrol,124950.0,4.0,2.0,Electrical Issue,2,1,2018-07-01,3,279.9,1.5,2018-07-01
+Bentley,Continental,10_5,2017,6,Silver,2010.0,Convertible,24900,6.0L,Automatic,Petrol,79950.0,4.0,2.0,Excessive Emissions,0,26,2017-06-26,3,131.95499999999998,3.0,2017-06-26
+Bentley,Continental,10_5,2018,7,White,2013.0,Convertible,18153,4.0L,Automatic,Petrol,90000.0,4.0,2.0,Excessive Emissions,0,4,2018-07-04,3,141.0,3.0,2018-07-04
+Bentley,Continental,10_5,2017,11,Green,2005.0,Coupe,65500,6.0L,Automatic,Petrol,24950.0,4.0,2.0,Steering Wheel Shaking,0,10,2017-11-10,3,84.95,3.0,2017-11-10
+Bentley,Continental,10_5,2018,3,Black,2012.0,Convertible,18000,4.0L,Automatic,Petrol,74950.0,4.0,2.0,Windscreen Crack,0,7,2018-03-07,3,104.97,3.0,2018-03-07
+Bentley,Continental,10_5,2018,2,White,2008.0,Coupe,53990,6.0L,Automatic,Petrol,35950.0,4.0,2.0,Gear Box Issue,0,3,2018-02-03,3,2764.4671064192457,6.0,2018-02-04
+Bentley,Continental,10_5,2018,8,White,2008.0,Convertible,43900,6.0L,Automatic,Petrol,47995.0,4.0,2.0,Starter Motor Issue,0,9,2018-08-09,3,659.95,9.0,2018-08-11
+Bentley,Continental,10_5,2018,4,Brown,2009.0,Convertible,33132,6.0L,Automatic,Petrol,49995.0,4.0,2.0,Tyre Alignment,0,13,2018-04-13,3,34.9995,1.5,2018-04-13
+Bentley,Continental,10_5,2018,2,Green,2004.0,Coupe,35200,6.0L,Automatic,Petrol,25900.0,4.0,2.0,Steering Wheel Shaking,0,1,2018-02-01,3,85.9,3.0,2018-02-01
+Bentley,Continental,10_5,2018,6,Red,2015.0,Convertible,27252,6.0L,Automatic,Petrol,105950.0,4.0,2.0,Engine Issue,2,23,2018-06-23,3,16852.5,48.0,2018-07-05
+Bentley,Continental,10_5,2018,3,Grey,2009.0,Coupe,42000,6.0L,Automatic,Petrol,51995.0,4.0,2.0,Windscreen Crack,0,5,2018-03-05,3,91.197,3.0,2018-03-05
+Bentley,Continental,10_5,2018,4,Gelb,2010.0,Coupe,31000,6.0L,Automatic,Petrol,57995.0,4.0,2.0,Gear Box Issue,0,22,2018-04-22,3,699.95,6.0,2018-04-23
+Bentley,Continental,10_5,2018,5,White,2014.0,Coupe,1737,4.0L,Automatic,Petrol,179950.0,2.0,2.0,Sensor Malfunction,0,8,2018-05-08,3,9177.5,9.0,2018-05-10
+Bentley,Continental,10_5,2017,11,Grey,2013.0,Convertible,36180,4.0L,Automatic,Petrol,83990.0,4.0,2.0,Windscreen Crack,0,18,2017-11-18,3,110.394,3.0,2017-11-18
+Bentley,Continental,10_5,2018,7,Silver,2009.0,Convertible,37800,6.0L,Automatic,Petrol,54950.0,4.0,2.0,Steering Wheel Shaking,0,11,2018-07-11,3,114.95,3.0,2018-07-11
+Bentley,Continental,10_5,2018,6,White,2013.0,Coupe,41000,4.0L,Automatic,Petrol,65990.0,4.0,2.0,Gear Box Issue,0,7,2018-06-07,3,3085.835094493234,2434.9259095842954,2020-02-05
+Bentley,Continental,10_5,2018,8,Black,2011.0,Coupe,41000,6.0L,Automatic,Petrol,53950.0,4.0,2.0,Excessive Emissions,0,28,2018-08-28,3,108.555,3.0,2018-08-28
+Bentley,Continental,10_5,2018,3,Grey,2013.0,Coupe,36000,4.0L,Automatic,Petrol,69500.0,4.0,2.0,Electrical Issue,2,25,2018-03-25,3,169.0,1.5,2018-03-25
+Bentley,Continental,10_5,2017,7,Gelb,2011.0,Convertible,22000,6.0L,Automatic,Petrol,73500.0,4.0,2.0,Alternator Failing,0,20,2017-07-20,3,1590.0,6.0,2017-07-21
+Bentley,Continental,10_5,2018,3,Black,2009.0,Convertible,43000,6.0L,Automatic,Petrol,52950.0,4.0,2.0,Steering Wheel Shaking,0,16,2018-03-16,3,112.95,3.0,2018-03-16
+Bentley,Continental,10_5,2018,4,Grey,2012.0,Coupe,12070,6.0L,Automatic,Petrol,65995.0,4.0,2.0,Tyre Alignment,0,27,2018-04-27,3,36.5995,1.5,2018-04-27
+Bentley,Continental,10_5,2018,7,Black,2017.0,Coupe,7815,6.0L,Automatic,Petrol,117450.0,4.0,2.0,Tyre Alignment,0,15,2018-07-15,3,41.745000000000005,1.5,2018-07-15
+Bentley,Continental,10_5,2018,6,Black,2017.0,Convertible,3321,6.0L,Automatic,Petrol,138950.0,4.0,2.0,Flat Tyres,0,23,2018-06-23,3,101.685,3.0,2018-06-23
+Bentley,Continental,10_5,2018,6,White,2015.0,Coupe,20271,4.0L,Automatic,Petrol,91975.0,4.0,2.0,Excessive Emissions,0,9,2018-06-09,3,142.7775,3.0,2018-06-09
+Bentley,Continental,10_5,2018,6,White,2012.0,Convertible,26000,6.0L,Automatic,Petrol,74990.0,4.0,2.0,Sensor Malfunction,0,15,2018-06-15,3,3929.5,9.0,2018-06-17
+Bentley,Continental,10_5,2018,1,Black,2004.0,Coupe,39000,6.0L,Automatic,Petrol,26000.0,4.0,2.0,Electrical Issue,4,9,2018-01-09,3,730.0254376398894,6.0,2018-01-10
+Bentley,Continental,10_5,2018,5,Grey,2017.0,Convertible,3494,4.0L,Automatic,Petrol,138995.0,4.0,2.0,Windscreen Crack,0,11,2018-05-11,3,143.397,3.0,2018-05-11
+Bentley,Continental,10_5,2018,8,Red,2013.0,Coupe,30000,4.0L,Automatic,Petrol,63990.0,4.0,2.0,Alternator Failing,0,3,2018-08-03,3,1399.8,6.0,2018-08-04
+Bentley,Continental,10_5,2018,2,Black,2009.0,Coupe,31000,6.0L,Automatic,Petrol,43990.0,4.0,2.0,Steering Wheel Shaking,0,5,2018-02-05,3,103.99000000000001,3.0,2018-02-05
+Bentley,Continental,10_5,2016,11,Black,2009.0,Convertible,43000,6.0L,Automatic,Petrol,49950.0,4.0,2.0,Tyre Alignment,0,24,2016-11-24,3,34.995,1.5,2016-11-24
+Bentley,Continental,10_5,2018,5,Black,2014.0,Convertible,20983,4.0L,Automatic,Petrol,92500.0,13.0,0.0,Engine Issue,1,25,2018-05-25,3,18980.0,24.0,2018-05-31
+Bentley,Continental,10_5,2018,8,Black,2008.0,Convertible,41500,6.0L,Automatic,Petrol,48000.0,4.0,2.0,Tyre Alignment,0,10,2018-08-10,3,34.8,1.5,2018-08-10
+Bentley,Continental,10_5,2018,4,Grey,2008.0,Coupe,24000,6.0L,Automatic,Petrol,44950.0,4.0,2.0,Steering Wheel Shaking,0,23,2018-04-23,3,104.95,3.0,2018-04-23
+Bentley,Continental,10_5,2018,5,Green,2004.0,Coupe,52600,6.0L,Automatic,Petrol,21000.0,4.0,2.0,Electrical Issue,4,6,2018-05-06,3,183.0,6.0,2018-05-07
+Bentley,Continental,10_5,2018,6,Grey,2008.0,Saloon,25075,6.0L,Automatic,Petrol,42950.0,4.0,4.0,Gear Box Issue,0,12,2018-06-12,3,549.5,6.0,2018-06-13
+Bentley,Continental,10_5,2017,9,Black,2009.0,Coupe,65332,6.0L,Automatic,Petrol,38990.0,4.0,2.0,Windscreen Crack,0,15,2017-09-15,3,416.56905854416453,290.65438710027036,2017-11-26
+Bentley,Continental,10_5,2018,3,Grey,2012.0,Coupe,36500,4.0L,Automatic,Petrol,64950.0,4.0,2.0,Tyre Alignment,0,27,2018-03-27,3,36.495,1.5,2018-03-27
+Bentley,Continental,10_5,2017,11,Grey,2014.0,Convertible,10594,6.0L,Automatic,Petrol,96895.0,4.0,2.0,Radiator Leaking,0,28,2017-11-28,3,2057.9,6.0,2017-11-29
+Bentley,Continental,10_5,2018,7,Black,2014.0,Coupe,30000,6.0L,Automatic,Petrol,70000.0,4.0,2.0,Electrical Issue,2,15,2018-07-15,3,170.0,1.5,2018-07-15
+Bentley,Continental,10_5,2018,8,Blue,2014.0,Convertible,9000,6.0L,Automatic,Petrol,86000.0,4.0,2.0,Radiator Leaking,0,23,2018-08-23,3,1840.0,6.0,2018-08-24
+Bentley,Continental,10_5,2018,4,Blue,2008.0,Convertible,42000,6.0L,Automatic,Petrol,49995.0,4.0,2.0,Alternator Failing,0,16,2018-04-16,3,1119.9,6.0,2018-04-17
+Bentley,Continental,10_5,2018,4,Grey,2008.0,Coupe,50623,6.0L,Automatic,Petrol,40000.0,4.0,2.0,Engine Issue,1,1,2018-04-01,3,8480.0,24.0,2018-04-07
+Bentley,Continental,10_5,2017,10,Green,2004.0,Coupe,50000,6.0L,Automatic,Petrol,21990.0,4.0,2.0,Starter Motor Issue,0,14,2017-10-14,3,399.9,9.0,2017-10-16
+Bentley,Continental,10_5,2018,8,Silver,2008.0,Coupe,50000,6.0L,Automatic,Petrol,39999.0,4.0,2.0,Steering Wheel Shaking,0,11,2018-08-11,3,99.999,3.0,2018-08-11
+Bentley,Continental,10_5,2018,7,Black,2018.0,Convertible,2120,4.0L,Automatic,Petrol,156500.0,4.0,2.0,Transmission Issue,1,28,2018-07-28,3,709.5,12.0,2018-07-31
+Bentley,Continental,10_5,2018,6,Black,2016.0,Coupe,12000,4.0L,Automatic,Petrol,116950.0,17.0,2.0,Sensor Malfunction,0,12,2018-06-12,3,19864.93607520403,9.0,2018-06-14
+Bentley,Continental,10_5,2018,7,Black,2009.0,Convertible,61000,6.0L,Automatic,Petrol,54950.0,4.0,2.0,Tyre Alignment,0,15,2018-07-15,3,35.495,1.5,2018-07-15
+Bentley,Continental,10_5,2018,7,Black,2018.0,Coupe,45,6.0L,Automatic,Petrol,239995.0,4.0,2.0,Engine Issue,4,12,2018-07-12,3,12599.75,30.0,2018-07-19
+Bentley,Continental,10_5,2018,2,Black,2004.0,Coupe,58000,6.0L,Automatic,Petrol,22880.0,4.0,0.0,Excessive Emissions,0,8,2018-02-08,3,80.592,3.0,2018-02-08
+Bentley,Continental,10_5,2018,5,Red,2016.0,Coupe,8547,4.0L,Automatic,Petrol,87990.0,4.0,2.0,Starter Motor Issue,0,15,2018-05-15,3,1059.9,9.0,2018-05-17
+Bentley,Continental,10_5,2018,8,Blue,2012.0,Coupe,30000,6.0L,Automatic,Petrol,59950.0,4.0,2.0,Steering Wheel Shaking,0,10,2018-08-10,3,119.95,3.0,2018-08-10
+Bentley,Continental,10_5,2016,11,Gelb,2014.0,Convertible,24000,4.0L,Automatic,Petrol,88495.0,4.0,2.0,Tyre Alignment,0,11,2016-11-11,3,38.8495,1.5,2016-11-11
+Bentley,Continental,10_5,2018,6,Silver,2004.0,Coupe,78500,6.0L,Automatic,Petrol,19995.0,12.0,2.0,Engine Issue,1,18,2018-06-18,3,4479.0,24.0,2018-06-24
+Bentley,Continental,10_5,2018,8,Gelb,2016.0,Convertible,8319,4.0L,Automatic,Petrol,115000.0,4.0,2.0,Steering Wheel Shaking,0,4,2018-08-04,3,175.0,3.0,2018-08-04
+Bentley,Continental,10_5,2018,6,Gelb,2005.0,Coupe,66000,6.0L,Automatic,Petrol,22995.0,4.0,2.0,Windscreen Crack,0,27,2018-06-27,3,73.797,3.0,2018-06-27
+Bentley,Continental,10_5,2018,7,Grey,2017.0,Coupe,4014,4.0L,Automatic,Petrol,116950.0,4.0,2.0,Warning Light,0,8,2018-07-08,3,8441.896941335986,5336.503782122185,2022-03-03
+Bentley,Continental,10_5,2018,6,Black,2011.0,Convertible,25000,6.0L,Automatic,Petrol,64985.0,4.0,2.0,Tyre Alignment,0,15,2018-06-15,3,36.4985,1.5,2018-06-15
+Bentley,Continental,10_5,2018,2,Silver,2004.0,Coupe,59000,6.0L,Automatic,Petrol,21489.0,4.0,2.0,Excessive Emissions,0,27,2018-02-27,3,79.3401,3.0,2018-02-27
+Bentley,Continental,10_5,2017,8,Grey,2014.0,Coupe,13000,6.0L,Automatic,Petrol,76000.0,4.0,2.0,Steering Wheel Shaking,0,12,2017-08-12,3,136.0,3.0,2017-08-12
+Bentley,Continental,10_5,2018,5,Grey,2014.0,Coupe,23200,4.0L,Automatic,Petrol,84995.0,4.0,2.0,Starter Motor Issue,0,1,2018-05-01,3,1029.95,9.0,2018-05-03
+Bentley,Continental,10_5,2018,2,Black,2008.0,Coupe,67000,6.0L,Automatic,Petrol,37777.0,4.0,2.0,Starter Motor Issue,0,13,2018-02-13,3,557.77,9.0,2018-02-15
+Bentley,Continental,10_5,2018,2,White,2010.0,Coupe,23600,6.0L,Automatic,Petrol,59990.0,4.0,2.0,Transmission Issue,2,19,2018-02-19,3,599.9300000000001,9.0,2018-02-21
+Bentley,Continental,10_5,2018,7,Blue,2015.0,Coupe,28545,4.0L,Automatic,Petrol,89000.0,4.0,2.0,Flat Tyres,0,27,2018-07-27,3,86.7,3.0,2018-07-27
+Bentley,Continental,10_5,2018,6,Gelb,2011.0,Convertible,21000,6.0L,Automatic,Petrol,70000.0,4.0,2.0,Flat Tyres,0,13,2018-06-13,3,81.0,3.0,2018-06-13
+Bentley,Continental,10_5,2018,7,Black,2016.0,Coupe,3791,4.0L,Automatic,Petrol,129950.0,4.0,2.0,Radiator Leaking,0,24,2018-07-24,3,2719.0,6.0,2018-07-25
+Bentley,Continental,10_5,2018,5,Silver,2009.0,Coupe,90000,6.0L,Automatic,Petrol,34995.0,4.0,2.0,Radiator Leaking,0,14,2018-05-14,3,3458.0613459072392,6.0,2018-05-15
+Bentley,Continental,10_5,2018,7,Blue,2005.0,Saloon,62829,6.0L,Automatic,Petrol,21950.0,5.0,4.0,Engine Issue,3,21,2018-07-21,3,2915.0,36.0,2018-07-30
+Bentley,Continental,10_5,2018,4,Gelb,2005.0,Coupe,48000,6.0L,Automatic,Petrol,26990.0,4.0,2.0,Transmission Issue,2,9,2018-04-09,3,368.93,9.0,2018-04-11
+Bentley,Continental,10_5,2018,7,Blue,2004.0,Coupe,46000,6.0L,Automatic,Petrol,22995.0,4.0,2.0,Steering Wheel Shaking,0,11,2018-07-11,3,82.995,3.0,2018-07-11
+Bentley,Continental,10_5,2017,12,Silver,2005.0,Coupe,51000,6.0L,Automatic,Petrol,24995.0,4.0,2.0,Sensor Malfunction,0,2,2017-12-02,3,1429.75,9.0,2017-12-04
+Bentley,Continental,10_5,2017,12,Silver,2004.0,Coupe,66000,6.0L,Automatic,Petrol,23995.0,4.0,2.0,Brake Pads Worn,0,26,2017-12-26,3,131.9975,6.0,2017-12-27
+Bentley,Continental,10_5,2018,3,Silver,2010.0,Coupe,9625,6.0L,Automatic,Petrol,49950.0,4.0,2.0,Excessive Emissions,0,4,2018-03-04,3,104.955,3.0,2018-03-04
+Bentley,Continental,10_5,2018,8,Black,2008.0,Coupe,43000,6.0L,Automatic,Petrol,38990.0,4.0,2.0,Engine Issue,1,18,2018-08-18,3,8278.0,24.0,2018-08-24
+Bentley,Continental,10_5,2018,7,Grey,2011.0,Coupe,30775,6.0L,Automatic,Petrol,60595.0,4.0,2.0,Transmission Issue,2,25,2018-07-25,3,604.165,9.0,2018-07-27
+Bentley,Continental,10_5,2018,5,Black,2016.0,Coupe,7500,6.0L,Automatic,Petrol,102900.0,4.0,2.0,Steering Wheel Shaking,0,15,2018-05-15,3,162.9,3.0,2018-05-15
+Bentley,Continental,10_5,2018,8,White,2015.0,Coupe,18885,6.0L,Automatic,Petrol,84995.0,4.0,2.0,Windscreen Crack,0,1,2018-08-01,3,398.17290301940005,412.32391205067927,2018-11-12
+Bentley,Continental,10_5,2018,5,Black,2008.0,Convertible,46980,6.0L,Automatic,Petrol,42950.0,4.0,2.0,Alternator Failing,0,14,2018-05-14,3,979.0,6.0,2018-05-15
+Bentley,Continental,10_5,2018,2,Blue,2004.0,Coupe,71000,6.0L,Automatic,Petrol,24995.0,4.0,2.0,Starter Motor Issue,0,26,2018-02-26,3,429.95000000000005,9.0,2018-02-28
+Bentley,Continental,10_5,2018,2,Black,2012.0,Convertible,29000,4.0L,Automatic,Petrol,74990.0,4.0,2.0,Excessive Emissions,0,16,2018-02-16,3,127.491,3.0,2018-02-16
+Bentley,Continental,10_5,2018,4,Grey,2012.0,Coupe,31248,4.0L,Automatic,Petrol,69995.0,4.0,2.0,Steering Wheel Shaking,0,25,2018-04-25,3,129.995,3.0,2018-04-25
+Bentley,Continental,10_5,2017,3,Black,2008.0,Convertible,63249,6.0L,Automatic,Petrol,37945.0,4.0,2.0,Warning Light,0,20,2017-03-20,3,919.45,27.0,2017-03-26
+Bentley,Continental,10_5,2018,7,Grey,2008.0,Coupe,62000,6.0L,Automatic,Petrol,36000.0,4.0,2.0,Warning Light,0,21,2018-07-21,3,900.0,27.0,2018-07-27
+Bentley,Continental,10_5,2018,5,Black,2004.0,Coupe,96000,6.0L,Automatic,Petrol,20990.0,4.0,2.0,Flat Tyres,0,11,2018-05-11,3,66.297,3.0,2018-05-11
+Bentley,Continental,10_5,2018,4,Grey,2015.0,Coupe,11516,4.0L,Automatic,Petrol,93900.0,4.0,2.0,Flat Tyres,0,21,2018-04-21,3,88.17,3.0,2018-04-21
+Bentley,Continental,10_5,2018,3,Green,2004.0,Coupe,30000,6.0L,Automatic,Petrol,29999.0,4.0,2.0,Gear Box Issue,0,19,2018-03-19,3,419.99,6.0,2018-03-20
+Bentley,Continental,10_5,2018,2,Gelb,2014.0,Convertible,15011,4.0L,Automatic,Petrol,98450.0,4.0,2.0,Brake Pads Worn,0,4,2018-02-04,3,889.2266257208755,6.0,2018-02-05
+Bentley,Continental,10_5,2018,2,Silver,2005.0,Coupe,23000,6.0L,Automatic,Petrol,32995.0,4.0,0.0,Steering Wheel Shaking,0,7,2018-02-07,3,92.995,3.0,2018-02-07
+Bentley,Continental,10_5,2018,7,Black,2016.0,Convertible,13327,6.0L,Automatic,Petrol,124895.0,4.0,2.0,Brake Pads Worn,0,19,2018-07-19,3,182.4475,6.0,2018-07-20
+Bentley,Continental,10_5,2017,5,Black,2014.0,Coupe,9800,6.0L,Automatic,Petrol,84750.0,4.0,2.0,Alternator Failing,0,4,2017-05-04,3,1815.0,6.0,2017-05-05
+Bentley,Continental,10_5,2017,11,Silver,2005.0,Coupe,97300,6.0L,Automatic,Petrol,23495.0,4.0,2.0,Windscreen Crack,0,10,2017-11-10,3,74.097,3.0,2017-11-10
+Bentley,Continental,10_5,2018,7,White,2010.0,Convertible,11250,6.0L,Automatic,Petrol,72990.0,4.0,2.0,Warning Light,0,26,2018-07-26,3,1269.9,27.0,2018-08-01
+Bentley,Continental,10_5,2018,2,Grey,2010.0,Coupe,25000,6.0L,Automatic,Petrol,62995.0,4.0,2.0,Warning Light,0,17,2018-02-17,3,1169.95,27.0,2018-02-23
+Bentley,Continental,10_5,2018,8,White,2010.0,Convertible,26000,6.0L,Automatic,Petrol,65990.0,4.0,2.0,Transmission Issue,3,21,2018-08-21,3,1073.9099999999999,24.0,2018-08-27
+Bentley,Continental,10_5,2018,3,Black,2004.0,Coupe,79000,6.0L,Automatic,Petrol,23995.0,4.0,2.0,Brake Pads Worn,0,27,2018-03-27,3,131.9975,6.0,2018-03-28
+Bentley,Continental,10_5,2017,9,Black,2012.0,Convertible,12000,4.0L,Automatic,Petrol,84995.0,4.0,2.0,Windscreen Crack,0,18,2017-09-18,3,110.99699999999999,3.0,2017-09-18
+Bentley,Continental,10_5,2018,1,White,2008.0,Convertible,65000,6.0L,Automatic,Petrol,44990.0,4.0,2.0,Steering Wheel Shaking,0,28,2018-01-28,3,556.0481219019385,396.6120821580927,2018-05-07
+Bentley,Continental,10_5,2018,8,Grey,2011.0,Coupe,21787,6.0L,Automatic,Petrol,59000.0,4.0,2.0,Starter Motor Issue,0,16,2018-08-16,3,770.0,9.0,2018-08-18
+Bentley,Continental,10_5,2018,4,Grey,2008.0,Coupe,75000,6.0L,Automatic,Petrol,35990.0,4.0,2.0,Gear Box Issue,0,15,2018-04-15,3,479.90000000000003,6.0,2018-04-16
+Bentley,Continental,10_5,2017,9,Green,2004.0,Coupe,44000,6.0L,Automatic,Petrol,28995.0,4.0,2.0,Steering Wheel Shaking,0,13,2017-09-13,3,88.995,3.0,2017-09-13
+Bentley,Continental,10_5,2018,8,Black,2008.0,Convertible,35275,6.0L,Automatic,Petrol,43995.0,4.0,2.0,Transmission Issue,1,18,2018-08-18,3,371.985,12.0,2018-08-21
+Bentley,Continental,10_5,2018,1,Silver,2004.0,Coupe,47000,6.0L,Automatic,Petrol,27999.0,4.0,2.0,Excessive Emissions,0,22,2018-01-22,3,85.1991,3.0,2018-01-22
+Bentley,Continental,10_5,2018,3,Grey,2018.0,Convertible,900,6.0L,Automatic,Petrol,225000.0,4.0,2.0,Steering Wheel Shaking,0,18,2018-03-18,3,285.0,3.0,2018-03-18
+Bentley,Continental,10_5,2018,5,Black,2004.0,Coupe,111000,6.0L,Automatic,Petrol,19850.0,4.0,2.0,Electrical Issue,4,22,2018-05-22,3,179.55,6.0,2018-05-23
+Bentley,Continental,10_5,2018,8,White,2009.0,Convertible,22592,6.0L,Automatic,Petrol,53990.0,4.0,2.0,Steering Wheel Shaking,0,28,2018-08-28,3,113.99000000000001,3.0,2018-08-28
+Bentley,Continental,10_5,2018,4,Black,2012.0,Convertible,29700,6.0L,Automatic,Petrol,69950.0,4.0,2.0,Warning Light,0,1,2018-04-01,3,1239.5,27.0,2018-04-07
+Bentley,Continental,10_5,2018,8,Black,2017.0,Coupe,7524,4.0L,Automatic,Petrol,117990.0,4.0,2.0,Alternator Failing,0,18,2018-08-18,3,14607.346993904954,6.0,2018-08-19
+Bentley,Continental,10_5,2018,2,Black,2017.0,Coupe,5084,6.0L,Automatic,Petrol,117995.0,4.0,2.0,Alternator Failing,0,20,2018-02-20,3,2479.9,6.0,2018-02-21
+Bentley,Continental,10_5,2018,3,Silver,2004.0,Coupe,55000,6.0L,Automatic,Petrol,27995.0,4.0,2.0,Alternator Failing,0,20,2018-03-20,3,679.9,6.0,2018-03-21
+Bentley,Continental,10_5,2018,4,Black,2015.0,Convertible,31000,6.0L,Automatic,Petrol,99950.0,4.0,2.0,Sensor Malfunction,0,17,2018-04-17,3,5177.5,9.0,2018-04-19
+Bentley,Continental,10_5,2018,1,Black,2005.0,Saloon,78800,6.0L,Automatic,Petrol,20000.0,4.0,4.0,Warning Light,0,12,2018-01-12,3,740.0,27.0,2018-01-18
+Bentley,Continental,10_5,2018,8,Grey,2008.0,Convertible,26772,6.0L,Automatic,Petrol,49995.0,4.0,2.0,Steering Wheel Shaking,0,10,2018-08-10,3,109.995,3.0,2018-08-10
+Bentley,Continental,10_5,2018,4,Silver,2005.0,Coupe,75000,6.0L,Automatic,Petrol,24995.0,4.0,2.0,Brake Pads Worn,0,3,2018-04-03,3,132.4975,6.0,2018-04-04
+Bentley,Continental,10_5,2018,6,Blue,2017.0,Coupe,2122,4.0L,Automatic,Petrol,124950.0,4.0,2.0,Excessive Emissions,0,8,2018-06-08,3,172.45499999999998,3.0,2018-06-08
+Bentley,Continental,10_5,2017,10,Black,2008.0,Coupe,49500,6.0L,Automatic,Petrol,38000.0,4.0,2.0,Brake Pads Worn,0,11,2017-10-11,3,139.0,6.0,2017-10-12
+Bentley,Continental,10_5,2018,8,Blue,2010.0,Convertible,10876,6.0L,Automatic,Petrol,69895.0,4.0,2.0,Excessive Emissions,0,2,2018-08-02,3,122.90549999999999,3.0,2018-08-02
+Bentley,Continental,10_5,2018,7,Grey,2011.0,Coupe,15000,6.0L,Automatic,Petrol,64900.0,4.0,2.0,Transmission Issue,3,9,2018-07-09,3,3626.9133008793333,3950.127602140429,2021-03-22
+Bentley,Continental,10_5,2016,9,Grey,2012.0,Coupe,43900,6.0L,Automatic,Petrol,72911.0,4.0,2.0,Sensor Malfunction,0,16,2016-09-16,3,3825.55,9.0,2016-09-18
+Bentley,Continental,10_5,2018,8,White,2016.0,Coupe,13400,6.0L,Automatic,Petrol,94995.0,4.0,2.0,Electrical Issue,3,26,2018-08-26,3,534.975,3.0,2018-08-26
+Bentley,Continental,10_5,2017,12,Black,2013.0,Convertible,15300,6.0L,Automatic,Petrol,90000.0,4.0,2.0,Electrical Issue,3,4,2017-12-04,3,510.0,3.0,2017-12-04
+Bentley,Continental,10_5,2018,1,Black,2014.0,Convertible,11306,4.0L,Automatic,Petrol,94500.0,4.0,2.0,Sensor Malfunction,0,26,2018-01-26,3,4905.0,9.0,2018-01-28
+Bentley,Continental,10_5,2018,1,Gelb,2012.0,Convertible,33000,4.0L,Automatic,Petrol,69950.0,4.0,2.0,Windscreen Crack,0,23,2018-01-23,3,101.97,3.0,2018-01-23
+Bentley,Continental,10_5,2018,8,Grey,2008.0,Coupe,35114,6.0L,Automatic,Petrol,48000.0,4.0,2.0,Warning Light,0,26,2018-08-26,3,1020.0,27.0,2018-09-01
+Bentley,Continental,10_5,2018,4,Grey,2010.0,Coupe,43000,6.0L,Automatic,Petrol,49550.0,4.0,2.0,Brake Pads Worn,0,24,2018-04-24,3,144.775,6.0,2018-04-25
+Bentley,Continental,10_5,2018,3,Black,2012.0,Coupe,21524,4.0L,Automatic,Petrol,69950.0,4.0,2.0,Flat Tyres,0,18,2018-03-18,3,80.985,3.0,2018-03-18
+Bentley,Continental,10_5,2018,8,Grey,2016.0,Coupe,4008,6.0L,Automatic,Petrol,109950.0,4.0,2.0,Flat Tyres,0,15,2018-08-15,3,92.985,3.0,2018-08-15
+Bentley,Continental,10_5,2018,6,White,2009.0,Coupe,35000,6.0L,Automatic,Petrol,59990.0,4.0,2.0,Windscreen Crack,0,15,2018-06-15,3,327.73533846998066,3.0,2018-06-15
+Bentley,Continental,10_5,2018,8,Black,2011.0,Coupe,58350,6.0L,Automatic,Petrol,50995.0,4.0,2.0,Steering Wheel Shaking,0,17,2018-08-17,3,110.995,3.0,2018-08-17
+Bentley,Continental,10_5,2015,3,Black,2010.0,Coupe,27521,6.0L,Automatic,Petrol,65000.0,2.0,2.0,Alternator Failing,0,17,2015-03-17,3,1420.0,6.0,2015-03-18
+Bentley,Continental,10_5,2018,6,Silver,2010.0,Coupe,33555,6.0L,Automatic,Petrol,41990.0,4.0,2.0,Flat Tyres,0,15,2018-06-15,3,72.597,3.0,2018-06-15
+Bentley,Continental,10_5,2018,2,Silver,2009.0,Coupe,29500,6.0L,Automatic,Petrol,42000.0,4.0,2.0,Steering Wheel Shaking,0,1,2018-02-01,3,102.0,3.0,2018-02-01
+Bentley,Continental,10_5,2018,6,Black,2005.0,Saloon,60815,6.0L,Automatic,Petrol,22990.0,5.0,4.0,Steering Wheel Shaking,0,10,2018-06-10,3,82.99000000000001,3.0,2018-06-10
+Bentley,Continental,10_5,2018,6,Blue,2008.0,Coupe,60000,6.0L,Automatic,Petrol,37950.0,4.0,2.0,Excessive Emissions,0,20,2018-06-20,3,94.155,3.0,2018-06-20
+Bentley,Continental,10_5,2018,3,Black,2014.0,Convertible,15808,4.0L,Automatic,Petrol,99995.0,4.0,2.0,Gear Box Issue,0,2,2018-03-02,3,1119.95,6.0,2018-03-03
+Bentley,Continental,10_5,2018,4,Green,2010.0,Convertible,45000,6.0L,Automatic,Petrol,54889.0,4.0,2.0,Alternator Failing,0,5,2018-04-05,3,1217.78,6.0,2018-04-06
+Bentley,Continental,10_5,2018,7,Black,2011.0,Saloon,31558,6.0L,Automatic,Petrol,46000.0,4.0,4.0,Alternator Failing,0,28,2018-07-28,3,1040.0,6.0,2018-07-29
+Bentley,Continental,10_5,2018,8,Blue,2013.0,Convertible,25150,6.0L,Automatic,Petrol,78990.0,4.0,2.0,Brake Pads Worn,0,15,2018-08-15,3,624.5060138292785,607.7470325312021,2019-01-13
+Bentley,Continental,10_5,2018,8,White,2012.0,Convertible,34087,4.0L,Automatic,Petrol,72950.0,4.0,2.0,Radiator Leaking,0,27,2018-08-27,3,1579.0,6.0,2018-08-28
+Bentley,Continental,10_5,2018,7,Silver,2004.0,Coupe,89975,6.0L,Automatic,Petrol,18500.0,4.0,2.0,Engine Issue,2,1,2018-07-01,3,3735.0,48.0,2018-07-13
+Bentley,Continental,10_5,2017,8,Gelb,2013.0,Convertible,27000,4.0L,Automatic,Petrol,75500.0,4.0,2.0,Sensor Malfunction,0,1,2017-08-01,3,3955.0,9.0,2017-08-03
+Bentley,Continental,10_5,2018,2,Silver,2004.0,Coupe,58000,6.0L,Automatic,Petrol,23968.0,4.0,2.0,Gear Box Issue,0,10,2018-02-10,3,359.68,6.0,2018-02-11
+Bentley,Continental,10_5,2018,7,Black,2018.0,Coupe,850,6.0L,Automatic,Petrol,209990.0,4.0,2.0,Brake Pads Worn,0,8,2018-07-08,3,224.995,6.0,2018-07-09
+Bentley,Continental,10_5,2018,4,Black,2013.0,Convertible,11000,4.0L,Automatic,Petrol,77995.0,4.0,2.0,Warning Light,0,20,2018-04-20,3,1319.95,27.0,2018-04-26
+Bentley,Continental,10_5,2018,5,White,2017.0,Coupe,3024,6.0L,Automatic,Petrol,125950.0,4.0,2.0,Flat Tyres,0,20,2018-05-20,3,97.785,3.0,2018-05-20
+Bentley,Continental,10_5,2018,6,White,2017.0,Convertible,3858,4.0L,Automatic,Petrol,159950.0,4.0,2.0,Transmission Issue,1,4,2018-06-04,3,719.85,12.0,2018-06-07
+Bentley,Continental,10_5,2018,4,Black,2012.0,Coupe,22000,6.0L,Automatic,Petrol,63995.0,14.0,0.0,Starter Motor Issue,0,19,2018-04-19,3,819.95,9.0,2018-04-21
+Bentley,Continental,10_5,2017,11,Silver,2010.0,Coupe,79290,6.0L,Automatic,Petrol,46925.0,4.0,2.0,Electrical Issue,3,18,2017-11-18,3,1680.1880112251947,3.0,2017-11-18
+Bentley,Continental,10_5,2018,3,Grey,2012.0,Coupe,13000,6.0L,Automatic,Petrol,66950.0,4.0,2.0,Radiator Leaking,0,15,2018-03-15,3,1459.0,6.0,2018-03-16
+Bentley,Continental,10_5,2018,4,Black,2011.0,Convertible,18000,6.0L,Automatic,Petrol,64990.0,4.0,2.0,Steering Wheel Shaking,0,13,2018-04-13,3,124.99,3.0,2018-04-13
+Bentley,Continental,10_5,2018,4,Black,2005.0,Saloon,52000,6.0L,Automatic,Petrol,18500.0,4.0,4.0,Windscreen Crack,0,7,2018-04-07,3,71.1,3.0,2018-04-07
+Bentley,Continental,10_5,2021,5,Grey,2019.0,Convertible,9788,6.0L,Automatic,Petrol,179990.0,4.0,2.0,Warning Light,0,10,2021-05-10,3,2339.9,27.0,2021-05-16
+Bentley,Continental,10_5,2021,1,Green,2019.0,Coupe,2500,6.0L,Automatic,Petrol,209850.0,4.0,2.0,Tyre Alignment,0,7,2021-01-07,3,50.985,1.5,2021-01-07
+Bentley,Continental,10_5,2021,4,Purple,2019.0,Convertible,4000,6.0L,Automatic,Petrol,199950.0,4.0,2.0,Alternator Failing,0,12,2021-04-12,3,4119.0,6.0,2021-04-13
+Bentley,Continental,10_5,2021,5,White,2019.0,Coupe,9500,6.0L,Automatic,Petrol,152950.0,4.0,2.0,Starter Motor Issue,0,4,2021-05-04,3,1709.5,9.0,2021-05-06
+Bentley,Continental,10_5,2021,5,Blue,2019.0,Convertible,10700,6.0L,Automatic,Petrol,199898.0,4.0,2.0,Flat Tyres,0,8,2021-05-08,3,119.9694,3.0,2021-05-08
+Bentley,Continental,10_5,2021,6,Black,2019.0,Coupe,12200,6.0L,Automatic,Petrol,154995.0,4.0,2.0,Excessive Emissions,0,12,2021-06-12,3,199.4955,3.0,2021-06-12
+Bentley,Continental,10_5,2021,6,White,2019.0,Convertible,3899,6.0L,Automatic,Petrol,184895.0,4.0,2.0,Sensor Malfunction,0,25,2021-06-25,3,30660.734088371355,28761.09681541268,2041-03-02
+Bentley,Continental,10_5,2021,6,Grey,2019.0,Coupe,10900,6.0L,Automatic,Petrol,159999.0,4.0,2.0,Tyre Alignment,0,27,2021-06-27,3,45.9999,1.5,2021-06-27
+Bentley,Continental,10_5,2021,6,Black,2019.0,Convertible,6705,6.0L,Automatic,Petrol,209895.0,4.0,2.0,Brake Pads Worn,0,21,2021-06-21,3,224.9475,6.0,2021-06-22
+Bentley,Continental,10_5,2021,6,Black,2019.0,Convertible,19900,6.0L,Automatic,Petrol,174995.0,4.0,2.0,Transmission Issue,3,10,2021-06-10,3,2054.955,24.0,2021-06-16
+Bentley,Continental,10_5,2020,9,White,2019.0,Convertible,7000,6.0L,Automatic,Petrol,169950.0,4.0,2.0,Windscreen Crack,0,9,2020-09-09,3,161.96999999999997,3.0,2020-09-09
+Bentley,Continental,10_5,2020,2,Grey,2019.0,Coupe,4452,6.0L,Automatic,Petrol,160000.0,4.0,2.0,Engine Issue,4,6,2020-02-06,3,8600.0,30.0,2020-02-13
+Bentley,Continental,10_5,2020,10,Grey,2019.0,Coupe,28500,6.0L,Automatic,Petrol,142000.0,4.0,2.0,Radiator Leaking,0,25,2020-10-25,3,2960.0,6.0,2020-10-26
+Bentley,Continental,10_5,2020,11,Blue,2019.0,Coupe,3600,6.0L,Automatic,Petrol,124900.0,4.0,2.0,Starter Motor Issue,0,18,2020-11-18,3,1429.0,9.0,2020-11-20
+Bentley,Continental,10_5,2021,1,White,2019.0,Coupe,18309,6.0L,Automatic,Petrol,139000.0,4.0,2.0,Engine Issue,4,18,2021-01-18,3,7550.0,30.0,2021-01-25
+Bentley,Continental,10_5,2021,2,Black,2019.0,Coupe,6700,6.0L,Automatic,Petrol,144995.0,4.0,2.0,Brake Pads Worn,0,27,2021-02-27,3,192.4975,6.0,2021-02-28
+Bentley,Continental,10_5,2021,2,Black,2019.0,Coupe,22309,6.0L,Automatic,Petrol,149850.0,4.0,2.0,Radiator Leaking,0,2,2021-02-02,3,16254.082963923986,6.0,2021-02-03
+Bentley,Continental,10_5,2021,2,Red,2019.0,Coupe,5545,6.0L,Automatic,Petrol,139850.0,4.0,2.0,Electrical Issue,4,4,2021-02-04,3,539.55,6.0,2021-02-05
+Bentley,Continental,10_5,2021,3,Grey,2019.0,Convertible,3800,6.0L,Automatic,Petrol,178000.0,4.0,2.0,Gear Box Issue,0,24,2021-03-24,3,1900.0,6.0,2021-03-25
+Bentley,Continental,10_5,2021,4,White,2019.0,Convertible,4960,6.0L,Automatic,Petrol,199990.0,4.0,2.0,Radiator Leaking,0,26,2021-04-26,3,4119.8,6.0,2021-04-27
+Bentley,Continental,10_5,2021,5,Red,2019.0,Coupe,10452,6.0L,Automatic,Petrol,140990.0,4.0,2.0,Windscreen Crack,0,22,2021-05-22,3,144.594,3.0,2021-05-22
+Bentley,Continental,10_5,2021,5,White,2019.0,Coupe,6731,6.0L,Automatic,Petrol,147900.0,4.0,2.0,Excessive Emissions,0,28,2021-05-28,3,193.10999999999999,3.0,2021-05-28
+Bentley,Continental,10_5,2021,5,Grey,2019.0,Convertible,4000,6.0L,Automatic,Petrol,179990.0,4.0,2.0,Excessive Emissions,0,11,2021-05-11,3,221.99099999999999,3.0,2021-05-11
+Bentley,Continental,10_5,2021,5,Grey,2019.0,Coupe,16000,6.0L,Automatic,Petrol,139898.0,4.0,2.0,Windscreen Crack,0,5,2021-05-05,3,143.9388,3.0,2021-05-05
+Bentley,Continental,10_5,2021,5,Grey,2019.0,Coupe,8180,6.0L,Automatic,Petrol,154950.0,4.0,2.0,Warning Light,0,14,2021-05-14,3,2089.5,27.0,2021-05-20
+Bentley,Continental,10_5,2021,6,Black,2019.0,Coupe,3800,6.0L,Automatic,Petrol,169000.0,4.0,2.0,Alternator Failing,0,3,2021-06-03,3,3500.0,6.0,2021-06-04

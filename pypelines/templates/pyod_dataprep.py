@@ -53,6 +53,9 @@ preprocessor = ColumnTransformer(
 # train test split
 x_train = {{dataset}}[features]
 
+x_train_preprocessed = preprocessor.fit_transform(x_train)
+y_train_preprocessed = preprocessor.fit_transform(prediction_df)
+
 model_comparison_list = []
 """
 

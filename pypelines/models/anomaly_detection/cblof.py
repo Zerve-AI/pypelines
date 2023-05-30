@@ -4,7 +4,7 @@ cblof_hyperparams = {
     'numerical': [
         {'search': True, 'name': 'n_clusters', 'min': 2, 'max': 20, 'step': 2},
         {'search': True, 'name': 'alpha', 'min': 0.5, 'max': 1, 'step': 0.1},
-        {'search': True, 'name': 'beta', 'min': 1, 'max': 100, 'step': 20},
+        {'search': True, 'name': 'beta', 'min': 1.1, 'max': 100, 'step': 20},
     ],
     'categorical': [
     ]

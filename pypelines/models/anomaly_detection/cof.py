@@ -2,7 +2,6 @@ from ..model_base import PYODModelBase, PYODModelComparisonBase
 
 cof_hyperparams = {
     'numerical': [
-        {'search': True, 'name': 'n_neighbors', 'min': 2, 'max': 20, 'step': 2},
     ],
     'categorical': [
     ]

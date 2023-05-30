@@ -1,6 +1,6 @@
 from ..model_base import PYODModelBase, PYODModelComparisonBase
 
-auto_encoder_hyperparams = {
+deepsvdd_hyperparams = {
     'numerical': [
         {'search': True, 'name': 'epochs', 'min': 100, 'max': 1000, 'step': 100},
         {'search': True, 'name': 'batch_size', 'min': 100, 'max': 1000, 'step': 100},
@@ -12,17 +12,16 @@ auto_encoder_hyperparams = {
     ]
 }
 
-
-class AutoEncoderAnomalyDetection(PYODModelBase):
+class DeepSVDDAnomalyDetection(PYODModelBase):
     def __init__(self):
-        model_string = 'AutoEncoder()'
-        imports = '''from pyod.models.auto_encoder import AutoEncoder\nimport matplotlib.pyplot as plt'''
+        model_string = 'DeepSVDD()'
+        imports = '''from pyod.models.deep_svdd import DeepSVDD\nimport matplotlib.pyplot as plt'''
         model_type ='Anomaly Detection'
-        super().__init__('AutoEncoder', model_string, auto_encoder_hyperparams, imports,model_type)
+        super().__init__('DeepSVDD', model_string, deepsvdd_hyperparams, imports,model_type)
 
-class AutoEncoderAnomalyDetectionComparison(PYODModelComparisonBase):
+class DeepSVDDAnomalyDetectionComparison(PYODModelComparisonBase):
     def __init__(self):
-        model_string = 'AutoEncoder()'
-        imports = '''from pyod.models.auto_encoder import AutoEncoder\nimport matplotlib.pyplot as plt'''
+        model_string = 'DeepSVDD()'
+        imports = '''from pyod.models.deep_svdd import DeepSVDD\nimport matplotlib.pyplot as plt'''
         model_type ='Anomaly Detection'
-        super().__init__('AutoEncoder', model_string, auto_encoder_hyperparams, imports,model_type)
+        super().__init__('DeepSVDD', model_string, deepsvdd_hyperparams, imports,model_type)
