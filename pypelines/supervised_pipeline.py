@@ -1,10 +1,10 @@
 #from typing import Type
 import os
 import pyperclip
-from .templates.pipeline import PipelineTemplate
+from .templates.sklearn_dataprep import SKLearnTemplate
 from .schemas import HyperParams, NumericalParam, CategoricalParam
-from .sklearn.classification import models_classification , models_comparison_classification, models_classification_default, models_comparison_classification_default
-from .sklearn.regression import models_regression, models_comparison_regression, models_regression_default, models_comparison_regression_default
+from .models.classification import models_classification , models_comparison_classification, models_classification_default, models_comparison_classification_default
+from .models.regression import models_regression, models_comparison_regression, models_regression_default, models_comparison_regression_default
 import pandas as pd 
 from typing import Union
 import inspect
@@ -169,7 +169,7 @@ class SupervisedPipeline:
         code_list = {}
         code_append = "" #store output for each model - used for writing code file output for each model
         code_all_models = "" #store output for all models - used for copy_to_clipboard
-        code, imports, requirements = PipelineTemplate()(self.pipeline_params)
+        code, imports, requirements = SKLearnTemplate()(self.pipeline_params)
         imports = self.default_imports + '\n' + imports
         code_append += imports
         code_append += code

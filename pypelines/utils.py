@@ -1,5 +1,5 @@
-from .sklearn.classification import models_classification
-from .sklearn.regression import models_regression
+from .models.classification import models_classification
+from .models.regression import models_regression
 
 
 def list_supported_models(model_type:str):
