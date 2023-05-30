@@ -7,6 +7,7 @@ from .cd import CDAnomalyDetection, CDAnomalyDetectionComparison
 from .copod import COPODAnomalyDetection, COPODAnomalyDetectionComparison
 from .deepsvdd import DeepSVDDAnomalyDetection, DeepSVDDAnomalyDetectionComparison
 from .ecod import ECODAnomalyDetection, ECODAnomalyDetectionComparison
+from .gmm import GMMAnomalyDetection, GMMAnomalyDetectionComparison
 
 
 models_ad = {
@@ -18,7 +19,8 @@ models_ad = {
     'Cooks Distance Outlier Factor': CDAnomalyDetection,
     'Copula Based Outlier Detector': COPODAnomalyDetection,
     'Deep One-Class Classification': DeepSVDDAnomalyDetection,
-    'Empirical Cumulative Distribution': ECODAnomalyDetection
+    'Empirical Cumulative Distribution': ECODAnomalyDetection,
+    'Gaussian Mixture Model': GMMAnomalyDetection
 }
 
 models_comparison_ad = {
@@ -30,7 +32,8 @@ models_comparison_ad = {
     'Cooks Distance Outlier Factor': CDAnomalyDetectionComparison,
     'Copula Based Outlier Detector': COPODAnomalyDetectionComparison,
     'Deep One-Class Classification': DeepSVDDAnomalyDetectionComparison,
-    'Empirical Cumulative Distribution': ECODAnomalyDetectionComparison
+    'Empirical Cumulative Distribution': ECODAnomalyDetectionComparison,
+    'Gaussian Mixture Model': GMMAnomalyDetectionComparison
 }
 
 
@@ -44,7 +47,8 @@ models_ad_default = {
     'Cooks Distance Outlier Factor': CDAnomalyDetection,
     'Copula Based Outlier Detector': COPODAnomalyDetection,
     'Deep One-Class Classification': DeepSVDDAnomalyDetection,
-    'Empirical Cumulative Distribution': ECODAnomalyDetection
+    'Empirical Cumulative Distribution': ECODAnomalyDetection,
+    'Gaussian Mixture Model': GMMAnomalyDetection
 }
 
 models_comparison_ad_default = {
@@ -56,5 +60,6 @@ models_comparison_ad_default = {
     'Cooks Distance Outlier Factor': CDAnomalyDetectionComparison,
     'Copula Based Outlier Detector': COPODAnomalyDetectionComparison,
     'Deep One-Class Classification': DeepSVDDAnomalyDetectionComparison,
-    'Empirical Cumulative Distribution': ECODAnomalyDetectionComparison
+    'Empirical Cumulative Distribution': ECODAnomalyDetectionComparison,
+    'Gaussian Mixture Model': GMMAnomalyDetectionComparison
 }
