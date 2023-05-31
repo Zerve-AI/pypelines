@@ -8,6 +8,8 @@ from .copod import COPODAnomalyDetection, COPODAnomalyDetectionComparison
 from .deepsvdd import DeepSVDDAnomalyDetection, DeepSVDDAnomalyDetectionComparison
 from .ecod import ECODAnomalyDetection, ECODAnomalyDetectionComparison
 from .gmm import GMMAnomalyDetection, GMMAnomalyDetectionComparison
+from .hbos import HBOSAnomalyDetection, HBOSAnomalyDetectionComparison
+from .iforest import IForestAnomalyDetection, IForestAnomalyDetectionComparison
 
 
 models_ad = {
@@ -20,7 +22,9 @@ models_ad = {
     'Copula Based Outlier Detector': COPODAnomalyDetection,
     'Deep One-Class Classification': DeepSVDDAnomalyDetection,
     'Empirical Cumulative Distribution': ECODAnomalyDetection,
-    'Gaussian Mixture Model': GMMAnomalyDetection
+    'Gaussian Mixture Model': GMMAnomalyDetection,
+    'Histogram-based Outlier Detection': HBOSAnomalyDetection,
+    'Isolation Forest': IForestAnomalyDetection
 }
 
 models_comparison_ad = {
@@ -33,7 +37,9 @@ models_comparison_ad = {
     'Copula Based Outlier Detector': COPODAnomalyDetectionComparison,
     'Deep One-Class Classification': DeepSVDDAnomalyDetectionComparison,
     'Empirical Cumulative Distribution': ECODAnomalyDetectionComparison,
-    'Gaussian Mixture Model': GMMAnomalyDetectionComparison
+    'Gaussian Mixture Model': GMMAnomalyDetectionComparison,
+    'Histogram-based Outlier Detection': HBOSAnomalyDetectionComparison,
+    'Isolation Forest': IForestAnomalyDetectionComparison
 }
 
 
@@ -48,7 +54,9 @@ models_ad_default = {
     'Copula Based Outlier Detector': COPODAnomalyDetection,
     'Deep One-Class Classification': DeepSVDDAnomalyDetection,
     'Empirical Cumulative Distribution': ECODAnomalyDetection,
-    'Gaussian Mixture Model': GMMAnomalyDetection
+    'Gaussian Mixture Model': GMMAnomalyDetection,
+    'Histogram-based Outlier Detection': HBOSAnomalyDetection,
+    'Isolation Forest': IForestAnomalyDetection
 }
 
 models_comparison_ad_default = {
@@ -61,5 +69,7 @@ models_comparison_ad_default = {
     'Copula Based Outlier Detector': COPODAnomalyDetectionComparison,
     'Deep One-Class Classification': DeepSVDDAnomalyDetectionComparison,
     'Empirical Cumulative Distribution': ECODAnomalyDetectionComparison,
-    'Gaussian Mixture Model': GMMAnomalyDetectionComparison
+    'Gaussian Mixture Model': GMMAnomalyDetectionComparison,
+    'Histogram-based Outlier Detection': HBOSAnomalyDetectionComparison,
+    'Isolation Forest': IForestAnomalyDetectionComparison
 }
