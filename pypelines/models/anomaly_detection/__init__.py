@@ -12,7 +12,8 @@ from .hbos import HBOSAnomalyDetection, HBOSAnomalyDetectionComparison
 from .iforest import IForestAnomalyDetection, IForestAnomalyDetectionComparison
 from .iforestnne import INNEAnomalyDetection, INNEAnomalyDetectionComparison
 from .kde import KDEAnomalyDetection, KDEAnomalyDetectionComparison
-
+from .kpca import KPCAAnomalyDetection, KPCAAnomalyDetectionComparison
+from .knn import KNNAnomalyDetection, KNNAnomalyDetectionComparison
 
 models_ad = {
     'ABOD Anomaly Detection': ABODAnomalyDetection,
@@ -29,6 +30,8 @@ models_ad = {
     'Isolation Forest': IForestAnomalyDetection,
     'Isolation NNE': INNEAnomalyDetection,
     'Kernel Density Estimation': KDEAnomalyDetection,
+    'Kernel PCA': KPCAAnomalyDetection,
+    'k-Nearest Neighbors': KNNAnomalyDetection
 }
 
 models_comparison_ad = {
@@ -46,6 +49,8 @@ models_comparison_ad = {
     'Isolation Forest': IForestAnomalyDetectionComparison,
     'Isolation NNE': INNEAnomalyDetectionComparison,
     'Kernel Density Estimation': KDEAnomalyDetectionComparison,
+    'Kernel PCA': KPCAAnomalyDetectionComparison,
+    'k-Nearest Neighbors': KNNAnomalyDetectionComparison
 }
 
 
@@ -65,6 +70,8 @@ models_ad_default = {
     'Isolation Forest': IForestAnomalyDetection,
     'Isolation NNE': INNEAnomalyDetection,
     'Kernel Density Estimation': KDEAnomalyDetection,
+    'Kernel PCA': KPCAAnomalyDetection,
+    'k-Nearest Neighbors': KNNAnomalyDetection
 }
 
 models_comparison_ad_default = {
@@ -82,4 +89,6 @@ models_comparison_ad_default = {
     'Isolation Forest': IForestAnomalyDetectionComparison,
     'Isolation NNE': INNEAnomalyDetectionComparison,
     'Kernel Density Estimation': KDEAnomalyDetectionComparison,
+    'Kernel PCA': KPCAAnomalyDetectionComparison,
+    'k-Nearest Neighbors': KNNAnomalyDetectionComparison
 }
