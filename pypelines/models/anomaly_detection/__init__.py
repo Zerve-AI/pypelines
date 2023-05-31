@@ -10,6 +10,8 @@ from .ecod import ECODAnomalyDetection, ECODAnomalyDetectionComparison
 from .gmm import GMMAnomalyDetection, GMMAnomalyDetectionComparison
 from .hbos import HBOSAnomalyDetection, HBOSAnomalyDetectionComparison
 from .iforest import IForestAnomalyDetection, IForestAnomalyDetectionComparison
+from .iforestnne import INNEAnomalyDetection, INNEAnomalyDetectionComparison
+from .kde import KDEAnomalyDetection, KDEAnomalyDetectionComparison
 
 
 models_ad = {
@@ -24,7 +26,9 @@ models_ad = {
     'Empirical Cumulative Distribution': ECODAnomalyDetection,
     'Gaussian Mixture Model': GMMAnomalyDetection,
     'Histogram-based Outlier Detection': HBOSAnomalyDetection,
-    'Isolation Forest': IForestAnomalyDetection
+    'Isolation Forest': IForestAnomalyDetection,
+    'Isolation NNE': INNEAnomalyDetection,
+    'Kernel Density Estimation': KDEAnomalyDetection,
 }
 
 models_comparison_ad = {
@@ -39,7 +43,9 @@ models_comparison_ad = {
     'Empirical Cumulative Distribution': ECODAnomalyDetectionComparison,
     'Gaussian Mixture Model': GMMAnomalyDetectionComparison,
     'Histogram-based Outlier Detection': HBOSAnomalyDetectionComparison,
-    'Isolation Forest': IForestAnomalyDetectionComparison
+    'Isolation Forest': IForestAnomalyDetectionComparison,
+    'Isolation NNE': INNEAnomalyDetectionComparison,
+    'Kernel Density Estimation': KDEAnomalyDetectionComparison,
 }
 
 
@@ -56,7 +62,9 @@ models_ad_default = {
     'Empirical Cumulative Distribution': ECODAnomalyDetection,
     'Gaussian Mixture Model': GMMAnomalyDetection,
     'Histogram-based Outlier Detection': HBOSAnomalyDetection,
-    'Isolation Forest': IForestAnomalyDetection
+    'Isolation Forest': IForestAnomalyDetection,
+    'Isolation NNE': INNEAnomalyDetection,
+    'Kernel Density Estimation': KDEAnomalyDetection,
 }
 
 models_comparison_ad_default = {
@@ -71,5 +79,7 @@ models_comparison_ad_default = {
     'Empirical Cumulative Distribution': ECODAnomalyDetectionComparison,
     'Gaussian Mixture Model': GMMAnomalyDetectionComparison,
     'Histogram-based Outlier Detection': HBOSAnomalyDetectionComparison,
-    'Isolation Forest': IForestAnomalyDetectionComparison
+    'Isolation Forest': IForestAnomalyDetectionComparison,
+    'Isolation NNE': INNEAnomalyDetectionComparison,
+    'Kernel Density Estimation': KDEAnomalyDetectionComparison,
 }
