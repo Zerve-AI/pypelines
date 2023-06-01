@@ -19,7 +19,7 @@ class AnomalyDetectionPipeline:
                  data:Union[str, pd.DataFrame],
                  predictions_data:Union[str, pd.DataFrame],
                  #target:str,
-                 #model_type:str,
+                 model_type:str,
                  nfolds:int,
                  models:list = None):
         """
