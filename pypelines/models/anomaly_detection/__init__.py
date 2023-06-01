@@ -27,9 +27,12 @@ from .lscp import LSCPAnomalyDetection, LSCPAnomalyDetectionComparison
 from .lunar import LUNARAnomalyDetection, LUNARAnomalyDetectionComparison
 from .lof import LOFAnomalyDetection, LOFAnomalyDetectionComparison
 from .loda import LODAAnomalyDetection, LODAAnomalyDetectionComparison
-
-
-
+from .hbos import HBOSAnomalyDetection, HBOSAnomalyDetectionComparison
+from .iforest import IForestAnomalyDetection, IForestAnomalyDetectionComparison
+from .iforestnne import INNEAnomalyDetection, INNEAnomalyDetectionComparison
+from .kde import KDEAnomalyDetection, KDEAnomalyDetectionComparison
+from .kpca import KPCAAnomalyDetection, KPCAAnomalyDetectionComparison
+from .knn import KNNAnomalyDetection, KNNAnomalyDetectionComparison
 
 
 models_ad = {
@@ -62,6 +65,12 @@ models_ad = {
 #     'LUNAR': LUNARAnomalyDetection,
     'LOF': LOFAnomalyDetection,
     'LODA': LODAAnomalyDetection
+    'Histogram-based Outlier Detection': HBOSAnomalyDetection,
+    'Isolation Forest': IForestAnomalyDetection,
+    'Isolation NNE': INNEAnomalyDetection,
+    'Kernel Density Estimation': KDEAnomalyDetection,
+    'Kernel PCA': KPCAAnomalyDetection,
+    'k-Nearest Neighbors': KNNAnomalyDetection
 }
 
 models_comparison_ad = {
@@ -94,6 +103,12 @@ models_comparison_ad = {
 #    'LUNAR': LUNARAnomalyDetectionComparison,
     'LOF': LOFAnomalyDetectionComparison,
     'LODA': LODAAnomalyDetectionComparison
+    'Histogram-based Outlier Detection': HBOSAnomalyDetectionComparison,
+    'Isolation Forest': IForestAnomalyDetectionComparison,
+    'Isolation NNE': INNEAnomalyDetectionComparison,
+    'Kernel Density Estimation': KDEAnomalyDetectionComparison,
+    'Kernel PCA': KPCAAnomalyDetectionComparison,
+    'k-Nearest Neighbors': KNNAnomalyDetectionComparison
 }
 
 
@@ -128,6 +143,12 @@ models_ad_default = {
 #     'LUNAR': LUNARAnomalyDetection,
     'LOF': LOFAnomalyDetection,
     'LODA': LODAAnomalyDetection
+    'Histogram-based Outlier Detection': HBOSAnomalyDetection,
+    'Isolation Forest': IForestAnomalyDetection,
+    'Isolation NNE': INNEAnomalyDetection,
+    'Kernel Density Estimation': KDEAnomalyDetection,
+    'Kernel PCA': KPCAAnomalyDetection,
+    'k-Nearest Neighbors': KNNAnomalyDetection
 }
 
 models_comparison_ad_default = {
@@ -160,4 +181,10 @@ models_comparison_ad_default = {
 #    'LUNAR': LUNARAnomalyDetectionComparison,
     'LOF': LOFAnomalyDetectionComparison,
     'LODA': LODAAnomalyDetectionComparison
+    'Histogram-based Outlier Detection': HBOSAnomalyDetectionComparison,
+    'Isolation Forest': IForestAnomalyDetectionComparison,
+    'Isolation NNE': INNEAnomalyDetectionComparison,
+    'Kernel Density Estimation': KDEAnomalyDetectionComparison,
+    'Kernel PCA': KPCAAnomalyDetectionComparison,
+    'k-Nearest Neighbors': KNNAnomalyDetectionComparison
 }
