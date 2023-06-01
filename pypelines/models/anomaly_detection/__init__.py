@@ -64,7 +64,7 @@ models_ad = {
 #     'LSCP': LSCPAnomalyDetection,
 #     'LUNAR': LUNARAnomalyDetection,
     'LOF': LOFAnomalyDetection,
-    'LODA': LODAAnomalyDetection
+    'LODA': LODAAnomalyDetection,
     'Histogram-based Outlier Detection': HBOSAnomalyDetection,
     'Isolation Forest': IForestAnomalyDetection,
     'Isolation NNE': INNEAnomalyDetection,
@@ -102,7 +102,7 @@ models_comparison_ad = {
 #    'LSCP': LSCPAnomalyDetectionComparison,
 #    'LUNAR': LUNARAnomalyDetectionComparison,
     'LOF': LOFAnomalyDetectionComparison,
-    'LODA': LODAAnomalyDetectionComparison
+    'LODA': LODAAnomalyDetectionComparison,
     'Histogram-based Outlier Detection': HBOSAnomalyDetectionComparison,
     'Isolation Forest': IForestAnomalyDetectionComparison,
     'Isolation NNE': INNEAnomalyDetectionComparison,
@@ -142,7 +142,7 @@ models_ad_default = {
 #     'LSCP': LSCPAnomalyDetection,
 #     'LUNAR': LUNARAnomalyDetection,
     'LOF': LOFAnomalyDetection,
-    'LODA': LODAAnomalyDetection
+    'LODA': LODAAnomalyDetection,
     'Histogram-based Outlier Detection': HBOSAnomalyDetection,
     'Isolation Forest': IForestAnomalyDetection,
     'Isolation NNE': INNEAnomalyDetection,
@@ -180,7 +180,7 @@ models_comparison_ad_default = {
 #    'LSCP': LSCPAnomalyDetectionComparison,
 #    'LUNAR': LUNARAnomalyDetectionComparison,
     'LOF': LOFAnomalyDetectionComparison,
-    'LODA': LODAAnomalyDetectionComparison
+    'LODA': LODAAnomalyDetectionComparison,
     'Histogram-based Outlier Detection': HBOSAnomalyDetectionComparison,
     'Isolation Forest': IForestAnomalyDetectionComparison,
     'Isolation NNE': INNEAnomalyDetectionComparison,
