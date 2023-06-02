@@ -26,10 +26,20 @@ def scorer_f(estimator, X_test):   #dummy scorer for unsupervised model gridsear
 {{prefix}}_y_train_pred = {{prefix}}_best_estimator.labels_ 
 {{prefix}}_y_train_scores = {{prefix}}_best_estimator.decision_scores_
 
+plt.figure(figsize = (10, 6), dpi = 150)
+s = plt.scatter(x_train.iloc[:,0], x_train.iloc[:,1], c = {{prefix}}_y_train_pred, cmap = 'coolwarm')
+plt.colorbar(s)
+plt.xlabel(x_train.columns[0], fontsize = 16)
+plt.ylabel(x_train.columns[1], fontsize = 16)
+plt.grid()
+plt.title(f'{{prefix}}_Anomaly Detection Scatter Plot', weight = 'bold')
+plt.show(block=False)
 # get the prediction on the test data
 {{prefix}}_y_test_pred = {{prefix}}_best_estimator.predict(y_train_preprocessed)
 {{prefix}}_y_test_pred_proba = {{prefix}}_best_estimator.predict_proba(y_train_preprocessed) 
 {{prefix}}_y_test_scores = {{prefix}}_best_estimator.decision_function(y_train_preprocessed) 
+
+
 
 '''
 

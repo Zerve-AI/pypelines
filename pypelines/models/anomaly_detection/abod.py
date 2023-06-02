@@ -2,6 +2,8 @@ from ..model_base import PYODModelBase, PYODModelComparisonBase
 
 abod_hyperparams = {
     'numerical': [
+        {'search': False, 'name': 'contamination', 'min': 0., 'max': 1, 'step': 0.25},
+        {'search': False, 'name': 'n_neighbors', 'min': 2, 'max': 20, 'step': 10},
     ],
     'categorical': [
     ]

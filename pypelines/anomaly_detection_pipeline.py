@@ -19,7 +19,7 @@ class AnomalyDetectionPipeline:
                  data:Union[str, pd.DataFrame],
                  predictions_data:Union[str, pd.DataFrame],
                  #target:str,
-                 model_type:str,
+                 #model_type:str,
                  nfolds:int,
                  models:list = None):
         """
@@ -241,4 +241,74 @@ class AnomalyDetectionPipeline:
         """
         self.generate_code(output_path = path)
         return f'model files saved to {path}'
+    
+    def model_grid_search_settings(self,model_name:str=None):
+        """
+        The model_grid_search_settings function is used to return the hyperparameters of a model.
+        
+        :param self: Bind the attributes with an object
+        :param model_name:str: Specify the name of the model to be used
+        :return: The hyperparameters of the model
+        """
+        self.models_ = self.models_ad
+        self.model_params = {k:v for k,v in self.models_.items() if k in model_name}
+        hyperparameters = {}
+        for name, model in self.model_params.items():
+            hyperparameters[name] = model().get_hyperparameters()
+        return hyperparameters[name]
+
+
+    def set_model_grid_search_settings(self,hyperparam_dict:dict = None, model_name:list = None, path:str=None):
+        """
+        The set_model_grid_search_settings function is used to manually set the model grid search settings.
+        
+        :param self: Represent the instance of the class
+        :param hyperparam_dict:dict: Pass in a dictionary of hyperparameters to be used for the model
+        :param model_name:list: Specify which models to generate code for
+        :param path:str: Specify the path you want to save your code in
+        :return: The code for the model pipeline
+        """
+        self.parse_config()
+        code_append = ""
+        code, imports, requirements = AnomalyDetectionTemplate()(self.pipeline_params)
+        imports = self.default_imports + '\n' + imports
+        code_append += imports
+        code_append += code
+        code_append += '\n'
+        code_append += '\n'
+        code_append += "##### End of Data Processing Pipeline #####"
+        code_append += '\n'
+        code_append += '\n'
+        for model_name, params in self.model_params.items():
+            ModelTemplate= self.models_all[model_name]
+            code_append += '\n'
+            code_append += '\n'
+            code_append += f"##### Model Pipeline for {model_name} #####"
+            code_append += '\n'
+            code, model_imports, model_requirements  = ModelTemplate()({
+                **params, 
+                **self.shared_model_params, 
+                'hyperparams': self.compile_hyperparameters(ModelTemplate().prefix, hyperparam_dict)
+                })
+            if model_requirements:
+                requirements += model_requirements
+            if model_imports:
+                imports += '\n' + model_imports
+            code_append += code
+            ModelCompTemplate= self.model_comp_all[model_name]
+            code, model_imports, model_requirements  = ModelCompTemplate()({
+                **params, 
+                **self.shared_model_params, 
+                'hyperparams': self.compile_hyperparameters(ModelCompTemplate().prefix, hyperparam_dict)
+                })
+            code_append += f"##### Model Metrics {model_name} #####"
+            code_append += code
+            code_append += '\n'
+            code_append += f"##### End of Model Pipeline for {model_name} #####"
+            if path is not None:
+                output_file = open(f"{path}/{model_name}.py", "w")
+                n = output_file.write(code_append)
+                output_file.close()
+            pyperclip.copy(code_append)
+        return print(code_append)
     

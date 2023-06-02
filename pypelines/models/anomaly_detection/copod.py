@@ -1,6 +1,11 @@
 from ..model_base import PYODModelBase, PYODModelComparisonBase
 
 copod_hyperparams = {
+    'numerical': [
+        {'search': False, 'name': 'contamination', 'min': 0., 'max': 1, 'step': 0.25},
+    ],
+    'categorical': [
+    ]
 
 }
 
