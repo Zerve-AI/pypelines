@@ -62,7 +62,7 @@ models_ad = {
     'MCD': MCDAnomalyDetection,
 #     'MAD': MADAnomalyDetection,
 #     'LSCP': LSCPAnomalyDetection,
-#     'LUNAR': LUNARAnomalyDetection,
+    'LUNAR': LUNARAnomalyDetection,
     'LOF': LOFAnomalyDetection,
     'LODA': LODAAnomalyDetection
     'Histogram-based Outlier Detection': HBOSAnomalyDetection,
@@ -100,7 +100,7 @@ models_comparison_ad = {
     'MCD': MCDAnomalyDetectionComparison,
 #    'MAD': MADAnomalyDetectionComparison,
 #    'LSCP': LSCPAnomalyDetectionComparison,
-#    'LUNAR': LUNARAnomalyDetectionComparison,
+    'LUNAR': LUNARAnomalyDetectionComparison,
     'LOF': LOFAnomalyDetectionComparison,
     'LODA': LODAAnomalyDetectionComparison
     'Histogram-based Outlier Detection': HBOSAnomalyDetectionComparison,
@@ -140,7 +140,7 @@ models_ad_default = {
     'MCD': MCDAnomalyDetection,
 #     'MAD': MADAnomalyDetection,
 #     'LSCP': LSCPAnomalyDetection,
-#     'LUNAR': LUNARAnomalyDetection,
+    'LUNAR': LUNARAnomalyDetection,
     'LOF': LOFAnomalyDetection,
     'LODA': LODAAnomalyDetection
     'Histogram-based Outlier Detection': HBOSAnomalyDetection,
@@ -178,7 +178,7 @@ models_comparison_ad_default = {
     'MCD': MCDAnomalyDetectionComparison,
 #    'MAD': MADAnomalyDetectionComparison,
 #    'LSCP': LSCPAnomalyDetectionComparison,
-#    'LUNAR': LUNARAnomalyDetectionComparison,
+    'LUNAR': LUNARAnomalyDetectionComparison,
     'LOF': LOFAnomalyDetectionComparison,
     'LODA': LODAAnomalyDetectionComparison
     'Histogram-based Outlier Detection': HBOSAnomalyDetectionComparison,
