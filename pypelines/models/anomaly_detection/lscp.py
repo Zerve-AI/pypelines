@@ -1,7 +1,7 @@
 from ..model_base import PYODModelBase, PYODModelComparisonBase
 
 lscp_hyperparams = {
-        'numerical': [
+    'numerical': [
         {'search': True, 'name': 'contamination', 'min': 0.1, 'max': 0.5, 'step': 0.05},
         {'search': True, 'name': 'local_max_features', 'min': 0.5, 'max': 1, 'step': 0.5},
         {'search': True, 'name': 'detector_list', 'min': 2, 'max': 10, 'step': 1}

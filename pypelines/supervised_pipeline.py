@@ -292,7 +292,7 @@ class SupervisedPipeline:
         """
         self.parse_config()
         code_append = ""
-        code, imports, requirements = PipelineTemplate()(self.pipeline_params)
+        code, imports, requirements = SKLearnTemplate()(self.pipeline_params)
         imports = self.default_imports + '\n' + imports
         code_append += imports
         code_append += code
