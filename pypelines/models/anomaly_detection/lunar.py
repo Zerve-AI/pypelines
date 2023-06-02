@@ -2,10 +2,10 @@ from ..model_base import PYODModelBase, PYODModelComparisonBase
 
 lunar_hyperparams = {
     'numerical': [
-        {'search': True, 'val_size': 'contamination', 'min': 0, 'max': 1, 'step': 0.1},
+        {'search': False, 'val_size': 'contamination', 'min': 0, 'max': 1, 'step': 0.1},
     ],
     'categorical': [
-        {'search': True, 'name': 'model_type', 'selected': ['WEIGHT'], 'values': ['WEIGHT', 'SCORE']}
+        {'search': False, 'name': 'model_type', 'selected': ['WEIGHT'], 'values': ['WEIGHT', 'SCORE']}
         
     ]
 }
