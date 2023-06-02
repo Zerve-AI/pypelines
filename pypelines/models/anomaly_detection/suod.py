@@ -3,7 +3,7 @@ from ..model_base import PYODModelBase, PYODModelComparisonBase
 suod_hyperparams = {
     'numerical': [
         {'search': True, 'name': 'contamination', 'min': 0.1, 'max': 0.5, 'step': 0.05},
-        {'search': True, 'name': 'target_dim_frac', 'min': 0, 'max': 1, 'step': 0.5}
+        {'search': True, 'name': 'target_dim_frac', 'min': 0.1, 'max': 1, 'step': 0.5}
     ],
     'categorical': [
         {'search': True, 'name': 'jl_method', 'selected': ['basic'], 'values': ['basic','discrete','circulant','toeplitz']}

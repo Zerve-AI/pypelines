@@ -10,7 +10,9 @@ setup(
         'pyperclip',
         'matplotlib',
         'jinja2',
-        'pydantic'
+        'pydantic',
+        'pyod',
+        'suod'
     ],
     # other metadata
 )
