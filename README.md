@@ -13,7 +13,7 @@ The generated code includes:
 - Model comparison
 
 Training code is generated as follows:
-```
+```py
 from pypelines.sklearn_pypeline import SupervisedPipeline
 my_pypeline = SupervisedPipeline(data = your_dataframe,
                                  target = 'dependent_variable_name', 
