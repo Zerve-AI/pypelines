@@ -12,7 +12,7 @@ template = '''
 ])
 
 # Create the grid search
-{{prefix}}_grid_search = GridSearchCV(estimator={{prefix}}_pipe, param_grid={{prefix}}_param_grid, cv={{cross_validation}}, scoring=make_scorer({{metric}}), verbose=1)
+{{prefix}}_grid_search = GridSearchCV(estimator={{prefix}}_pipe, param_grid={{prefix}}_param_grid, cv={{cross_validation}}, scoring=make_scorer({{metric}}), verbose=3)
 {{prefix}}_grid_search.fit(X_train, y_train)
 
 # Get the best hyperparameters
@@ -25,7 +25,7 @@ template = '''
 {% if model_type == "Regression" %}
 # Generate Predictions
 {{prefix}}_predictions = {{prefix}}_best_estimator.predict(X_test)
-{{prefix}}_predictions_df = pd.DataFrame({{prefix}}_best_estimator.predict(X_test))
+{{prefix}}_predictions_df = pd.DataFrame({{prefix}}_best_estimator.predict(X_test))x`
 
 # Generate Model Metrics
 {{prefix}}_r2_score = r2_score(y_test, {{prefix}}_predictions_df.iloc[:,0])
