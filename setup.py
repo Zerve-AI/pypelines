@@ -12,7 +12,8 @@ setup(
         'jinja2',
         'pydantic',
         'pyod',
-        'suod'
+        'suod',
+        'sktime'
     ],
     # other metadata
 )
