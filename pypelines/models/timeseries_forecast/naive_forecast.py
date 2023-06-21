@@ -1,20 +1,20 @@
 from ..model_base import TSForecastModelBase, TSForecastModelComparisonBase
 
 
-trend_forecast_hyperparams = {
+naive_forecast_hyperparams = {
 }
 
-class TrendForecast(TSForecastModelBase):
+class NaiveForecast(TSForecastModelBase):
     def __init__(self):
-        model_string = 'trend_forecaster()'
-        imports = '''from sktime.forecasting.trend import TrendForecaster\nfrom sklearn.metrics import mean_squared_error,make_scorer,r2_score,explained_variance_score\nimport matplotlib.pyplot as plt'''
+        model_string = 'naive_forecaster()'
+        imports = '''from sktime.forecasting.naive import NaiveForecaster\nfrom sklearn.metrics import mean_squared_error,make_scorer,r2_score,explained_variance_score\nimport matplotlib.pyplot as plt'''
         model_type='TSForecast'
-        super().__init__('TrendForecaster', model_string, trend_forecast_hyperparams, imports,model_type)
+        super().__init__('NaiveForecaster', model_string, naive_forecast_hyperparams, imports,model_type)
 
 
-class TrendForecastComparison(TSForecastModelComparisonBase):
+class NaiveForecastComparison(TSForecastModelComparisonBase):
     def __init__(self):
-        model_string = 'trend_forecaster()'
-        imports = '''from sktime.forecasting.trend import TrendForecaster \nfrom sklearn.metrics import mean_squared_error,make_scorer,r2_score,explained_variance_score\nimport matplotlib.pyplot as plt'''
+        model_string = 'naive_forecaster()'
+        imports = '''from sktime.forecasting.naive import TrendForecNaiveForecasteraster\nfrom sklearn.metrics import mean_squared_error,make_scorer,r2_score,explained_variance_score\nimport matplotlib.pyplot as plt'''
         model_type='TSForecast'
-        super().__init__('TrendForecaster', model_string, trend_forecast_hyperparams, imports,model_type)
+        super().__init__('NaiveForecaster', model_string, naive_forecast_hyperparams, imports,model_type)

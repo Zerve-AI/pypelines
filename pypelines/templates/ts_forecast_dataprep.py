@@ -4,23 +4,20 @@ from .template_base import AutoPipelineBaseTemplate
 required_imports = """
 import pandas as pd
 import numpy as np
-from sklearn.compose import ColumnTransformer
-from sklearn.preprocessing import MinMaxScaler,OrdinalEncoder
-from sklearn.model_selection import train_test_split
-from sklearn.pipeline import Pipeline
-from sklearn.impute import SimpleImputer
 """
 
 template = """
+
 date_col = '{{date_column}}'
 features = list({{dataset}}.columns)
 feature_df = {{dataset}}[features]
 
 x_train = {{dataset}}[features]
-# preprocess pipelines to be added
-
 x_train_preprocessed = x_train
-x_train_preprocessed[date_col] = pd.to_datetime(x_train_preprocessed[date_col])
+x_train_preprocessed[date_col] = pd.to_datetime(x_train_preprocessed[date_col],format = "{{date_format}}")
+x_train_preprocessed = x_train_preprocessed.set_index(date_col)
+x_train_preprocessed.index = x_train_preprocessed.index.to_period(freq = "{{frequency}}")
+
 model_comparison_list = []
 """
 

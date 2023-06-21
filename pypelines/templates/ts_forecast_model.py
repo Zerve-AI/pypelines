@@ -11,8 +11,7 @@ template = '''
 {{prefix}}_model.fit(x_train_preprocessed)
 
 # get the prediction on the test data
-{{prefix}}_y_pred = {{prefix}}_model.predict(fh=[1,2,3])
-{{prefix}}_y_pred['Period'] = pd.to_datetime({{prefix}}_y_pred['Period'])
+{{prefix}}_y_pred = {{prefix}}_model.predict(fh={{forecast_horizon}})
 
 '''
 
