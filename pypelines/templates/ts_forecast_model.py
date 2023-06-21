@@ -12,10 +12,11 @@ template = '''
 
 # get the prediction on the test data
 {{prefix}}_y_pred = {{prefix}}_model.predict(fh=[1,2,3])
+{{prefix}}_y_pred['Period'] = pd.to_datetime({{prefix}}_y_pred['Period'])
 
 '''
 
-class TSForecaseModelTemplate(AutoPipelineBaseTemplate):
+class TSForecastModelTemplate(AutoPipelineBaseTemplate):
     def __init__(self, requirements=None, required_imports=None, default_values=None):
         """
         The __init__ function is used to initialize the class.

@@ -2,7 +2,7 @@ from ..templates.sklearn_model import SkLearnModelTemplate
 from ..templates.sklearn_model_comparison import SkLearnModelComparisonTemplate
 from ..templates.pyod_model import PYODModelTemplate
 from ..templates.pyod_model_comparison import PYODModelComparisonTemplate
-from ..templates.ts_forecast_model import TSForecaseModelTemplate
+from ..templates.ts_forecast_model import TSForecastModelTemplate
 from ..templates.ts_forecast_model_comparison import TSForecastModelComparisonTemplate
 
 
@@ -231,7 +231,7 @@ class PYODModelComparisonBase(PYODModelComparisonTemplate):
 
 
 
-class TSForecastModelBase(TSForecaseModelTemplate):
+class TSForecastModelBase(TSForecastModelTemplate):
     def __init__(self, prefix, model_string, hyperparameters, imports=None,model_type=None):
         """
         The __init__ function is called when the class is instantiated.

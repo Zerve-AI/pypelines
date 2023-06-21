@@ -9,17 +9,18 @@ from sklearn.preprocessing import MinMaxScaler,OrdinalEncoder
 from sklearn.model_selection import train_test_split
 from sklearn.pipeline import Pipeline
 from sklearn.impute import SimpleImputer
-import sktime
 """
 
 template = """
+date_col = '{{date_column}}'
 features = list({{dataset}}.columns)
 feature_df = {{dataset}}[features]
 
 x_train = {{dataset}}[features]
+# preprocess pipelines to be added
 
 x_train_preprocessed = x_train
-
+x_train_preprocessed[date_col] = pd.to_datetime(x_train_preprocessed[date_col])
 model_comparison_list = []
 """
 
