@@ -1,17 +1,24 @@
 from .template_base import AutoPipelineBaseTemplate
 
 
+
 template = '''
 {{imports}}
+cv = ExpandingWindowSplitter(fh={{forecast_horizon}})
 
 {{prefix}}_param_grid = {{hyperparams}}
 
 {{prefix}}_model = {{prefix}}()
 
-{{prefix}}_model.fit(x_train_preprocessed)
+{{prefix}}_gscv = ForecastingGridSearchCV(
+    forecaster={{prefix}}_model,
+    param_grid={{prefix}}_param_grid,
+    cv=cv,
+    verbose=1)
+{{prefix}}_gscv.fit(x_train_preprocessed)
 
 # get the prediction on the test data
-{{prefix}}_y_pred = {{prefix}}_model.predict(fh={{forecast_horizon}})
+{{prefix}}_y_pred = {{prefix}}_gscv.predict(fh={{forecast_horizon}})
 
 '''
 

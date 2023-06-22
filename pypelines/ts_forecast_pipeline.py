@@ -2,7 +2,7 @@
 import os
 import pyperclip
 from .templates.ts_forecast_dataprep import TSTemplate
-from .schemas import HyperParams, NumericalParam, CategoricalParam
+from .schemas import HyperParamsTSF, NumericalParamTSF, CategoricalParamTSF
 from .models.timeseries_forecast import models_comparison_forecast, models_forecast, models_comparison_forecast_default, models_forecast_default
 import pandas as pd 
 from typing import Union
@@ -106,10 +106,10 @@ class TSForecastPipeline:
                 if k=='categorical':
                     if not p['selected']:
                         continue
-                    hyperparams.append(CategoricalParam(**{'prefix': model_prefix, 'name': p['name'], 'values': p['selected']}))
+                    hyperparams.append(CategoricalParamTSF(**{'prefix': model_prefix, 'name': p['name'], 'values': p['selected']}))
                 elif k=='numerical':
-                    hyperparams.append(NumericalParam(**{'prefix': model_prefix, **p}))
-        return HyperParams(**{'params': hyperparams})
+                    hyperparams.append(NumericalParamTSF(**{'prefix': model_prefix, **p}))
+        return HyperParamsTSF(**{'params': hyperparams})
     
     def parse_config(self):
         """
