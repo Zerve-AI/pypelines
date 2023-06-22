@@ -6,6 +6,10 @@ from .exponential_smoothing import ExponentialSmoothingForecast, ExponentialSmoo
 from .auto_ets import AutoETSForecast,AutoETSForecastComparison
 from .theta_forecast import ThetaForecast, ThetaForecastComparison
 from .croston_forecast import CrostonForecast, CrostonForecastComparison
+from .stats_forecast_auto_arima import SFAutoArimaForecast, SFAutoArimaForecastComparison
+from .stats_forecast_auto_ces import SFAutoCESForecast, SFAutoCESForecastComparison
+from .stats_forecast_auto_ets import SFAutoETSForecast, SFAutoETSForecastComparison
+from .stats_forecast_auto_theta import SFAutoThetaForecast, SFAutoThetaForecastComparison
 
 
 models_forecast = {
@@ -16,7 +20,11 @@ models_forecast = {
     'Exponential Smoothing': ExponentialSmoothingForecast,
     'AutoETS Forecast': AutoETSForecast,
     'Theta Forecast': ThetaForecast,
-    'Croston Forecast': CrostonForecast
+    'Croston Forecast': CrostonForecast,
+    'SFAutoArima Forecast': SFAutoArimaForecast,
+    'SFAutoCES Forecast': SFAutoCESForecast,
+    'SFAutoETS Forecast': SFAutoETSForecast,
+    'SFAutoTheta Forecast': SFAutoThetaForecast
 }
 
 models_comparison_forecast = {
@@ -27,7 +35,11 @@ models_comparison_forecast = {
     'Exponential Smoothing': ExponentialSmoothingForecastComparison,
     'AutoETS Forecast': AutoETSForecastComparison,
     'Theta Forecast': ThetaForecastComparison,
-    'Croston Forecast': CrostonForecastComparison
+    'Croston Forecast': CrostonForecastComparison,
+    'SFAutoArima Forecast': SFAutoArimaForecastComparison,
+    'SFAutoCES Forecast': SFAutoCESForecastComparison,
+    'SFAutoETS Forecast': SFAutoETSForecastComparison,
+    'SFAutoTheta Forecast': SFAutoThetaForecastComparison
 }
 
 
@@ -40,8 +52,11 @@ models_forecast_default = {
     'Exponential Smoothing': ExponentialSmoothingForecast,
     'AutoETS Forecast': AutoETSForecast,
     'Theta Forecast': ThetaForecast,
-    'Croston Forecast': CrostonForecast
-
+    'Croston Forecast': CrostonForecast,
+    'SFAutoArima Forecast': SFAutoArimaForecast,
+    'SFAutoCES Forecast': SFAutoCESForecast,
+    'SFAutoETS Forecast': SFAutoETSForecast,
+    'SFAutoTheta Forecast': SFAutoThetaForecast
 }
 
 models_comparison_forecast_default = {
@@ -52,5 +67,9 @@ models_comparison_forecast_default = {
     'Exponential Smoothing': ExponentialSmoothingForecastComparison,
     'AutoETS Forecast': AutoETSForecastComparison,
     'Theta Forecast': ThetaForecastComparison,
-    'Croston Forecast': CrostonForecastComparison
+    'Croston Forecast': CrostonForecastComparison,
+    'SFAutoArima Forecast': SFAutoArimaForecastComparison,
+    'SFAutoCES Forecast': SFAutoCESForecastComparison,
+    'SFAutoETS Forecast': SFAutoETSForecastComparison,
+    'SFAutoTheta Forecast': SFAutoThetaForecastComparison
 }

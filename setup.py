@@ -13,7 +13,8 @@ setup(
         'pydantic',
         'pyod',
         'suod',
-        'sktime'
+        'sktime',
+        'statsforecast'
     ],
     # other metadata
 )
