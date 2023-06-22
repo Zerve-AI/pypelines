@@ -3,11 +3,10 @@ from ..model_base import TSForecastModelBase, TSForecastModelComparisonBase
 
 exp_smoothing_forecast_hyperparams = {
     'numerical': [
-        {'search': True, 'name': 'sp', 'min': 12, 'max': 12, 'step': 1},
+        {'search': True, 'name': 'sp', 'min': 12, 'max': 13, 'step': 1},
         {'search': False, 'name': 'initial_level', 'min': None, 'max': None, 'step': None},
         {'search': False, 'name': 'initial_trend', 'min': None, 'max': None, 'step': None},
         {'search': False, 'name': 'initial_seasonal', 'min': None, 'max': None, 'step': None},
-        {'search': False, 'name': 'use_boxcox', 'min': None, 'max': None, 'step': None},
         {'search': False, 'name': 'smoothing_level', 'min': None, 'max': None, 'step': None},
         {'search': False, 'name': 'smoothing_trend', 'min': None, 'max': None, 'step': None},
         {'search': False, 'name': 'smoothing_seasonal', 'min': None, 'max': None, 'step': None},
@@ -21,11 +20,11 @@ exp_smoothing_forecast_hyperparams = {
         {'search': False, 'name': 'random_state', 'min': None, 'max': None, 'step': None}
     ],
     'categorical': [
-        {'search': False, 'name': 'trend', 'selected': ['add'], 'values': ['add', 'mul', 'additive', 'multiplicative', None]},
-        {'search': False, 'name': 'damped_trend', 'selected': [False], 'values': [True, False]},
-        {'search': False, 'name': 'seasonal', 'selected': ['multiplicative'], 'values': ['add', 'mul', 'additive', 'multiplicative', None]},
-        {'search': False, 'name': 'initialization_method', 'selected': ['estimated'], 'values': ['estimated', 'heuristic', 'legacy-heuristic', 'known', None]},
-        {'search': False, 'name': 'use_boxcox', 'selected': [False], 'values': [True, False]}
+        {'search': True, 'name': 'trend', 'selected': ['add'], 'values': ['add', 'mul', 'additive', 'multiplicative', None]},
+        {'search': True, 'name': 'damped_trend', 'selected': [False], 'values': [True, False]},
+        {'search': True, 'name': 'seasonal', 'selected': ['multiplicative'], 'values': ['add', 'mul', 'additive', 'multiplicative', None]},
+        {'search': True, 'name': 'initialization_method', 'selected': ['estimated'], 'values': ['estimated', 'heuristic', 'legacy-heuristic', 'known', None]},
+        {'search': True, 'name': 'use_boxcox', 'selected': [False], 'values': [True, False,'log', float]}
     ]
 }
 
