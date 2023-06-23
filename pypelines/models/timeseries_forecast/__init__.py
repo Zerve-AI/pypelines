@@ -10,6 +10,8 @@ from .stats_forecast_auto_arima import SFAutoArimaForecast, SFAutoArimaForecastC
 from .stats_forecast_auto_ces import SFAutoCESForecast, SFAutoCESForecastComparison
 from .stats_forecast_auto_ets import SFAutoETSForecast, SFAutoETSForecastComparison
 from .stats_forecast_auto_theta import SFAutoThetaForecast, SFAutoThetaForecastComparison
+from .sarimax_forecast import SarimaxForecast, SarimaxForecastComparison
+from .var import VARForecast, VARForecastComparison
 
 
 models_forecast = {
@@ -24,7 +26,9 @@ models_forecast = {
     'SFAutoArima Forecast': SFAutoArimaForecast,
     'SFAutoCES Forecast': SFAutoCESForecast,
     'SFAutoETS Forecast': SFAutoETSForecast,
-    'SFAutoTheta Forecast': SFAutoThetaForecast
+    'SFAutoTheta Forecast': SFAutoThetaForecast,
+    'SARIMAX': SarimaxForecast,
+    'VAR' : VARForecast
 }
 
 models_comparison_forecast = {
@@ -39,7 +43,9 @@ models_comparison_forecast = {
     'SFAutoArima Forecast': SFAutoArimaForecastComparison,
     'SFAutoCES Forecast': SFAutoCESForecastComparison,
     'SFAutoETS Forecast': SFAutoETSForecastComparison,
-    'SFAutoTheta Forecast': SFAutoThetaForecastComparison
+    'SFAutoTheta Forecast': SFAutoThetaForecastComparison,
+    'SARIMAX': SarimaxForecastComparison,
+    'VAR' : VARForecastComparison
 }
 
 
@@ -56,7 +62,9 @@ models_forecast_default = {
     'SFAutoArima Forecast': SFAutoArimaForecast,
     'SFAutoCES Forecast': SFAutoCESForecast,
     'SFAutoETS Forecast': SFAutoETSForecast,
-    'SFAutoTheta Forecast': SFAutoThetaForecast
+    'SFAutoTheta Forecast': SFAutoThetaForecast,
+    'SARIMAX': SarimaxForecast,
+    'VAR' : VARForecast
 }
 
 models_comparison_forecast_default = {
@@ -71,5 +79,7 @@ models_comparison_forecast_default = {
     'SFAutoArima Forecast': SFAutoArimaForecastComparison,
     'SFAutoCES Forecast': SFAutoCESForecastComparison,
     'SFAutoETS Forecast': SFAutoETSForecastComparison,
-    'SFAutoTheta Forecast': SFAutoThetaForecastComparison
+    'SFAutoTheta Forecast': SFAutoThetaForecastComparison,
+    'SARIMAX': SarimaxForecastComparison,
+    'VAR' : VARForecastComparison
 }
