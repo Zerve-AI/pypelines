@@ -12,6 +12,11 @@ from .stats_forecast_auto_ets import SFAutoETSForecast, SFAutoETSForecastCompari
 from .stats_forecast_auto_theta import SFAutoThetaForecast, SFAutoThetaForecastComparison
 from .sarimax_forecast import SarimaxForecast, SarimaxForecastComparison
 from .var import VARForecast, VARForecastComparison
+from .varmax import VARMAXForecast, VARMAXForecastComparison
+from .autoarima import AutoARIMAForecast, AutoARIMAForecastComparison
+from .arima import ARIMAForecast, ARIMAForecastComparison
+from .bats import BATSForecast, BATSForecastComparison
+from .tbats import TBATSForecast, TBATSForecastComparison
 
 
 models_forecast = {
@@ -28,7 +33,12 @@ models_forecast = {
     'SFAutoETS Forecast': SFAutoETSForecast,
     'SFAutoTheta Forecast': SFAutoThetaForecast,
     'SARIMAX': SarimaxForecast,
-    'VAR' : VARForecast
+    'VAR' : VARForecast,
+    'VARMAX' : VARMAXForecast,
+    'AutoARIMA': AutoARIMAForecast,
+    'ARIMA': ARIMAForecast,
+    'BATS': BATSForecast,
+    'TBATS': TBATSForecast
 }
 
 models_comparison_forecast = {
@@ -45,7 +55,12 @@ models_comparison_forecast = {
     'SFAutoETS Forecast': SFAutoETSForecastComparison,
     'SFAutoTheta Forecast': SFAutoThetaForecastComparison,
     'SARIMAX': SarimaxForecastComparison,
-    'VAR' : VARForecastComparison
+    'VAR' : VARForecastComparison,
+    'VARMAX' : VARMAXForecastComparison,
+    'AutoARIMA': AutoARIMAForecastComparison,
+    'ARIMA': ARIMAForecastComparison,
+    'BATS': BATSForecastComparison,
+    'TBATS': TBATSForecastComparison
 }
 
 
@@ -64,7 +79,12 @@ models_forecast_default = {
     'SFAutoETS Forecast': SFAutoETSForecast,
     'SFAutoTheta Forecast': SFAutoThetaForecast,
     'SARIMAX': SarimaxForecast,
-    'VAR' : VARForecast
+    'VAR' : VARForecast,
+    'VARMAX' : VARMAXForecast,
+    'AutoARIMA': AutoARIMAForecast,
+    'ARIMA': ARIMAForecast,
+    'BATS': BATSForecast,
+    'TBATS': TBATSForecast
 }
 
 models_comparison_forecast_default = {
@@ -81,5 +101,10 @@ models_comparison_forecast_default = {
     'SFAutoETS Forecast': SFAutoETSForecastComparison,
     'SFAutoTheta Forecast': SFAutoThetaForecastComparison,
     'SARIMAX': SarimaxForecastComparison,
-    'VAR' : VARForecastComparison
+    'VAR' : VARForecastComparison,
+    'VARMAX' : VARMAXForecastComparison,
+    'AutoARIMA': AutoARIMAForecastComparison,
+    'ARIMA': ARIMAForecastComparison,
+    'BATS': BATSForecastComparison,
+    'TBATS': TBATSForecastComparison
 }

@@ -126,7 +126,10 @@ class TSForecastPipeline:
         selected_models = self.models 
         self.metric = 'mean_squared_error'
         self.default_imports = tsf_imports
-        self.pipeline_params = {'dataset': self.dataset_name,'date_column':self.date_column,'date_format':self.date_format,'frequency':self.frequency}
+        self.pipeline_params = {'dataset': self.dataset_name,
+                                'date_column':self.date_column,
+                                'date_format':self.date_format,
+                                'frequency':self.frequency}
         self.shared_model_params = {'metric':self.metric ,'forecast_horizon':self.forecast_horizon}
         self.model_params = {k:v for k,v in self.model_param.items() if k in selected_models}
         self.model_comp_params = {k:v for k,v in self.model_param.items() if k in selected_models}

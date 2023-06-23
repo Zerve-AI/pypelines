@@ -14,7 +14,9 @@ setup(
         'pyod',
         'suod',
         'sktime',
-        'statsforecast'
+        'statsforecast',
+        'pmdarima',
+        'tbats'
     ],
     # other metadata
 )
