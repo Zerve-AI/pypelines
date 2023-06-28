@@ -18,10 +18,12 @@ class TSForecastPipeline:
     def __init__(self,
                  data:Union[str, pd.DataFrame],
                  models:list = None,
+                 target_column:str=None,
                  date_column:str = None,
                  date_format:str = None,
                  frequency:str = None,
-                 forecast_horizon:list = None):
+                 forecast_horizon:list = None,
+                 use_exogeneous_vars:str = 'False'):
         """
         The __init__ function initializes the class with the following parameters:
             
@@ -49,6 +51,8 @@ class TSForecastPipeline:
         self.frequency = frequency
         self.date_format = date_format
         self.forecast_horizon = forecast_horizon
+        self.target_column = target_column
+        self.exo = use_exogeneous_vars
 
         if models is None:
             self.models = list(models_forecast_default.keys())
@@ -129,8 +133,10 @@ class TSForecastPipeline:
         self.pipeline_params = {'dataset': self.dataset_name,
                                 'date_column':self.date_column,
                                 'date_format':self.date_format,
-                                'frequency':self.frequency}
-        self.shared_model_params = {'metric':self.metric ,'forecast_horizon':self.forecast_horizon}
+                                'target_column':self.target_column,
+                                'frequency':self.frequency,
+                                'exo':self.exo}
+        self.shared_model_params = {'metric':self.metric ,'forecast_horizon':self.forecast_horizon,'exo':self.exo}
         self.model_params = {k:v for k,v in self.model_param.items() if k in selected_models}
         self.model_comp_params = {k:v for k,v in self.model_param.items() if k in selected_models}
 

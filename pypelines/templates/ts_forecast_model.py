@@ -15,7 +15,12 @@ cv = ExpandingWindowSplitter(fh={{forecast_horizon}})
     param_grid={{prefix}}_param_grid,
     cv=cv,
     verbose=1)
-{{prefix}}_gscv.fit(x_train_preprocessed)
+
+{% if exo == "True" %}
+{{prefix}}_gscv.fit(y=y_train_preprocessed,X=x_train_preprocessed)
+{% elif exo == "False" %}
+{{prefix}}_gscv.fit(y=y_train_preprocessed)
+{% endif %}
 
 # get the prediction on the test data
 {{prefix}}_y_pred = {{prefix}}_gscv.predict(fh={{forecast_horizon}})
