@@ -6,7 +6,6 @@ import pandas as pd
 import numpy as np
 """
 
-
 template = """
 target_col='{{target_column}}'
 date_col = '{{date_column}}'

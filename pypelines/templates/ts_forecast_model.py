@@ -15,10 +15,13 @@ cv = ExpandingWindowSplitter(fh={{forecast_horizon}})
     param_grid={{prefix}}_param_grid,
     cv=cv,
     verbose=1)
-{{prefix}}_gscv.fit(y_train_preprocessed)
+{% if exo == "True" %}
+{{prefix}}_gscv.fit(y=y_train_preprocessed,X=x_train_preprocessed)
+{% elif exo == "False" %}
+{{prefix}}_gscv.fit(y=y_train_preprocessed)
+{% endif %}
 {{prefix}}_performance_metrics = {{prefix}}_gscv.cv_results_
 {{prefix}}_performance_metrics['model'] = {{prefix}}
-
 model_comparison_list.append({{prefix}}_performance_metrics)
 
 # get the prediction on the test data
