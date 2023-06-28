@@ -1,7 +1,11 @@
 from .template_base import AutoPipelineBaseTemplate
 
-
+# table = pd.concat([ARIMA_gscv.cv_results_,TrendForecaster_gscv.cv_results_, NaiveForecaster_gscv.cv_results_])
 template = '''
+table = pd.concat(model_comparison_list)
+table = table.sort_values('mean_test_MeanAbsolutePercentageError', ascending=True)
+print(table)
+print(f"The best model is {table['model'].iloc[0]} with MAPE of {table['mean_test_MeanAbsolutePercentageError'].iloc[0]:1f} % and predict time of {table['mean_pred_time'].iloc[0]:1f}")
 
 '''
 

@@ -6,18 +6,30 @@ import pandas as pd
 import numpy as np
 """
 
+
 template = """
-
+target_col='{{target_column}}'
 date_col = '{{date_column}}'
-features = list({{dataset}}.columns)
-feature_df = {{dataset}}[features]
 
-x_train = {{dataset}}[features]
-x_train_preprocessed = x_train
+{% if exo == "True" %}
+features = list({{dataset}}.columns.drop(target_col))
+y = {{dataset}}[[date_col,target_col]]
+y_train_preprocessed = y
+y_train_preprocessed[date_col] = pd.to_datetime(y_train_preprocessed[date_col],format = "{{date_format}}")
+y_train_preprocessed = y_train_preprocessed.set_index(date_col)
+y_train_preprocessed.index = y_train_preprocessed.index.to_period(freq = "{{frequency}}")
+X = {{dataset}}[features]
+x_train_preprocessed = X
 x_train_preprocessed[date_col] = pd.to_datetime(x_train_preprocessed[date_col],format = "{{date_format}}")
 x_train_preprocessed = x_train_preprocessed.set_index(date_col)
 x_train_preprocessed.index = x_train_preprocessed.index.to_period(freq = "{{frequency}}")
-
+{% elif exo == "False" %}
+y = {{dataset}}[[date_col,target_col]]
+y_train_preprocessed = y
+y_train_preprocessed[date_col] = pd.to_datetime(y_train_preprocessed[date_col],format = "{{date_format}}")
+y_train_preprocessed = y_train_preprocessed.set_index(date_col)
+y_train_preprocessed.index = y_train_preprocessed.index.to_period(freq = "{{frequency}}")
+{% endif %}
 model_comparison_list = []
 """
 
