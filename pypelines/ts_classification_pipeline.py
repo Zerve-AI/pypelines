@@ -1,33 +1,27 @@
 #from typing import Type
 import os
 import pyperclip
-from .templates.sklearn_dataprep import SKLearnTemplate
-from .schemas import HyperParams, NumericalParam, CategoricalParam
-from .models.classification import models_classification , models_comparison_classification, models_classification_default, models_comparison_classification_default
-from .models.regression import models_regression, models_comparison_regression, models_regression_default, models_comparison_regression_default
+from .templates.ts_classification_dataprep import TSClassificationTemplate
+from .schemas import HyperParamsTSClassification, NumericalParamClassification, CategoricalParamTSClassification
+from .models.timeseries_classification import models_ts_classification,models_comparison_ts_classification, models_ts_classification_default, models_comparison_ts_classification_default
 import pandas as pd 
 from typing import Union
 import inspect
 
 
-classification_imports = '''
-from sklearn.model_selection import GridSearchCV
+tsclassification_imports = '''
+from sktime import *
 from sklearn.metrics import accuracy_score
 '''
 
-regression_imports = '''
-from sklearn.model_selection import GridSearchCV
-from sklearn.metrics import mean_squared_error
-'''
-
-class SupervisedPipeline:
+class TSClassificationPipeline:
     def __init__(self,
                  data:Union[str, pd.DataFrame],
-                 predictions_data:Union[str, pd.DataFrame],
-                 target:str,
-                 model_type:str,
-                 nfolds:int,
-                 models:list = None):
+                 test_data:Union[str, pd.DataFrame],
+                 models:list = None,
+                 target_column:str=None,
+                 positive_class:str=None,
+                 nfolds:int=3):
         """
         The __init__ function initializes the class with the following parameters:
             
@@ -49,30 +43,31 @@ class SupervisedPipeline:
         else:
             raise ValueError("data must be a pandas DataFrame or a string")
         
-        if isinstance(predictions_data, pd.DataFrame):
+        if isinstance(test_data, pd.DataFrame):
             callers_globals = inspect.stack()[1][0].f_globals
-            predictions_dataset_name = [k for k,v in callers_globals.items() if v is data][0]
-        elif isinstance(predictions_data, str):
-            predictions_dataset_name = predictions_data
+            test_dataset_name = [k for k,v in callers_globals.items() if v is test_data][0]
+        elif isinstance(data, str):
+            test_dataset_name = test_data
         else:
-            raise ValueError("test_data must be a pandas DataFrame or a string")
+            raise ValueError("data must be a pandas DataFrame or a string. If no test data is available please use train dataframe as test data.n\
+                             Metrics will be unreliable in this case as prediction is done on same data as train data.")
+
 
         self.dataset_name = dataset_name
-        self.predictions_dataset_name = predictions_dataset_name
-        self.target = target
-        self.model_type = model_type
+        self.target_column = target_column
+        self.nfolds = nfolds
+        self.test_dataset_name = test_dataset_name
+        self.pos_label=positive_class
 
-        if models is None and model_type == 'classification':
-            self.models = list(models_classification_default.keys())
-        elif models is None and model_type == 'regression':
-            self.models = list(models_regression_default.keys())    
+        if models is None:
+            self.models = list(models_ts_classification_default.keys())
         else :
             self.models = models
 
+        self.models_tsclf = models_ts_classification
+        
 
-        self.nfolds = nfolds
-        self.models_clf = models_classification
-        self.models_reg = models_regression
+    
 
     def model_list(self):
         """
@@ -92,10 +87,7 @@ class SupervisedPipeline:
         :param self: Bind the instance of the class to a method
         :return: A dictionary of hyperparameters for each model in the models list
         """
-        if   self.model_type == 'classification':
-             self.models_ = self.models_clf
-        elif self.model_type == 'regression':
-             self.models_ = self.models_reg
+        self.models_ = self.models_tsclf
         self.model_params = {k:v for k,v in self.models_.items() if k in self.models}
         hyperparameters = {}
         for name, model in self.model_params.items():
@@ -124,10 +116,10 @@ class SupervisedPipeline:
                 if k=='categorical':
                     if not p['selected']:
                         continue
-                    hyperparams.append(CategoricalParam(**{'prefix': model_prefix, 'name': p['name'], 'values': p['selected']}))
+                    hyperparams.append(CategoricalParamTSClassification(**{'prefix': model_prefix, 'name': p['name'], 'values': p['selected']}))
                 elif k=='numerical':
-                    hyperparams.append(NumericalParam(**{'prefix': model_prefix, **p}))
-        return HyperParams(**{'params': hyperparams})
+                    hyperparams.append(NumericalParamClassification(**{'prefix': model_prefix, **p}))
+        return HyperParamsTSClassification(**{'params': hyperparams})
     
     def parse_config(self):
         """
@@ -138,27 +130,21 @@ class SupervisedPipeline:
         :param self: Represent the instance of the class
         :return: A dictionary of models, model_params, pipeline_params and shared_model params
         """
-        if self.model_type == 'classification':
-           self.models_all = models_classification
-           self.model_comp_all = models_comparison_classification
-           self.model_param = self.get_hyperparameters()
-           selected_models = self.models 
-           self.metric = 'accuracy_score'
-           self.default_imports = classification_imports
-        elif self.model_type== 'regression':
-           self.models_all = models_regression
-           self.model_comp_all = models_comparison_regression
-           self.model_param = self.get_hyperparameters()
-           selected_models = self.models 
-           self.metric = 'mean_squared_error'
-           self.default_imports = regression_imports
-        self.pipeline_params = {'dataset': self.dataset_name, 'target_column': self.target,'prediction_dataset':self.predictions_dataset_name}
-        self.shared_model_params = {'cross_validation':self.nfolds, 'metric':self.metric }
+        self.models_all = models_ts_classification
+        self.model_comp_all = models_comparison_ts_classification
+        self.model_param = self.get_hyperparameters()
+        selected_models = self.models 
+        self.metric = 'accuracy_score'
+        self.default_imports = tsclassification_imports
+        self.pipeline_params = {'dataset': self.dataset_name,
+                                'target_column':self.target_column,
+                                'test_dataset':self.test_dataset_name}
+        self.shared_model_params = {'metric':self.metric,'cross_validation':self.nfolds, 'pos_label':self.pos_label}
         self.model_params = {k:v for k,v in self.model_param.items() if k in selected_models}
         self.model_comp_params = {k:v for k,v in self.model_param.items() if k in selected_models}
 
     def generate_code(self, output_path:str=None):
-        """
+        """s
         The generate_code function takes in a dictionary of parameters and generates code for the pipeline.
         
         :param self: Refer to the object itself
@@ -169,7 +155,7 @@ class SupervisedPipeline:
         code_list = {}
         code_append = "" #store output for each model - used for writing code file output for each model
         code_all_models = "" #store output for all models - used for copy_to_clipboard
-        code, imports, requirements = SKLearnTemplate()(self.pipeline_params)
+        code, imports, requirements = TSClassificationTemplate()(self.pipeline_params)
         imports = self.default_imports + '\n' + imports
         code_append += imports
         code_append += code
@@ -270,10 +256,7 @@ class SupervisedPipeline:
         :param model_name:str: Specify the name of the model to be used
         :return: The hyperparameters of the model
         """
-        if   self.model_type == 'classification':
-             self.models_ = self.models_clf
-        elif self.model_type == 'regression':
-             self.models_ = self.models_reg
+        self.models_ = self.models_tsclf
         self.model_params = {k:v for k,v in self.models_.items() if k in model_name}
         hyperparameters = {}
         for name, model in self.model_params.items():
@@ -292,7 +275,7 @@ class SupervisedPipeline:
         """
         self.parse_config()
         code_append = ""
-        code, imports, requirements = SKLearnTemplate()(self.pipeline_params)
+        code, imports, requirements = TSClassificationTemplate()(self.pipeline_params)
         imports = self.default_imports + '\n' + imports
         code_append += imports
         code_append += code
@@ -334,5 +317,3 @@ class SupervisedPipeline:
             pyperclip.copy(code_append)
         return print(code_append)
     
-
-

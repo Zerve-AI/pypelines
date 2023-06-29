@@ -6,6 +6,10 @@ from .categorical_param import CategoricalParam
 from .constant_param import ConstantParamAD
 from .numerical_param import NumericalParamAD
 from .categorical_param import CategoricalParamAD
+
+from .categorical_param import CategoricalParamTSClassification
+from .numerical_param import NumericalParamClassification
+from .constant_param import ConstantParamTSClassification
 from typing import List, Union
 
 
@@ -28,4 +32,11 @@ class HyperParamsAD(BaseModel):
     def __str__(self):
         return f'{{\n{"".join([str(param) for param in self.params])}}}\n'
 
+class HyperParamsTSClassification(BaseModel):
+    params: List[Union[CategoricalParamTSClassification, NumericalParamClassification, ConstantParamTSClassification]]
 
+    def __repr__(self):
+        return f'{{\n{"".join([str(param) for param in self.params])}}}\n'
+
+    def __str__(self):
+        return f'{{\n{"".join([str(param) for param in self.params])}}}\n'
