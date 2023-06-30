@@ -3,6 +3,12 @@ from .lstmfcn import LSTMFCNTSClassifier, LSTMFCNTSClassifierComparison
 from .fcn import FCNTSClassifier, FCNTSClassifierComparison
 from .inceptiontime import InceptionTimeClassifier, InceptionTimeClassifierComparison
 from .mlp import MLPTSClassifier, MLPTSClassifierComparison
+from .tapnet import TapNetTSClassifier, TapNetTSClassifierComparison
+from .bossensemble import BOSSEnsembleTSClassifier, BOSSEnsembleTSClassifierComparison
+from .contractableboss import ContractableBOSSTSClassifier, ContractableBOSSTSClassifierComparison
+from .elasticensemble import ElasticEnsembleTSClassifier, ElasticEnsembleTSClassifierComparison
+
+
 
 
 models_ts_classification = {
@@ -10,7 +16,11 @@ models_ts_classification = {
     'LSTMFCN': LSTMFCNTSClassifier,
     'FCN': FCNTSClassifier,
     'INCEPTIONTIME': InceptionTimeClassifier,
-    'MLP': MLPTSClassifier
+    'MLP': MLPTSClassifier,
+    'TAPNET': TapNetTSClassifier,
+    'BOSSENSEMBLE': BOSSEnsembleTSClassifier,
+    'CONTRACTABLEBOSS': ContractableBOSSTSClassifier,
+    'ElasticEnsemble':ElasticEnsembleTSClassifier
 }
 
 models_comparison_ts_classification = {
@@ -18,7 +28,11 @@ models_comparison_ts_classification = {
     'LSTMFCN': LSTMFCNTSClassifierComparison,
     'FCN': FCNTSClassifierComparison,
     'INCEPTIONTIME': InceptionTimeClassifierComparison,
-    'MLP': MLPTSClassifierComparison
+    'MLP': MLPTSClassifierComparison,
+    'TAPNET': TapNetTSClassifierComparison,
+    'BOSSENSEMBLE': BOSSEnsembleTSClassifierComparison,
+    'CONTRACTABLEBOSS': ContractableBOSSTSClassifierComparison,
+    'ElasticEnsemble':ElasticEnsembleTSClassifierComparison
 }
 
 models_ts_classification_default = {
@@ -26,7 +40,11 @@ models_ts_classification_default = {
     'LSTMFCN': LSTMFCNTSClassifier,
     'FCN': FCNTSClassifier,
     'INCEPTIONTIME': InceptionTimeClassifier,
-    'MLP': MLPTSClassifier
+    'MLP': MLPTSClassifier,
+    'TAPNET': TapNetTSClassifier,
+    'BOSSENSEMBLE': BOSSEnsembleTSClassifier,
+    'CONTRACTABLEBOSS': ContractableBOSSTSClassifier,
+    'ElasticEnsemble':ElasticEnsembleTSClassifier
 }
 
 
@@ -35,5 +53,9 @@ models_comparison_ts_classification_default = {
     'LSTMFCN': LSTMFCNTSClassifierComparison,
     'FCN': FCNTSClassifierComparison,
     'INCEPTIONTIME': InceptionTimeClassifierComparison,
-    'MLP': MLPTSClassifierComparison
+    'MLP': MLPTSClassifierComparison,
+    'TAPNET': TapNetTSClassifierComparison,
+    'BOSSENSEMBLE': BOSSEnsembleTSClassifierComparison,
+    'CONTRACTABLEBOSS': ContractableBOSSTSClassifierComparison,
+    'ElasticEnsemble':ElasticEnsembleTSClassifierComparison
 }

@@ -12,7 +12,8 @@ setup(
         'jinja2',
         'pydantic',
         'pyod',
-        'suod'
+        'suod',
+        'keras-self-attention'
     ],
     # other metadata
 )
