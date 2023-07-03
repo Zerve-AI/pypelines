@@ -9,6 +9,9 @@ from .contractableboss import ContractableBOSSTSClassifier, ContractableBOSSTSCl
 from .elasticensemble import ElasticEnsembleTSClassifier, ElasticEnsembleTSClassifierComparison
 from .knn import KNNTSClassifier, KNNTSClassifierComparison
 from .proximityforest import ProximityForestTSClassifier, ProximityForestTSClassifierComparison
+from .proximitystump import ProximityStumpTSClassifier, ProximityStumpTSClassifierComparison
+from .proximitytree import ProximityTreeTSClassifier, ProximityTreeTSClassifierComparison
+from .shapedtw import ShapeDTWTSClassifier, ShapeDTWSClassifierComparison
 
 
 
@@ -25,6 +28,9 @@ models_ts_classification = {
     'ElasticEnsemble':ElasticEnsembleTSClassifier,
     'KNN': KNNTSClassifier,
     'ProximityForest': ProximityForestTSClassifier,
+    'ProximityStump': ProximityStumpTSClassifier,
+    'ProximityTree':ProximityTreeTSClassifier,
+    'ShapeDTW': ShapeDTWTSClassifier
 }
 
 models_comparison_ts_classification = {
@@ -39,6 +45,9 @@ models_comparison_ts_classification = {
     'ElasticEnsemble':ElasticEnsembleTSClassifierComparison,
     'KNN': KNNTSClassifierComparison,
     'ProximityForest': ProximityForestTSClassifierComparison,
+    'ProximityStump': ProximityStumpTSClassifierComparison,
+    'ProximityTree':ProximityTreeTSClassifierComparison,
+    'ShapeDTW': ShapeDTWSClassifierComparison
 }
 
 models_ts_classification_default = {
@@ -53,6 +62,9 @@ models_ts_classification_default = {
     'ElasticEnsemble':ElasticEnsembleTSClassifier,
     'KNN': KNNTSClassifier,
     'ProximityForest': ProximityForestTSClassifier,
+    'ProximityStump': ProximityStumpTSClassifier,
+    'ProximityTree':ProximityTreeTSClassifier,
+    'ShapeDTW': ShapeDTWTSClassifier
 }
 
 
@@ -68,4 +80,7 @@ models_comparison_ts_classification_default = {
     'ElasticEnsemble':ElasticEnsembleTSClassifierComparison,
     'KNN': KNNTSClassifierComparison,
     'ProximityForest': ProximityForestTSClassifierComparison,
+    'ProximityStump': ProximityStumpTSClassifierComparison,
+    'ProximityTree':ProximityTreeTSClassifierComparison,
+    'ShapeDTW': ShapeDTWSClassifierComparison
 }
