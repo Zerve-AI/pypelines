@@ -68,43 +68,23 @@ models_comparison_forecast = {
 models_forecast_default = {
     'Trend Forecast': TrendForecast,
     'Naive Forecast': NaiveForecast,
-    'Polynomial Trend Forecast': PolynomialTrendForecast,
-    'STL Forecast': STLForecast,
     'Exponential Smoothing': ExponentialSmoothingForecast,
     'AutoETS Forecast': AutoETSForecast,
-    'Theta Forecast': ThetaForecast,
-    'Croston Forecast': CrostonForecast,
-    'SFAutoArima Forecast': SFAutoArimaForecast,
-    'SFAutoCES Forecast': SFAutoCESForecast,
-    'SFAutoETS Forecast': SFAutoETSForecast,
-    'SFAutoTheta Forecast': SFAutoThetaForecast,
     'SARIMAX': SarimaxForecast,
     'VAR' : VARForecast,
     'VARMAX' : VARMAXForecast,
     'AutoARIMA': AutoARIMAForecast,
     'ARIMA': ARIMAForecast,
-    'BATS': BATSForecast,
-    'TBATS': TBATSForecast
 }
 
 models_comparison_forecast_default = {
     'Trend Forecast': TrendForecastComparison,
     'Naive Forecast': NaiveForecastComparison,
-    'Polynomial Trend Forecast': PolynomialTrendForecastComparison,
-    'STL Forecast': STLForecastComparison,
     'Exponential Smoothing': ExponentialSmoothingForecastComparison,
     'AutoETS Forecast': AutoETSForecastComparison,
-    'Theta Forecast': ThetaForecastComparison,
-    'Croston Forecast': CrostonForecastComparison,
-    'SFAutoArima Forecast': SFAutoArimaForecastComparison,
-    'SFAutoCES Forecast': SFAutoCESForecastComparison,
-    'SFAutoETS Forecast': SFAutoETSForecastComparison,
-    'SFAutoTheta Forecast': SFAutoThetaForecastComparison,
     'SARIMAX': SarimaxForecastComparison,
     'VAR' : VARForecastComparison,
     'VARMAX' : VARMAXForecastComparison,
     'AutoARIMA': AutoARIMAForecastComparison,
     'ARIMA': ARIMAForecastComparison,
-    'BATS': BATSForecastComparison,
-    'TBATS': TBATSForecastComparison
 }
