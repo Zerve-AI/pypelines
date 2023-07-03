@@ -7,6 +7,8 @@ from .tapnet import TapNetTSClassifier, TapNetTSClassifierComparison
 from .bossensemble import BOSSEnsembleTSClassifier, BOSSEnsembleTSClassifierComparison
 from .contractableboss import ContractableBOSSTSClassifier, ContractableBOSSTSClassifierComparison
 from .elasticensemble import ElasticEnsembleTSClassifier, ElasticEnsembleTSClassifierComparison
+from .knn import KNNTSClassifier, KNNTSClassifierComparison
+from .proximityforest import ProximityForestTSClassifier, ProximityForestTSClassifierComparison
 
 
 
@@ -20,7 +22,9 @@ models_ts_classification = {
     'TAPNET': TapNetTSClassifier,
     'BOSSENSEMBLE': BOSSEnsembleTSClassifier,
     'CONTRACTABLEBOSS': ContractableBOSSTSClassifier,
-    'ElasticEnsemble':ElasticEnsembleTSClassifier
+    'ElasticEnsemble':ElasticEnsembleTSClassifier,
+    'KNN': KNNTSClassifier,
+    'ProximityForest': ProximityForestTSClassifier,
 }
 
 models_comparison_ts_classification = {
@@ -32,7 +36,9 @@ models_comparison_ts_classification = {
     'TAPNET': TapNetTSClassifierComparison,
     'BOSSENSEMBLE': BOSSEnsembleTSClassifierComparison,
     'CONTRACTABLEBOSS': ContractableBOSSTSClassifierComparison,
-    'ElasticEnsemble':ElasticEnsembleTSClassifierComparison
+    'ElasticEnsemble':ElasticEnsembleTSClassifierComparison,
+    'KNN': KNNTSClassifierComparison,
+    'ProximityForest': ProximityForestTSClassifierComparison,
 }
 
 models_ts_classification_default = {
@@ -44,7 +50,9 @@ models_ts_classification_default = {
     'TAPNET': TapNetTSClassifier,
     'BOSSENSEMBLE': BOSSEnsembleTSClassifier,
     'CONTRACTABLEBOSS': ContractableBOSSTSClassifier,
-    'ElasticEnsemble':ElasticEnsembleTSClassifier
+    'ElasticEnsemble':ElasticEnsembleTSClassifier,
+    'KNN': KNNTSClassifier,
+    'ProximityForest': ProximityForestTSClassifier,
 }
 
 
@@ -57,5 +65,7 @@ models_comparison_ts_classification_default = {
     'TAPNET': TapNetTSClassifierComparison,
     'BOSSENSEMBLE': BOSSEnsembleTSClassifierComparison,
     'CONTRACTABLEBOSS': ContractableBOSSTSClassifierComparison,
-    'ElasticEnsemble':ElasticEnsembleTSClassifierComparison
+    'ElasticEnsemble':ElasticEnsembleTSClassifierComparison,
+    'KNN': KNNTSClassifierComparison,
+    'ProximityForest': ProximityForestTSClassifierComparison,
 }
