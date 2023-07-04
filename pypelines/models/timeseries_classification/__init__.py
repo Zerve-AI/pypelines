@@ -12,6 +12,7 @@ from .proximityforest import ProximityForestTSClassifier, ProximityForestTSClass
 from .proximitystump import ProximityStumpTSClassifier, ProximityStumpTSClassifierComparison
 from .proximitytree import ProximityTreeTSClassifier, ProximityTreeTSClassifierComparison
 from .shapedtw import ShapeDTWTSClassifier, ShapeDTWSClassifierComparison
+from .dummy import DUMMYTSClassifier, DUMMYTSClassifierComparison
 
 
 
@@ -30,7 +31,8 @@ models_ts_classification = {
     'ProximityForest': ProximityForestTSClassifier,
     'ProximityStump': ProximityStumpTSClassifier,
     'ProximityTree':ProximityTreeTSClassifier,
-    'ShapeDTW': ShapeDTWTSClassifier
+    'ShapeDTW': ShapeDTWTSClassifier,
+    'DummyClassifier': DUMMYTSClassifier
 }
 
 models_comparison_ts_classification = {
@@ -47,7 +49,8 @@ models_comparison_ts_classification = {
     'ProximityForest': ProximityForestTSClassifierComparison,
     'ProximityStump': ProximityStumpTSClassifierComparison,
     'ProximityTree':ProximityTreeTSClassifierComparison,
-    'ShapeDTW': ShapeDTWSClassifierComparison
+    'ShapeDTW': ShapeDTWSClassifierComparison,
+    'DummyClassifier': DUMMYTSClassifierComparison
 }
 
 models_ts_classification_default = {
@@ -64,7 +67,8 @@ models_ts_classification_default = {
     'ProximityForest': ProximityForestTSClassifier,
     'ProximityStump': ProximityStumpTSClassifier,
     'ProximityTree':ProximityTreeTSClassifier,
-    'ShapeDTW': ShapeDTWTSClassifier
+    'ShapeDTW': ShapeDTWTSClassifier,
+    'DummyClassifier': DUMMYTSClassifier
 }
 
 
@@ -82,5 +86,6 @@ models_comparison_ts_classification_default = {
     'ProximityForest': ProximityForestTSClassifierComparison,
     'ProximityStump': ProximityStumpTSClassifierComparison,
     'ProximityTree':ProximityTreeTSClassifierComparison,
-    'ShapeDTW': ShapeDTWSClassifierComparison
+    'ShapeDTW': ShapeDTWSClassifierComparison,
+    'DummyClassifier': DUMMYTSClassifierComparison
 }
