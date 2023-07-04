@@ -35,8 +35,8 @@ from .catch22classifier import Catch22TSClassifier, Catch22TSClassifierCompariso
 from .Fresh_prince import FreshPRINCETSClassifier, FreshPRINCETSClassifierComparison
 from .matrix_pc import MatrixPCTSClassifier, MatrixPCTSClassifierComparison
 from .random_ic import RandomICTSClassifier, RandomICTSClassifierComparison
-
-
+from .shapedtw import ShapeDTWTSClassifier, ShapeDTWSClassifierComparison
+from .dummy import DUMMYTSClassifier, DUMMYTSClassifierComparison
 
 models_ts_classification = {
     'CNN': CNNTSClassifier,
@@ -53,12 +53,8 @@ models_ts_classification = {
     'ProximityStump': ProximityStumpTSClassifier,
     'ProximityTree':ProximityTreeTSClassifier,
     'ShapeDTW': ShapeDTWTSClassifier,
-    #'RotationForest': RotationForestTSClassifier,
     'RocketClassifer': RocketTSClassifier,
     'Arsenal': ArsenalTSClassifier,
-    #'TimeSeriesSVC': TimeSeriesSVCTSClassifier,
-    #'MrSQM': MrSQMTSClassifier,
-    #'ContinuousIntervalTree': ContinuousIntervalTreeTSClassifier,
     'ShapeletTransformClassifier': ShapeletTransformTSClassifier,
     'TimeSeriesForestClassifier': TimeSeriesForestTSClassifier,
     'SupervisedTimeSeriesForestClassifier': SupervisedTimeSeriesForestTSClassifier,
@@ -70,12 +66,11 @@ models_ts_classification = {
     'TSFreshClassifier': TSFreshTSClassifier,
     'SummaryClassifier': SummaryTSClassifier,
     'SignatureClassifier': SignatureTSClassifier,
-    #'TEASER': TEASERTSClassifier,
-    #'ProbabilityThresholdEarlyClassifier': ProbabilityTECTSClassifier,
     'Catch22Classifier': Catch22TSClassifier,
     'FreshPRINCE': FreshPRINCETSClassifier,
     'MatrixProfileClassifier': MatrixPCTSClassifier,
     'RandomIntervalClassifier': RandomICTSClassifier
+    'DummyClassifier': DUMMYTSClassifier
 }
 
 models_comparison_ts_classification = {
@@ -93,12 +88,8 @@ models_comparison_ts_classification = {
     'ProximityStump': ProximityStumpTSClassifierComparison,
     'ProximityTree':ProximityTreeTSClassifierComparison,
     'ShapeDTW': ShapeDTWSTSClassifierComparison, 
-    #'RotationForest': RotationForestTSClassifierComparison,
     'RocketClassifer': RocketTSClassifierComparison,
     'Arsenal': ArsenalTSClassifierComparison,
-    #'TimeSeriesSVC': TimeSeriesSVCTSClassifierComparison,
-    #'MrSQM': MrSQMTSClassifierComparison,
-    #'ContinuousIntervalTree': ContinuousIntervalTreeTSClassifierComparison,
     'ShapeletTransformClassifier': ShapeletTransformTSClassifierComparison,
     'TimeSeriesForestClassifier': TimeSeriesForestTSClassifierComparison,
     'SupervisedTimeSeriesForestClassifier': SupervisedTimeSeriesForestTSClassifierComparison,
@@ -110,92 +101,46 @@ models_comparison_ts_classification = {
     'TSFreshClassifier': TSFreshTSClassifierComparison,
     'SummaryClassifier': SummaryTSClassifierComparison,
     'SignatureClassifier': SignatureTSClassifierComparison,
-    #'TEASER': TEASERTSClassifierComparison,
-    #'ProbabilityThresholdEarlyClassifier': ProbabilityTECTSClassifierComparison,
     'Catch22Classifier': Catch22TSClassifierComparison,
     'FreshPRINCE': FreshPRINCETSClassifierComparison,
     'MatrixProfileClassifier': MatrixPCTSClassifierComparison,
     'RandomIntervalClassifier': RandomICTSClassifierComparison
-    
+    'DummyClassifier': DUMMYTSClassifierComparison
 }
 
 models_ts_classification_default = {
     'CNN': CNNTSClassifier,
     'LSTMFCN': LSTMFCNTSClassifier,
-    'FCN': FCNTSClassifier,
-    'INCEPTIONTIME': InceptionTimeClassifier,
     'MLP': MLPTSClassifier,
-    'TAPNET': TapNetTSClassifier,
-    'BOSSENSEMBLE': BOSSEnsembleTSClassifier,
-    'CONTRACTABLEBOSS': ContractableBOSSTSClassifier,
     'ElasticEnsemble':ElasticEnsembleTSClassifier,
     'KNN': KNNTSClassifier,
-    'ProximityForest': ProximityForestTSClassifier,
-    'ProximityStump': ProximityStumpTSClassifier,
-    'ProximityTree':ProximityTreeTSClassifier,
     'ShapeDTW': ShapeDTWTSClassifier,
-    #'RotationForest': RotationForestTSClassifier,
-    'RocketClassifer': RocketTSClassifier,
-    'Arsenal': ArsenalTSClassifier,
-    #'TimeSeriesSVC': TimeSeriesSVCTSClassifier,
-    #'MrSQM': MrSQMTSClassifier,
-    #'ContinuousIntervalTree': ContinuousIntervalTreeTSClassifier,
-    'ShapeletTransformClassifier': ShapeletTransformTSClassifier,
     'TimeSeriesForestClassifier': TimeSeriesForestTSClassifier,
     'SupervisedTimeSeriesForestClassifier': SupervisedTimeSeriesForestTSClassifier,
     'DrCIF': DrCIFTSClassifier,
     'RandomIntervalSpectralEnsemble': RandomISETSClassifier,
     'CanonicalIntervalForest': CanonicalIFTSClassifier,
-    'HIVECOTEV2': HIVECOTEV2TSClassifier,
-    'HIVECOTEV1': HIVECOTEV1TSClassifier,
     'TSFreshClassifier': TSFreshTSClassifier,
-    'SummaryClassifier': SummaryTSClassifier,
-    'SignatureClassifier': SignatureTSClassifier,
-    #'TEASER': TEASERTSClassifier,
-    #'ProbabilityThresholdEarlyClassifier': ProbabilityTECTSClassifier,
-    'Catch22Classifier': Catch22TSClassifier,
-    'FreshPRINCE': FreshPRINCETSClassifier,
     'MatrixProfileClassifier': MatrixPCTSClassifier,
     'RandomIntervalClassifier': RandomICTSClassifier
-} 
+    'DummyClassifier': DUMMYTSClassifier
+}
 
 
 models_comparison_ts_classification_default = {
-    'CNN': CNNTSClassifierComparison,
+     'CNN': CNNTSClassifierComparison,
     'LSTMFCN': LSTMFCNTSClassifierComparison,
-    'FCN': FCNTSClassifierComparison,
-    'INCEPTIONTIME': InceptionTimeClassifierComparison,
     'MLP': MLPTSClassifierComparison,
-    'TAPNET': TapNetTSClassifierComparison,
-    'BOSSENSEMBLE': BOSSEnsembleTSClassifierComparison,
-    'CONTRACTABLEBOSS': ContractableBOSSTSClassifierComparison,
     'ElasticEnsemble':ElasticEnsembleTSClassifierComparison,
     'KNN': KNNTSClassifierComparison,
-    'ProximityForest': ProximityForestTSClassifierComparison,
-    'ProximityStump': ProximityStumpTSClassifierComparison,
-    'ProximityTree':ProximityTreeTSClassifierComparison,
-    'ShapeDTW': ShapeDTWSTSClassifierComparison,
-    #'RotationForest': RotationForestTSClassifierComparison,
-    'RocketClassifer': RocketTSClassifierComparison,
-    'Arsenal': ArsenalTSClassifierComparison,
-    #'TimeSeriesSVC': TimeSeriesSVCTSClassifierComparison,
-    #'MrSQM': MrSQMTSClassifierComparison,
-    #'ContinuousIntervalTree': ContinuousIntervalTreeTSClassifierComparison,
-    'ShapeletTransformClassifier': ShapeletTransformTSClassifierComparison,
+    'ShapeDTW': ShapeDTWTSClassifierComparison,
     'TimeSeriesForestClassifier': TimeSeriesForestTSClassifierComparison,
     'SupervisedTimeSeriesForestClassifier': SupervisedTimeSeriesForestTSClassifierComparison,
     'DrCIF': DrCIFTSClassifierComparison,
     'RandomIntervalSpectralEnsemble': RandomISETSClassifierComparison,
     'CanonicalIntervalForest': CanonicalIFTSClassifierComparison,
-    'HIVECOTEV2': HIVECOTEV2TSClassifierComparison,
-    'HIVECOTEV1': HIVECOTEV1TSClassifierComparison,
     'TSFreshClassifier': TSFreshTSClassifierComparison,
-    'SummaryClassifier': SummaryTSClassifierComparison,
-    'SignatureClassifier': SignatureTSClassifierComparison,
-    #'TEASER': TEASERTSClassifierComparison,
-    #'ProbabilityThresholdEarlyClassifier': ProbabilityTECTSClassifierComparison,
-    'Catch22Classifier': Catch22TSClassifierComparison,
-    'FreshPRINCE': FreshPRINCETSClassifierComparison,
     'MatrixProfileClassifier': MatrixPCTSClassifierComparison,
-    'RandomIntervalClassifier': RandomICTSClassifierComparison
+    'RandomIntervalClassifier': RandomICTSClassifierComparison,
+    'DummyClassifier': DUMMYTSClassifierComparison
 }
