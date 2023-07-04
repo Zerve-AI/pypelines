@@ -25,18 +25,22 @@ class TSForecastPipeline:
                  forecast_horizon:list = None,
                  use_exogeneous_vars:str = 'False'):
         """
-        The __init__ function initializes the class with the following parameters:
-            
+        The __init__ function is called when the class is instantiated.
+        It sets up the instance variables for each object that will be created.
         
         :param self: Represent the instance of the class
-        :param data:Union[str: Specify the type of data that is being passed to the function
-        :param pd.DataFrame]: Check if the data is a pandas dataframe or not
-        :param target:str: Specify the target variable in the dataset
-        :param model_type:str: Specify the type of problem we are dealing with
-        :param nfolds:int: Specify the number of folds in cross-validation
-        :param models:list: Specify the list of models to be used in the experiment
-        :return: A new object instance
+        :param data:Union[str: Specify that the data parameter can be either a string or a pandas dataframe
+        :param pd.DataFrame]: Pass the dataframe to the class
+        :param models:list: Specify the models to be used in forecasting
+        :param target_column:str: Specify the name of the column to be forecasted
+        :param date_column:str: Specify the name of the column in your dataframe that contains dates
+        :param date_format:str: Specify the format of the date column
+        :param frequency:str: Define the frequency of the time series
+        :param forecast_horizon:list: Define the number of periods to forecast
+        :param use_exogeneous_vars:str: Determine whether or not to use exogenous variables in the model
+        :return: A new instance of the class
         """
+        
         if isinstance(data, pd.DataFrame):
             callers_globals = inspect.stack()[1][0].f_globals
             dataset_name = [k for k,v in callers_globals.items() if v is data][0]
@@ -65,22 +69,25 @@ class TSForecastPipeline:
 
     def model_list(self):
         """
-        The models function returns a list of all the models in the car class
+        The model_list function returns a list of all the models that are available to be used in the pipeline.
+        
         
         :param self: Represent the instance of the class
-        :return: A list of models
+        :return: The list of models in the car
+        :doc-author: Trelent
         """
         return print(self.models)
 
     def get_hyperparameters(self):
         """
         The get_hyperparameters function returns a dictionary of hyperparameters for each model.
-        The keys are the names of the models and the values are dictionaries containing 
-        the hyperparameter name as key and an instance of HyperParams as value. The HyperParams class is used to store information about each hyperparameter, such as its type (numerical or categorical), default value, range if numerical, etc.
+        The keys are the names of the models and the values are dictionaries containing all 
+        the hyperparameters for that model. The format is as follows:
         
-        :param self: Bind the instance of the class to a method
-        :return: A dictionary of hyperparameters for each model in the models list
+        :param self: Bind the object to the method
+        :return: A dictionary of hyperparameters for each model
         """
+        
         self.models_ = self.models_tsf
         self.model_params = {k:v for k,v in self.models_.items() if k in self.models}
         hyperparameters = {}
@@ -90,17 +97,18 @@ class TSForecastPipeline:
     
     def compile_hyperparameters(self, model_prefix, params):
         """
-        The compile_hyperparameters function takes in a model prefix and the params dictionary.
-        It then iterates through each key, value pair in the params dictionary. For each key, value pair it iterates through all of the values (which are dictionaries).
-        If search is set to False for any of these dictionaries, it skips them. If k is equal to categorical and selected is not empty for any of these dictionaries, 
-        it appends a CategoricalParam object with prefix as model_prefix and name as p['name'] (the name from that particular dictionary) 
-        and values as p['selected']
+        The compile_hyperparameters function takes in a model_prefix and params dictionary.
+        The function then iterates through the params dictionary, which is structured as follows:
+        {'categorical': [{'name': '', 'selected': []}, ...], 
+         'numerical': [{'name': '', 'min_value: 0, max_value: 1, search=True/False}]}
+        and returns a HyperParamsTSF object with all of the hyperparameters that are to be searched over.
         
-        :param self: Represent the instance of the class
+        :param self: Bind the method to an object
         :param model_prefix: Identify the model
-        :param params: Pass the parameters to be used in the model
-        :return: A hyperparams object
+        :param params: Pass the hyperparameters to be used in the search
+        :return: A hyperparamstsf object
         """
+        
         hyperparams = []
         
         for k, v in params.items():
@@ -117,13 +125,11 @@ class TSForecastPipeline:
     
     def parse_config(self):
         """
-        The parse_config function is used to parse the configuration file and extract all of the information needed for 
-        the pipeline. It extracts information about the dataset, target column, models to be trained on, hyperparameters for each model
-        and other parameters such as number of folds in cross validation and metric used.
-        
-        :param self: Represent the instance of the class
-        :return: A dictionary of models, model_params, pipeline_params and shared_model params
+        The parse_config function is used to parse the configuration file and extract all of the information needed for
+        the pipeline. It also sets up some default values that are used in other parts of the pipeline.
+        :param self: Refer to the class instance itself
         """
+        
         self.models_all = models_forecast
         self.model_comp_all = models_comparison_forecast
         self.model_param = self.get_hyperparameters()
@@ -141,13 +147,14 @@ class TSForecastPipeline:
         self.model_comp_params = {k:v for k,v in self.model_param.items() if k in selected_models}
 
     def generate_code(self, output_path:str=None):
-        """s
-        The generate_code function takes in a dictionary of parameters and generates code for the pipeline.
-        
-        :param self: Refer to the object itself
-        :param output_path:str: Specify the path where the generated code will be saved
-        :return: A string of code
         """
+        The generate_code function is used to generate the code for a time series forecasting pipeline.
+        
+        :param self: Refer to the class instance itself
+        :param output_path:str: Specify the path where the generated code is saved
+        :return: A string that contains the code for all models in the pipeline
+        """
+        
         self.parse_config()
         code_list = {}
         code_append = "" #store output for each model - used for writing code file output for each model
@@ -213,23 +220,26 @@ class TSForecastPipeline:
     
     def get_code(self):
         """
-        The get_code function is a method of the class CodeGenerator.
-        It takes no arguments and returns the generated code as a string.
+        The get_code function is used to generate the code for a pipeline.
+                It takes in no arguments and returns a string of code that can be executed.
+                
         
-        :param self: Represent the instance of the class
-        :return: The value of the generate_code function
+        :param self: Refer to the current class instance
+        :return: The code generated by the generate_code function
         """
+        
         code_gen = self.generate_code()
         return print(code_gen)
     
     def code_to_clipboard(self):
         """
         The code_to_clipboard function copies the generated code to the clipboard.
-            
+                
         
-        :param self: Refer to the current instance of a class
-        :return: The generated code is saved to clipboard
+        :param self: Refer to the object itself
+        :return: A string of the code generated
         """
+        
         code_gen = self.generate_code()
         return pyperclip.copy(code_gen)
     
@@ -237,11 +247,15 @@ class TSForecastPipeline:
                      path:str =  os.getcwd()):
         """
         The code_to_file function saves the generated code to a file.
+                
+                Parameters:
+                    path (str): The directory where the files will be saved. Defaults to current working directory.
         
-        :param self: Refer to the object itself
-        :param path:str: Define the path where the model files will be saved
-        :return: A string indicating where the model files were saved
+        :param self: Represent the instance of the class
+        :param path:str: Specify the path where the model files will be saved
+        :return: path to which the files are saved.
         """
+        
         self.generate_code(output_path = path)
         return f'model files saved to {path}'
     
