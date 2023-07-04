@@ -1,4 +1,3 @@
-#from typing import Type
 import os
 import pyperclip
 from .templates.ts_classification_dataprep import TSClassificationTemplate
@@ -24,17 +23,19 @@ class TSClassificationPipeline:
                  nfolds:int=3):
         """
         The __init__ function initializes the class with the following parameters:
-            
-        
+
         :param self: Represent the instance of the class
-        :param data:Union[str: Specify the type of data that is being passed to the function
-        :param pd.DataFrame]: Check if the data is a pandas dataframe or not
-        :param target:str: Specify the target variable in the dataset
-        :param model_type:str: Specify the type of problem we are dealing with
-        :param nfolds:int: Specify the number of folds in cross-validation
-        :param models:list: Specify the list of models to be used in the experiment
-        :return: A new object instance
+        :param data:Union[str: Check if the data is a string or not
+        :param pd.DataFrame]: Store the dataframe passed to the class
+        :param test_data:Union[str: Specify the test data
+        :param pd.DataFrame]: Pass the dataframe
+        :param models:list: Pass the list of models to be trained and tested
+        :param target_column:str: Specify the target column in the dataframe
+        :param positive_class:str: Specify the positive class in a binary classification problem
+        :param nfolds:int: Specify the number of folds for cross validation
+        :return: The self object
         """
+
         if isinstance(data, pd.DataFrame):
             callers_globals = inspect.stack()[1][0].f_globals
             dataset_name = [k for k,v in callers_globals.items() if v is data][0]
@@ -71,21 +72,19 @@ class TSClassificationPipeline:
 
     def model_list(self):
         """
-        The models function returns a list of all the models in the car class
-        
-        :param self: Represent the instance of the class
-        :return: A list of models
+        The model_list function prints the list of models available for use in the pipeline.
+                
+        :param self: Allow an object to refer to itself inside of a method
+        :return: A list of the models in the model type
         """
         return print(self.models)
 
     def get_hyperparameters(self):
         """
-        The get_hyperparameters function returns a dictionary of hyperparameters for each model.
-        The keys are the names of the models and the values are dictionaries containing 
-        the hyperparameter name as key and an instance of HyperParams as value. The HyperParams class is used to store information about each hyperparameter, such as its type (numerical or categorical), default value, range if numerical, etc.
+        The get_hyperparameters function is used to get the hyperparameters of a model.
         
-        :param self: Bind the instance of the class to a method
-        :return: A dictionary of hyperparameters for each model in the models list
+        :param self: Bind the object to the function
+        :return: A dictionary of hyperparameters for each model
         """
         self.models_ = self.models_tsclf
         self.model_params = {k:v for k,v in self.models_.items() if k in self.models}
@@ -96,16 +95,14 @@ class TSClassificationPipeline:
     
     def compile_hyperparameters(self, model_prefix, params):
         """
-        The compile_hyperparameters function takes in a model prefix and the params dictionary.
-        It then iterates through each key, value pair in the params dictionary. For each key, value pair it iterates through all of the values (which are dictionaries).
-        If search is set to False for any of these dictionaries, it skips them. If k is equal to categorical and selected is not empty for any of these dictionaries, 
-        it appends a CategoricalParam object with prefix as model_prefix and name as p['name'] (the name from that particular dictionary) 
-        and values as p['selected']
+        The compile_hyperparameters function takes in a model_prefix and params.
+        The model_prefix is the name of the model that will be used to prefix all hyperparameters.
+        The params are a dictionary containing two keys: categorical and numerical.  The values for these keys are lists of dictionaries, each dictionary representing one hyperparameter with its associated properties (name, type, searchable).
         
         :param self: Represent the instance of the class
         :param model_prefix: Identify the model
-        :param params: Pass the parameters to be used in the model
-        :return: A hyperparams object
+        :param params: Pass the hyperparameters to the function
+        :return: A hyperparamstsclassification object
         """
         hyperparams = []
         
@@ -123,12 +120,11 @@ class TSClassificationPipeline:
     
     def parse_config(self):
         """
-        The parse_config function is used to parse the configuration file and extract all of the information needed for 
-        the pipeline. It extracts information about the dataset, target column, models to be trained on, hyperparameters for each model
-        and other parameters such as number of folds in cross validation and metric used.
+        The parse_config function is used to parse the configuration file and extract all of the information needed for
+        generating a pipeline. The function takes in a config object, which contains all of the information from 
+        the configuration file. It then extracts this information and stores it in class variables that can be accessed by other functions.
         
-        :param self: Represent the instance of the class
-        :return: A dictionary of models, model_params, pipeline_params and shared_model params
+        :param self: Bind the attributes and methods of a class to an instance of that class
         """
         self.models_all = models_ts_classification
         self.model_comp_all = models_comparison_ts_classification
@@ -144,13 +140,14 @@ class TSClassificationPipeline:
         self.model_comp_params = {k:v for k,v in self.model_param.items() if k in selected_models}
 
     def generate_code(self, output_path:str=None):
-        """s
-        The generate_code function takes in a dictionary of parameters and generates code for the pipeline.
-        
-        :param self: Refer to the object itself
-        :param output_path:str: Specify the path where the generated code will be saved
-        :return: A string of code
         """
+        The generate_code function is used to generate the code for a given pipeline.
+        
+        :param self: Represent the instance of the class
+        :param output_path:str: Specify the path to save the generated code
+        :return: The code for all models
+        """
+        
         self.parse_config()
         code_list = {}
         code_append = "" #store output for each model - used for writing code file output for each model
@@ -216,22 +213,21 @@ class TSClassificationPipeline:
     
     def get_code(self):
         """
-        The get_code function is a method of the class CodeGenerator.
-        It takes no arguments and returns the generated code as a string.
-        
-        :param self: Represent the instance of the class
-        :return: The value of the generate_code function
+        The get_code function is used to generate the code for a pipeline.
+        The function takes in no arguments and returns a string of code that can be copied into an IDE or Jupyter Notebook.
+        :param self: Refer to the current instance of a class
+        :return: The generated code
         """
+        
         code_gen = self.generate_code()
         return print(code_gen)
     
     def code_to_clipboard(self):
         """
         The code_to_clipboard function copies the generated code to the clipboard.
-            
         
-        :param self: Refer to the current instance of a class
-        :return: The generated code is saved to clipboard
+        :param self: Refer to the instance of the class
+        :return: The generated code copied to clipboard
         """
         code_gen = self.generate_code()
         return pyperclip.copy(code_gen)
@@ -240,11 +236,15 @@ class TSClassificationPipeline:
                      path:str =  os.getcwd()):
         """
         The code_to_file function saves the generated code to a file.
+                
+                Parameters:
+                    path (str): The directory where the files will be saved. Defaults to current working directory.
         
         :param self: Refer to the object itself
-        :param path:str: Define the path where the model files will be saved
-        :return: A string indicating where the model files were saved
+        :param path:str: Specify where the model files will be saved
+        :return: A string that says where the model files are saved
         """
+        
         self.generate_code(output_path = path)
         return f'model files saved to {path}'
     
@@ -252,10 +252,11 @@ class TSClassificationPipeline:
         """
         The model_grid_search_settings function is used to return the hyperparameters of a model.
         
-        :param self: Bind the attributes with an object
-        :param model_name:str: Specify the name of the model to be used
-        :return: The hyperparameters of the model
+        :param self: Bind the method to the class
+        :param model_name:str: Specify the model to be used in the grid search
+        :return: The hyperparameters for the model specified in the function argument
         """
+        
         self.models_ = self.models_tsclf
         self.model_params = {k:v for k,v in self.models_.items() if k in model_name}
         hyperparameters = {}
@@ -265,14 +266,20 @@ class TSClassificationPipeline:
 
     def set_model_grid_search_settings(self,hyperparam_dict:dict = None, model_name:list = None, path:str=None):
         """
-        The set_model_grid_search_settings function is used to manually set the model grid search settings.
+        The set_model_grid_search_settings function is used to generate a Python script that can be run in the terminal.
+        The function takes three arguments: hyperparam_dict, model_name, and path. The hyperparam_dict argument is a dictionary of 
+        hyperparameters for each model that will be used in the grid search. The model name argument is a list of strings containing 
+        the names of models to include in the grid search (e.g., ['RandomForestClassifier', 'XGBoost']). Finally, path is an optional string 
+        argument specifying where you would like your Python script saved.
         
-        :param self: Represent the instance of the class
+        :param self: Make the function a method of the class
         :param hyperparam_dict:dict: Pass in a dictionary of hyperparameters to be used for the model
         :param model_name:list: Specify which models to generate code for
-        :param path:str: Specify the path you want to save your code in
+        :param path:str: Save the file to a specific location
         :return: The code for the model pipeline
+        :doc-author: Trelent
         """
+        
         self.parse_config()
         code_append = ""
         code, imports, requirements = TSClassificationTemplate()(self.pipeline_params)
