@@ -3,7 +3,6 @@ from .models.regression import models_regression
 from .models.anomaly_detection import models_ad
 from .models.timeseries_classification import models_ts_classification
 
-
 def list_supported_models(model_type:str):
     """
     The list_supported_models function returns a list of all the supported models for a given model type.

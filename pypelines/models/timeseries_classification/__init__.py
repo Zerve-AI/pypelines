@@ -35,7 +35,7 @@ from .catch22classifier import Catch22TSClassifier, Catch22TSClassifierCompariso
 from .Fresh_prince import FreshPRINCETSClassifier, FreshPRINCETSClassifierComparison
 from .matrix_pc import MatrixPCTSClassifier, MatrixPCTSClassifierComparison
 from .random_ic import RandomICTSClassifier, RandomICTSClassifierComparison
-from .shapedtw import ShapeDTWTSClassifier, ShapeDTWSClassifierComparison
+from .shapedtw import ShapeDTWTSClassifier, ShapeDTWSTSClassifierComparison
 from .dummy import DUMMYTSClassifier, DUMMYTSClassifierComparison
 
 models_ts_classification = {
@@ -69,7 +69,7 @@ models_ts_classification = {
     'Catch22Classifier': Catch22TSClassifier,
     'FreshPRINCE': FreshPRINCETSClassifier,
     'MatrixProfileClassifier': MatrixPCTSClassifier,
-    'RandomIntervalClassifier': RandomICTSClassifier
+    'RandomIntervalClassifier': RandomICTSClassifier,
     'DummyClassifier': DUMMYTSClassifier
 }
 
@@ -104,7 +104,7 @@ models_comparison_ts_classification = {
     'Catch22Classifier': Catch22TSClassifierComparison,
     'FreshPRINCE': FreshPRINCETSClassifierComparison,
     'MatrixProfileClassifier': MatrixPCTSClassifierComparison,
-    'RandomIntervalClassifier': RandomICTSClassifierComparison
+    'RandomIntervalClassifier': RandomICTSClassifierComparison,
     'DummyClassifier': DUMMYTSClassifierComparison
 }
 
@@ -122,18 +122,18 @@ models_ts_classification_default = {
     'CanonicalIntervalForest': CanonicalIFTSClassifier,
     'TSFreshClassifier': TSFreshTSClassifier,
     'MatrixProfileClassifier': MatrixPCTSClassifier,
-    'RandomIntervalClassifier': RandomICTSClassifier
+    'RandomIntervalClassifier': RandomICTSClassifier,
     'DummyClassifier': DUMMYTSClassifier
 }
 
 
 models_comparison_ts_classification_default = {
-     'CNN': CNNTSClassifierComparison,
+    'CNN': CNNTSClassifierComparison,
     'LSTMFCN': LSTMFCNTSClassifierComparison,
     'MLP': MLPTSClassifierComparison,
     'ElasticEnsemble':ElasticEnsembleTSClassifierComparison,
     'KNN': KNNTSClassifierComparison,
-    'ShapeDTW': ShapeDTWTSClassifierComparison,
+    'ShapeDTW': ShapeDTWSTSClassifierComparison,
     'TimeSeriesForestClassifier': TimeSeriesForestTSClassifierComparison,
     'SupervisedTimeSeriesForestClassifier': SupervisedTimeSeriesForestTSClassifierComparison,
     'DrCIF': DrCIFTSClassifierComparison,
