@@ -4,15 +4,10 @@ from .template_base import AutoPipelineBaseTemplate
 template = '''
 {{imports}}
 {{prefix}}_param_grid = {{hyperparams}}
-
-# Create the pipeline
-{{prefix}}_pipe = Pipeline([
-    ('preprocessor', preprocessor),
-    ('{{prefix}}', {{model}})
-])
+{{prefix}}_model = {{prefix}}()
 
 # Create the grid search
-{{prefix}}_grid_search = GridSearchCV(estimator={{prefix}}_pipe, param_grid={{prefix}}_param_grid, cv={{cross_validation}}, scoring=make_scorer({{metric}}), verbose=3)
+{{prefix}}_grid_search = GridSearchCV(estimator={{prefix}}_model, param_grid={{prefix}}_param_grid, cv={{cross_validation}}, scoring=make_scorer({{metric}}), verbose=3)
 {{prefix}}_grid_search.fit(X_train, y_train)
 
 # Get the best hyperparameters
@@ -21,8 +16,7 @@ template = '''
 # Store results as a dataframe  
 {{prefix}}_search_results = pd.DataFrame({{prefix}}_grid_search.cv_results_)
 
-# Model metrics
-{% if model_type == "Regression" %}
+
 # Generate Predictions
 {{prefix}}_predictions = {{prefix}}_best_estimator.predict(X_test)
 {{prefix}}_predictions_df = pd.DataFrame({{prefix}}_best_estimator.predict(X_test))
@@ -68,88 +62,11 @@ for i in range(len({{prefix}}_deciles) - 1):
 {{prefix}}_lift_plot_ax.legend()
 plt.show(block=False)
 
-{% elif model_type == "Classification" %}
-# Generate Predictions
-{{prefix}}_predictions = pd.DataFrame({{prefix}}_best_estimator.predict(X_test))
-{% if prefix not in ['passive_aggressive_classifier','ridge_classifer','perceptron_classifier']%}
-{{prefix}}_predictions_prob = {{prefix}}_best_estimator.predict_proba(X_test)
-{{prefix}}_predictions_prob_df = pd.DataFrame()
-{{prefix}}_predictions_prob_df[{{prefix}}_grid_search.classes_[0]] = {{prefix}}_predictions_prob[:,0]
-{{prefix}}_predictions_prob_df[{{prefix}}_grid_search.classes_[1]] = {{prefix}}_predictions_prob[:,1] 
-{% else %}
-{{prefix}}_predictions_prob  = {{prefix}}_best_estimator.decision_function(X_test)
-{{prefix}}_predictions_prob_df = pd.DataFrame()
-{{prefix}}_predictions_prob_df[{{prefix}}_grid_search.classes_[0]] = {{prefix}}_predictions_prob
-{{prefix}}_predictions_prob_df[{{prefix}}_grid_search.classes_[1]] = {{prefix}}_predictions_prob
-{% endif %}
 
-# Generate Model Metrics
-{{prefix}}_accuracy = accuracy_score(y_test, {{prefix}}_predictions.iloc[:,0])
-{{prefix}}_f1_score = f1_score(y_test, {{prefix}}_predictions.iloc[:,0])
-{{prefix}}_precision = precision_score(y_test, {{prefix}}_predictions.iloc[:,0])
-{{prefix}}_recall = recall_score(y_test, {{prefix}}_predictions.iloc[:,0])
-{{prefix}}_roc_auc_score = roc_auc_score(y_test, {{prefix}}_predictions_prob_df[{{prefix}}_grid_search.classes_[1]])
-{{prefix}}_performance_metrics = [['{{prefix}}','accuracy',{{prefix}}_accuracy], 
-                                  ['{{prefix}}','f1_score',{{prefix}}_f1_score],
-                                  ['{{prefix}}','precision', {{prefix}}_precision],
-                                  ['{{prefix}}','recall', {{prefix}}_recall],
-                                  ['{{prefix}}','roc_auc_score', {{prefix}}_roc_auc_score]]
-{{prefix}}_performance_metrics = pd.DataFrame({{prefix}}_performance_metrics, columns=['model','metric', 'value'])
-fpr, tpr, thresholds = roc_curve(y_test, {{prefix}}_predictions_prob_df[{{prefix}}_grid_search.classes_[1]])
-roc_auc = auc(fpr, tpr)
-
-# ROC Curve plot
-{{prefix}}_roc_auc_plot, {{prefix}}_roc_auc_plot_ax = plt.subplots()
-{{prefix}}_roc_auc_plot_ax.plot(fpr, tpr, label=f'ROC curve (AUC = {roc_auc:.4f})')
-{{prefix}}_roc_auc_plot_ax.plot([0, 1], [0, 1], 'r--', label='Random guess')
-# Set axis labels and title
-{{prefix}}_roc_auc_plot_ax.set_xlabel('False Positive Rate')
-{{prefix}}_roc_auc_plot_ax.set_ylabel('True Positive Rate')
-{{prefix}}_roc_auc_plot_ax.set_title(f'{{prefix}} ROC Curve')
-# Add legend
-{{prefix}}_roc_auc_plot_ax.legend()
-
-
-print({{prefix}}_performance_metrics[{{prefix}}_performance_metrics['metric'] == 'roc_auc_score'])
-
-# Lift Chart
-aux_df = pd.DataFrame()
-aux_df['y_real'] = y_test
-aux_df['y_proba'] = {{prefix}}_predictions_prob_df.iloc[:,1].values
-
-# Sort by predicted probability
-aux_df = aux_df.sort_values('y_proba', ascending=False)
-
-# Find the total positive ratio of the whole dataset
-total_positive_ratio = sum(aux_df['y_real'] == 1) / aux_df.shape[0]
-
-# For each line of data, get the ratio of positives of the given subset and calculate the lift
-lift_values = []
-for i in aux_df.index:
-    threshold = aux_df.loc[i]['y_proba']
-    subset = aux_df[aux_df['y_proba'] >= threshold]
-    subset_positive_ratio = sum(subset['y_real'] == 1) / subset.shape[0]
-    lift = subset_positive_ratio / total_positive_ratio
-    lift_values.append(lift)
-
-# Plot the lift curve
-{{prefix}}_lift_plot, {{prefix}}_lift_plot_ax = plt.subplots()
-{{prefix}}_lift_plot_ax.set_xlabel('Proportion')
-{{prefix}}_lift_plot_ax.set_ylabel('Lift')
-{{prefix}}_lift_plot_ax.set_title(f'{{prefix}} Lift Curve')
-
-# plot the lift curve
-x_vals = np.linspace(0, 1, num=len(lift_values))
-{{prefix}}_lift_plot_ax.plot(x_vals, lift_values, color='b')
-
-# add dashed horizontal line at lift of 1
-{{prefix}}_lift_plot_ax.axhline(y=1, color='gray', linestyle='--', linewidth=3)
-
-{% endif %}
 model_comparison_list.append({{prefix}}_performance_metrics)
 '''
 
-class SkLearnModelTemplate(AutoPipelineBaseTemplate):
+class TSRegressionModelTemplate(AutoPipelineBaseTemplate):
     def __init__(self, requirements=None, required_imports=None, default_values=None):
         """
         The __init__ function is used to initialize the class.

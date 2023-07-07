@@ -10,6 +10,12 @@ from .categorical_param import CategoricalParamAD
 from .categorical_param import CategoricalParamTSClassification
 from .numerical_param import NumericalParamClassification
 from .constant_param import ConstantParamTSClassification
+
+from .categorical_param import CategoricalParamTSRegression
+from .numerical_param import NumericalParamRegression
+from .constant_param import ConstantParamTSRegression
+
+
 from typing import List, Union
 
 
@@ -34,6 +40,15 @@ class HyperParamsAD(BaseModel):
 
 class HyperParamsTSClassification(BaseModel):
     params: List[Union[CategoricalParamTSClassification, NumericalParamClassification, ConstantParamTSClassification]]
+
+    def __repr__(self):
+        return f'{{\n{"".join([str(param) for param in self.params])}}}\n'
+
+    def __str__(self):
+        return f'{{\n{"".join([str(param) for param in self.params])}}}\n'
+    
+class HyperParamsTSRegression(BaseModel):
+    params: List[Union[CategoricalParamTSRegression, NumericalParamRegression, ConstantParamTSRegression]]
 
     def __repr__(self):
         return f'{{\n{"".join([str(param) for param in self.params])}}}\n'
