@@ -8,12 +8,17 @@ from .numerical_param import NumericalParamAD
 from .categorical_param import CategoricalParamAD
 
 from .categorical_param import CategoricalParamTSClassification
-from .numerical_param import NumericalParamClassification
+from .numerical_param import NumericalParamTSClassification
 from .constant_param import ConstantParamTSClassification
 
 from .categorical_param import CategoricalParamTSRegression
-from .numerical_param import NumericalParamRegression
+from .numerical_param import NumericalParamTSRegression
 from .constant_param import ConstantParamTSRegression
+
+
+from .categorical_param import CategoricalParamTSClustering
+from .numerical_param import NumericalParamTSClustering
+from .constant_param import ConstantParamTSClustering
 
 
 from typing import List, Union
@@ -39,7 +44,7 @@ class HyperParamsAD(BaseModel):
         return f'{{\n{"".join([str(param) for param in self.params])}}}\n'
 
 class HyperParamsTSClassification(BaseModel):
-    params: List[Union[CategoricalParamTSClassification, NumericalParamClassification, ConstantParamTSClassification]]
+    params: List[Union[CategoricalParamTSClassification, NumericalParamTSClassification, ConstantParamTSClassification]]
 
     def __repr__(self):
         return f'{{\n{"".join([str(param) for param in self.params])}}}\n'
@@ -48,7 +53,16 @@ class HyperParamsTSClassification(BaseModel):
         return f'{{\n{"".join([str(param) for param in self.params])}}}\n'
     
 class HyperParamsTSRegression(BaseModel):
-    params: List[Union[CategoricalParamTSRegression, NumericalParamRegression, ConstantParamTSRegression]]
+    params: List[Union[CategoricalParamTSRegression, NumericalParamTSRegression, ConstantParamTSRegression]]
+
+    def __repr__(self):
+        return f'{{\n{"".join([str(param) for param in self.params])}}}\n'
+
+    def __str__(self):
+        return f'{{\n{"".join([str(param) for param in self.params])}}}\n'
+    
+class HyperParamsTSClustering(BaseModel):
+    params: List[Union[CategoricalParamTSClustering, NumericalParamTSClustering, ConstantParamTSClustering]]
 
     def __repr__(self):
         return f'{{\n{"".join([str(param) for param in self.params])}}}\n'

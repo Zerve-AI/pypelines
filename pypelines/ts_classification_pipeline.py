@@ -1,7 +1,7 @@
 import os
 import pyperclip
 from .templates.ts_classification_dataprep import TSClassificationTemplate
-from .schemas import HyperParamsTSClassification, NumericalParamClassification, CategoricalParamTSClassification
+from .schemas import HyperParamsTSClassification, NumericalParamTSClassification, CategoricalParamTSClassification
 from .models.timeseries_classification import models_ts_classification,models_comparison_ts_classification, models_ts_classification_default, models_comparison_ts_classification_default
 import pandas as pd 
 from typing import Union
@@ -115,7 +115,7 @@ class TSClassificationPipeline:
                         continue
                     hyperparams.append(CategoricalParamTSClassification(**{'prefix': model_prefix, 'name': p['name'], 'values': p['selected']}))
                 elif k=='numerical':
-                    hyperparams.append(NumericalParamClassification(**{'prefix': model_prefix, **p}))
+                    hyperparams.append(NumericalParamTSClassification(**{'prefix': model_prefix, **p}))
         return HyperParamsTSClassification(**{'params': hyperparams})
     
     def parse_config(self):

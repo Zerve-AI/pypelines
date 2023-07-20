@@ -1,26 +1,22 @@
 import os
 import pyperclip
-from .templates.ts_regression_dataprep import TSRegressionTemplate
-from .schemas import HyperParamsTSRegression, NumericalParamTSRegression, CategoricalParamTSRegression
-from .models.timeseries_regression import models_ts_regression,models_comparison_ts_regression, models_ts_regression_default, models_comparison_ts_regression_default
+from .templates.ts_clustering_dataprep import TSClusteringTemplate
+from .schemas import HyperParamsTSClustering, NumericalParamTSClustering, CategoricalParamTSClustering
+from .models.timeseries_clustering import models_ts_clustering, models_comparison_ts_clustering, models_ts_clustering_default,models_comparison_ts_clustering_default
 import pandas as pd 
 from typing import Union
 import inspect
 
 
-tsregression_imports = '''
+tsclustering_imports = '''
 from sktime import *
-from sklearn.metrics import accuracy_score
 '''
 
-class TSRegressionPipeline:
+class TSClusteringPipeline:
     def __init__(self,
                  data:Union[str, pd.DataFrame],
-                 test_data:Union[str, pd.DataFrame],
-                 models:list = None,
-                 target_column:str=None,
-                 #positive_class:str=None,
-                 nfolds:int=3):
+                 nfolds:int=3,
+                 models:list = None):
         """
         The __init__ function initializes the class with the following parameters:
 
@@ -43,28 +39,17 @@ class TSRegressionPipeline:
         else:
             raise ValueError("data must be a pandas DataFrame or a string")
         
-        if isinstance(test_data, pd.DataFrame):
-            callers_globals = inspect.stack()[1][0].f_globals
-            test_dataset_name = [k for k,v in callers_globals.items() if v is test_data][0]
-        elif isinstance(data, str):
-            test_dataset_name = test_data
-        else:
-            raise ValueError("data must be a pandas DataFrame or a string. If no test data is available please use train dataframe as test data.n\
-                             Metrics will be unreliable in this case as prediction is done on same data as train data.")
 
 
         self.dataset_name = dataset_name
-        self.target_column = target_column
         self.nfolds = nfolds
-        self.test_dataset_name = test_dataset_name
-        #self.pos_label=positive_class
 
         if models is None:
-            self.models = list(models_ts_regression_default.keys())
+            self.models = list(models_ts_clustering_default.keys())
         else :
             self.models = models
 
-        self.models_tsreg = models_ts_regression
+        self.models_tsclustering = models_ts_clustering
         
 
     
@@ -85,7 +70,7 @@ class TSRegressionPipeline:
         :param self: Bind the object to the function
         :return: A dictionary of hyperparameters for each model
         """
-        self.models_ = self.models_tsreg
+        self.models_ = self.models_tsclustering
         self.model_params = {k:v for k,v in self.models_.items() if k in self.models}
         hyperparameters = {}
         for name, model in self.model_params.items():
@@ -111,10 +96,10 @@ class TSRegressionPipeline:
                 if k=='categorical':
                     if not p['selected']:
                         continue
-                    hyperparams.append(CategoricalParamTSRegression(**{'prefix': model_prefix, 'name': p['name'], 'values': p['selected']}))
+                    hyperparams.append(CategoricalParamTSClustering(**{'prefix': model_prefix, 'name': p['name'], 'values': p['selected']}))
                 elif k=='numerical':
-                    hyperparams.append(NumericalParamTSRegression(**{'prefix': model_prefix, **p}))
-        return HyperParamsTSRegression(**{'params': hyperparams})
+                    hyperparams.append(NumericalParamTSClustering(**{'prefix': model_prefix, **p}))
+        return HyperParamsTSClustering(**{'params': hyperparams})
     
     def parse_config(self):
         """
@@ -124,16 +109,14 @@ class TSRegressionPipeline:
         
         :param self: Bind the attributes and methods of a class to an instance of that class
         """
-        self.models_all = models_ts_regression
-        self.model_comp_all = models_comparison_ts_regression
+        self.models_all = models_ts_clustering
+        self.model_comp_all = models_comparison_ts_clustering
         self.model_param = self.get_hyperparameters()
         selected_models = self.models 
         self.metric = 'accuracy_score'
-        self.default_imports = tsregression_imports
-        self.pipeline_params = {'dataset': self.dataset_name,
-                                'target_column':self.target_column,
-                                'test_dataset':self.test_dataset_name}
-        self.shared_model_params = {'metric':self.metric,'cross_validation':self.nfolds}
+        self.default_imports = tsclustering_imports
+        self.pipeline_params = {'dataset': self.dataset_name}
+        self.shared_model_params = {'cross_validation':self.nfolds}
         self.model_params = {k:v for k,v in self.model_param.items() if k in selected_models}
         self.model_comp_params = {k:v for k,v in self.model_param.items() if k in selected_models}
 
@@ -150,7 +133,7 @@ class TSRegressionPipeline:
         code_list = {}
         code_append = "" #store output for each model - used for writing code file output for each model
         code_all_models = "" #store output for all models - used for copy_to_clipboard
-        code, imports, requirements = TSRegressionTemplate()(self.pipeline_params)
+        code, imports, requirements = TSClusteringTemplate()(self.pipeline_params)
         imports = self.default_imports + '\n' + imports
         code_append += imports
         code_append += code
@@ -280,7 +263,7 @@ class TSRegressionPipeline:
         
         self.parse_config()
         code_append = ""
-        code, imports, requirements = TSRegressionTemplate()(self.pipeline_params)
+        code, imports, requirements = TSClusteringTemplate()(self.pipeline_params)
         imports = self.default_imports + '\n' + imports
         code_append += imports
         code_append += code
