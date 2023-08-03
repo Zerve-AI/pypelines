@@ -20,6 +20,10 @@ from .categorical_param import CategoricalParamTSClustering
 from .numerical_param import NumericalParamTSClustering
 from .constant_param import ConstantParamTSClustering
 
+from .constant_param import ConstantParamClustering
+from .numerical_param import NumericalParamClustering
+from .categorical_param import CategoricalParamClustering
+
 
 from typing import List, Union
 
@@ -63,6 +67,15 @@ class HyperParamsTSRegression(BaseModel):
     
 class HyperParamsTSClustering(BaseModel):
     params: List[Union[CategoricalParamTSClustering, NumericalParamTSClustering, ConstantParamTSClustering]]
+
+    def __repr__(self):
+        return f'{{\n{"".join([str(param) for param in self.params])}}}\n'
+
+    def __str__(self):
+        return f'{{\n{"".join([str(param) for param in self.params])}}}\n'
+
+class HyperParamsClustering(BaseModel):
+    params: List[Union[ConstantParamClustering, NumericalParamClustering, CategoricalParamClustering]]
 
     def __repr__(self):
         return f'{{\n{"".join([str(param) for param in self.params])}}}\n'
