@@ -5,6 +5,9 @@ from .spectral_clustering import SpectralClustering, SpectralClusteringCompariso
 from .agglomerative import AgglomerativeClustering, AgglomerativeClusteringComparison
 from .dbscan import DBSCANClustering, DBSCANClusteringComparison
 from .hdbscan import HDBSCANClustering, HDBSCANClusteringComparison
+from .optics import OPTICSClustering, OPTICSClusteringComparison
+from .birch import BirchClustering, BirchClusteringComparison
+
 
 models_clustering = {
     'KMeans': KMeansClustering,
@@ -13,7 +16,9 @@ models_clustering = {
     'SpectralClustering': SpectralClustering,
     'AgglomerativeClustering': AgglomerativeClustering,
     'DBSCANClustering' : DBSCANClustering,
-    'HDBSCANClustering':HDBSCANClustering
+    'HDBSCANClustering':HDBSCANClustering,
+    'OPTICSClustering': OPTICSClustering,
+    'BirchClustering': BirchClustering
 }
 
 models_comparison_clustering = {
@@ -23,7 +28,9 @@ models_comparison_clustering = {
     'SpectralClustering': SpectralClusteringComparison,
     'AgglomerativeClustering': AgglomerativeClusteringComparison,
     'DBSCANClustering' : DBSCANClusteringComparison,
-    'HDBSCANClustering':HDBSCANClusteringComparison
+    'HDBSCANClustering':HDBSCANClusteringComparison,
+    'OPTICSClustering': OPTICSClusteringComparison,
+    'BirchClustering': BirchClusteringComparison
 }
 
 models_clustering_default = {
@@ -33,7 +40,9 @@ models_clustering_default = {
     'SpectralClustering': SpectralClustering,
     'AgglomerativeClustering': AgglomerativeClustering,
     'DBSCANClustering' : DBSCANClustering,
-    'HDBSCANClustering':HDBSCANClustering
+    'HDBSCANClustering':HDBSCANClustering,
+    'OPTICSClustering': OPTICSClustering,
+    'BirchClustering': BirchClustering
 }
 
 models_comparison_clustering_default = {
@@ -43,5 +52,7 @@ models_comparison_clustering_default = {
     'SpectralClustering': SpectralClusteringComparison,
     'AgglomerativeClustering': AgglomerativeClusteringComparison,
     'DBSCANClustering' : DBSCANClusteringComparison,
-    'HDBSCANClustering':HDBSCANClusteringComparison
+    'HDBSCANClustering':HDBSCANClusteringComparison,
+    'OPTICSClustering': OPTICSClusteringComparison,
+    'BirchClustering': BirchClusteringComparison
 }

@@ -28,7 +28,7 @@ cv = [(slice(None), slice(None))]
 # Store results as a dataframe  
 {{prefix}}_search_results = pd.DataFrame({{prefix}}_grid_search.cv_results_)
 
-model_comparison_list.append({{prefix}}_search_results[{{prefix}}_search_results['rank_test_score']==1])
+model_comparison_list.append({{prefix}}_search_results.loc[{{prefix}}_search_results['mean_test_score'].idxmax()])
 
 def as_list(x):
     if type(x) is list:
