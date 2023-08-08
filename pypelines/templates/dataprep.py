@@ -51,8 +51,8 @@ if len(edited_missing_columns) != 0:
 if {{encoding_models}}[0] not in ["MeanEncoder", "WoEEncoder", "OrdinalEncoder", "DecisionTreeEncoder"]:
     {{dataset}} = encode.fit_transform({{dataset}})
 else:
-    x = {{dataset}}.drop(columns={{target}},axis=1)
-    y = {{dataset}}[{{target}}]
+    x = {{dataset}}.drop(columns='{{target}}',axis=1)
+    y = {{dataset}}['{{target}}']
     {{dataset}} = encode.fit_transform(x,y)
 
 """

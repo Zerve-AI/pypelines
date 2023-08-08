@@ -48,17 +48,23 @@ class DataPrepPipeline:
 
         self.outlier_models = outlier_models
         self.encoding_models = encoding_models
-        self.models_clf = outlier_methods
-        self.models_reg = encoding_methods
+        self.models_outlier = outlier_methods
+        self.models_encoding = encoding_methods
 
     def outlier_list(self):
         """
-        The models function returns a list of all the models in the car class
+        The models function returns a list of all the outlier methods
         
-        :param self: Represent the instance of the class
-        :return: A list of models
         """
-        return print(self.encoding_models)
+        return print(outlier_methods.keys())
+    
+
+    def encoding_list(self):
+        """
+        The models function returns a list of all the encoding methods
+        
+        """
+        return print(encoding_methods.keys())
 
     def get_hyperparameters(self):
         """
@@ -69,8 +75,8 @@ class DataPrepPipeline:
         :param self: Bind the instance of the class to a method
         :return: A dictionary of hyperparameters for each model in the models list
         """
-        self.outlier_model_params = {k:v for k,v in self.models_clf.items() if k in self.outlier_models}
-        self.encoding_model_params = {k:v for k,v in self.models_reg.items() if k in self.encoding_models}
+        self.outlier_model_params = {k:v for k,v in self.models_outlier.items() if k in self.outlier_models}
+        self.encoding_model_params = {k:v for k,v in self.models_encoding.items() if k in self.encoding_models}
         outlier_hyperparameters = {}
         for name, model in self.outlier_model_params.items():
             outlier_hyperparameters[name] = model().get_hyperparameters()
@@ -97,7 +103,7 @@ class DataPrepPipeline:
         encoding_selected_models = self.encoding_models 
 
 
-        self.pipeline_params = {'dataset': self.dataset_name, 'target_column': self.target, 'encoding_models': self.encoding_models}
+        self.pipeline_params = {'dataset': self.dataset_name, 'target': self.target, 'encoding_models': self.encoding_models}
         #self.shared_model_params = {'cross_validation':self.nfolds, 'metric':self.metric }
         self.outlier_model_params = {k:v for k,v in self.outlier_model_param.items() if k in outlier_selected_models}
         self.encoding_model_params = {k:v for k,v in self.encoding_model_param.items() if k in encoding_selected_models}
