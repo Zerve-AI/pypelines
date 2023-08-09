@@ -1,9 +1,17 @@
-from ..templates.template_base import AutoPipelineBaseTemplate
+from .template_base import AutoPipelineBaseTemplate
 
 
 template = '''
-
-
+try:
+    if {{discretisation_models}}[0] == 'DecisionTreeDiscretiser':
+        x = {{dataset}}.drop("{{target}}", axis=1)
+        y = {{dataset}}["{{target}}"]
+        x = discret.fit_transform(x, y)
+    else:
+        x = {{dataset}}.drop("{{target}}", axis=1)
+        x = discret.fit_transform(x)
+except Exception as e:
+    print("Error in discretization:", str(e))
 '''
 
 class DataPrepModelTemplate(AutoPipelineBaseTemplate):

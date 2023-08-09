@@ -3,14 +3,13 @@ from feature_engine.imputation import MeanMedianImputer, CategoricalImputer, Arb
 
 
 imputators = [
-    CategoricalImputer(variables=[""]), 
-    MeanMedianImputer(imputation_method='median',variables=[""]),
-    ArbitraryNumberImputer(variables = [""],arbitrary_number = 99),
-    EndTailImputer(imputation_method='gaussian',tail='right',fold=3,variables=[""]),
-    CategoricalImputer(variables=[""]),
-    RandomSampleImputer(random_state=[""],seed='observation',seeding_method='add'),
-    AddMissingIndicator(variables=[""],),
-    DropMissingData(variables=[""])
+    MeanMedianImputer(imputation_method='median', variables=None),
+    ArbitraryNumberImputer(arbitrary_number=999, variables=None, imputer_dict=None),
+    EndTailImputer(imputation_method='gaussian', tail='right', fold=3, variables=None),
+    CategoricalImputer(imputation_method='missing', fill_value='Missing', variables=None, return_object=False, ignore_format=False),
+    RandomSampleImputer(variables=None, random_state=None, seed='general', seeding_method='add'),
+    AddMissingIndicator(missing_only=True, variables=None),
+    DropMissingData(missing_only=True, threshold=None, variables=None)
 ]
 
 
@@ -19,41 +18,48 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
-
 from feature_engine.imputation import MeanMedianImputer, CategoricalImputer, ArbitraryNumberImputer, EndTailImputer, RandomSampleImputer, AddMissingIndicator, DropMissingData
 """
 
 template = """
+# HANDLING OUTLIERS
+{{dataset}} = out.fit_transform({{dataset}})
 
-# MISSINING VALUE IMPUTATION
+# MISSING VALUE IMPUTATION
 
 # Identifying the missing columns and selecting only columns with less than 10% missing values
 edited_missing_columns = {{dataset}}.columns[{{dataset}}.isnull().mean() <= 0.1].tolist()
 
 if len(edited_missing_columns) != 0:
     int_lst = {{dataset}}[edited_missing_columns].select_dtypes(include=['int64', 'float64']).columns.tolist()
-    cat_lst = {{dataset}}[edited_missing_columns].select_dtypes(include=['category']).columns.tolist()
+    cat_lst = {{dataset}}[edited_missing_columns].select_dtypes(include=['object']).columns.tolist()
 
-    if len(int_lst) > 0:
-        imputer = MeanMedianImputer(imputation_method='median', variables=int_lst)
-        {{dataset}}[int_lst] = imputer.fit_transform({{dataset}}[int_lst])
+    try:
+        if len(int_lst) > 0:
+            imputer = MeanMedianImputer(imputation_method='median', variables=int_lst)
+            {{dataset}}[int_lst] = imputer.fit_transform({{dataset}}[int_lst])
+    except Exception as e:
+        print("Error in integer imputation:", str(e))
 
-    if len(cat_lst) > 0:
-        imputer = CategoricalImputer(variables=cat_lst)
-        {{dataset}}[cat_lst] = imputer.fit_transform({{dataset}}[cat_lst])
+    try:
+        if len(cat_lst) > 0:
+            imputer = CategoricalImputer(variables=cat_lst)
+            {{dataset}}[cat_lst] = imputer.fit_transform({{dataset}}[cat_lst])
+    except Exception as e:
+        print("Error in categorical imputation:", str(e))
 
 {{dataset}} = {{dataset}}.dropna(axis=1)
 
-# HANDLING OUTLIERS
-{{dataset}} = out.fit_transform({{dataset}})
-
 # ENCODING CATEGORICAL VARIABLES
-if {{encoding_models}}[0] not in ["MeanEncoder", "WoEEncoder", "OrdinalEncoder", "DecisionTreeEncoder"]:
-    {{dataset}} = encode.fit_transform({{dataset}})
-else:
-    x = {{dataset}}.drop(columns='{{target}}',axis=1)
-    y = {{dataset}}['{{target}}']
-    {{dataset}} = encode.fit_transform(x,y)
+try:
+    if {{encoding_models}}[0] not in ["MeanEncoder", "WoEEncoder", "OrdinalEncoder", "DecisionTreeEncoder"]:
+        {{dataset}} = encode.fit_transform({{dataset}})
+    else:
+        x = {{dataset}}.drop(columns='{{target}}', axis=1)
+        y = {{dataset}}['{{target}}']
+        {{dataset}} = encode.fit_transform(x, y)
+except Exception as e:
+    print("Error in encoding:", str(e))
 
 """
 

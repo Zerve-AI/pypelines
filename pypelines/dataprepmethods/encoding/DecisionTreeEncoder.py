@@ -4,7 +4,7 @@ from ..model_base import DataPreplBase
 class DecisionTreeEncoder(DataPreplBase):
     def __init__(self):
         model_string = 'DecisionTreeEncoder()'
-        imports = '''from feature_engine.encoding import DecisionTreeEncoder\n\n\nencode = DecisionTreeEncoder()'''
+        imports = '''from feature_engine.encoding import DecisionTreeEncoder\n\n\nencode = DecisionTreeEncoder(encoding_method='arbitrary', cv=3, scoring='neg_mean_squared_error', param_grid=None, regression=True, random_state=None, variables=None, ignore_format=False)'''
         method='encoding'
         super().__init__('decisiontreeencoder', model_string, imports, method)
 

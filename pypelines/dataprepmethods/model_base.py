@@ -1,4 +1,4 @@
-from ..templates.dataprep_model import DataPrepModelTemplate
+from ..templates.discretisation import DataPrepModelTemplate
 from ..templates.pyod_model import PYODModelTemplate
 
 
