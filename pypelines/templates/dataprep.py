@@ -87,8 +87,6 @@ if len(edited_missing_columns) != 0:
             {% endif %}
     except Exception as e:
         print("Error in integer imputation:", str(e))
-else:
-    pass
         
 feature_df = pd.concat([{{dataset}}_num,{{dataset}}_cat],axis=1)
 {{dataset}} =  pd.concat([feature_df,{{dataset}}["{{target_column}}"]],axis=1)
