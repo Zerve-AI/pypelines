@@ -5,7 +5,6 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
-from feature_engine.imputation import MeanMedianImputer, CategoricalImputer, ArbitraryNumberImputer, EndTailImputer, RandomSampleImputer, AddMissingIndicator, DropMissingData
 from feature_engine.encoding import CountFrequencyEncoder
 """
 
@@ -140,6 +139,31 @@ try:
     {% endif %}
 except Exception as e:
     print("Error in integer encoding:", str(e))
+{% endif %}
+
+{% if datetime_method != None %}
+# Datetime Features
+try:
+    {% if datetime_method == "DatetimeFeatures" %}
+    dt = DatetimeFeatures(variables=None, features_to_extract=None, drop_original=True, missing_values='raise', dayfirst=False, yearfirst=False, utc=None)
+    dtf = dt(features_to_extract = ["year", "month", "day_of_month"])
+    x = {{dataset}}.drop("{{target_column}}", axis=1)
+    y = {{dataset}}["{{target_column}}"]
+    x = dtf.fit_transform(x)
+    {{dataset}} = pd.concat([x,y])
+
+
+    {% elif datetime_method == "DatetimeSubtraction" %}
+    dt = DatetimeSubtraction(variables, reference, new_variables_names=None, output_unit='D', missing_values='ignore', drop_original=False, dayfirst=False, yearfirst=False, utc=None)    
+    dtf = dt(variables=["{{target_date1_column}}"], reference=["{{target_date2_column}}"])
+    x = {{dataset}}.drop("{{target_column}}", axis=1)
+    y = {{dataset}}["{{target_column}}"]
+    x = dtf.fit_transform(x)
+    {{dataset}} = pd.concat([x,y])
+
+    {% endif %}
+except Exception as e:
+    print("Error in integer datetime:", str(e))
 {% endif %}
 
 {% if discretisation_method != None %}
