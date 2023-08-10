@@ -2,6 +2,7 @@
 import os
 import pyperclip
 from .templates.dataprep import DataPrepTemplate
+from .dataprepmethods.preprocessing import preprocessing_methods
 from .dataprepmethods.outlier import outlier_methods
 from .dataprepmethods.imputation import imputation_methods
 from .dataprepmethods.encoding import encoding_methods
@@ -16,6 +17,7 @@ class DataPrepPipeline:
     def __init__(self,
                  data:Union[str, pd.DataFrame],
                  target:str,
+                 preprocessing_method:str=None,
                  outlier_method:str=None,
                  numerical_imputation_methods:str=None,
                  categorical_imputation_methods:str=None,
@@ -36,6 +38,8 @@ class DataPrepPipeline:
 
         self.dataset_name = dataset_name
         self.target = target
+        self.preprocessing_method = preprocessing_method
+        self.datetime_method = datetime_method
         self.outlier_method = outlier_method
         self.numerical_imputation = numerical_imputation_methods
         self.categorical_imputation = categorical_imputation_methods
@@ -44,6 +48,9 @@ class DataPrepPipeline:
         self.target_date1_column = target_date1_column
         self.target_date2_column = target_date2_column
         self.discretisation_method = discretisation_method
+
+        preprocessing_ = {k: v for k, v in preprocessing_methods.items() if k == self.preprocessing_method}
+        self.preprocessing_import = {name: model().get_library() for name, model in preprocessing_.items()}
 
         outlier_ = {k: v for k, v in outlier_methods.items() if k == self.outlier_method}
         self.outlier_import = {name: model().get_library() for name, model in outlier_.items()}
@@ -67,6 +74,7 @@ class DataPrepPipeline:
     def parse_config(self):
         self.pipeline_params = {'dataset': self.dataset_name,
                                  'target_column': self.target,
+                                 'preprocessing_method': self.preprocessing_method,
                                  'outlier_method': self.outlier_method,
                                  'numerical_imputation':self.numerical_imputation,
                                  'categorical_imputation':self.categorical_imputation,
@@ -85,6 +93,7 @@ class DataPrepPipeline:
         code, imports, requirements = DataPrepTemplate()(self.pipeline_params)
         imports = imports
         code_append += imports
+        code_append += "".join(list(self.preprocessing_import.values()))
         code_append += '\n'
         code_append += "".join(list(self.outlier_import.values()))
         code_append += '\n'

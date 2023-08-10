@@ -3,9 +3,6 @@ from .template_base import AutoPipelineBaseTemplate
 required_imports = """
 import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt
-from sklearn.model_selection import train_test_split
-from feature_engine.encoding import CountFrequencyEncoder
 """
 
 template = """
@@ -13,6 +10,24 @@ template = """
 target = "{{target_column}}"
 features = list({{dataset}}.columns.drop("{{target_column}}"))
 feature_df = {{dataset}}[features]
+
+
+
+{% if preprocessing_method != None %}
+# Preprocessing
+try:
+    {% if preprocessing_method == 'MatchVariables' %}
+    process = MatchVariables(missing_values='raise', verbose=True)
+    {{dataset}} = process.fit_transform({{dataset}})
+
+    {% elif preprocessing_method == 'MatchCategories' %}
+    process = MatchCategories(variables=None, ignore_format=False, missing_values='ignore')
+    {{dataset}} = process.fit_transform({{dataset}})
+    {% endif %}
+except Exception as e:
+    print("Error in outlier:", str(e))
+{% endif %}
+
 
 {% if outlier_method != None %}
 # Handling Outliers
