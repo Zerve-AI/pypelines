@@ -1,7 +1,7 @@
-from ..model_base import DataPreplBase
+from ..dataprep_base import DataPrepBase
 
 
-class StringSimilarityEncoder(DataPreplBase):
+class StringSimilarityEncoder(DataPrepBase):
     def __init__(self):
         model_string = 'StringSimilarityEncoder()'
         imports = '''from feature_engine.encoding import StringSimilarityEncoder\n\n\nencode = StringSimilarityEncoder(top_categories=None, keywords=None, missing_values='impute', variables=None, ignore_format=False)'''

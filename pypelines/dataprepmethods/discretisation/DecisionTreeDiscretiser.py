@@ -1,10 +1,10 @@
-from ..model_base import DataPreplBase
+from ..dataprep_base import DataPrepBase
 
 
-class DecisionTreeDiscretiser(DataPreplBase):
+class DecisionTreeDiscretiser(DataPrepBase):
     def __init__(self):
         model_string = 'DecisionTreeDiscretiser()'
-        imports = '''from feature_engine.discretisation import DecisionTreeDiscretiser\ndiscret = DecisionTreeDiscretiser(variables=None, cv=3, scoring='neg_mean_squared_error', param_grid=None, regression=True, random_state=None)'''
+        imports = '''from feature_engine.discretisation import DecisionTreeDiscretiser'''
         method='discretisation'
         super().__init__('DecisionTreeDiscretiser', model_string, imports, method)
 

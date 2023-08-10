@@ -1,10 +1,9 @@
-#from typing import Type
+# from typing import Type
 import os
 import pyperclip
 from .templates.dataprep import DataPrepTemplate
-from .templates.discretisation import DataPrepModelTemplate
-from .schemas import HyperParams, NumericalParam, CategoricalParam
 from .dataprepmethods.outlier import outlier_methods
+from .dataprepmethods.imputation import imputation_methods
 from .dataprepmethods.encoding import encoding_methods
 from .dataprepmethods.discretisation import discretisation_methods
 import pandas as pd 
@@ -13,128 +12,101 @@ import inspect
 
 
 class DataPrepPipeline:
-    def __init__(self, data: Union[str, pd.DataFrame], target: str,
-                 outlier_models: list = None, encoding_models: list = None,
-                 discretisation_models: list = None):
+    def __init__(self,
+                 data:Union[str, pd.DataFrame],
+                 target:str,
+                 outlier_method:str=None,
+                 numerical_imputation_methods:str=None,
+                 categorical_imputation_methods:str=None,
+                 encoding_method:str=None,
+                 discretisation_method:str=None):
+
         if isinstance(data, pd.DataFrame):
             callers_globals = inspect.stack()[1][0].f_globals
-            dataset_name = [k for k, v in callers_globals.items() if v is data][0]
+            dataset_name = [k for k,v in callers_globals.items() if v is data][0]
         elif isinstance(data, str):
             dataset_name = data
         else:
             raise ValueError("data must be a pandas DataFrame or a string")
+        
 
         self.dataset_name = dataset_name
         self.target = target
-        self.encoding_models = encoding_models or []
-        self.discretisation_models = discretisation_models or []
-        self.outlier_models = outlier_models or []
+        self.outlier_method = outlier_method
+        self.numerical_imputation = numerical_imputation_methods
+        self.categorical_imputation = categorical_imputation_methods
+        self.encoding_method = encoding_method
+        self.discretisation_method = discretisation_method
 
- 
-        self.outlier_models = outlier_models
-        self.encoding_models = encoding_models
-        self.models_outlier = outlier_methods
-        self.models_encoding = encoding_methods
-        self.models_discretisation = discretisation_methods
+        outlier_ = {k: v for k, v in outlier_methods.items() if k == self.outlier_method}
+        self.outlier_import = {name: model().get_library() for name, model in outlier_.items()}
 
-        # Add initialization of other model-related attributes
+        numerical_imputation_ = {k: v for k, v in imputation_methods.items() if k == numerical_imputation_methods}
+        self.numerical_imputation_import = {name: model().get_library() for name, model in numerical_imputation_.items()}
 
-    def outlier_list(self):
-        return list(outlier_methods.keys())
+        categorical_imputation_ = {k: v for k, v in imputation_methods.items() if k == categorical_imputation_methods}
+        self.categorical_imputation_import = {name: model().get_library() for name, model in categorical_imputation_.items()}
 
-    def encoding_list(self):
-        return list(encoding_methods.keys())
+        encoding_ = {k: v for k, v in encoding_methods.items() if k == self.encoding_method}
+        self.encoding_import = {name: model().get_library() for name, model in encoding_.items()}
 
-    def discretisation_list(self):
-        return list(discretisation_methods.keys())
+        discretisation_ = {k: v for k, v in discretisation_methods.items() if k == self.discretisation_method}
+        self.discretisation_import = {name: model().get_library() for name, model in discretisation_.items()}
+
+    def para(self):
+        return print(self.discretisation_import)
+
+    def parse_config(self):
+        self.pipeline_params = {'dataset': self.dataset_name,
+                                 'target_column': self.target,
+                                 'outlier_method': self.outlier_method,
+                                 'numerical_imputation':self.numerical_imputation,
+                                 'categorical_imputation':self.categorical_imputation,
+                                 'encoding':self.encoding_method,
+                                 'discretisation_method':self.discretisation_method
+                                 }
+
+    def generate_code(self, output_path:str=None):
+        self.parse_config()
+
+        code_append = "" #store output for each model - used for writing code file output for each model
+        code_all_models = "" #store output for all models - used for copy_to_clipboard
+        code, imports, requirements = DataPrepTemplate()(self.pipeline_params)
+        imports = imports
+        code_append += imports
+        code_append += '\n'
+        code_append += "".join(list(self.outlier_import.values()))
+        code_append += '\n'
+        code_append += "".join(list(self.discretisation_import.values()))
+        code_append += '\n'
+        code_append += "".join(list(self.numerical_imputation_import.values()))
+        code_append += '\n'
+        code_append += "".join(list(self.categorical_imputation_import.values()))
+        code_append += '\n'
+        code_append += "".join(list(self.encoding_import.values()))
+        code_append += '\n'
+        code_append += '\n'
+        code_append += code
+        code_append += '\n'
+        code_append += "##### End of Data Processing Pipeline #####"
+        code_append += '\n'
+        code_append += '\n'
+
+        code_data_prep = code_append
+
+        code_all_models += code_data_prep
+           
+        return code_all_models
 
     def get_code(self):
         code_gen = self.generate_code()
-        return code_gen
-
+        return print(code_gen)
+    
     def code_to_clipboard(self):
         code_gen = self.generate_code()
         return pyperclip.copy(code_gen)
-
-    def code_to_file(self, path: str = os.getcwd()):
-        self.generate_code(output_path=path)
-        return f"Model files saved to {path}"
     
-    def get_hyperparameters(self):
-        try:
-            self.outlier_model_params = {k: v for k, v in self.models_outlier.items() if k in self.outlier_models}
-            self.encoding_model_params = {k: v for k, v in self.models_encoding.items() if k in self.encoding_models}
-
-            outlier_hyperparameters = {name: model().get_hyperparameters() for name, model in self.outlier_model_params.items()}
-            encoding_hyperparameters = {name: model().get_hyperparameters() for name, model in self.encoding_model_params.items()}
-
-            discretisation_hyperparameters = {}
-            self.discretisation_model_params = {k: v for k, v in self.models_discretisation.items() if k in self.discretisation_models}
-            discretisation_hyperparameters = {name: model().get_hyperparameters() for name, model in self.discretisation_model_params.items()}
-
-            return outlier_hyperparameters, encoding_hyperparameters, discretisation_hyperparameters
-        except Exception as e:
-            raise RuntimeError(f"An error occurred while getting hyperparameters: {e}")
-
-
-    def generate_code(self, output_path: str = None):
-        try:
-            self.parse_config()        
-            code_append = "" #store output for each model - used for writing code file output for each model
-
-            # Data Preparation
-            code, imports, requirements = DataPrepTemplate()(self.pipeline_params)
-            code_append += imports
-            # Loading the library for encoding and outlier handling
-            for model_name, params in self.encoding_model_params.items():
-                code_append += params
-                code_append += '\n'
-            for model_name, params in self.outlier_model_params.items():
-                code_append += params
-            code_append += code
-            code_append += '\n'
-            # Loading discretisation as optional
-            if self.discretisation_models:
-                code_append += "# DISCRETISATION"
-                code_append += '\n'
-                discretisation_code = ""
-                # Loading library for discretisation
-                for model_name, params in self.discretisation_model_params.items():
-                    discretisation_code += params
-                # Loading code for discretisation
-                if self.pipeline_params['discretisation_models']:
-                    discretisation_code += DataPrepModelTemplate()(self.pipeline_params)[0]
-                    
-                code_append += discretisation_code
-            
-            code_append += "##### End of Data Processing Pipeline #####"
-
-            final_code = code_append
-            if output_path:
-                with open(output_path, "w") as code_file:
-                    code_file.write(final_code)
-
-            return final_code
-        except Exception as e:
-            return f"An error occurred: {e}"
-
-    def parse_config(self):
-        try:
-            self.outlier_models_all = outlier_methods
-            self.encoding_models_all = encoding_methods
-            
-            outlier_selected_models = self.outlier_models 
-            encoding_selected_models = self.encoding_models 
-
-            discretisation_selected_models = self.discretisation_models
-            self.outlier_model_param, self.encoding_model_param, self.discretisation_model_param = self.get_hyperparameters()
-            self.pipeline_params = {'dataset': self.dataset_name, 'target': self.target, 'encoding_models': self.encoding_models, 'discretisation_models' : self.discretisation_models}
-            self.outlier_model_params = {k:v for k,v in self.outlier_model_param.items() if k in outlier_selected_models}
-            self.encoding_model_params = {k:v for k,v in self.encoding_model_param.items() if k in encoding_selected_models}
-            self.discretisation_model_params = {k:v for k,v in self.discretisation_model_param.items() if k in discretisation_selected_models}
-
-        except Exception as e:
-            raise RuntimeError(f"Error parsing configuration: {e}")
-
-
-
+    def code_to_file(self,
+                     path:str =  os.getcwd()):
+        self.generate_code(output_path = path)
+        return f'model files saved to {path}'

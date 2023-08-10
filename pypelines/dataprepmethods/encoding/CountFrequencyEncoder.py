@@ -1,7 +1,7 @@
-from ..model_base import DataPreplBase
+from ..dataprep_base import DataPrepBase
 
 
-class CountFrequencyEncoder(DataPreplBase):
+class CountFrequencyEncoder(DataPrepBase):
     def __init__(self):
         model_string = 'CountFrequencyEncoder()'
         imports = '''from feature_engine.encoding import CountFrequencyEncoder\n\n\nencode = CountFrequencyEncoder(encoding_method='count', variables=None, missing_values='raise', ignore_format=False, unseen='ignore')'''
