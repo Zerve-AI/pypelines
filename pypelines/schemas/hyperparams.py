@@ -46,6 +46,15 @@ class HyperParamsAD(BaseModel):
 
     def __str__(self):
         return f'{{\n{"".join([str(param) for param in self.params])}}}\n'
+    
+class HyperParamsTSF(BaseModel):
+    params: List[Union[ConstantParamAD, NumericalParamAD, CategoricalParamAD]]
+
+    def __repr__(self):
+        return f'{{\n{"".join([str(param) for param in self.params])}}}\n'
+
+    def __str__(self):
+        return f'{{\n{"".join([str(param) for param in self.params])}}}\n'
 
 class HyperParamsTSClassification(BaseModel):
     params: List[Union[CategoricalParamTSClassification, NumericalParamTSClassification, ConstantParamTSClassification]]

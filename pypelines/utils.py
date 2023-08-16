@@ -2,6 +2,7 @@ from .models.classification import models_classification
 from .models.regression import models_regression
 from .models.anomaly_detection import models_ad
 from .models.timeseries_classification import models_ts_classification
+from .models.timeseries_forecast import models_forecast
 
 def list_supported_models(model_type:str):
     """
@@ -18,6 +19,8 @@ def list_supported_models(model_type:str):
         models = list(models_ad.keys())
     elif model_type == 'timeseries_classification':
         models = list(models_ts_classification.keys())
+    elif model_type == 'timeseries_forecast':
+        models = list(models_forecast.keys())
     return models
 
 
