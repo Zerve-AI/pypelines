@@ -12,7 +12,11 @@ setup(
         'jinja2',
         'pydantic',
         'pyod',
-        'suod'
+        'suod',
+        'sktime',
+        'statsforecast',
+        'pmdarima',
+        'tbats'
     ],
     # other metadata
 )
