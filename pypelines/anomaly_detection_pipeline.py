@@ -18,23 +18,22 @@ class AnomalyDetectionPipeline:
     def __init__(self,
                  data:Union[str, pd.DataFrame],
                  predictions_data:Union[str, pd.DataFrame],
-                 #target:str,
-                 #model_type:str,
                  nfolds:int,
                  models:list = None):
         """
-        The __init__ function initializes the class with the following parameters:
-            
+        The __init__ function is the constructor for a class.
+        It initializes all of the attributes of an object, and it's called when you create a new instance of that class.
+        
         
         :param self: Represent the instance of the class
-        :param data:Union[str: Specify the type of data that is being passed to the function
-        :param pd.DataFrame]: Check if the data is a pandas dataframe or not
-        :param target:str: Specify the target variable in the dataset
-        :param model_type:str: Specify the type of problem we are dealing with
-        :param nfolds:int: Specify the number of folds in cross-validation
-        :param models:list: Specify the list of models to be used in the experiment
-        :return: A new object instance
+        :param data:Union[str: Specify that the data parameter can be either a string or a pandas dataframe
+        :param pd.DataFrame]: Pass the dataframe to the class
+        :param predictions_data:Union[str: Specify the dataset that will be used for predictions
+        :param pd.DataFrame]: Pass the dataframe to the class
+        :param nfolds:int: Set the number of folds for cross-validation
+        :param models:list: Pass a list of models to the class
         """
+        
         if isinstance(data, pd.DataFrame):
             callers_globals = inspect.stack()[1][0].f_globals
             dataset_name = [k for k,v in callers_globals.items() if v is data][0]
@@ -53,8 +52,6 @@ class AnomalyDetectionPipeline:
 
         self.dataset_name = dataset_name
         self.predictions_dataset_name = predictions_dataset_name
-        #self.target = target
-        #self.model_type = model_type
 
         if models is None:
             self.models = list(models_ad_default.keys())
@@ -67,10 +64,9 @@ class AnomalyDetectionPipeline:
 
     def model_list(self):
         """
-        The models function returns a list of all the models in the car class
-        
+        The model_list function returns a list of all the models that are available for use in the pipeline.
         :param self: Represent the instance of the class
-        :return: A list of models
+        :return: A list of all the models
         """
         return print(self.models)
 
@@ -78,11 +74,11 @@ class AnomalyDetectionPipeline:
         """
         The get_hyperparameters function returns a dictionary of hyperparameters for each model.
         The keys are the names of the models and the values are dictionaries containing 
-        the hyperparameter name as key and an instance of HyperParams as value. The HyperParams class is used to store information about each hyperparameter, such as its type (numerical or categorical), default value, range if numerical, etc.
-        
-        :param self: Bind the instance of the class to a method
-        :return: A dictionary of hyperparameters for each model in the models list
+        the hyperparameter name as key and an instance of HyperParam class as value. 
+        :param self: Bind the method to the class
+        :return: A dictionary of hyperparameters for each model
         """
+        
         self.models_ = self.models_ad
         self.model_params = {k:v for k,v in self.models_.items() if k in self.models}
         hyperparameters = {}
@@ -92,17 +88,16 @@ class AnomalyDetectionPipeline:
     
     def compile_hyperparameters(self, model_prefix, params):
         """
-        The compile_hyperparameters function takes in a model prefix and the params dictionary.
-        It then iterates through each key, value pair in the params dictionary. For each key, value pair it iterates through all of the values (which are dictionaries).
-        If search is set to False for any of these dictionaries, it skips them. If k is equal to categorical and selected is not empty for any of these dictionaries, 
-        it appends a CategoricalParam object with prefix as model_prefix and name as p['name'] (the name from that particular dictionary) 
-        and values as p['selected']
+        The compile_hyperparameters function takes in a model_prefix and params.
+        The model_prefix is the name of the model, e.g., 'svm'. The params are all of the parameters for that particular 
+        model, which includes numerical and categorical parameters. For each parameter in params, if it is selected to be searched over (i.e., search=True), then we create an instance of either NumericalParamAD or CategoricalParamAD depending on whether it's numerical or categorical respectively.
         
         :param self: Represent the instance of the class
-        :param model_prefix: Identify the model
-        :param params: Pass the parameters to be used in the model
-        :return: A hyperparams object
+        :param model_prefix: Prefix the name of the hyperparameter with a string
+        :param params: Pass the parameters of the model
+        :return: A hyperparamsad object
         """
+        
         hyperparams = []
         
         for k, v in params.items():
@@ -120,12 +115,15 @@ class AnomalyDetectionPipeline:
     def parse_config(self):
         """
         The parse_config function is used to parse the configuration file and extract all of the information needed for 
-        the pipeline. It extracts information about the dataset, target column, models to be trained on, hyperparameters for each model
-        and other parameters such as number of folds in cross validation and metric used.
+        the pipeline. It extracts:
+            - The dataset name, which will be used to load the data from a csv file in a directory called 'data' in your current working directory.
+            - The predictions dataset name, which will be used to load predictions from a csv file in a directory called 'predictions' in your current working directory. 
+            - The models that you want to run on this data (from models_ad). This should be specified as an array of strings with each string being one model's name
         
-        :param self: Represent the instance of the class
-        :return: A dictionary of models, model_params, pipeline_params and shared_model params
+        :param self: Refer to the object itself
+        :return: A dictionary of the model parameters
         """
+        
         self.models_all = models_ad
         self.model_comp_all = models_comparison_ad
         self.model_param = self.get_hyperparameters()
@@ -139,12 +137,13 @@ class AnomalyDetectionPipeline:
 
     def generate_code(self, output_path:str=None):
         """
-        The generate_code function takes in a dictionary of parameters and generates code for the pipeline.
+        The generate_code function is used to generate code for the data processing pipeline and each model.
         
-        :param self: Refer to the object itself
-        :param output_path:str: Specify the path where the generated code will be saved
-        :return: A string of code
+        :param self: Represent the instance of the class
+        :param output_path:str: Specify the path to save the generated code
+        :return: The code for all models in the pipeline
         """
+        
         self.parse_config()
         code_list = {}
         code_append = "" #store output for each model - used for writing code file output for each model
