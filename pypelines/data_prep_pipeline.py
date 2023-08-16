@@ -19,8 +19,8 @@ class DataPrepPipeline:
                  target:str,
                  preprocessing_method:str=None,
                  outlier_method:str=None,
-                 numerical_imputation_methods:str=None,
-                 categorical_imputation_methods:str=None,
+                 numerical_imputation_method:str=None,
+                 categorical_imputation_method:str=None,
                  encoding_method:str=None,
                  datetime_method:str=None,
                  target_date1_column:str=None,
@@ -41,8 +41,8 @@ class DataPrepPipeline:
         self.preprocessing_method = preprocessing_method
         self.datetime_method = datetime_method
         self.outlier_method = outlier_method
-        self.numerical_imputation = numerical_imputation_methods
-        self.categorical_imputation = categorical_imputation_methods
+        self.numerical_imputation = numerical_imputation_method
+        self.categorical_imputation = categorical_imputation_method
         self.encoding_method = encoding_method
         self.datetime_method = datetime_method
         self.target_date1_column = target_date1_column
@@ -55,10 +55,10 @@ class DataPrepPipeline:
         outlier_ = {k: v for k, v in outlier_methods.items() if k == self.outlier_method}
         self.outlier_import = {name: model().get_library() for name, model in outlier_.items()}
 
-        numerical_imputation_ = {k: v for k, v in imputation_methods.items() if k == numerical_imputation_methods}
+        numerical_imputation_ = {k: v for k, v in imputation_methods.items() if k == numerical_imputation_method}
         self.numerical_imputation_import = {name: model().get_library() for name, model in numerical_imputation_.items()}
 
-        categorical_imputation_ = {k: v for k, v in imputation_methods.items() if k == categorical_imputation_methods}
+        categorical_imputation_ = {k: v for k, v in imputation_methods.items() if k == categorical_imputation_method}
         self.categorical_imputation_import = {name: model().get_library() for name, model in categorical_imputation_.items()}
 
         encoding_ = {k: v for k, v in encoding_methods.items() if k == self.encoding_method}
@@ -69,7 +69,6 @@ class DataPrepPipeline:
 
         discretisation_ = {k: v for k, v in discretisation_methods.items() if k == self.discretisation_method}
         self.discretisation_import = {name: model().get_library() for name, model in discretisation_.items()}
-
 
     def parse_config(self):
         self.pipeline_params = {'dataset': self.dataset_name,
