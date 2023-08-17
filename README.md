@@ -14,7 +14,7 @@ The generated code includes:
 
 Training code is generated as follows:
 ```py
-from pypelines.sklearn_pypeline import SupervisedPipeline
+from pypelines.supervised_pipeline import SupervisedPipeline
 my_pypeline = SupervisedPipeline(data = your_dataframe,
                                  target = 'dependent_variable_name', 
 				 model_type = 'classification' # or 'regression', 
@@ -37,5 +37,14 @@ To see a listing of all available models, utilize `pypelines.classification_mode
 - `my_pypeline.code_to_file('/path/to/filename.py')` saves the training code to a file.
 
 ## Supported Models:
-See currently available models: [Regression](https://github.com/Zerve-AI/pypelines/blob/master/pypelines/sklearn/regression/) and [Classification](https://github.com/Zerve-AI/pypelines/blob/master/pypelines/sklearn/classification/)
+See currently available models: 
+1. [Regression](https://github.com/Zerve-AI/pypelines/tree/main/pypelines/models/regression)
+2. [Classification](https://github.com/Zerve-AI/pypelines/tree/main/pypelines/models/classification)
+3. [Anomaly Detection](https://github.com/Zerve-AI/pypelines/tree/main/pypelines/models/anomaly_detection)
+4. [Clustering](https://github.com/Zerve-AI/pypelines/tree/main/pypelines/models/clustering)
+5. [Timeseries Classification](https://github.com/Zerve-AI/pypelines/tree/main/pypelines/models/timeseries_classification)
+6. [Timeseries Regression](https://github.com/Zerve-AI/pypelines/tree/main/pypelines/models/timeseries_regression)
+7. [Timeseries Forecast](https://github.com/Zerve-AI/pypelines/tree/main/pypelines/models/timeseries_forecast)
+8. [Timeseries Clustering](https://github.com/Zerve-AI/pypelines/tree/main/pypelines/models/timeseries_clustering)
+
 
