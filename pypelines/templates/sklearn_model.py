@@ -25,7 +25,7 @@ template = '''
 {% if model_type == "Regression" %}
 # Generate Predictions
 {{prefix}}_predictions = {{prefix}}_best_estimator.predict(X_test)
-{{prefix}}_predictions_df = pd.DataFrame({{prefix}}_best_estimator.predict(X_test))x`
+{{prefix}}_predictions_df = pd.DataFrame({{prefix}}_best_estimator.predict(X_test))
 
 # Generate Model Metrics
 {{prefix}}_r2_score = r2_score(y_test, {{prefix}}_predictions_df.iloc[:,0])

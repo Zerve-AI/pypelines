@@ -12,7 +12,14 @@ setup(
         'jinja2',
         'pydantic',
         'pyod',
-        'suod'
+        'suod',
+        'keras-self-attention',
+        'tsfresh == 0.20.1',
+        'esig == 0.9.8.3'
+        'sktime',
+        'statsforecast',
+        'pmdarima',
+        'tbats'
     ],
     # other metadata
 )

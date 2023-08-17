@@ -1,3 +1,3 @@
-from .hyperparams import HyperParams,HyperParamsAD
-from .numerical_param import NumericalParam,NumericalParamAD
-from .categorical_param import CategoricalParam, CategoricalParamAD
+from .hyperparams import HyperParams,HyperParamsAD,HyperParamsTSClassification, HyperParamsTSRegression, HyperParamsTSClustering, HyperParamsClustering,HyperParamsTSF
+from .numerical_param import NumericalParam,NumericalParamAD,NumericalParamTSClassification, NumericalParamTSRegression, NumericalParamTSClustering, NumericalParamClustering,NumericalParamTSF
+from .categorical_param import CategoricalParam, CategoricalParamAD,CategoricalParamTSClassification, CategoricalParamTSRegression, CategoricalParamTSClustering, CategoricalParamClustering,CategoricalParamTSF
