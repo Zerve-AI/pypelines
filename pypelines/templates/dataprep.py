@@ -211,6 +211,27 @@ try:
 except Exception as e:
     print("Error in integer encoding:", str(e))
 {% endif %}
+
+{% if forecast_method != None %}
+# Forecasting Features
+try:
+    {% if forecasting_method == "LagFeatures" %}
+    lf = LagFeatures(variables=None, periods=[1,2], freq=None, sort_index=True, missing_values='raise', drop_original=False)
+    x = lf.fit_transform({{dataset}})
+
+
+    {% elif forecasting_method == "WindowFeatures" %}
+    wf = WindowFeatures(variables=None, window=3, min_periods=None, functions='mean', periods=1, freq=None, sort_index=True, missing_values='raise', drop_original=False)
+    x = wf.fit_transform({{dataset}})
+
+    {% elif forecasting_method == "ExpandingWindowFeatures" %}
+    ewf = ExpandingWindowFeatures(variables=None, min_periods=None, functions='mean', periods=1, freq=None, sort_index=True, missing_values='raise', drop_original=False)
+    x = ewf.fit_transform({{dataset}})
+
+    {% endif %}
+except Exception as e:
+    print("Error in integer forecast:", str(e))
+{% endif %}
 """
 
 class DataPrepTemplate(AutoPipelineBaseTemplate):

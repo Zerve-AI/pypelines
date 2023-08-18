@@ -8,6 +8,7 @@ from .dataprepmethods.imputation import imputation_methods
 from .dataprepmethods.encoding import encoding_methods
 from .dataprepmethods.datetime import datetime_methods
 from .dataprepmethods.discretisation import discretisation_methods
+from .dataprepmethods.forecasting_features import forecasting_methods
 import pandas as pd 
 from typing import Union
 import inspect
@@ -25,7 +26,8 @@ class DataPrepPipeline:
                  datetime_method:str=None,
                  target_date1_column:str=None,
                  target_date2_column:str=None,
-                 discretisation_method:str=None):
+                 discretisation_method:str=None,
+                 forecasting_method:str=None):
 
         if isinstance(data, pd.DataFrame):
             callers_globals = inspect.stack()[1][0].f_globals
@@ -48,6 +50,7 @@ class DataPrepPipeline:
         self.target_date1_column = target_date1_column
         self.target_date2_column = target_date2_column
         self.discretisation_method = discretisation_method
+        self.forecasting_method = forecasting_method
 
         preprocessing_ = {k: v for k, v in preprocessing_methods.items() if k == self.preprocessing_method}
         self.preprocessing_import = {name: model().get_library() for name, model in preprocessing_.items()}
@@ -70,6 +73,9 @@ class DataPrepPipeline:
         discretisation_ = {k: v for k, v in discretisation_methods.items() if k == self.discretisation_method}
         self.discretisation_import = {name: model().get_library() for name, model in discretisation_.items()}
 
+        forecasting_ = {k: v for k, v in forecasting_methods.items() if k == self.forecasting_method}
+        self.forecasting_import = {name: model().get_library() for name, model in forecasting_.items()}
+
     def parse_config(self):
         self.pipeline_params = {'dataset': self.dataset_name,
                                  'target_column': self.target,
@@ -81,7 +87,8 @@ class DataPrepPipeline:
                                  'datetime_method':self.datetime_method,
                                  'target_date1_column': self.target_date1_column,
                                  'target_date2_column': self.target_date2_column,
-                                 'discretisation_method':self.discretisation_method
+                                 'discretisation_method':self.discretisation_method,
+                                 'forecasting_method':self.forecasting_method
                                  }
 
     def generate_code(self, output_path:str=None):
@@ -105,6 +112,8 @@ class DataPrepPipeline:
         code_append += "".join(list(self.datetime_import.values()))
         code_append += '\n'
         code_append += "".join(list(self.encoding_import.values()))
+        code_append += '\n'
+        code_append += "".join(list(self.forecasting_import.values()))
         code_append += '\n'
         code_append += code
         code_append += '\n'

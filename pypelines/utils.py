@@ -12,6 +12,7 @@ from .dataprepmethods.imputation import imputation_methods
 from .dataprepmethods.encoding import encoding_methods
 from .dataprepmethods.datetime import datetime_methods
 from .dataprepmethods.discretisation import discretisation_methods
+from .dataprepmethods.forecasting_features import forecasting_methods
 
 def list_supported_models(model_type:str):
     """
@@ -52,4 +53,6 @@ def list_supported_dataprepmethods(method_type:str):
         methods = list(preprocessing_methods.keys())
     elif method_type == 'discretisation':
         methods = list(discretisation_methods.keys())
+    elif method_type == 'forecasting':
+        methods = list(forecasting_methods.keys())
     return methods
