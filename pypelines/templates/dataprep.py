@@ -12,12 +12,11 @@ features = list({{dataset}}.columns.drop("{{target_column}}"))
 feature_df = {{dataset}}[features]
 
 
-
 {% if preprocessing_method != None %}
 # Preprocessing
 try:
     {% if preprocessing_method == 'MatchVariables' %}
-    process = MatchVariables(missing_values='raise', verbose=True)
+    process = MatchVariables(missing_values='ignore', verbose=True)
     {{dataset}} = process.fit_transform({{dataset}})
 
     {% elif preprocessing_method == 'MatchCategories' %}
@@ -28,25 +27,6 @@ except Exception as e:
     print("Error in outlier:", str(e))
 {% endif %}
 
-
-{% if outlier_method != None %}
-# Handling Outliers
-try:
-    {% if outlier_method == 'ArbitraryCapper' %}
-    out = ArbitraryOutlierCapper(max_capping_dict=None, min_capping_dict=None, missing_values='ignore')
-    {{dataset}} = out.fit_transform({{dataset}})
-
-    {% elif outlier_method == 'Outlier Trimmer' %}
-    out = OutlierTrimmer(capping_method='gaussian', tail='right', fold=3, variables=None, missing_values='ignore')
-    {{dataset}} = out.fit_transform({{dataset}})
-
-    {% elif outlier_method == 'Winsorizer' %}
-    out = Winsorizer(capping_method='gaussian', tail='right', fold=3, add_indicators=False, variables=None, missing_values='ignore')
-    {{dataset}} = out.fit_transform({{dataset}})
-    {% endif %}
-except Exception as e:
-    print("Error in outlier:", str(e))
-{% endif %} 
 
 {% if numerical_imputation != None or categorical_imputation != None %}
 # Missing Value Imputation
@@ -106,6 +86,26 @@ if len(edited_missing_columns) != 0:
 feature_df = pd.concat([{{dataset}}_num,{{dataset}}_cat],axis=1)
 {{dataset}} =  pd.concat([feature_df,{{dataset}}["{{target_column}}"]],axis=1)
 {% endif %}
+
+
+{% if outlier_method != None %}
+# Handling Outliers
+try:
+    {% if outlier_method == 'ArbitraryCapper' %}
+    out = ArbitraryOutlierCapper(max_capping_dict=None, min_capping_dict=None, missing_values='ignore')
+    {{dataset}} = out.fit_transform({{dataset}})
+
+    {% elif outlier_method == 'Outlier Trimmer' %}
+    out = OutlierTrimmer(capping_method='gaussian', tail='right', fold=3, variables=None, missing_values='ignore')
+    {{dataset}} = out.fit_transform({{dataset}})
+
+    {% elif outlier_method == 'Winsorizer' %}
+    out = Winsorizer(capping_method='gaussian', tail='right', fold=3, add_indicators=False, variables=None, missing_values='ignore')
+    {{dataset}} = out.fit_transform({{dataset}})
+    {% endif %}
+except Exception as e:
+    print("Error in outlier:", str(e))
+{% endif %} 
 
 
 {% if encoding != None %}
@@ -179,59 +179,97 @@ except Exception as e:
     print("Error in integer datetime:", str(e))
 {% endif %}
 
-{% if discretisation_method != None %}
-# Discretisation
-try:
-    {% if discretisation_method == "DecisionTreeDiscretiser" %}
-    discret = DecisionTreeDiscretiser(variables=None, cv=3, scoring='neg_mean_squared_error', param_grid=None, regression=True, random_state=None)
-    x = {{dataset}}.drop("{{target_column}}", axis=1)
-    y = {{dataset}}["{{target_column}}"]
-    x = discret.fit_transform(x, y)
-
-    {% elif discretisation_method == "ArbitraryDiscretiser" %}
-    discret = ArbitraryDiscretiser(return_object=False, return_boundaries=False, precision=3, errors='ignore')
-    x = {{dataset}}.drop("{{target_column}}", axis=1)
-    x = discret.fit_transform(x)
-
-    {% elif discretisation_method == "EqualFrequencyDiscretiser" %}
-    discret = EqualFrequencyDiscretiser(variables=None, q=10, return_object=False, return_boundaries=False, precision=3)
-    x = {{dataset}}.drop("{{target_column}}", axis=1)
-    x = discret.fit_transform(x)
-
-    {% elif discretisation_method == "EqualWidthDiscretiser" %}
-    discret = EqualWidthDiscretiser(variables=None, bins=10, return_object=False, return_boundaries=False, precision=3)
-    x = {{dataset}}.drop("{{target_column}}", axis=1)
-    x = discret.fit_transform(x)
-
-    {% elif discretisation_method == "GeometricWidthDiscretiser" %}
-    discret = GeometricWidthDiscretiser(variables=None, bins=10, return_object=False, return_boundaries=False, precision=7)
-    x = {{dataset}}.drop("{{target_column}}", axis=1)
-    x = discret.fit_transform(x)
-    {% endif %}
-except Exception as e:
-    print("Error in integer encoding:", str(e))
-{% endif %}
-
 {% if forecast_method != None %}
 # Forecasting Features
 try:
     {% if forecasting_method == "LagFeatures" %}
-    lf = LagFeatures(variables=None, periods=[1,2], freq=None, sort_index=True, missing_values='raise', drop_original=False)
-    x = lf.fit_transform({{dataset}})
+    lf = LagFeatures(variables={{forecast_columns}}, periods=[1,2], freq=None, sort_index=True, missing_values='raise', drop_original=False)
+    {{dataset}} = lf.fit_transform({{dataset}})
 
 
     {% elif forecasting_method == "WindowFeatures" %}
-    wf = WindowFeatures(variables=None, window=3, min_periods=None, functions='mean', periods=1, freq=None, sort_index=True, missing_values='raise', drop_original=False)
-    x = wf.fit_transform({{dataset}})
+    wf = WindowFeatures(variables={{forecast_columns}}, window=3, min_periods=None, functions='mean', periods=1, freq=None, sort_index=True, missing_values='raise', drop_original=False)
+    {{dataset}} = wf.fit_transform({{dataset}})
 
     {% elif forecasting_method == "ExpandingWindowFeatures" %}
-    ewf = ExpandingWindowFeatures(variables=None, min_periods=None, functions='mean', periods=1, freq=None, sort_index=True, missing_values='raise', drop_original=False)
-    x = ewf.fit_transform({{dataset}})
+    ewf = ExpandingWindowFeatures(variables={{forecast_columns}}, min_periods=None, functions='mean', periods=1, freq=None, sort_index=True, missing_values='raise', drop_original=False)
+    {{dataset}} = ewf.fit_transform({{dataset}})
 
     {% endif %}
 except Exception as e:
     print("Error in integer forecast:", str(e))
 {% endif %}
+
+{% if transformer_method != None %}
+# variable transformer
+try:
+    {% if transformer_method == "LogTransformer" %}
+    lt = LogTransformer(variables={{transformer_columns}})
+    {{dataset}} = lt.fit_transform({{dataset}})
+
+    {% elif transformer_method == "LogCpTransformer" %}
+    lct = LogCpTransformer(variables={{transformer_columns}})
+    {{dataset}} = lct.fit_transform({{dataset}})
+
+    {% elif transformer_method == "ReciprocalTransformer" %}
+    rpt = ReciprocalTransformer(variables={{transformer_columns}})
+    {{dataset}} = rpt.fit_transform({{dataset}})
+
+    {% elif transformer_method == "ArcsinTransformer" %}
+    at = ArcsinTransformer(variables={{transformer_columns}})
+    {{dataset}} = at.fit_transform({{dataset}})
+
+    {% elif transformer_method == "PowerTransformer" %}
+    pt = PowerTransformer(variables={{transformer_columns}})
+    {{dataset}} = pt.fit_transform({{dataset}})
+
+    {% elif transformer_method == "BoxCoxTransformer" %}
+    bt = BoxCoxTransformer(variables={{transformer_columns}})
+    {{dataset}} = bt.fit_transform({{dataset}})
+
+    {% elif transformer_method == "YeoJohnsonTransformer" %}
+    yt = YeoJohnsonTransformer(variables={{transformer_columns}})
+    {{dataset}} = yt.fit_transform({{dataset}})
+    {% endif %}
+    
+except Exception as e:
+    print("Error in integer transformer:", str(e))
+{% endif %}
+
+{% if discretisation_method != None %}
+# Discretisation
+try:
+    {% if discretisation_method == "DecisionTreeDiscretiser" %}
+    discret = DecisionTreeDiscretiser(variables = {{discretisation_columns}}, cv=3, scoring='neg_mean_squared_error', param_grid=None, regression=True, random_state=None)
+    x = {{dataset}}.drop("{{target_column}}", axis=1)
+    y = {{dataset}}["{{target_column}}"]
+    x = discret.fit_transform(x, y)
+
+    {% elif discretisation_method == "ArbitraryDiscretiser" %}
+    discret = ArbitraryDiscretiser(variables = {{discretisation_columns}}return_object=False, return_boundaries=False, precision=3, errors='ignore')
+    x = {{dataset}}.drop("{{target_column}}", axis=1)
+    x = discret.fit_transform(x)
+
+    {% elif discretisation_method == "EqualFrequencyDiscretiser" %}
+    discret = EqualFrequencyDiscretiser(variables = {{discretisation_columns}}, q=10, return_object=False, return_boundaries=False, precision=3)
+    x = {{dataset}}.drop("{{target_column}}", axis=1)
+    x = discret.fit_transform(x)
+
+    {% elif discretisation_method == "EqualWidthDiscretiser" %}
+    discret = EqualWidthDiscretiser(variables = {{discretisation_columns}}, bins=10, return_object=False, return_boundaries=False, precision=3)
+    x = {{dataset}}.drop("{{target_column}}", axis=1)
+    x = discret.fit_transform(x)
+
+    {% elif discretisation_method == "GeometricWidthDiscretiser" %}
+    discret = GeometricWidthDiscretiser(variables = {{discretisation_columns}}, bins=10, return_object=False, return_boundaries=False, precision=7)
+    #x = {{dataset}}.drop("{{target_column}}", axis=1)
+    {{housing}} = discret.fit_transform({{housing}})
+    {% endif %}
+except Exception as e:
+    print("Error in integer discretisation:", str(e))
+{% endif %}
+
+
 """
 
 class DataPrepTemplate(AutoPipelineBaseTemplate):

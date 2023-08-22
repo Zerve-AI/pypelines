@@ -9,6 +9,7 @@ from .dataprepmethods.encoding import encoding_methods
 from .dataprepmethods.datetime import datetime_methods
 from .dataprepmethods.discretisation import discretisation_methods
 from .dataprepmethods.forecasting_features import forecasting_methods
+from .dataprepmethods.transformers import transformer_methods
 import pandas as pd 
 from typing import Union
 import inspect
@@ -26,8 +27,12 @@ class DataPrepPipeline:
                  datetime_method:str=None,
                  target_date1_column:str=None,
                  target_date2_column:str=None,
+                 forecasting_method:str=None,
+                 forecast_columns:list=None,
+                 transformer_method:str=None,
+                 transformer_columns:list=None,
                  discretisation_method:str=None,
-                 forecasting_method:str=None):
+                 discretisation_columns:list=None):
 
         if isinstance(data, pd.DataFrame):
             callers_globals = inspect.stack()[1][0].f_globals
@@ -49,53 +54,68 @@ class DataPrepPipeline:
         self.datetime_method = datetime_method
         self.target_date1_column = target_date1_column
         self.target_date2_column = target_date2_column
-        self.discretisation_method = discretisation_method
         self.forecasting_method = forecasting_method
+        self.forecast_columns = forecast_columns
+        self.transformer_method = transformer_method
+        self.transformer_columns = transformer_columns
+        self.discretisation_method = discretisation_method
+        self.discretisation_columns = discretisation_columns
+
 
         preprocessing_ = {k: v for k, v in preprocessing_methods.items() if k == self.preprocessing_method}
-        self.preprocessing_import = {name: model().get_library() for name, model in preprocessing_.items()}
+        self.preprocessing_import = {name: method().get_library() for name, method in preprocessing_.items()}
 
         outlier_ = {k: v for k, v in outlier_methods.items() if k == self.outlier_method}
-        self.outlier_import = {name: model().get_library() for name, model in outlier_.items()}
+        self.outlier_import = {name: method().get_library() for name, method in outlier_.items()}
 
         numerical_imputation_ = {k: v for k, v in imputation_methods.items() if k == numerical_imputation_method}
-        self.numerical_imputation_import = {name: model().get_library() for name, model in numerical_imputation_.items()}
+        self.numerical_imputation_import = {name: method().get_library() for name, method in numerical_imputation_.items()}
 
         categorical_imputation_ = {k: v for k, v in imputation_methods.items() if k == categorical_imputation_method}
-        self.categorical_imputation_import = {name: model().get_library() for name, model in categorical_imputation_.items()}
+        self.categorical_imputation_import = {name: method().get_library() for name, method in categorical_imputation_.items()}
 
         encoding_ = {k: v for k, v in encoding_methods.items() if k == self.encoding_method}
-        self.encoding_import = {name: model().get_library() for name, model in encoding_.items()}
+        self.encoding_import = {name: method().get_library() for name, method in encoding_.items()}
 
         datetime_ = {k: v for k, v in datetime_methods.items() if k == self.datetime_method}
-        self.datetime_import = {name: model().get_library() for name, model in datetime_.items()}
-
-        discretisation_ = {k: v for k, v in discretisation_methods.items() if k == self.discretisation_method}
-        self.discretisation_import = {name: model().get_library() for name, model in discretisation_.items()}
+        self.datetime_import = {name: method().get_library() for name, method in datetime_.items()}
 
         forecasting_ = {k: v for k, v in forecasting_methods.items() if k == self.forecasting_method}
-        self.forecasting_import = {name: model().get_library() for name, model in forecasting_.items()}
+        self.forecasting_import = {name: method().get_library() for name, method in forecasting_.items()}
+
+        transformer_ = {k: v for k, v in transformer_methods.items() if k == self.transformer_method}
+        self.transformer_import = {name: method().get_library() for name, method in transformer_.items()}
+
+        discretisation_ = {k: v for k, v in discretisation_methods.items() if k == self.discretisation_method}
+        self.discretisation_import = {name: method().get_library() for name, method in discretisation_.items()}
+
+
 
     def parse_config(self):
         self.pipeline_params = {'dataset': self.dataset_name,
                                  'target_column': self.target,
                                  'preprocessing_method': self.preprocessing_method,
                                  'outlier_method': self.outlier_method,
-                                 'numerical_imputation':self.numerical_imputation,
-                                 'categorical_imputation':self.categorical_imputation,
-                                 'encoding':self.encoding_method,
-                                 'datetime_method':self.datetime_method,
+                                 'numerical_imputation': self.numerical_imputation,
+                                 'categorical_imputation': self.categorical_imputation,
+                                 'encoding': self.encoding_method,
+                                 'datetime_method': self.datetime_method,
                                  'target_date1_column': self.target_date1_column,
                                  'target_date2_column': self.target_date2_column,
+                                 'forecasting_method': self.forecasting_method, 
+                                 'forecast_columns': self.forecast_columns,
+                                 'transformer_method':self.transformer_method,
+                                 'transformer_columns': self.forecast_columns,
+                                 'forecast_columns': self.transformer_columns,
                                  'discretisation_method':self.discretisation_method,
-                                 'forecasting_method':self.forecasting_method
+                                 'discretisation_columns': self.discretisation_columns,                                 
                                  }
 
     def generate_code(self, output_path:str=None):
         self.parse_config()
 
-        code_append = "" #store output for each model - used for writing code file output for each model
-        code_all_models = "" #store output for all models - used for copy_to_clipboard
+        code_append = "" #store output for each method - used for writing code file output for each method
+        code_all_methods = "" #store output for all methods - used for copy_to_clipboard
         code, imports, requirements = DataPrepTemplate()(self.pipeline_params)
         imports = imports
         code_append += imports
@@ -115,6 +135,8 @@ class DataPrepPipeline:
         code_append += '\n'
         code_append += "".join(list(self.forecasting_import.values()))
         code_append += '\n'
+        code_append += "".join(list(self.transformer_import.values()))
+        code_append += '\n'
         code_append += code
         code_append += '\n'
         code_append += "##### End of Data Processing Pipeline #####"
@@ -123,9 +145,9 @@ class DataPrepPipeline:
 
         code_data_prep = code_append
 
-        code_all_models += code_data_prep
+        code_all_methods += code_data_prep
            
-        return code_all_models
+        return code_all_methods
 
     def get_code(self):
         code_gen = self.generate_code()
@@ -138,4 +160,4 @@ class DataPrepPipeline:
     def code_to_file(self,
                      path:str =  os.getcwd()):
         self.generate_code(output_path = path)
-        return f'model files saved to {path}'
+        return f'method files saved to {path}'
