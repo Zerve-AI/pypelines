@@ -27,6 +27,25 @@ except Exception as e:
     print("Error in outlier:", str(e))
 {% endif %}
 
+{% if forecast_method != None %}
+# Forecasting Features
+try:
+    {% if forecasting_method == "LagFeatures" %}
+    lf = LagFeatures(variables={{forecast_columns}}, periods=[1,2], freq=None, sort_index=True, missing_values='ignore', drop_original=False)
+    {{dataset}} = lf.fit_transform({{dataset}})
+
+    {% elif forecasting_method == "WindowFeatures" %}
+    wf = WindowFeatures(variables={{forecast_columns}}, window=3, min_periods=None, functions='mean', periods=1, freq=None, sort_index=True, missing_values='ignore', drop_original=False)
+    {{dataset}} = wf.fit_transform({{dataset}})
+
+    {% elif forecasting_method == "ExpandingWindowFeatures" %}
+    ewf = ExpandingWindowFeatures(variables={{forecast_columns}}, min_periods=None, functions='mean', periods=1, freq=None, sort_index=True, missing_values='ignore', drop_original=False)
+    {{dataset}} = ewf.fit_transform({{dataset}})
+
+    {% endif %}
+except Exception as e:
+    print("Error in forecast:", str(e))
+{% endif %}
 
 {% if numerical_imputation != None or categorical_imputation != None %}
 # Missing Value Imputation
@@ -64,7 +83,7 @@ if len(edited_missing_columns) != 0:
             {{dataset}}_num = imputer.fit_transform({{dataset}}[int_lst])
             {% endif %}
     except Exception as e:
-        print("Error in integer imputation:", str(e))
+        print("Error in imputation:", str(e))
 
     try:
         if len(cat_lst) > 0:
@@ -81,12 +100,11 @@ if len(edited_missing_columns) != 0:
             {{dataset}}_cat= imputer.fit_transform({{dataset}}[cat_lst])
             {% endif %}
     except Exception as e:
-        print("Error in integer imputation:", str(e))
+        print("Error in imputation:", str(e))
         
 feature_df = pd.concat([{{dataset}}_num,{{dataset}}_cat],axis=1)
 {{dataset}} =  pd.concat([feature_df,{{dataset}}["{{target_column}}"]],axis=1)
 {% endif %}
-
 
 {% if outlier_method != None %}
 # Handling Outliers
@@ -106,7 +124,6 @@ try:
 except Exception as e:
     print("Error in outlier:", str(e))
 {% endif %} 
-
 
 {% if encoding != None %}
 # Encoding Categorical Variables
@@ -151,7 +168,7 @@ try:
     {{dataset}} = encode.fit_transform({{dataset}})
     {% endif %}
 except Exception as e:
-    print("Error in integer encoding:", str(e))
+    print("Error in encoding:", str(e))
 {% endif %}
 
 {% if datetime_method != None %}
@@ -176,28 +193,7 @@ try:
 
     {% endif %}
 except Exception as e:
-    print("Error in integer datetime:", str(e))
-{% endif %}
-
-{% if forecast_method != None %}
-# Forecasting Features
-try:
-    {% if forecasting_method == "LagFeatures" %}
-    lf = LagFeatures(variables={{forecast_columns}}, periods=[1,2], freq=None, sort_index=True, missing_values='raise', drop_original=False)
-    {{dataset}} = lf.fit_transform({{dataset}})
-
-
-    {% elif forecasting_method == "WindowFeatures" %}
-    wf = WindowFeatures(variables={{forecast_columns}}, window=3, min_periods=None, functions='mean', periods=1, freq=None, sort_index=True, missing_values='raise', drop_original=False)
-    {{dataset}} = wf.fit_transform({{dataset}})
-
-    {% elif forecasting_method == "ExpandingWindowFeatures" %}
-    ewf = ExpandingWindowFeatures(variables={{forecast_columns}}, min_periods=None, functions='mean', periods=1, freq=None, sort_index=True, missing_values='raise', drop_original=False)
-    {{dataset}} = ewf.fit_transform({{dataset}})
-
-    {% endif %}
-except Exception as e:
-    print("Error in integer forecast:", str(e))
+    print("Error in datetime:", str(e))
 {% endif %}
 
 {% if transformer_method != None %}
@@ -233,7 +229,7 @@ try:
     {% endif %}
     
 except Exception as e:
-    print("Error in integer transformer:", str(e))
+    print("Error in transformer:", str(e))
 {% endif %}
 
 {% if discretisation_method != None %}
@@ -241,35 +237,82 @@ except Exception as e:
 try:
     {% if discretisation_method == "DecisionTreeDiscretiser" %}
     discret = DecisionTreeDiscretiser(variables = {{discretisation_columns}}, cv=3, scoring='neg_mean_squared_error', param_grid=None, regression=True, random_state=None)
-    x = {{dataset}}.drop("{{target_column}}", axis=1)
-    y = {{dataset}}["{{target_column}}"]
-    x = discret.fit_transform(x, y)
+    {{dataset}} = discret.fit_transform({{dataset}})
 
     {% elif discretisation_method == "ArbitraryDiscretiser" %}
     discret = ArbitraryDiscretiser(variables = {{discretisation_columns}}return_object=False, return_boundaries=False, precision=3, errors='ignore')
-    x = {{dataset}}.drop("{{target_column}}", axis=1)
-    x = discret.fit_transform(x)
+    {{dataset}} = discret.fit_transform({{dataset}})
 
     {% elif discretisation_method == "EqualFrequencyDiscretiser" %}
     discret = EqualFrequencyDiscretiser(variables = {{discretisation_columns}}, q=10, return_object=False, return_boundaries=False, precision=3)
-    x = {{dataset}}.drop("{{target_column}}", axis=1)
-    x = discret.fit_transform(x)
+    {{dataset}} = discret.fit_transform({{dataset}})
 
     {% elif discretisation_method == "EqualWidthDiscretiser" %}
     discret = EqualWidthDiscretiser(variables = {{discretisation_columns}}, bins=10, return_object=False, return_boundaries=False, precision=3)
-    x = {{dataset}}.drop("{{target_column}}", axis=1)
-    x = discret.fit_transform(x)
+    {{dataset}} = discret.fit_transform({{dataset}})
 
     {% elif discretisation_method == "GeometricWidthDiscretiser" %}
     discret = GeometricWidthDiscretiser(variables = {{discretisation_columns}}, bins=10, return_object=False, return_boundaries=False, precision=7)
-    #x = {{dataset}}.drop("{{target_column}}", axis=1)
-    {{housing}} = discret.fit_transform({{housing}})
+    {{dataset}} = discret.fit_transform({{dataset}})
     {% endif %}
 except Exception as e:
-    print("Error in integer discretisation:", str(e))
+    print("Error in discretisation:", str(e))
 {% endif %}
 
+{% if featureselection_method != None %}
+# Feature Selection
+try:
+    {% if featureselection_method == "DropConstantFeatures" %}
+    dcf = DropConstantFeatures(variables=None, tol=1, missing_values='ignore', confirm_variables=False)
+    {{dataset}} = dcf.fit_transform({{dataset}})
+    
+    {% elif featureselection_method == "DropDuplicateFeatures" %}
+    ddf = DropDuplicateFeatures(variables=None, missing_values='ignore', confirm_variables=False)    
+    {{dataset}} = ddf.fit_transform({{dataset}})
 
+    {% elif featureselection_method == "DropCorrelatedFeatures" %}
+    dcf = DropCorrelatedFeatures(variables=None, method='pearson', threshold=0.8, missing_values='ignore', confirm_variables=False)
+    {{dataset}} = dcf.fit_transform({{dataset}})
+
+    {% elif featureselection_method == "SmartCorrelatedSelection" %}
+    scs = SmartCorrelatedSelection(variables=None, method='pearson', threshold=0.8, missing_values='ignore', selection_method='missing_values', estimator=None, scoring='roc_auc', cv=3, confirm_variables=False)
+    {{dataset}} = scs.fit_transform({{dataset}})   
+
+    {% elif featureselection_method == "SelectBySingleFeaturePerformance" %}
+    sfp = SelectBySingleFeaturePerformance(estimator=RandomForestClassifier(random_state=42), scoring='roc_auc', cv=3, threshold=None, variables=None, confirm_variables=False)
+    {{dataset}} = sfp.fit_transform({{dataset}})  
+
+    {% elif featureselection_method == "RecursiveFeatureElimination" %}
+    rfe = RecursiveFeatureElimination(estimator=RandomForestClassifier(random_state=2), scoring='roc_auc', cv=3, threshold=0.01, variables=None, confirm_variables=False)
+    {{dataset}} = rfe.fit_transform({{dataset}},{{dataset}}["{{target_column}}"])
+
+    {% elif featureselection_method == "RecursiveFeatureAddition" %}
+    rfa = RecursiveFeatureAddition(estimator=RandomForestClassifier(random_state=42), scoring='roc_auc', cv=3, threshold=0.01, variables=None, confirm_variables=False)
+    {{dataset}} = rfa.fit_transform({{dataset}},{{dataset}}["{{target_column}}"])
+
+    {% elif featureselection_method == "DropHighPSIFeatures" %}
+    psi = DropHighPSIFeatures(split_col=None, split_frac=0.5, split_distinct=False, cut_off=None, switch=False, threshold=0.25, bins=10, strategy='equal_frequency', min_pct_empty_bins=0.0001, missing_values='raise', variables=None, confirm_variables=False, p_value=0.001)
+    {{dataset}} = psi.fit_transform({{dataset}}) 
+    
+    {% elif featureselection_method == "SelectByInformationValue" %}
+    iv = SelectByInformationValue(variables=None, bins=5, strategy='equal_width', threshold=0.2, confirm_variables=False)
+    {{dataset}} = iv.fit_transform({{dataset}},{{dataset}}["{{target_column}}"]) 
+
+    {% elif featureselection_method == "SelectByShuffling" %}
+    sbs = SelectByShuffling(estimator=RandomForestClassifier(random_state=42), scoring='roc_auc', cv=3, threshold=None, variables=None, random_state=None, confirm_variables=False)
+    {{dataset}} = sbs.fit_transform({{dataset}},{{dataset}}["{{target_column}}"])  
+
+    {% elif featureselection_method == "SelectByTargetMeanPerformance" %}
+    tmp = SelectByTargetMeanPerformance(bins=5, strategy='equal_width', scoring='roc_auc', cv=3, threshold=None, regression=False, confirm_variables=False)
+    {{dataset}} = tmp.fit_transform({{dataset}},{{dataset}}["{{target_column}}"])  
+
+    {% elif featureselection_method == "ProbeFeatureSelection" %}
+    sel = ProbeFeatureSelection(estimator=LogisticRegression(), variables=None, scoring='roc_auc', n_probes=1, distribution='normal', cv=5, random_state=0, confirm_variables=False)
+    {{dataset}} = sel.fit_transform({{dataset}},{{dataset}}["{{target_column}}"]) 
+    {% endif %}
+except Exception as e:
+    print("Error in feature selection:", str(e))
+{% endif %}
 """
 
 class DataPrepTemplate(AutoPipelineBaseTemplate):

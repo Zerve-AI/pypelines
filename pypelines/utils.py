@@ -14,6 +14,8 @@ from .dataprepmethods.datetime import datetime_methods
 from .dataprepmethods.discretisation import discretisation_methods
 from .dataprepmethods.forecasting_features import forecasting_methods
 from .dataprepmethods.transformers import transformer_methods
+from .dataprepmethods.feature_selection import featureselection_methods
+
 
 def list_supported_models(model_type:str):
     """
@@ -58,4 +60,6 @@ def list_supported_dataprepmethods(method_type:str):
         methods = list(forecasting_methods.keys())
     elif method_type == 'transformer':
         methods = list(transformer_methods.keys())
+    elif method_type == 'featureselection':
+        methods = list(featureselection_methods.keys())
     return methods
